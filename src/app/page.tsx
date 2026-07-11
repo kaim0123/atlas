@@ -1,65 +1,40 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import { DocsPage, Hero, Eyebrow, Lead, DocsFooter, IndexGrid, IndexCard } from "@/components/docs";
+
+export const metadata: Metadata = {
+  title: "Atlas",
+};
+
+const sections = [
+  { href: "/computer", num: "01", title: "コンピュータ", desc: "OS・メモリの仕組みから、PCハードウェアの基礎・端末管理まで" },
+  { href: "/network", num: "02", title: "ネットワーク", desc: "OSI参照モデル・IP・ポートから、配線・機器・Wi-Fiまで" },
+  { href: "/internet", num: "03", title: "インターネット", desc: "DNS・Web・メールの仕組みから、サーバー・ISP接続まで" },
+  { href: "/dev", num: "04", title: "開発", desc: "言語・フレームワーク・DBから、パッケージ管理・開発環境まで" },
+  { href: "/design", num: "05", title: "設計", desc: "パラダイムから9つのアーキテクチャ、設計原則まで" },
+  { href: "/test", num: "06", title: "テスト", desc: "静的解析からE2E、パフォーマンス、CI/CDまでの品質計画" },
+  { href: "/security", num: "07", title: "セキュリティ", desc: "インジェクション攻撃から認証・認可まで" },
+  { href: "/infra", num: "08", title: "インフラ", desc: "仮想化・クラウド(AWS)・ストレージから、基盤の監視・障害切り分けまで" },
+  { href: "/ops", num: "09", title: "運用", desc: "デプロイ・監視・パフォーマンスから、分析・コスト・コンプライアンスまで" },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <DocsPage>
+      <Hero>
+        <Eyebrow>Atlas</Eyebrow>
+        <h1>個人の知識地図</h1>
+        <Lead>コンピュータ・ネットワークの基礎から、開発・設計・セキュリティ、インフラ実務まで分野ごとに整理しています。</Lead>
+      </Hero>
+
+      <IndexGrid>
+        {sections.map((section) => (
+          <IndexCard key={section.href} href={section.href} num={section.num} title={section.title}>
+            {section.desc}
+          </IndexCard>
+        ))}
+      </IndexGrid>
+
+      <DocsFooter>Atlas</DocsFooter>
+    </DocsPage>
   );
 }

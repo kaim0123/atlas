@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# pagefind index (regenerated on build; copied into /public for `next dev`)
+/public/pagefind/
+
 # production
 /build
 

@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // pagefind search index, regenerated on build (see STATIC_DEPLOY_PLAN.md)
+    "public/pagefind/**",
   ]),
 ]);
 
