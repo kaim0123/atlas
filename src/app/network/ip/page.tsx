@@ -20,7 +20,7 @@ import {
 } from "@/components/docs";
 
 export const metadata: Metadata = {
-  title: "IPアドレスとルーティングの実務",
+  title: "IPアドレスと経路",
 };
 
 export default function Page() {
@@ -28,15 +28,21 @@ export default function Page() {
     <DocsPage>
       <Hero>
         <Eyebrow>ネットワーク</Eyebrow>
-        <h1>IPアドレスとルーティングの実務 ― 現場で使う知識</h1>
+        <h1>IPアドレスと経路 ― 住所づけからルーティングまで</h1>
         <Lead>
-          OSI参照モデルやTCP/UDPの基礎は「<Link href="/network/protocols">通信プロトコル</Link>」で扱いました。ここではその上に立つ、実務で使うIPアドレス設計とトラブルシュートを扱います。
+          「<Link href="/network/layers">階層モデル</Link>」で見たネットワーク層(インターネット層)の主役がIPアドレスです。まず試験でも問われる基礎(IPv4/IPv6・グローバル/プライベート・DHCP)を押さえ、その上で実務で使うサブネット設計・NAT・診断コマンドへと進みます。
         </Lead>
       </Hero>
 
-      <p>ネットワークを設計・運用する現場では、「層がどう積み重なっているか」よりも「このIPアドレスをどう区切るか」「通信がどこで止まっているか」といった、より具体的な判断を求められます。ここではサブネット設計・NAT・診断コマンドという3つの実務知識を順番に見ていきます。</p>
+      <Heading num="01">IPアドレスとは ― ネットワーク上の住所</Heading>
+      <p><Term>IPアドレス</Term>は、通信相手を特定するためのネットワーク上の「住所」です。従来の<Term>IPv4</Term>は32ビットで、<code>192.168.1.1</code>のように8ビットずつ4つに区切って表記します。組み合わせは約43億通りで、世界的なアドレス枯渇に備え、128ビットでけた違いに広い空間を持つ<Term>IPv6</Term>への移行が進んでいます。</p>
+      <p>用途によって2種類に分かれます。インターネット全体で一意に通用するのが<Term>グローバルIPアドレス</Term>、家庭や社内など閉じたネットワークの中だけで通用するのが<Term>プライベートIPアドレス</Term>(例: <code>192.168.x.x</code>)です。プライベートIPはそのままではインターネットに出られず、後述のNATでグローバルIPに変換されます。また、機器がネットワークに接続するたびに空いているIPアドレスを自動で割り当てる仕組みを<Term>DHCP</Term>と呼びます。</p>
 
-      <Heading num="01">サブネットとCIDR ― ネットワークをどう「区切る」か</Heading>
+      <Analogy label="💡 たとえるなら">
+        グローバルIPは「郵便が届く正式な住所」、プライベートIPは「社内の内線番号や座席番号」です。内線番号のままでは外から郵便は届かず、代表住所(グローバルIP)を経由する必要があります。DHCPは「出社のたびに空いている席を割り当てるフリーアドレス制」のようなものです。
+      </Analogy>
+
+      <Heading num="02">サブネットとCIDR ― ネットワークをどう「区切る」か</Heading>
       <p>1つのネットワークに機器を無制限につなぐのではなく、部署やフロアといった単位でネットワークを小さく区切ることを<Term>サブネット化(サブネッティング)</Term>と呼びます。区切ることで、通信の混雑を抑えたり、トラブルの影響範囲を限定したりできます。</p>
 
       <h3>サブネットマスクとCIDR表記</h3>
@@ -56,7 +62,7 @@ export default function Page() {
         CIDR表記は「郵便番号の桁数」に似ています。桁数が多いほど絞り込まれた狭い地域を指し、桁数が少ないほど広い地域をまとめて指します。<code>/24</code>は「町名まで」、<code>/16</code>は「市区までしか区切っていない」ようなイメージです。
       </Analogy>
 
-      <Heading num="02">デフォルトゲートウェイとルーティング ― 次にどこへ渡すか</Heading>
+      <Heading num="03">デフォルトゲートウェイとルーティング ― 次にどこへ渡すか</Heading>
       <p>同じサブネット内の機器同士は直接通信できますが、別のネットワークにいる相手と通信するには、いったん「出口」を経由する必要があります。この出口の役割を果たす機器のアドレスが<Term>デフォルトゲートウェイ</Term>です。多くの家庭用ネットワークでは、ルーターのLAN側アドレス(例: <code>192.168.1.1</code>)がこれにあたります。</p>
 
       <h3>ルーティングテーブル ― 「次にどこへ渡すか」の一覧表</h3>
@@ -74,8 +80,8 @@ export default function Page() {
         ルーティングテーブルは、交差点に立つ標識のようなものです。「この行き先ならこちらの道」と決まった案内がなければ、とりあえず「幹線道路(デフォルトゲートウェイ)」へ進むよう指示されます。
       </Analogy>
 
-      <Heading num="03">NAT ― プライベートIPとグローバルIPの変換</Heading>
-      <p>家庭やオフィスの中では、ルーターの配下にある機器へ<Term>プライベートIPアドレス</Term>(例: <code>192.168.1.10</code>)が割り当てられています。しかしインターネット上で一意に通用するのは<Term>グローバルIPアドレス</Term>だけです。この変換を担うのが<Term>NAT(Network Address Translation)</Term>です(プライベートIP・グローバルIPそのものの役割は「<Link href="/network/protocols">通信プロトコル</Link>」も参照)。</p>
+      <Heading num="04">NAT ― プライベートIPとグローバルIPの変換</Heading>
+      <p>家庭やオフィスの中では、ルーターの配下にある機器へ<Term>プライベートIPアドレス</Term>(例: <code>192.168.1.10</code>)が割り当てられています。しかしインターネット上で一意に通用するのは<Term>グローバルIPアドレス</Term>だけです。この変換を担うのが<Term>NAT(Network Address Translation)</Term>です。</p>
       <p>例えば社内の機器<code>192.168.1.10</code>がWebサイトへアクセスするとき、ルーターは送信元アドレスを自分のグローバルIPアドレス(例: <code>203.0.113.5</code>)に書き換えて外部へ送信します。応答が返ってくると、ルーターは「どの内部機器からの通信だったか」を対応表をもとに、正しい内部機器へ届け直します。ポート番号まで使って複数の内部機器を同時に区別する方式は、特に<Term>NAPT(IPマスカレード)</Term>と呼ばれます。</p>
 
       <Diagram caption="送信元IPを書き換えて外部と通信するNATの仕組み(模式図)">
@@ -111,7 +117,7 @@ export default function Page() {
         NATは会社の郵便室のようなものです。社員それぞれの席(プライベートIP)は社外には知られていませんが、外部への発送はすべて会社の代表住所(グローバルIP)から行われます。返信が届くと、郵便室が宛先を見て正しい社員の席まで配ります。
       </Analogy>
 
-      <Heading num="04">つながらないときに使う診断コマンド</Heading>
+      <Heading num="05">つながらないときに使う診断コマンド</Heading>
       <p>「インターネットにつながらない」というトラブルが起きたとき、闇雲に再起動するのではなく、どの段階でつまずいているかを切り分けるためのコマンド群があります。</p>
 
       <table>
@@ -149,17 +155,17 @@ export default function Page() {
           <p>複数の内部機器が1つのグローバルIPを共有し、対応表(ポート番号)で区別されます。</p>
         </Card>
       </CardGrid>
-      <p>ここまでは主に有線・IPレベルの実務知識でした。次は、同じネットワークの世界でもケーブルを使わない「Wi-Fi」が、電波を使ってどう機器をつなげているのかを見ていきましょう。</p>
+      <p>ここまでで、住所づけ(IP)から経路の判断(ルーティング・NAT)までを見てきました。次は、その1つ上でデータの届け先アプリを選ぶトランスポート層へ進みましょう。</p>
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/network/protocols" tag="ネットワーク">通信プロトコル</RelatedLink>
-          <RelatedLink href="/computer/basics" tag="コンピュータ">PCハードウェアの基礎</RelatedLink>
-          <RelatedLink href="/network/wifi" tag="ネットワーク">Wi-Fiの仕組み</RelatedLink>
+          <RelatedLink href="/network/transport" tag="ネットワーク">トランスポート層 ― TCPとUDP</RelatedLink>
+          <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル</RelatedLink>
+          <RelatedLink href="/network/topology" tag="ネットワーク">トポロジと接続装置</RelatedLink>
         </RelatedList>
       </RelatedNav>
 
-      <DocsFooter>Atlas &middot; ネットワーク &middot; IPアドレスとルーティングの実務</DocsFooter>
+      <DocsFooter>Atlas &middot; ネットワーク &middot; IPアドレスと経路</DocsFooter>
     </DocsPage>
   );
 }

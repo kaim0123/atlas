@@ -121,12 +121,19 @@ export const sections: NavSection[] = [
     title: "ネットワーク",
     icon: Network,
     tree: [
-      { href: "/network/protocols", title: "通信プロトコル" },
-      { href: "/network/ip", title: "IPアドレスとルーティング" },
-      { href: "/network/port", title: "ポートの全体像" },
-      { href: "/network/cabling", title: "ケーブルと規格" },
-      { href: "/network/devices", title: "ネットワーク機器の役割" },
-      { href: "/network/wifi", title: "Wi-Fiの仕組み" },
+      { href: "/network/basics", title: "ネットワークの全体像" },
+      { href: "/network/layers", title: "階層モデル" },
+      { href: "/network/topology", title: "トポロジと接続装置" },
+      { href: "/network/ip", title: "IPアドレスと経路" },
+      { href: "/network/transport", title: "トランスポート層" },
+      {
+        title: "データリンク層と物理層",
+        children: [
+          { href: "/network/link", title: "データリンク層と物理層" },
+          { href: "/network/link/wireless", title: "無線LAN(Wi-Fi)" },
+        ],
+      },
+      { href: "/network/applications", title: "アプリケーション層" },
     ],
   },
   {

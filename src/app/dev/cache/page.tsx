@@ -30,7 +30,7 @@ export default function Page() {
         <Eyebrow>開発</Eyebrow>
         <h1>キャッシュの全体像 ― 名前は同じでも、動く場所も目的も違う</h1>
         <Lead>
-          「<Link href="/computer/memory">メモリの仕組み</Link>」ではCPUの<Term>キャッシュメモリ</Term>を、「<Link href="/internet/web">Webの仕組み</Link>」ではDNSの問い合わせ結果を、「<Link href="/network/protocols">通信プロトコル</Link>」では<code>Cache-Control</code>ヘッダを、それぞれ見てきました。実は「キャッシュ」という同じ言葉が、1台のコンピュータの内部からインターネットの向こう側まで、何段階にもわたって登場します。このページでは、それらを1枚の地図として整理します。
+          「<Link href="/computer/memory">メモリの仕組み</Link>」ではCPUの<Term>キャッシュメモリ</Term>を、「<Link href="/internet/web">Webの仕組み</Link>」ではDNSの問い合わせ結果を、「<Link href="/network/applications">アプリケーション層</Link>」では<code>Cache-Control</code>ヘッダを、それぞれ見てきました。実は「キャッシュ」という同じ言葉が、1台のコンピュータの内部からインターネットの向こう側まで、何段階にもわたって登場します。このページでは、それらを1枚の地図として整理します。
         </Lead>
       </Hero>
 
@@ -94,7 +94,7 @@ export default function Page() {
       </Diagram>
 
       <h3>ブラウザキャッシュ ― 自分専用の手元の保存棚</h3>
-      <p>一度読み込んだ画像・CSS・JavaScriptファイルなどを、自分のブラウザの中に保存しておく仕組みです。同じサイトに再訪問したとき、サーバーへ取りに行かずに済むため表示が速くなります。どれくらいの期間保存してよいかは、サーバーが返す<code>Cache-Control</code>ヘッダで指示します(詳しくは「<Link href="/network/protocols">通信プロトコル</Link>」)。</p>
+      <p>一度読み込んだ画像・CSS・JavaScriptファイルなどを、自分のブラウザの中に保存しておく仕組みです。同じサイトに再訪問したとき、サーバーへ取りに行かずに済むため表示が速くなります。どれくらいの期間保存してよいかは、サーバーが返す<code>Cache-Control</code>ヘッダで指示します(詳しくは「<Link href="/network/applications">アプリケーション層</Link>」)。</p>
 
       <h3>DNSキャッシュ ― 一度調べた住所を覚えておく</h3>
       <p>「<Link href="/internet/web">Webの仕組み</Link>」で見た通り、ホスト名からIPアドレスへの変換結果を一定時間覚えておくキャッシュです。ブラウザ自身や、その先のOS・DNSサーバーなど、複数の場所で行われています。</p>

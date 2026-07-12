@@ -35,7 +35,7 @@ export default function Page() {
       </Hero>
 
       <Heading num="01">VPC ― 自分専用の仮想ネットワーク</Heading>
-      <p><Term>VPC(Virtual Private Cloud)</Term>は、AWS上に自分専用の論理的に隔離されたネットワーク区画を作る仕組みです。<Link href="/network/protocols">通信プロトコル</Link>ページで見たIPアドレスの範囲(CIDR)を自分で決め、その中を<Term>サブネット</Term>という単位でさらに区切って使います。</p>
+      <p><Term>VPC(Virtual Private Cloud)</Term>は、AWS上に自分専用の論理的に隔離されたネットワーク区画を作る仕組みです。<Link href="/network/ip">IPアドレスと経路</Link>ページで見たIPアドレスの範囲(CIDR)を自分で決め、その中を<Term>サブネット</Term>という単位でさらに区切って使います。</p>
 
       <table>
         <thead>
@@ -94,7 +94,7 @@ export default function Page() {
         <RelatedList>
           <RelatedLink href="/infra/aws/security" tag="AWS">セキュリティ、アイデンティティ、コンプライアンス</RelatedLink>
           <RelatedLink href="/infra/aws/compute" tag="AWS">コンピューティング</RelatedLink>
-          <RelatedLink href="/network/protocols" tag="ネットワーク">通信プロトコル</RelatedLink>
+          <RelatedLink href="/network/ip" tag="ネットワーク">IPアドレスと経路</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

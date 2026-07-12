@@ -163,7 +163,7 @@ export default function Page() {
           <RelatedLink href="/computer/cpu" tag="コンピュータ">CPUと命令実行</RelatedLink>
           <RelatedLink href="/network/ip" tag="ネットワーク">IPアドレスとルーティングの実務</RelatedLink>
           <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み</RelatedLink>
-          <RelatedLink href="/network/wifi" tag="ネットワーク">Wi-Fiの仕組み</RelatedLink>
+          <RelatedLink href="/network/link/wireless" tag="ネットワーク">無線LAN(Wi-Fi)</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

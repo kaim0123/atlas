@@ -145,7 +145,7 @@ export default function Page() {
       <RelatedNav>
         <RelatedList>
           <RelatedLink href="/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
-          <RelatedLink href="/network/devices" tag="ネットワーク">ネットワーク機器の役割分担</RelatedLink>
+          <RelatedLink href="/network/topology" tag="ネットワーク">トポロジと接続装置</RelatedLink>
           <RelatedLink href="/internet/isp" tag="インターネット">ISP接続とCDN</RelatedLink>
         </RelatedList>
       </RelatedNav>

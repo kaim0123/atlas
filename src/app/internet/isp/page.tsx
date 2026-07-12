@@ -30,14 +30,14 @@ export default function Page() {
         <Eyebrow>インターネット</Eyebrow>
         <h1>ISP接続とCDN ― インターネットへの入り口</h1>
         <Lead>
-          「<Link href="/network/devices">ネットワーク機器の役割</Link>」ではルーターがインターネットへの出口だと説明しましたが、そのルーターの先に広がる「インターネットそのもの」を実際に提供しているのは誰なのでしょうか。ここではISP(プロバイダ)という会社の役割と、Webサイトを速く届けるCDNの仕組みを見ていきます。
+          「<Link href="/network/topology">トポロジと接続装置</Link>」ではルーターがインターネットへの出口だと説明しましたが、そのルーターの先に広がる「インターネットそのもの」を実際に提供しているのは誰なのでしょうか。ここではISP(プロバイダ)という会社の役割と、Webサイトを速く届けるCDNの仕組みを見ていきます。
         </Lead>
       </Hero>
 
       <p>なお、名前をIPアドレスに変換する<Term>DNS</Term>の仕組みそのものや、通信を暗号化する<Term>HTTPS/TLS</Term>の仕組みそのものは、それぞれ「<Link href="/internet/dns">DNS</Link>」「<Link href="/internet/web">Webの仕組み</Link>」で詳しく扱っています。ここでは重複を避け、ISPやCDNが「何のために」それらの技術を使っているかに絞って説明します。</p>
 
       <Heading num="01">ISP(プロバイダ)とは何をしている会社か</Heading>
-      <p><Term>ISP(Internet Service Provider)</Term>は、家庭やオフィスを世界中のネットワークがつながる「インターネット」本体に接続する会社です。「<Link href="/network/devices">ネットワーク機器の役割</Link>」で見たルーターは、あくまで自宅・社内のネットワークとインターネットの境目に立つ機器にすぎません。その先、実際にネットワークとネットワークをつなぎ合わせている回線・設備・契約を提供しているのがISPです。</p>
+      <p><Term>ISP(Internet Service Provider)</Term>は、家庭やオフィスを世界中のネットワークがつながる「インターネット」本体に接続する会社です。「<Link href="/network/topology">トポロジと接続装置</Link>」で見たルーターは、あくまで自宅・社内のネットワークとインターネットの境目に立つ機器にすぎません。その先、実際にネットワークとネットワークをつなぎ合わせている回線・設備・契約を提供しているのがISPです。</p>
       <p>日本では、光ファイバーなどの物理的な回線を敷設・保守する<Term>回線事業者</Term>(例: NTT東西のフレッツ光)と、その回線を借りてインターネットへの接続サービスを提供する<Term>ISP</Term>(例: 「〇〇プロバイダ」を名乗る各社)が分かれていることが多く、これが「回線契約」と「プロバイダ契約」が別々に必要になる理由です。</p>
 
       <Heading num="02">PPPoEとIPoE ― 接続方式の違い</Heading>
@@ -60,7 +60,7 @@ export default function Page() {
       </Analogy>
 
       <Heading num="03">IPv4アドレス枯渇とIPv6</Heading>
-      <p>「<Link href="/network/protocols">通信プロトコル</Link>」で見た通り、従来の<Term>IPv4</Term>は32ビットで表現されるアドレスで、割り当てられる組み合わせは約43億個しかありません。インターネットに接続する機器が爆発的に増えた結果、新規に配布できるIPv4アドレスは各地域の管理団体ですでに払底しています。</p>
+      <p>「<Link href="/network/ip">IPアドレスと経路</Link>」で見た通り、従来の<Term>IPv4</Term>は32ビットで表現されるアドレスで、割り当てられる組み合わせは約43億個しかありません。インターネットに接続する機器が爆発的に増えた結果、新規に配布できるIPv4アドレスは各地域の管理団体ですでに払底しています。</p>
       <p>この不足を補うため、ISPは複数の利用者で少数のグローバルIPv4アドレスを共有する<Term>CGNAT(キャリアグレードNAT)</Term>のような技術で当座をしのぎつつ、128ビットで事実上無尽蔵のアドレス空間を持つ<Term>IPv6</Term>への移行を進めています。IPoEが近年広まっている背景にも、このIPv6への移行という文脈があります。</p>
 
       <Heading num="04">CDN ― なぜ物理的に近いサーバーから配信すると速いのか</Heading>
@@ -110,7 +110,7 @@ export default function Page() {
       <Heading num="05">プロキシ ― フォワード型とリバース型</Heading>
       <p><Term>プロキシ</Term>は、クライアントとサーバーの間に立ち、通信を代理で仲介する仕組みです。どちら側の代理人として立つかによって、大きく2種類に分かれます。</p>
       <p><Term>フォワードプロキシ</Term>は、クライアント側の代理人です。社内ネットワークの端末がインターネットへ出ていく手前に置かれ、「どのサイトへのアクセスを許可するか」というフィルタリングや、よくアクセスされるコンテンツのキャッシュなどを行います。サーバー側からは、実際の利用者ではなくフォワードプロキシが通信してきたように見えます。</p>
-      <p><Term>リバースプロキシ</Term>は、逆にサーバー側の代理人です。クライアントからは1つの窓口に見えますが、実際にはその裏で複数のサーバーへ処理を振り分けています。「<Link href="/network/devices">ネットワーク機器の役割</Link>」で見たロードバランサや、この記事で見たCDNのエッジサーバーも、広い意味ではリバースプロキシの一種です。</p>
+      <p><Term>リバースプロキシ</Term>は、逆にサーバー側の代理人です。クライアントからは1つの窓口に見えますが、実際にはその裏で複数のサーバーへ処理を振り分けています。「<Link href="/network/topology">トポロジと接続装置</Link>」で見たロードバランサや、この記事で見たCDNのエッジサーバーも、広い意味ではリバースプロキシの一種です。</p>
 
       <table>
         <tbody>
@@ -147,7 +147,7 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/network/devices" tag="ネットワーク">ネットワーク機器の役割分担</RelatedLink>
+          <RelatedLink href="/network/topology" tag="ネットワーク">トポロジと接続装置</RelatedLink>
           <RelatedLink href="/internet/dns" tag="インターネット">DNS ― 名前をIPアドレスに変える電話帳</RelatedLink>
           <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み ― URLからレンダリングまで</RelatedLink>
         </RelatedList>
