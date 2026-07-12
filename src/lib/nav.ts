@@ -1,4 +1,5 @@
 import {
+  Sigma,
   Cpu,
   Network,
   Globe,
@@ -25,6 +26,22 @@ export type NavSection = {
 };
 
 export const sections: NavSection[] = [
+  {
+    href: "/theory",
+    title: "情報科学",
+    icon: Sigma,
+    tree: [
+      { href: "/theory/numbers", title: "数と基数変換" },
+      { href: "/theory/numbers/floating", title: "浮動小数点と演算精度" },
+      { href: "/theory/logic", title: "論理と真理値表" },
+      { href: "/theory/probability", title: "確率・統計と情報理論" },
+      { href: "/theory/probability/inference", title: "推定と仮説検定" },
+      { href: "/theory/encoding", title: "文字コード" },
+      { href: "/theory/algorithms", title: "アルゴリズムとデータ構造" },
+      { href: "/theory/algorithms/graphs", title: "グラフと最短経路" },
+      { href: "/theory/formal", title: "形式言語" },
+    ],
+  },
   {
     href: "/computer",
     title: "コンピュータ",
