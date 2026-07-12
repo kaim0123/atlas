@@ -43,14 +43,29 @@ Atlas
 
 ## 1. computer/ — コンピュータ ★旧 hardware
 
+e-Words「コンピュータシステム」を学習順(A 機械 → B ソフトウェア → C システム構成)で再構成。詳細計画は [`05content-plan/02_コンピュータシステム/ディレクトリ.md`](02_コンピュータシステム/ディレクトリ.md)。
+
 ```
 computer/
 ├── page.tsx          ✓ 索引
-├── history/  ✓ ← cs/hardware-history   コンピュータの歴史
-├── basics/   ✓ ← cs/hardware           PCハードウェアの基礎
-├── memory/   ✓ ← cs/memory             メモリの仕組み
-├── os/       ✓ ← cs/os                 OSの仕組み
-└── (＋ 実機:cpu / gpu / disk / boot〈BIOS/UEFI/TPM/Secure Boot〉)  フェーズ2
+├── history/       ✓  コンピュータの歴史(e-Words 範囲外・入口)
+├── basics/        ✓  PCハードウェアの基礎(五大装置を Heading 00 に追加)
+├── semiconductor/ ✓  半導体(全体像/transistor/logic/adder)   A-2
+├── cpu/           ✓  CPUと命令実行                           A-3
+│   └── performance/  性能と高速化                            A-4
+├── memory/        ✓  メモリの仕組み(+ speed/stack/history/virtual)  A-6
+├── io/            ✓  入出力                                  A-7〜A-9
+│   ├── bus/          バス
+│   ├── interface/    入出力インタフェース(basics の USB 詳細を移設)
+│   └── devices/      入出力装置
+├── os/            ✓  OSの仕組み(+ kernel/process/syscall/shell/filesystem/歴史)  B
+│   └── memory/       記憶管理と仮想記憶(ページング・LRU・スラッシング)  B-3
+├── system/           システム構成                            C-1〜C-3
+│   ├── architecture/ 処理形態とシステム構成
+│   ├── reliability/  信頼性と冗長化
+│   └── metrics/      性能と経済性の評価
+├── client/        ✓  クライアント管理の実務(io/devices からリンク)
+└── printer/       ✓  プリンターの仕組み(io/devices からリンク)
 ```
 
 ## 2. network/ — ネットワーク

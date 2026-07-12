@@ -59,6 +59,13 @@ export const sections: NavSection[] = [
         ],
       },
       {
+        title: "CPU",
+        children: [
+          { href: "/computer/cpu", title: "CPUと命令実行" },
+          { href: "/computer/cpu/performance", title: "性能と高速化" },
+        ],
+      },
+      {
         title: "メモリ",
         children: [
           { href: "/computer/memory", title: "メモリの仕組み" },
@@ -69,11 +76,20 @@ export const sections: NavSection[] = [
         ],
       },
       {
+        title: "入出力",
+        children: [
+          { href: "/computer/io/bus", title: "バス" },
+          { href: "/computer/io/interface", title: "入出力インタフェース" },
+          { href: "/computer/io/devices", title: "入出力装置" },
+        ],
+      },
+      {
         title: "OS",
         children: [
           { href: "/computer/os", title: "OSの仕組み" },
           { href: "/computer/os/kernel", title: "カーネルの役割と設計" },
           { href: "/computer/os/process", title: "プロセスとスレッド" },
+          { href: "/computer/os/memory", title: "記憶管理と仮想記憶" },
           { href: "/computer/os/syscall", title: "システムコール" },
           { href: "/computer/os/shell", title: "シェル" },
           { href: "/computer/os/filesystem", title: "ファイルシステム" },
@@ -86,6 +102,14 @@ export const sections: NavSection[] = [
               { href: "/computer/os/linux", title: "Linuxの歴史" },
             ],
           },
+        ],
+      },
+      {
+        title: "システム構成",
+        children: [
+          { href: "/computer/system/architecture", title: "処理形態とシステム構成" },
+          { href: "/computer/system/reliability", title: "信頼性と冗長化" },
+          { href: "/computer/system/metrics", title: "性能と経済性の評価" },
         ],
       },
       { href: "/computer/client", title: "クライアント管理の実務" },

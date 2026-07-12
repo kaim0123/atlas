@@ -25,6 +25,7 @@ import {
 const subTopics = [
   { href: "/computer/os/kernel", title: "カーネルの役割と設計", desc: "OSの中核・4層構造・モノリシック/マイクロ・特権モード" },
   { href: "/computer/os/process", title: "プロセスとスレッド", desc: "メモリ空間・PCB・スケジューリング・IPC・fork/exec" },
+  { href: "/computer/os/memory", title: "記憶管理と仮想記憶", desc: "区画・スワッピング・ページング・LRU/FIFO・スラッシング" },
   { href: "/computer/os/syscall", title: "システムコール", desc: "アプリとカーネルをつなぐ唯一の窓口とその内部動作" },
   { href: "/computer/os/shell", title: "シェル", desc: "コマンドを解釈する殻 ― sh・Bash・zshの系譜" },
   { href: "/computer/os/filesystem", title: "ファイルシステム", desc: "FAT・NTFS・ext・APFS ― データを配置し守る仕組み" },
