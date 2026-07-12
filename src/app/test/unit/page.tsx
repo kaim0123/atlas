@@ -104,7 +104,7 @@ export default function Page() {
         <RelatedList>
           <RelatedLink href="/test/strategy" tag="テスト">品質戦略とテストピラミッド</RelatedLink>
           <RelatedLink href="/test/integration" tag="テスト">Integrationテスト</RelatedLink>
-          <RelatedLink href="/sdlc/testing/levels" tag="開発技術">テストの段階</RelatedLink>
+          <RelatedLink href="/test/strategy" tag="テスト">テストの段階</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

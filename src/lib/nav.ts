@@ -1,6 +1,7 @@
 import {
   Sigma,
   Cpu,
+  MonitorCog,
   Network,
   Globe,
   Database,
@@ -11,6 +12,8 @@ import {
   AppWindow,
   Palette,
   Server,
+  Cloud,
+  Activity,
   Settings2,
   Workflow,
   type LucideIcon,
@@ -88,27 +91,6 @@ export const sections: NavSection[] = [
         ],
       },
       {
-        title: "OS",
-        children: [
-          { href: "/computer/os", title: "OSの仕組み" },
-          { href: "/computer/os/kernel", title: "カーネルの役割と設計" },
-          { href: "/computer/os/process", title: "プロセスとスレッド" },
-          { href: "/computer/os/memory", title: "記憶管理と仮想記憶" },
-          { href: "/computer/os/syscall", title: "システムコール" },
-          { href: "/computer/os/shell", title: "シェル" },
-          { href: "/computer/os/filesystem", title: "ファイルシステム" },
-          {
-            title: "歴史と系譜",
-            children: [
-              { href: "/computer/os/unix", title: "UNIXの歴史と哲学" },
-              { href: "/computer/os/posix", title: "UNIX・BSD・Linuxの違い" },
-              { href: "/computer/os/gnu", title: "GNUとフリーソフトウェア" },
-              { href: "/computer/os/linux", title: "Linuxの歴史" },
-            ],
-          },
-        ],
-      },
-      {
         title: "システム構成",
         children: [
           { href: "/computer/system/architecture", title: "処理形態とシステム構成" },
@@ -118,6 +100,29 @@ export const sections: NavSection[] = [
       },
       { href: "/computer/client", title: "クライアント管理の実務" },
       { href: "/computer/printer", title: "プリンターの仕組み" },
+    ],
+  },
+  {
+    href: "/os",
+    title: "OS",
+    icon: MonitorCog,
+    tree: [
+      { href: "/os", title: "OSの仕組み" },
+      { href: "/os/kernel", title: "カーネルの役割と設計" },
+      { href: "/os/process", title: "プロセスとスレッド" },
+      { href: "/os/memory", title: "記憶管理と仮想記憶" },
+      { href: "/os/syscall", title: "システムコール" },
+      { href: "/os/shell", title: "シェル" },
+      { href: "/os/filesystem", title: "ファイルシステム" },
+      {
+        title: "歴史と系譜",
+        children: [
+          { href: "/os/unix", title: "UNIXの歴史と哲学" },
+          { href: "/os/posix", title: "UNIX・BSD・Linuxの違い" },
+          { href: "/os/gnu", title: "GNUとフリーソフトウェア" },
+          { href: "/os/linux", title: "Linuxの歴史" },
+        ],
+      },
     ],
   },
   {
@@ -165,11 +170,13 @@ export const sections: NavSection[] = [
       { href: "/database/sql", title: "SQLとデータ操作" },
       { href: "/database/transaction", title: "トランザクションと整合性" },
       { href: "/database/advanced/index", title: "索引とアクセス制御" },
+      { href: "/database/physical", title: "物理設計と運用" },
+      { href: "/database/history", title: "データベースの歴史" },
     ],
   },
   {
     href: "/sdlc",
-    title: "開発技術",
+    title: "開発工程・管理",
     icon: Workflow,
     tree: [
       { href: "/sdlc/overview", title: "開発の全体像" },
@@ -177,24 +184,9 @@ export const sections: NavSection[] = [
       { href: "/sdlc/process/agile", title: "スクラムとアジャイル実践" },
       { href: "/sdlc/requirements", title: "要件定義" },
       { href: "/sdlc/requirements/modeling", title: "要件の表現方法" },
-      {
-        title: "設計",
-        children: [
-          { href: "/sdlc/design/basics", title: "設計の全体像" },
-          { href: "/sdlc/design/structured", title: "構造化設計" },
-          { href: "/sdlc/design/data-centered", title: "データ中心設計" },
-          { href: "/sdlc/design/object", title: "オブジェクト指向設計" },
-          { href: "/sdlc/design/architecture", title: "システム構成とアーキテクチャ" },
-        ],
-      },
-      { href: "/sdlc/implementation", title: "実装" },
-      {
-        title: "テスト",
-        children: [
-          { href: "/sdlc/testing/levels", title: "テストの段階" },
-          { href: "/sdlc/testing/techniques", title: "テスト技法" },
-        ],
-      },
+      { href: "/design", title: "設計（設計セクションへ）" },
+      { href: "/dev/implementation", title: "実装" },
+      { href: "/test", title: "テスト（テストセクションへ）" },
       { href: "/sdlc/review", title: "レビューと品質確認" },
       { href: "/sdlc/deployment", title: "導入と受入れ" },
       { href: "/sdlc/maintenance", title: "保守" },
@@ -247,14 +239,7 @@ export const sections: NavSection[] = [
           { href: "/dev/framework/tailwind", title: "Tailwind CSS" },
         ],
       },
-      {
-        title: "データベース(追補)",
-        children: [
-          { href: "/dev/database", title: "データベース(開発者向け)" },
-          { href: "/dev/database/physical", title: "物理設計と運用" },
-          { href: "/dev/database/history", title: "データベースの歴史" },
-        ],
-      },
+      { href: "/dev/implementation", title: "実装" },
       { href: "/dev/cache", title: "キャッシュの全体像" },
     ],
   },
@@ -486,72 +471,88 @@ export const sections: NavSection[] = [
       },
       { href: "/infra/storage", title: "ストレージの仕組み" },
       { href: "/infra/storage/backup", title: "バックアップと復旧" },
-      { href: "/infra/monitoring", title: "インフラの監視" },
       { href: "/infra/incident", title: "インフラ障害の切り分け" },
+    ],
+  },
+  {
+    href: "/cloud",
+    title: "クラウド",
+    icon: Cloud,
+    tree: [
+      { href: "/cloud", title: "クラウドの全体像" },
       {
         title: "AWS",
         children: [
-          { href: "/infra/aws", title: "AWS概要" },
-          { href: "/infra/aws/basics", title: "AWSの基礎" },
+          { href: "/cloud/aws", title: "AWS概要" },
+          { href: "/cloud/aws/basics", title: "AWSの基礎" },
           {
             title: "コンピューティング",
             children: [
-              { href: "/infra/aws/compute", title: "コンピューティング概要" },
-              { href: "/infra/aws/compute/lambda", title: "Lambda" },
+              { href: "/cloud/aws/compute", title: "コンピューティング概要" },
+              { href: "/cloud/aws/compute/lambda", title: "Lambda" },
             ],
           },
           {
             title: "ストレージ",
             children: [
-              { href: "/infra/aws/storage", title: "ストレージ概要" },
-              { href: "/infra/aws/storage/s3", title: "S3" },
+              { href: "/cloud/aws/storage", title: "ストレージ概要" },
+              { href: "/cloud/aws/storage/s3", title: "S3" },
             ],
           },
           {
             title: "ネットワーキングとコンテンツ配信",
             children: [
-              { href: "/infra/aws/network", title: "ネットワーキングとコンテンツ配信概要" },
-              { href: "/infra/aws/network/route53", title: "Route 53" },
-              { href: "/infra/aws/network/cloudfront", title: "CloudFront" },
-              { href: "/infra/aws/network/acm", title: "ACM" },
+              { href: "/cloud/aws/network", title: "ネットワーキングとコンテンツ配信概要" },
+              { href: "/cloud/aws/network/route53", title: "Route 53" },
+              { href: "/cloud/aws/network/cloudfront", title: "CloudFront" },
+              { href: "/cloud/aws/network/acm", title: "ACM" },
             ],
           },
           {
             title: "セキュリティ、アイデンティティ、コンプライアンス",
             children: [
-              { href: "/infra/aws/security", title: "セキュリティ、アイデンティティ、コンプライアンス概要" },
-              { href: "/infra/aws/security/secrets-manager", title: "Secrets Manager" },
+              { href: "/cloud/aws/security", title: "セキュリティ、アイデンティティ、コンプライアンス概要" },
+              { href: "/cloud/aws/security/secrets-manager", title: "Secrets Manager" },
             ],
           },
-          { href: "/infra/aws/database", title: "データベース" },
+          { href: "/cloud/aws/database", title: "データベース" },
           {
             title: "モニタリングと管理",
             children: [
-              { href: "/infra/aws/monitoring", title: "モニタリングと管理概要" },
-              { href: "/infra/aws/monitoring/cloudwatch", title: "CloudWatch" },
+              { href: "/cloud/aws/monitoring", title: "モニタリングと管理概要" },
+              { href: "/cloud/aws/monitoring/cloudwatch", title: "CloudWatch" },
             ],
           },
-          { href: "/infra/aws/container", title: "コンテナ" },
+          { href: "/cloud/aws/container", title: "コンテナ" },
           {
             title: "CI/CD",
             children: [
-              { href: "/infra/aws/cicd", title: "CI/CD概要" },
-              { href: "/infra/aws/cicd/codebuild", title: "CodeBuild" },
-              { href: "/infra/aws/cicd/codepipeline", title: "CodePipeline" },
+              { href: "/cloud/aws/cicd", title: "CI/CD概要" },
+              { href: "/cloud/aws/cicd/codebuild", title: "CodeBuild" },
+              { href: "/cloud/aws/cicd/codepipeline", title: "CodePipeline" },
             ],
           },
           {
             title: "アプリケーション統合",
             children: [
-              { href: "/infra/aws/integration", title: "アプリケーション統合概要" },
-              { href: "/infra/aws/integration/sqs", title: "SQS" },
-              { href: "/infra/aws/integration/sns", title: "SNS" },
-              { href: "/infra/aws/integration/eventbridge", title: "EventBridge" },
+              { href: "/cloud/aws/integration", title: "アプリケーション統合概要" },
+              { href: "/cloud/aws/integration/sqs", title: "SQS" },
+              { href: "/cloud/aws/integration/sns", title: "SNS" },
+              { href: "/cloud/aws/integration/eventbridge", title: "EventBridge" },
             ],
           },
-          { href: "/infra/aws/iac", title: "IaC" },
+          { href: "/cloud/aws/iac", title: "IaC" },
         ],
       },
+    ],
+  },
+  {
+    href: "/monitoring",
+    title: "監視",
+    icon: Activity,
+    tree: [
+      { href: "/monitoring", title: "監視・保守" },
+      { href: "/monitoring/infra", title: "インフラの監視" },
     ],
   },
   {
@@ -560,7 +561,6 @@ export const sections: NavSection[] = [
     icon: Settings2,
     tree: [
       { href: "/ops/deploy", title: "インフラとデプロイ" },
-      { href: "/ops/monitoring", title: "監視・保守" },
       { href: "/ops/performance", title: "パフォーマンス" },
       { href: "/ops/data", title: "データ管理" },
       { href: "/ops/analytics", title: "分析・改善" },

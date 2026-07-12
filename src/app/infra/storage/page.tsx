@@ -109,7 +109,7 @@ export default function Page() {
       </Analogy>
 
       <Aside label="関連ページ">
-        ここで扱うRAIDは、社内のNAS/SANなど<strong>インフラ全体の冗長化</strong>という情シス視点の整理です。データベース1台の物理設計としてのRAID活用については「<Link href="/dev/database/physical">物理設計と運用</Link>」も参照してください。
+        ここで扱うRAIDは、社内のNAS/SANなど<strong>インフラ全体の冗長化</strong>という情シス視点の整理です。データベース1台の物理設計としてのRAID活用については「<Link href="/database/physical">物理設計と運用</Link>」も参照してください。
       </Aside>
 
       <Heading num="03">オブジェクトストレージ ― ファイル/ブロックとの違い</Heading>
@@ -150,7 +150,7 @@ export default function Page() {
         <RelatedList>
           <RelatedLink href="/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
           <RelatedLink href="/infra/virtualization" tag="インフラ">仮想化の仕組み</RelatedLink>
-          <RelatedLink href="/dev/database/physical" tag="開発">物理設計と運用</RelatedLink>
+          <RelatedLink href="/database/physical" tag="データベース">物理設計と運用</RelatedLink>
           <RelatedLink href="/ops/data" tag="運用">データ管理 ― バックアップ・リストア戦略</RelatedLink>
         </RelatedList>
       </RelatedNav>

@@ -94,7 +94,7 @@ export default function Page() {
           <tr><td className="hl">増分バックアップ</td><td>直前の(方式を問わない)バックアップからの変更分</td><td>取得は軽量だが、復元は完全＋すべての増分を順に適用する</td></tr>
         </tbody>
       </table>
-      <p>完全バックアップを復元(リストア)したうえで、そこから障害直前までのログを再生(ロールフォワード)すれば、直近の状態まで復旧できます。RAIDによるディスク冗長化やレプリケーションなど、より実務的な物理設計・運用は「<Link href="/dev/database/physical">物理設計と運用</Link>」で詳しく扱います。</p>
+      <p>完全バックアップを復元(リストア)したうえで、そこから障害直前までのログを再生(ロールフォワード)すれば、直近の状態まで復旧できます。RAIDによるディスク冗長化やレプリケーションなど、より実務的な物理設計・運用は「<Link href="/database/physical">物理設計と運用</Link>」で詳しく扱います。</p>
 
       <Heading num="まとめ">一貫性を守る3つの仕組み</Heading>
       <CardGrid>
@@ -106,7 +106,7 @@ export default function Page() {
       <RelatedNav>
         <RelatedList>
           <RelatedLink href="/database/sql" tag="データベース">SQLとデータ操作</RelatedLink>
-          <RelatedLink href="/dev/database/physical" tag="開発">物理設計と運用</RelatedLink>
+          <RelatedLink href="/database/physical" tag="データベース">物理設計と運用</RelatedLink>
           <RelatedLink href="/database/advanced/index" tag="データベース">索引とアクセス制御</RelatedLink>
         </RelatedList>
       </RelatedNav>

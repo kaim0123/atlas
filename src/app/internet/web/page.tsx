@@ -297,7 +297,7 @@ export default function Page() {
         <RelatedList>
           <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル ― OSI参照モデルとTCP/IP</RelatedLink>
           <RelatedLink href="/internet/history" tag="インターネット">インターネットの歴史</RelatedLink>
-          <RelatedLink href="/computer/os" tag="コンピュータ">OSの仕組み</RelatedLink>
+          <RelatedLink href="/os" tag="OS">OSの仕組み</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

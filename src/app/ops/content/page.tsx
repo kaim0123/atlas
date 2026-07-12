@@ -52,7 +52,7 @@ export default function Page() {
       </Analogy>
 
       <Heading num="02">画像・メディア管理</Heading>
-      <p>記事本文と画像・動画などのメディアファイルは、ライフサイクルが異なるため別々に管理されるのが一般的です。メディアは<Link href="/infra/aws/storage">オブジェクトストレージ</Link>に置き、CDN経由で配信することで、テキストの更新頻度とファイル配信の負荷を分離できます。アップロード時に自動でリサイズ・次世代フォーマットへの変換を行う仕組みを挟んでおくと、執筆者が意識せずとも<Link href="/ops/performance">パフォーマンス</Link>が保たれます。</p>
+      <p>記事本文と画像・動画などのメディアファイルは、ライフサイクルが異なるため別々に管理されるのが一般的です。メディアは<Link href="/cloud/aws/storage">オブジェクトストレージ</Link>に置き、CDN経由で配信することで、テキストの更新頻度とファイル配信の負荷を分離できます。アップロード時に自動でリサイズ・次世代フォーマットへの変換を行う仕組みを挟んでおくと、執筆者が意識せずとも<Link href="/ops/performance">パフォーマンス</Link>が保たれます。</p>
 
       <Heading num="03">公開フロー</Heading>
       <p>コード変更のPRレビューと同じように、コンテンツにも「公開する前に確認する」工程を設けます。</p>
@@ -84,7 +84,7 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/infra/aws/storage" tag="AWS">ストレージ</RelatedLink>
+          <RelatedLink href="/cloud/aws/storage" tag="AWS">ストレージ</RelatedLink>
           <RelatedLink href="/ops/performance" tag="運用">パフォーマンス</RelatedLink>
           <RelatedLink href="/ops/deploy" tag="運用">インフラとデプロイ</RelatedLink>
         </RelatedList>

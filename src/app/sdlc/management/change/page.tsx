@@ -25,7 +25,7 @@ export default function Page() {
   return (
     <DocsPage>
       <Hero>
-        <Eyebrow>開発技術</Eyebrow>
+        <Eyebrow>開発工程・管理</Eyebrow>
         <h1>変更管理 ― 変更を勝手に入れさせない</h1>
         <Lead>
           稼働中のシステムや進行中の開発に変更を加えるとき、思いつきで手を入れると、影響が読めないまま別の場所が壊れます。<Term>変更管理</Term>は、変更の要求を受け付け、影響を評価し、承認してから反映するという手順を定め、システムの一貫性を保つ仕組みです。
@@ -62,13 +62,13 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/sdlc/management/config" tag="開発技術">構成管理</RelatedLink>
-          <RelatedLink href="/sdlc/maintenance" tag="開発技術">保守</RelatedLink>
-          <RelatedLink href="/sdlc/overview" tag="開発技術">開発の全体像</RelatedLink>
+          <RelatedLink href="/sdlc/management/config" tag="開発工程・管理">構成管理</RelatedLink>
+          <RelatedLink href="/sdlc/maintenance" tag="開発工程・管理">保守</RelatedLink>
+          <RelatedLink href="/sdlc/overview" tag="開発工程・管理">開発の全体像</RelatedLink>
         </RelatedList>
       </RelatedNav>
 
-      <DocsFooter>Atlas &middot; 開発技術 &middot; 変更管理</DocsFooter>
+      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; 変更管理</DocsFooter>
     </DocsPage>
   );
 }

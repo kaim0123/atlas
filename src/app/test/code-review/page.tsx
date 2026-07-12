@@ -99,7 +99,7 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/sdlc/review" tag="開発技術">レビューと品質確認</RelatedLink>
+          <RelatedLink href="/sdlc/review" tag="開発工程・管理">レビューと品質確認</RelatedLink>
           <RelatedLink href="/test/design-techniques" tag="テスト">テスト設計技法</RelatedLink>
           <RelatedLink href="/test/quality-plan" tag="テスト">品質計画</RelatedLink>
         </RelatedList>

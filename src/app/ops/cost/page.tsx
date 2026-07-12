@@ -33,7 +33,7 @@ export default function Page() {
       </Hero>
 
       <Heading num="01">クラウド費用の内訳</Heading>
-      <p>クラウドの請求は、性質の異なる複数の要素の合計です。<Link href="/infra/aws/compute">コンピューティング</Link>・<Link href="/infra/aws/storage">ストレージ</Link>ページで扱った各サービスは、この4つのどれか(または複数)で課金されています。</p>
+      <p>クラウドの請求は、性質の異なる複数の要素の合計です。<Link href="/cloud/aws/compute">コンピューティング</Link>・<Link href="/cloud/aws/storage">ストレージ</Link>ページで扱った各サービスは、この4つのどれか(または複数)で課金されています。</p>
 
       <table>
         <thead>
@@ -89,9 +89,9 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/infra/aws/compute" tag="AWS">コンピューティング</RelatedLink>
-          <RelatedLink href="/infra/aws/storage" tag="AWS">ストレージ</RelatedLink>
-          <RelatedLink href="/ops/monitoring" tag="運用">監視・保守</RelatedLink>
+          <RelatedLink href="/cloud/aws/compute" tag="AWS">コンピューティング</RelatedLink>
+          <RelatedLink href="/cloud/aws/storage" tag="AWS">ストレージ</RelatedLink>
+          <RelatedLink href="/monitoring" tag="監視">監視・保守</RelatedLink>
           <RelatedLink href="/ops/data" tag="運用">データ管理</RelatedLink>
         </RelatedList>
       </RelatedNav>

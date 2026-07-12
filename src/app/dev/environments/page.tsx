@@ -40,7 +40,7 @@ export default function Page() {
       <p>「<Link href="/dev/workspace">開発環境</Link>」で扱った意味です。エディタ・ターミナル・シェルなど、自分のPC上でコードを書き、動作確認をするための道具一式を指します。</p>
 
       <Heading num="03">意味2: 実行環境(ランタイム環境) ― プログラムが実際に動く土台</Heading>
-      <p>「<Link href="/dev/runtime">ランタイム</Link>」で見た通り、同じJavaScript/TypeScriptのコードでも、ブラウザ・Node.js・Deno・Bunのどこで動かすかによって使える機能や前提が変わります。「<Link href="/computer/os">OSの仕組み</Link>」で見たOSも、アプリケーションが動作するための土台という意味で実行環境の一種です。「同じ日本語を話せても、日本とアメリカでは通貨や交通ルールが違う」という<Link href="/dev/runtime">ランタイム</Link>のたとえは、そのままこの意味の「環境」にも当てはまります。</p>
+      <p>「<Link href="/dev/runtime">ランタイム</Link>」で見た通り、同じJavaScript/TypeScriptのコードでも、ブラウザ・Node.js・Deno・Bunのどこで動かすかによって使える機能や前提が変わります。「<Link href="/os">OSの仕組み</Link>」で見たOSも、アプリケーションが動作するための土台という意味で実行環境の一種です。「同じ日本語を話せても、日本とアメリカでは通貨や交通ルールが違う」という<Link href="/dev/runtime">ランタイム</Link>のたとえは、そのままこの意味の「環境」にも当てはまります。</p>
 
       <Heading num="04">意味3: デプロイ環境の「ステージ」 ― 開発・検証・本番という段階</Heading>
       <p>同じアプリケーションを、影響範囲の小さい場所から順番に確認しながら公開していく考え方があります。手元だけで動く<Term>開発環境(dev)</Term>、本番に近い条件でチームが確認する<Term>検証環境(staging)</Term>、実際の利用者が使う<Term>本番環境(production)</Term>という3段階に分けるのが代表的です。それぞれ同じコードを動かしていても、接続するデータベースや公開範囲が異なります。この段階分け自体の具体的な進め方は、今後「運用・プロセス」カテゴリで扱う予定です。</p>
@@ -69,7 +69,7 @@ export default function Page() {
         <RelatedList>
           <RelatedLink href="/dev/workspace" tag="開発">開発環境</RelatedLink>
           <RelatedLink href="/dev/runtime" tag="開発">ランタイム</RelatedLink>
-          <RelatedLink href="/computer/os" tag="コンピュータ">OSの仕組み</RelatedLink>
+          <RelatedLink href="/os" tag="OS">OSの仕組み</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

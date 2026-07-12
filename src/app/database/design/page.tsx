@@ -185,13 +185,13 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>1NF→2NF→3NFの順に従属関係を断つ</h4><p>繰り返し(1NF)、部分関数従属(2NF)、推移的関数従属(3NF)の順に対処します。</p></Card>
         <Card><CardNumber>4</CardNumber><h4>BCNF以降は実務では稀</h4><p>候補キーが重なる特殊なケースや多値従属など、遭遇する頻度は高くありません。</p></Card>
       </CardGrid>
-      <p>ここまでで、要件から論理的なテーブル設計(概念スキーマ)を導く手順が固まりました。次は、これをSQLで操作する「<Link href="/database/sql">SQLとデータ操作</Link>」へ。実際のインデックス設計・冗長化・バックアップといった物理設計の実務は「<Link href="/dev/database/physical">物理設計と運用</Link>」で扱います。</p>
+      <p>ここまでで、要件から論理的なテーブル設計(概念スキーマ)を導く手順が固まりました。次は、これをSQLで操作する「<Link href="/database/sql">SQLとデータ操作</Link>」へ。実際のインデックス設計・冗長化・バックアップといった物理設計の実務は「<Link href="/database/physical">物理設計と運用</Link>」で扱います。</p>
 
       <RelatedNav>
         <RelatedList>
           <RelatedLink href="/database/model" tag="データベース">関係モデルと3層スキーマ</RelatedLink>
           <RelatedLink href="/database/sql" tag="データベース">SQLとデータ操作</RelatedLink>
-          <RelatedLink href="/dev/database/physical" tag="開発">物理設計と運用</RelatedLink>
+          <RelatedLink href="/database/physical" tag="データベース">物理設計と運用</RelatedLink>
           <RelatedLink href="/design/methodology/data-centric" tag="設計">データ中心設計</RelatedLink>
         </RelatedList>
       </RelatedNav>

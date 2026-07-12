@@ -25,7 +25,7 @@ export default function Page() {
   return (
     <DocsPage>
       <Hero>
-        <Eyebrow>開発技術</Eyebrow>
+        <Eyebrow>開発工程・管理</Eyebrow>
         <h1>開発プロセスと手法 ― 計画の立て方・進め方の違い</h1>
         <Lead>
           <Link href="/sdlc/overview">開発の全体像</Link>で見た要件定義から保守までの工程を、実際に「どういう順番で・どの単位で」進めるか。その進め方の型を<Term>開発プロセスモデル</Term>と呼びます。全体をきっちり順番に進める考え方から、小さく作って改善を重ねる考え方まで、代表的なモデルを整理します。
@@ -67,7 +67,7 @@ export default function Page() {
       </table>
 
       <Heading num="04">構造化手法 ― 大きな問題を分けて詳しくする</Heading>
-      <p>プロセスモデルとは別に、開発の各工程を進める技法として<Term>構造化手法</Term>があります。システムを機能のまとまりで<Term>階層構造化</Term>し、大まかな仕様から少しずつ詳細へ落としていく<Term>段階的詳細化</Term>（トップダウン）で全体を組み立てます。設計面での具体的な手法は<Link href="/sdlc/design/structured">構造化設計</Link>で扱います。</p>
+      <p>プロセスモデルとは別に、開発の各工程を進める技法として<Term>構造化手法</Term>があります。システムを機能のまとまりで<Term>階層構造化</Term>し、大まかな仕様から少しずつ詳細へ落としていく<Term>段階的詳細化</Term>（トップダウン）で全体を組み立てます。設計面での具体的な手法は<Link href="/design/paradigm/structured">構造化設計</Link>で扱います。</p>
 
       <Heading num="まとめ">開発プロセスで押さえたいこと</Heading>
       <CardGrid>
@@ -78,13 +78,13 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/sdlc/overview" tag="開発技術">開発の全体像</RelatedLink>
-          <RelatedLink href="/sdlc/process/agile" tag="開発技術">スクラムとアジャイル実践</RelatedLink>
-          <RelatedLink href="/sdlc/requirements" tag="開発技術">要件定義</RelatedLink>
+          <RelatedLink href="/sdlc/overview" tag="開発工程・管理">開発の全体像</RelatedLink>
+          <RelatedLink href="/sdlc/process/agile" tag="開発工程・管理">スクラムとアジャイル実践</RelatedLink>
+          <RelatedLink href="/sdlc/requirements" tag="開発工程・管理">要件定義</RelatedLink>
         </RelatedList>
       </RelatedNav>
 
-      <DocsFooter>Atlas &middot; 開発技術 &middot; 開発プロセスと手法</DocsFooter>
+      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; 開発プロセスと手法</DocsFooter>
     </DocsPage>
   );
 }

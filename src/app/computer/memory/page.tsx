@@ -194,7 +194,7 @@ export default function Page() {
           <RelatedLink href="/computer/memory/speed" tag="コンピュータ">速さの壁 ― キャッシュ・帯域・HBM</RelatedLink>
           <RelatedLink href="/computer/memory/stack" tag="コンピュータ">スタックと関数呼び出しの舞台裏</RelatedLink>
           <RelatedLink href="/dev/language-basics" tag="開発">プログラミング言語の仕組み</RelatedLink>
-          <RelatedLink href="/computer/os" tag="コンピュータ">OSの仕組み ― プロセス・スレッド・カーネル</RelatedLink>
+          <RelatedLink href="/os" tag="OS">OSの仕組み ― プロセス・スレッド・カーネル</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

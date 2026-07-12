@@ -157,7 +157,7 @@ export default function Page() {
           <tr><td className="hl">購読</td><td>SNS Subscription(SQS・Lambda・HTTPなどを紐付ける設定)</td></tr>
         </tbody>
       </table>
-      <p>例えば「注文が確定した」という開始イベントを1回<code>publish()</code>するだけで、メール送信・在庫更新・出荷準備という3つのイベントプロセッサー(Lambda)が、互いの存在を知らないまま同時に起動します。発行側のコードに受信側の関数名が一切登場しないという点が、疎結合を実装レベルで支えています。具体的なコード例と構成図は<Link href="/infra/aws/integration/sns">SNS</Link>のページを参照してください。</p>
+      <p>例えば「注文が確定した」という開始イベントを1回<code>publish()</code>するだけで、メール送信・在庫更新・出荷準備という3つのイベントプロセッサー(Lambda)が、互いの存在を知らないまま同時に起動します。発行側のコードに受信側の関数名が一切登場しないという点が、疎結合を実装レベルで支えています。具体的なコード例と構成図は<Link href="/cloud/aws/integration/sns">SNS</Link>のページを参照してください。</p>
 
       <p>次のページでは、大量アクセスに耐えるためにデータベースを経由せずメモリ上でデータを処理する<Link href="/design/architecture/sys/space-based">スペースベースアーキテクチャ</Link>を見ていきます。</p>
 

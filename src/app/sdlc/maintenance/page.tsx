@@ -25,7 +25,7 @@ export default function Page() {
   return (
     <DocsPage>
       <Hero>
-        <Eyebrow>開発技術</Eyebrow>
+        <Eyebrow>開発工程・管理</Eyebrow>
         <h1>保守 ― リリース後に手を入れ続ける</h1>
         <Lead>
           システムは作って終わりではありません。不具合の修正、法改正や業務変更への追随、将来のトラブルの予防 ― リリース後に加える変更をまとめて<Term>保守</Term>と呼びます。稼働期間はしばしば開発期間より長く、システムのコストの多くは保守が占めます。
@@ -53,7 +53,7 @@ export default function Page() {
       <p>変更を安全に続けるための技術がいくつかあります。<Term>リファクタリング</Term>は、外から見た振る舞いを変えずに内部構造を整理し、読みやすく直しやすい状態を保つ作業です。<Term>リバースエンジニアリング</Term>は、既存のプログラムから設計や仕様を逆にたどって明らかにする手法で、ドキュメントが失われた古いシステムの保守で役立ちます。</p>
 
       <Heading num="03">完整性と回帰テスト</Heading>
-      <p>保守で最も怖いのは「直したつもりが別の場所を壊す」ことです。システムが一貫して正しい状態を保っていること（<Term>完整性</Term>）を守るために、変更のたびに<Link href="/sdlc/testing/levels">回帰テスト</Link>を行い、既存機能が壊れていないかを確認します。稼働後の変更は<Link href="/sdlc/management/change">変更管理</Link>の手順に乗せ、影響範囲を管理しながら進めます。なお、稼働中の監視・運用の実務は<Link href="/ops/monitoring">監視・保守</Link>で扱います。</p>
+      <p>保守で最も怖いのは「直したつもりが別の場所を壊す」ことです。システムが一貫して正しい状態を保っていること（<Term>完整性</Term>）を守るために、変更のたびに<Link href="/test/strategy">回帰テスト</Link>を行い、既存機能が壊れていないかを確認します。稼働後の変更は<Link href="/sdlc/management/change">変更管理</Link>の手順に乗せ、影響範囲を管理しながら進めます。なお、稼働中の監視・運用の実務は<Link href="/monitoring">監視・保守</Link>で扱います。</p>
 
       <Heading num="まとめ">保守で押さえたいこと</Heading>
       <CardGrid>
@@ -64,13 +64,13 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/sdlc/deployment" tag="開発技術">導入と受入れ</RelatedLink>
-          <RelatedLink href="/sdlc/management/change" tag="開発技術">変更管理</RelatedLink>
-          <RelatedLink href="/ops/monitoring" tag="運用">監視・保守</RelatedLink>
+          <RelatedLink href="/sdlc/deployment" tag="開発工程・管理">導入と受入れ</RelatedLink>
+          <RelatedLink href="/sdlc/management/change" tag="開発工程・管理">変更管理</RelatedLink>
+          <RelatedLink href="/monitoring" tag="監視">監視・保守</RelatedLink>
         </RelatedList>
       </RelatedNav>
 
-      <DocsFooter>Atlas &middot; 開発技術 &middot; 保守</DocsFooter>
+      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; 保守</DocsFooter>
     </DocsPage>
   );
 }

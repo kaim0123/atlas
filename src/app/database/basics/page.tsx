@@ -78,7 +78,7 @@ export default function Page() {
         <RelatedList>
           <RelatedLink href="/database/model" tag="データベース">関係モデルと3層スキーマ</RelatedLink>
           <RelatedLink href="/database/transaction" tag="データベース">トランザクションと整合性</RelatedLink>
-          <RelatedLink href="/dev/database" tag="開発">データベース(開発者向け)</RelatedLink>
+          <RelatedLink href="/database" tag="データベース">データベース(開発者向け)</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

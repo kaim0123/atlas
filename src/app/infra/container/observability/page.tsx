@@ -148,7 +148,7 @@ export default function Page() {
         <RelatedList>
           <RelatedLink href="/infra/container/kubernetes" tag="インフラ">Kubernetes ― 大量のコンテナを束ねる</RelatedLink>
           <RelatedLink href="/infra/container/security" tag="インフラ">コンテナセキュリティ ― 5大リスクと防御</RelatedLink>
-          <RelatedLink href="/ops/monitoring" tag="運用">監視・保守</RelatedLink>
+          <RelatedLink href="/monitoring" tag="監視">監視・保守</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

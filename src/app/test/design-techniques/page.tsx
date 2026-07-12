@@ -121,9 +121,9 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/sdlc/testing/techniques" tag="開発技術">テスト技法（網羅率・バグ曲線）</RelatedLink>
+          <RelatedLink href="/test/design-techniques" tag="テスト">テスト技法（網羅率・バグ曲線）</RelatedLink>
           <RelatedLink href="/test/strategy" tag="テスト">品質戦略とテストピラミッド</RelatedLink>
-          <RelatedLink href="/sdlc/review" tag="開発技術">レビューと品質確認</RelatedLink>
+          <RelatedLink href="/sdlc/review" tag="開発工程・管理">レビューと品質確認</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

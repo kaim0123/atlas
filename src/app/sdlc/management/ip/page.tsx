@@ -25,7 +25,7 @@ export default function Page() {
   return (
     <DocsPage>
       <Hero>
-        <Eyebrow>開発技術</Eyebrow>
+        <Eyebrow>開発工程・管理</Eyebrow>
         <h1>知的財産とライセンス ― 誰のもので、どう使ってよいか</h1>
         <Lead>
           プログラムやデータ、アイデアには、それを生み出した人の権利があります。開発では、自分たちが作るものの権利と、他者が作ったものを使う条件の両方を理解しておく必要があります。中心となるのが<Term>著作権</Term>と<Term>特許</Term>、そして利用条件を定める<Term>ライセンス</Term>です。
@@ -66,13 +66,13 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/sdlc/management/config" tag="開発技術">構成管理</RelatedLink>
+          <RelatedLink href="/sdlc/management/config" tag="開発工程・管理">構成管理</RelatedLink>
           <RelatedLink href="/ops/compliance" tag="運用">法令・コンプライアンス</RelatedLink>
-          <RelatedLink href="/sdlc/overview" tag="開発技術">開発の全体像</RelatedLink>
+          <RelatedLink href="/sdlc/overview" tag="開発工程・管理">開発の全体像</RelatedLink>
         </RelatedList>
       </RelatedNav>
 
-      <DocsFooter>Atlas &middot; 開発技術 &middot; 知的財産とライセンス</DocsFooter>
+      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; 知的財産とライセンス</DocsFooter>
     </DocsPage>
   );
 }

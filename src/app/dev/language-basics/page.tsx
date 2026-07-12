@@ -156,7 +156,7 @@ export default function Page() {
         <RelatedList>
           <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル ― OSI参照モデルとTCP/IP</RelatedLink>
           <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み ― レジスタからストレージまで</RelatedLink>
-          <RelatedLink href="/computer/os" tag="コンピュータ">OSの仕組み ― プロセス・スレッド・カーネル</RelatedLink>
+          <RelatedLink href="/os" tag="OS">OSの仕組み ― プロセス・スレッド・カーネル</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

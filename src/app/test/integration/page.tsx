@@ -72,7 +72,7 @@ export default function Page() {
         <RelatedList>
           <RelatedLink href="/test/unit" tag="テスト">Unitテスト</RelatedLink>
           <RelatedLink href="/test/e2e" tag="テスト">E2Eテスト</RelatedLink>
-          <RelatedLink href="/sdlc/testing/levels" tag="開発技術">テストの段階</RelatedLink>
+          <RelatedLink href="/test/strategy" tag="テスト">テストの段階</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

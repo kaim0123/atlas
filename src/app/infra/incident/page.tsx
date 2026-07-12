@@ -36,7 +36,7 @@ export default function Page() {
         </Lead>
       </Hero>
 
-      <p><Link href="/ops/monitoring">監視・保守</Link>で紹介した障害対応フロー「①検知→②切り分け→③暫定対応→④根本原因の調査→⑤恒久対応→⑥ポストモーテム」のうち、このページでは特に②<Term>切り分け</Term>の具体的な手順を、インフラの階層ごとに掘り下げます。</p>
+      <p><Link href="/monitoring">監視・保守</Link>で紹介した障害対応フロー「①検知→②切り分け→③暫定対応→④根本原因の調査→⑤恒久対応→⑥ポストモーテム」のうち、このページでは特に②<Term>切り分け</Term>の具体的な手順を、インフラの階層ごとに掘り下げます。</p>
 
       <Heading num="01">なぜ「下から」確認するのか</Heading>
       <p>ブラウザに表示されるエラーは、常に本当の原因を教えてくれるとは限りません。「ページが真っ白」「表示が遅い」といった上位層(アプリケーション)の症状に見えて、実は物理層やネットワーク層といった下位層で止まっていることが少なくありません。通信は下位層の土台の上に上位層が乗って成立しているため、下位層が壊れれば上位層はすべて機能しなくなります。だからこそ切り分けは、疑わしい箇所に飛びつくのではなく、<Term>物理→ネットワーク→DNS→サーバー→アプリ</Term>という積み重なった階層の順に、下から1段ずつ確認していくのが定石です。</p>
@@ -71,8 +71,8 @@ export default function Page() {
         <li><strong>① 物理</strong>ケーブルの抜け・電源断・ハードウェア故障を確認する。クラウド環境ではラックを見に行く代わりに、利用しているクラウド事業者の障害情報ページ(ステータスページ)を確認する。</li>
         <li><strong>② ネットワーク</strong><code>ping</code>で対象ホストにICMPが到達するか確認する。応答がなければ<code>traceroute</code>(Windowsでは<code>tracert</code>)で経路上のどこで途切れているかを1ホップずつ辿る。</li>
         <li><strong>③ DNS</strong><code>nslookup</code>や<code>dig</code>で名前解決ができるか、返ってくるIPアドレスが正しいかを確認する。名前解決の仕組み自体は<Link href="/internet/dns">DNS</Link>で詳しく扱っている。</li>
-        <li><strong>④ サーバー</strong>IPアドレスまでは届くのに応答がない場合、<code>telnet</code>や<code>curl</code>で該当ポート(80番・443番など)に接続できるか確認する。接続できてもエラーが返る場合は、サーバー自体のCPU・メモリ・ディスクの逼迫を疑う(<Link href="/infra/monitoring">インフラの監視</Link>で見た指標)。</li>
-        <li><strong>⑤ アプリケーション</strong>ここまでで問題がなければ、ようやくアプリのログやヘルスチェックエンドポイントを確認する段階になる。<Link href="/ops/monitoring">監視・保守</Link>で扱ったメトリクス・ログ・トレースの出番はここから。</li>
+        <li><strong>④ サーバー</strong>IPアドレスまでは届くのに応答がない場合、<code>telnet</code>や<code>curl</code>で該当ポート(80番・443番など)に接続できるか確認する。接続できてもエラーが返る場合は、サーバー自体のCPU・メモリ・ディスクの逼迫を疑う(<Link href="/monitoring/infra">インフラの監視</Link>で見た指標)。</li>
+        <li><strong>⑤ アプリケーション</strong>ここまでで問題がなければ、ようやくアプリのログやヘルスチェックエンドポイントを確認する段階になる。<Link href="/monitoring">監視・保守</Link>で扱ったメトリクス・ログ・トレースの出番はここから。</li>
       </Steps>
 
       <Analogy label="💡 たとえるなら">
@@ -119,8 +119,8 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/ops/monitoring" tag="運用">監視・保守</RelatedLink>
-          <RelatedLink href="/infra/monitoring" tag="インフラ">インフラの監視</RelatedLink>
+          <RelatedLink href="/monitoring" tag="監視">監視・保守</RelatedLink>
+          <RelatedLink href="/monitoring/infra" tag="監視">インフラの監視</RelatedLink>
           <RelatedLink href="/security/network-defense" tag="セキュリティ">ネットワーク層の防御</RelatedLink>
           <RelatedLink href="/internet/dns" tag="インターネット">DNS</RelatedLink>
         </RelatedList>

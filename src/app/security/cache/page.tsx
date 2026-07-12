@@ -105,6 +105,7 @@ export default function Page() {
           <RelatedLink href="/security/authz" tag="セキュリティ">認可</RelatedLink>
           <RelatedLink href="/security/session" tag="セキュリティ">セッションとCookie管理</RelatedLink>
           <RelatedLink href="/security/logging" tag="セキュリティ">ログ出力設計</RelatedLink>
+          <RelatedLink href="/dev/cache" tag="開発">キャッシュの全体像</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

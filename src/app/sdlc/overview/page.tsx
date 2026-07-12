@@ -25,7 +25,7 @@ export default function Page() {
   return (
     <DocsPage>
       <Hero>
-        <Eyebrow>開発技術</Eyebrow>
+        <Eyebrow>開発工程・管理</Eyebrow>
         <h1>開発の全体像 ― 工程と成果物の地図</h1>
         <Lead>
           システム開発は、いきなりコードを書き始めるわけではありません。<Term>要件定義</Term>から<Term>保守</Term>まで、いくつかの工程を順に進み、各工程で決まった成果物を作りながら次へ引き継いでいきます。細部に入る前に、まず全体の地図を頭に入れておきましょう。
@@ -65,13 +65,13 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/sdlc/process" tag="開発技術">開発プロセスと手法</RelatedLink>
-          <RelatedLink href="/sdlc/requirements" tag="開発技術">要件定義</RelatedLink>
-          <RelatedLink href="/sdlc/testing/levels" tag="開発技術">テストの段階</RelatedLink>
+          <RelatedLink href="/sdlc/process" tag="開発工程・管理">開発プロセスと手法</RelatedLink>
+          <RelatedLink href="/sdlc/requirements" tag="開発工程・管理">要件定義</RelatedLink>
+          <RelatedLink href="/test/strategy" tag="テスト">テストの段階</RelatedLink>
         </RelatedList>
       </RelatedNav>
 
-      <DocsFooter>Atlas &middot; 開発技術 &middot; 開発の全体像</DocsFooter>
+      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; 開発の全体像</DocsFooter>
     </DocsPage>
   );
 }

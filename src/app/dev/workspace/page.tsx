@@ -36,7 +36,7 @@ export default function Page() {
         </Lead>
       </Hero>
 
-      <p>前のページ「<Link href="/computer/os">OSの仕組み</Link>」で、OSと対話する方法にはアイコンをクリックする<Term>GUI</Term>と、文字で命令を打ち込む<Term>CLI</Term>の2種類があると紹介しました。ここからは、実際に開発をするうえで避けて通れないCLIの世界 ― ターミナルとシェル ― を詳しく見ていきます。</p>
+      <p>前のページ「<Link href="/os">OSの仕組み</Link>」で、OSと対話する方法にはアイコンをクリックする<Term>GUI</Term>と、文字で命令を打ち込む<Term>CLI</Term>の2種類があると紹介しました。ここからは、実際に開発をするうえで避けて通れないCLIの世界 ― ターミナルとシェル ― を詳しく見ていきます。</p>
 
       <Heading num="01">GUIとCLI、2つの操作方法</Heading>
       <p>ふだん私たちがパソコンを使うときは、ほとんどが<Term>GUI(グラフィカルユーザーインターフェース)</Term>です。アイコンをダブルクリックしたり、ファイルをドラッグ&ドロップしたりする、目で見て直感的に操作できる方式です。一方<Term>CLI(コマンドラインインターフェース)</Term>は、キーボードで文字の命令(コマンド)を打ち込んでコンピュータを操作する方式です。</p>
@@ -126,7 +126,7 @@ export default function Page() {
         <li><strong>プロセス生成</strong>シェルがOSに依頼し、そのプログラム用の新しいプロセスを作って実行する</li>
         <li><strong>結果表示</strong>カーネルが実行し、出力結果をシェル経由でターミナルに返す</li>
       </Steps>
-      <p>「プロセス」については前のページ「<Link href="/computer/os">OSの仕組み</Link>」で扱った通り、OSが管理する実行中のプログラムの単位でした。コマンドを打つたびに、裏では小さなプロセスが生まれては消えている、というわけです。</p>
+      <p>「プロセス」については前のページ「<Link href="/os">OSの仕組み</Link>」で扱った通り、OSが管理する実行中のプログラムの単位でした。コマンドを打つたびに、裏では小さなプロセスが生まれては消えている、というわけです。</p>
 
       <Heading num="まとめ">ターミナルとシェルの役割分担</Heading>
       <CardGrid>
@@ -139,7 +139,7 @@ export default function Page() {
       <RelatedNav>
         <RelatedList>
           <RelatedLink href="/dev/tooling" tag="開発">パッケージ管理とビルド</RelatedLink>
-          <RelatedLink href="/computer/os" tag="コンピュータ">OSの仕組み</RelatedLink>
+          <RelatedLink href="/os" tag="OS">OSの仕組み</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

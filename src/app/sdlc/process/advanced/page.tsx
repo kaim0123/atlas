@@ -25,7 +25,7 @@ export default function Page() {
   return (
     <DocsPage>
       <Hero>
-        <Eyebrow>開発技術</Eyebrow>
+        <Eyebrow>開発工程・管理</Eyebrow>
         <h1>プロセス成熟度 ― 開発の質を組織で高める（発展）</h1>
         <Lead>
           このページは<Term>発展トピック</Term>です。初学者はまず<Link href="/sdlc/process">開発プロセスと手法</Link>までを固め、後回しにして構いません。ここでは、個々のプロジェクトを超えて「開発のやり方そのものを標準化し、質を測って改善する」ための枠組みを概観します。厳密さを追う<Term>形式手法</Term>、工程を共通言語化する<Term>SLCP</Term>、組織の成熟度を測る<Term>CMMI</Term>が主役です。
@@ -57,13 +57,13 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/sdlc/process" tag="開発技術">開発プロセスと手法</RelatedLink>
-          <RelatedLink href="/sdlc/overview" tag="開発技術">開発の全体像</RelatedLink>
-          <RelatedLink href="/sdlc/management/config" tag="開発技術">構成管理</RelatedLink>
+          <RelatedLink href="/sdlc/process" tag="開発工程・管理">開発プロセスと手法</RelatedLink>
+          <RelatedLink href="/sdlc/overview" tag="開発工程・管理">開発の全体像</RelatedLink>
+          <RelatedLink href="/sdlc/management/config" tag="開発工程・管理">構成管理</RelatedLink>
         </RelatedList>
       </RelatedNav>
 
-      <DocsFooter>Atlas &middot; 開発技術 &middot; プロセス成熟度（発展）</DocsFooter>
+      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; プロセス成熟度（発展）</DocsFooter>
     </DocsPage>
   );
 }

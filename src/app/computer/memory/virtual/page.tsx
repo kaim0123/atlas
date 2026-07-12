@@ -148,10 +148,10 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/computer/os/memory" tag="コンピュータ">記憶管理と仮想記憶 ― ページング・LRU・スラッシング</RelatedLink>
+          <RelatedLink href="/os/memory" tag="OS">記憶管理と仮想記憶 ― ページング・LRU・スラッシング</RelatedLink>
           <RelatedLink href="/computer/memory/speed" tag="コンピュータ">速さの壁 ― キャッシュ・帯域・HBM</RelatedLink>
           <RelatedLink href="/computer/memory/history" tag="コンピュータ">記憶装置の歴史</RelatedLink>
-          <RelatedLink href="/computer/os" tag="コンピュータ">OSの仕組み ― プロセス・スレッド・カーネル</RelatedLink>
+          <RelatedLink href="/os" tag="OS">OSの仕組み ― プロセス・スレッド・カーネル</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

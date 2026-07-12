@@ -25,7 +25,7 @@ export default function Page() {
   return (
     <DocsPage>
       <Hero>
-        <Eyebrow>開発技術</Eyebrow>
+        <Eyebrow>開発工程・管理</Eyebrow>
         <h1>スクラムとアジャイル実践 ― 反復を支える役割と仕組み</h1>
         <Lead>
           <Link href="/sdlc/process">開発プロセスと手法</Link>で見た<Term>アジャイル</Term>の価値観を、実際のチーム運営に落とし込む代表的な枠組みが<Term>スクラム</Term>です。役割・会議・成果物を軽く決めて短い反復を回す仕組みと、<Term>XP</Term>や<Term>TDD</Term>といった実践、そして<Term>CI/CD</Term>・<Term>DevOps</Term>の考え方までを一続きで見ていきます。
@@ -56,7 +56,7 @@ export default function Page() {
       <p>アジャイルを技術面で支える実践群として、<Term>XP</Term>（エクストリームプログラミング）があります。中でも代表的なのが、テストを先に書いてから実装する<Term>TDD</Term>（テスト駆動開発）、2人が1台で協力して書く<Term>ペアプログラミング</Term>、そして小さな改善を積み重ねる<Term>リファクタリング</Term>です。いずれも「変化に強いコードを、こまめに確かめながら育てる」という発想でつながっています。</p>
 
       <Heading num="04">CI/CDとDevOps ― 反復を自動化で支える</Heading>
-      <p>短い反復を現実的に回すには、統合とリリースの自動化が欠かせません。変更をこまめに統合して自動テストする<Term>継続的インテグレーション</Term>（CI）、そこから自動でリリース可能な状態まで持っていく<Term>継続的デリバリー</Term>（CD）、開発と運用が協調して速く安全に届ける<Term>DevOps</Term>、それにセキュリティを組み込んだ<Term>DevSecOps</Term>。ここでは考え方の入口までとし、具体的なパイプライン構築は<Link href="/infra/aws/cicd">CI/CD</Link>や<Link href="/ops/deploy">インフラとデプロイ</Link>に委ねます。</p>
+      <p>短い反復を現実的に回すには、統合とリリースの自動化が欠かせません。変更をこまめに統合して自動テストする<Term>継続的インテグレーション</Term>（CI）、そこから自動でリリース可能な状態まで持っていく<Term>継続的デリバリー</Term>（CD）、開発と運用が協調して速く安全に届ける<Term>DevOps</Term>、それにセキュリティを組み込んだ<Term>DevSecOps</Term>。ここでは考え方の入口までとし、具体的なパイプライン構築は<Link href="/cloud/aws/cicd">CI/CD</Link>や<Link href="/ops/deploy">インフラとデプロイ</Link>に委ねます。</p>
 
       <Heading num="まとめ">アジャイル実践で押さえたいこと</Heading>
       <CardGrid>
@@ -67,13 +67,13 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/sdlc/process" tag="開発技術">開発プロセスと手法</RelatedLink>
-          <RelatedLink href="/infra/aws/cicd" tag="インフラ">CI/CD</RelatedLink>
+          <RelatedLink href="/sdlc/process" tag="開発工程・管理">開発プロセスと手法</RelatedLink>
+          <RelatedLink href="/cloud/aws/cicd" tag="AWS">CI/CD</RelatedLink>
           <RelatedLink href="/ops/deploy" tag="運用">インフラとデプロイ</RelatedLink>
         </RelatedList>
       </RelatedNav>
 
-      <DocsFooter>Atlas &middot; 開発技術 &middot; スクラムとアジャイル実践</DocsFooter>
+      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; スクラムとアジャイル実践</DocsFooter>
     </DocsPage>
   );
 }

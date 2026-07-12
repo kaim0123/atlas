@@ -65,7 +65,7 @@ REVOKE INSERT ON orders FROM app_user;       -- 追加の許可を取り消す`}
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/dev/database/physical" tag="開発">物理設計と運用</RelatedLink>
+          <RelatedLink href="/database/physical" tag="データベース">物理設計と運用</RelatedLink>
           <RelatedLink href="/database/transaction" tag="データベース">トランザクションと整合性</RelatedLink>
           <RelatedLink href="/security/sqli" tag="セキュリティ">SQLインジェクション対策</RelatedLink>
         </RelatedList>

@@ -172,7 +172,7 @@ export default function Page() {
         <RelatedList>
           <RelatedLink href="/security/auth" tag="セキュリティ">認証</RelatedLink>
           <RelatedLink href="/security/session" tag="セキュリティ">セッションとCookie管理</RelatedLink>
-          <RelatedLink href="/ops/monitoring" tag="運用">監視・保守</RelatedLink>
+          <RelatedLink href="/monitoring" tag="監視">監視・保守</RelatedLink>
           <RelatedLink href="/infra/incident" tag="インフラ">インフラ障害の切り分け</RelatedLink>
         </RelatedList>
       </RelatedNav>

@@ -25,10 +25,10 @@ export default function Page() {
   return (
     <DocsPage>
       <Hero>
-        <Eyebrow>開発技術</Eyebrow>
+        <Eyebrow>開発工程・管理</Eyebrow>
         <h1>レビューと品質確認 ― 人の目で確認する品質保証</h1>
         <Lead>
-          <Link href="/sdlc/testing/levels">テスト</Link>が「動くコード」に対する検証だとすれば、要件定義書や設計書のように、動かして確認できない成果物もあります。<Term>レビュー</Term>とは、人が成果物を読んで欠陥を見つける、テストとは異なる角度の品質保証です。開発の各工程で早めに欠陥を見つけるほど、手戻りは小さく済みます。
+          <Link href="/test/strategy">テスト</Link>が「動くコード」に対する検証だとすれば、要件定義書や設計書のように、動かして確認できない成果物もあります。<Term>レビュー</Term>とは、人が成果物を読んで欠陥を見つける、テストとは異なる角度の品質保証です。開発の各工程で早めに欠陥を見つけるほど、手戻りは小さく済みます。
         </Lead>
       </Hero>
 
@@ -85,13 +85,13 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/sdlc/testing/levels" tag="開発技術">テストの段階</RelatedLink>
+          <RelatedLink href="/test/strategy" tag="テスト">テストの段階</RelatedLink>
           <RelatedLink href="/test/code-review" tag="テスト">コードレビュー</RelatedLink>
           <RelatedLink href="/test/strategy" tag="テスト">品質戦略とテストピラミッド</RelatedLink>
         </RelatedList>
       </RelatedNav>
 
-      <DocsFooter>Atlas &middot; 開発技術 &middot; レビューと品質確認</DocsFooter>
+      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; レビューと品質確認</DocsFooter>
     </DocsPage>
   );
 }

@@ -25,7 +25,7 @@ export default function Page() {
   return (
     <DocsPage>
       <Hero>
-        <Eyebrow>開発技術</Eyebrow>
+        <Eyebrow>開発工程・管理</Eyebrow>
         <h1>構成管理 ― 「今どれが正か」を見失わない</h1>
         <Lead>
           開発が進むと、ソースコード・設計書・ライブラリ・設定ファイルなど、無数の成果物が版を重ねていきます。どれが最新で、どれとどれが組み合わさって動くのか ― これを一貫して管理するのが<Term>構成管理</Term>（ソフトウェア構成管理）です。開発工程を横断してプロジェクトを支える、管理技術の土台です。
@@ -55,13 +55,13 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/sdlc/management/change" tag="開発技術">変更管理</RelatedLink>
+          <RelatedLink href="/sdlc/management/change" tag="開発工程・管理">変更管理</RelatedLink>
           <RelatedLink href="/dev/tooling" tag="開発">パッケージ管理とビルド</RelatedLink>
-          <RelatedLink href="/sdlc/overview" tag="開発技術">開発の全体像</RelatedLink>
+          <RelatedLink href="/sdlc/overview" tag="開発工程・管理">開発の全体像</RelatedLink>
         </RelatedList>
       </RelatedNav>
 
-      <DocsFooter>Atlas &middot; 開発技術 &middot; 構成管理</DocsFooter>
+      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; 構成管理</DocsFooter>
     </DocsPage>
   );
 }

@@ -186,7 +186,7 @@ export default function Page() {
         <RelatedList>
           <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル ― OSI参照モデルとTCP/IP</RelatedLink>
           <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み ― URLからレンダリングまで</RelatedLink>
-          <RelatedLink href="/infra/aws/network/route53" tag="AWS">Route 53 ― ドメイン名を宛先へ振り分ける</RelatedLink>
+          <RelatedLink href="/cloud/aws/network/route53" tag="AWS">Route 53 ― ドメイン名を宛先へ振り分ける</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

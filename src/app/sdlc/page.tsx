@@ -13,7 +13,7 @@ import {
 } from "@/components/docs";
 
 export const metadata: Metadata = {
-  title: "開発技術",
+  title: "開発工程・管理",
 };
 
 const topics = [
@@ -22,14 +22,9 @@ const topics = [
   { href: "/sdlc/process/agile", title: "スクラムとアジャイル実践", desc: "スクラムの役割・スプリント、XP・TDD・CI/CDの入口" },
   { href: "/sdlc/requirements", title: "要件定義", desc: "機能要件と非機能要件の区別、ステークホルダとの合意" },
   { href: "/sdlc/requirements/modeling", title: "要件の表現方法", desc: "ユースケース・DFD・ER図・UMLで要件を可視化する" },
-  { href: "/sdlc/design/basics", title: "設計の全体像", desc: "外部設計と内部設計、モジュール化（結合度・凝集度）の入口" },
-  { href: "/sdlc/design/structured", title: "構造化設計", desc: "流れ図・DFD・状態遷移図・決定表、STS分割・TR分割" },
-  { href: "/sdlc/design/data-centered", title: "データ中心設計", desc: "データモデル・ER図・正規化を設計に使う" },
-  { href: "/sdlc/design/object", title: "オブジェクト指向設計", desc: "クラス・継承・多相性、クラス図（試験向け概念）" },
-  { href: "/sdlc/design/architecture", title: "システム構成とアーキテクチャ", desc: "クライアントサーバ・分散処理・マイクロサービス・MVC" },
-  { href: "/sdlc/implementation", title: "実装", desc: "コーディング標準・命名規則・構造化プログラミング・部品化" },
-  { href: "/sdlc/testing/levels", title: "テストの段階", desc: "単体・結合・システム・受入れ・回帰テスト" },
-  { href: "/sdlc/testing/techniques", title: "テスト技法", desc: "命令/条件/判定条件/複数条件網羅、同値・限界値、バグ曲線" },
+  { href: "/design", title: "設計", desc: "構造化・データ中心・オブジェクト指向とアーキテクチャ。深掘りは「設計」セクションへ" },
+  { href: "/dev/implementation", title: "実装", desc: "コーディング標準・命名規則・構造化プログラミング・部品化" },
+  { href: "/test", title: "テスト", desc: "テストの段階と技法、品質の見える化。深掘りは「テスト」セクションへ" },
   { href: "/sdlc/review", title: "レビューと品質確認", desc: "インスペクション・ウォークスルー・工程別レビュー" },
   { href: "/sdlc/deployment", title: "導入と受入れ", desc: "リリースの流れ、受入れテストと検収" },
   { href: "/sdlc/maintenance", title: "保守", desc: "是正・適応・予防保守、リファクタリング・リバースエンジニアリング" },
@@ -43,8 +38,8 @@ export default function Page() {
   return (
     <DocsPage>
       <Hero>
-        <Eyebrow>開発技術</Eyebrow>
-        <h1>開発技術</h1>
+        <Eyebrow>開発工程・管理</Eyebrow>
+        <h1>開発工程・管理</h1>
         <Lead>
           ネットワークやデータベースといった<Term>技術要素</Term>を理解したあと、いよいよ「システムをどう作り、どう管理するか」を学びます。<Term>要件定義</Term>で何を作るかを決め、<Term>設計</Term>で仕組みを固め、<Term>実装</Term>し、<Term>テスト</Term>で検証し、<Term>導入・保守</Term>で運用へ渡す ― この開発ライフサイクルの各工程と、工程を横断する<Term>開発管理</Term>の基本を、試験と実務の両面から押さえます。
         </Lead>
@@ -70,7 +65,7 @@ export default function Page() {
         ))}
       </IndexGrid>
 
-      <DocsFooter>Atlas &middot; 開発技術</DocsFooter>
+      <DocsFooter>Atlas &middot; 開発工程・管理</DocsFooter>
     </DocsPage>
   );
 }

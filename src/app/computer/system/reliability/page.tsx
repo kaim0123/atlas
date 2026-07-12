@@ -110,7 +110,7 @@ export default function Page() {
         <RelatedList>
           <RelatedLink href="/computer/system/metrics" tag="コンピュータ">性能と経済性の評価 ― スループット・TCO</RelatedLink>
           <RelatedLink href="/computer/system/architecture" tag="コンピュータ">処理形態とシステム構成 ― 冗長構成・RAID</RelatedLink>
-          <RelatedLink href="/infra/monitoring" tag="インフラ">インフラの監視</RelatedLink>
+          <RelatedLink href="/monitoring/infra" tag="監視">インフラの監視</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

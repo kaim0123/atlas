@@ -25,7 +25,7 @@ export default function Page() {
   return (
     <DocsPage>
       <Hero>
-        <Eyebrow>開発技術</Eyebrow>
+        <Eyebrow>開発工程・管理</Eyebrow>
         <h1>導入と受入れ ― 開発から本番へ渡す</h1>
         <Lead>
           テストを終えたシステムは、本番環境へ移して実際に使い始めます。この工程が<Term>導入</Term>（リリース）です。そして開発側の「できました」と発注側の「受け取ります」を突き合わせるのが<Term>受入れテスト</Term>と<Term>検収</Term>。作る側と使う側の責任が入れ替わる、区切りの工程です。
@@ -65,13 +65,13 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/sdlc/testing/levels" tag="開発技術">テストの段階</RelatedLink>
-          <RelatedLink href="/sdlc/maintenance" tag="開発技術">保守</RelatedLink>
+          <RelatedLink href="/test/strategy" tag="テスト">テストの段階</RelatedLink>
+          <RelatedLink href="/sdlc/maintenance" tag="開発工程・管理">保守</RelatedLink>
           <RelatedLink href="/ops/deploy" tag="運用">インフラとデプロイ</RelatedLink>
         </RelatedList>
       </RelatedNav>
 
-      <DocsFooter>Atlas &middot; 開発技術 &middot; 導入と受入れ</DocsFooter>
+      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; 導入と受入れ</DocsFooter>
     </DocsPage>
   );
 }

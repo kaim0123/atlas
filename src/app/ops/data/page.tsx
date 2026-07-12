@@ -33,7 +33,7 @@ export default function Page() {
       </Hero>
 
       <Heading num="01">どこにデータを置くか</Heading>
-      <p>アプリが扱うデータは性質によって適した置き場所が異なります。個々のサービスの詳細は<Link href="/infra/aws/database">データベース</Link>・<Link href="/infra/aws/storage">ストレージ</Link>ページで扱っているため、ここでは「何を基準に選ぶか」を整理します。</p>
+      <p>アプリが扱うデータは性質によって適した置き場所が異なります。個々のサービスの詳細は<Link href="/cloud/aws/database">データベース</Link>・<Link href="/cloud/aws/storage">ストレージ</Link>ページで扱っているため、ここでは「何を基準に選ぶか」を整理します。</p>
 
       <table>
         <thead>
@@ -80,11 +80,11 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/dev/database" tag="開発">データベース ― 設計と運用</RelatedLink>
+          <RelatedLink href="/database" tag="データベース">データベース ― 設計と運用</RelatedLink>
           <RelatedLink href="/infra/storage" tag="インフラ">ストレージの仕組み ― NAS・SAN・RAID</RelatedLink>
-          <RelatedLink href="/infra/aws/database" tag="AWS">データベース</RelatedLink>
-          <RelatedLink href="/infra/aws/storage" tag="AWS">ストレージ</RelatedLink>
-          <RelatedLink href="/ops/monitoring" tag="運用">監視・保守</RelatedLink>
+          <RelatedLink href="/cloud/aws/database" tag="AWS">データベース</RelatedLink>
+          <RelatedLink href="/cloud/aws/storage" tag="AWS">ストレージ</RelatedLink>
+          <RelatedLink href="/monitoring" tag="監視">監視・保守</RelatedLink>
           <RelatedLink href="/ops/cost" tag="運用">コスト管理</RelatedLink>
         </RelatedList>
       </RelatedNav>

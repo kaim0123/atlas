@@ -41,7 +41,7 @@ export default function Page() {
         </thead>
         <tbody>
           <tr><td className="hl">PaaS(フルマネージド)</td><td>Vercel、Netlify、Cloudflare Pages</td><td>GitリポジトリをつなぐだけでビルドとCDN配信を代行。Next.jsのISR/Server Actionsなど動的機能もフルサポート</td></tr>
-          <tr><td className="hl">クラウドの部品を自分で組む</td><td>S3 + CloudFront、EC2、ECS</td><td>静的ファイルをオブジェクトストレージに置き、CDNを前段に構える。<Link href="/infra/aws/network">構成の自由度が高い代わりに自分で組む手間が増える</Link></td></tr>
+          <tr><td className="hl">クラウドの部品を自分で組む</td><td>S3 + CloudFront、EC2、ECS</td><td>静的ファイルをオブジェクトストレージに置き、CDNを前段に構える。<Link href="/cloud/aws/network">構成の自由度が高い代わりに自分で組む手間が増える</Link></td></tr>
         </tbody>
       </table>
 
@@ -50,7 +50,7 @@ export default function Page() {
       </Analogy>
 
       <Heading num="02">DNS・SSL/TLS・CDN ― ドメインからページが届くまで</Heading>
-      <p>ユーザーがドメイン名を入力してからページが表示されるまでには、<Term>DNS</Term>(ドメイン名をIPアドレスに変換)・<Term>SSL/TLS</Term>(通信の暗号化)・<Term>CDN</Term>(地理的に近い拠点からコンテンツを配信)という3つの仕組みが働いています。この一連の流れの詳細は<Link href="/internet/web">Webの仕組み</Link>で、AWSでの実装(Route 53・ACM・CloudFront)は<Link href="/infra/aws/network">ネットワーキングとコンテンツ配信</Link>で扱っています。PaaSを使う場合、この3つは基本的に自動で用意されるため、個人サイトで意識するのはカスタムドメインの接続程度です。</p>
+      <p>ユーザーがドメイン名を入力してからページが表示されるまでには、<Term>DNS</Term>(ドメイン名をIPアドレスに変換)・<Term>SSL/TLS</Term>(通信の暗号化)・<Term>CDN</Term>(地理的に近い拠点からコンテンツを配信)という3つの仕組みが働いています。この一連の流れの詳細は<Link href="/internet/web">Webの仕組み</Link>で、AWSでの実装(Route 53・ACM・CloudFront)は<Link href="/cloud/aws/network">ネットワーキングとコンテンツ配信</Link>で扱っています。PaaSを使う場合、この3つは基本的に自動で用意されるため、個人サイトで意識するのはカスタムドメインの接続程度です。</p>
 
       <Heading num="03">Git運用とデプロイフロー</Heading>
       <p>デプロイの起点は基本的に<Term>Gitへのpush</Term>です。個人開発でも、`main`ブランチ = 本番反映という状態を保つために、最低限のルールを決めておくと事故が減ります。</p>
@@ -74,7 +74,7 @@ export default function Page() {
       </CardGrid>
 
       <Heading num="04">CI/CDとGitHub Actions</Heading>
-      <p><Term>CI(継続的インテグレーション)</Term>はpushのたびにビルド・テストを自動実行して問題を早期発見する仕組み、<Term>CD(継続的デリバリー/デプロイ)</Term>はテストを通過したコードを自動で本番に反映する仕組みです。<Term>GitHub Actions</Term>は最も普及しているCI/CDツールの1つで、リポジトリに`.github/workflows/*.yml`を置くだけで「pushされたらテストを実行し、mainへのマージなら本番デプロイする」という一連の流れを自動化できます。AWS環境で同じ役割を担うCodeBuild・CodePipelineの詳細は<Link href="/infra/aws/cicd">AWSのCI/CD</Link>ページを参照してください。</p>
+      <p><Term>CI(継続的インテグレーション)</Term>はpushのたびにビルド・テストを自動実行して問題を早期発見する仕組み、<Term>CD(継続的デリバリー/デプロイ)</Term>はテストを通過したコードを自動で本番に反映する仕組みです。<Term>GitHub Actions</Term>は最も普及しているCI/CDツールの1つで、リポジトリに`.github/workflows/*.yml`を置くだけで「pushされたらテストを実行し、mainへのマージなら本番デプロイする」という一連の流れを自動化できます。AWS環境で同じ役割を担うCodeBuild・CodePipelineの詳細は<Link href="/cloud/aws/cicd">AWSのCI/CD</Link>ページを参照してください。</p>
 
       <Analogy label="💡 たとえるなら">
         CI/CDのないデプロイは「手作業で毎回ゼロから料理を作る」ようなものです。CI/CDは「レシピ通りに材料を切り、決まった手順で焼き、決まった皿に盛る」工程を自動化した調理ロボットで、人が介在しないぶん手順のブレがなく、失敗にもすぐ気づけます。
@@ -89,10 +89,10 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/infra/aws/network" tag="AWS">ネットワーキングとコンテンツ配信</RelatedLink>
-          <RelatedLink href="/infra/aws/cicd" tag="AWS">CI/CD</RelatedLink>
-          <RelatedLink href="/sdlc/deployment" tag="開発技術">導入と受入れ</RelatedLink>
-          <RelatedLink href="/sdlc/management/config" tag="開発技術">構成管理</RelatedLink>
+          <RelatedLink href="/cloud/aws/network" tag="AWS">ネットワーキングとコンテンツ配信</RelatedLink>
+          <RelatedLink href="/cloud/aws/cicd" tag="AWS">CI/CD</RelatedLink>
+          <RelatedLink href="/sdlc/deployment" tag="開発工程・管理">導入と受入れ</RelatedLink>
+          <RelatedLink href="/sdlc/management/config" tag="開発工程・管理">構成管理</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

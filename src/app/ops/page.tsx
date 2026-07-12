@@ -22,7 +22,6 @@ const groups = [
     label: "公開して動かす",
     topics: [
       { href: "/ops/deploy", title: "インフラとデプロイ", desc: "どこで動かし、どう公開するか ― ホスティング・DNS・SSL・CDN・CI/CD" },
-      { href: "/ops/monitoring", title: "監視・保守", desc: "メトリクス・ログ・トレース・アラートで異常に気づき、劣化を先回りする" },
       { href: "/ops/performance", title: "パフォーマンス", desc: "Core Web Vitals・キャッシュ戦略・画像最適化で「速く表示する」" },
     ],
   },
@@ -55,7 +54,7 @@ export default function Page() {
       </Hero>
 
       <Heading num="01">運営を構成する12のジャンル</Heading>
-      <p>公開されたサイトを「動いている状態」に保つには、コード以外にも考えるべきことが数多くあります。<Term>セキュリティ</Term>・<Term>品質管理</Term>・<Term>監視</Term>はすでに<Link href="/security">セキュリティ</Link>・<Link href="/test">テスト</Link>・<Link href="/ops/monitoring">監視</Link>セクションで厚く扱っているため、ここでは残り7ジャンルを新規に扱います。</p>
+      <p>公開されたサイトを「動いている状態」に保つには、コード以外にも考えるべきことが数多くあります。<Term>セキュリティ</Term>・<Term>品質管理</Term>・<Term>監視</Term>はすでに<Link href="/security">セキュリティ</Link>・<Link href="/test">テスト</Link>・<Link href="/monitoring">監視</Link>セクションで厚く扱っているため、ここでは残り7ジャンルを新規に扱います。</p>
 
       <table>
         <thead>
@@ -67,12 +66,12 @@ export default function Page() {
           <tr><td className="hl">パフォーマンス</td><td>速く表示する</td><td>キャッシュ、画像最適化、Core Web Vitals</td><td><Link href="/ops/performance">パフォーマンス</Link></td></tr>
           <tr><td className="hl">データ管理</td><td>データをどう保存するか</td><td>DB、ストレージ、バックアップ</td><td><Link href="/ops/data">データ管理</Link></td></tr>
           <tr><td className="hl">セキュリティ</td><td>安全に運用する</td><td>認証、認可、WAF、CORS、XSS対策</td><td><Link href="/security">セキュリティ</Link></td></tr>
-          <tr><td className="hl">監視・運用</td><td>正常に動いているか</td><td>モニタリング、ログ、ヘルスチェック、通知</td><td><Link href="/ops/monitoring">監視・保守</Link></td></tr>
+          <tr><td className="hl">監視・運用</td><td>正常に動いているか</td><td>モニタリング、ログ、ヘルスチェック、通知</td><td><Link href="/monitoring">監視・保守</Link></td></tr>
           <tr><td className="hl">品質管理</td><td>不具合を防ぐ</td><td>テスト、エラー監視</td><td><Link href="/test">テスト</Link></td></tr>
           <tr><td className="hl">分析・改善</td><td>利用状況を知る</td><td>Google Analytics、PostHog、SEO</td><td><Link href="/ops/analytics">分析・改善</Link></td></tr>
           <tr><td className="hl">コンテンツ管理</td><td>更新を効率化する</td><td>CMS、画像、記事、公開管理</td><td><Link href="/ops/content">コンテンツ管理</Link></td></tr>
           <tr><td className="hl">コスト管理</td><td>無駄な費用を防ぐ</td><td>クラウド料金、通信量、ストレージ</td><td><Link href="/ops/cost">コスト管理</Link></td></tr>
-          <tr><td className="hl">保守・メンテナンス</td><td>継続して安全に運用する</td><td>ライブラリ更新、SSL更新、障害対応</td><td><Link href="/ops/monitoring">監視・保守</Link></td></tr>
+          <tr><td className="hl">保守・メンテナンス</td><td>継続して安全に運用する</td><td>ライブラリ更新、SSL更新、障害対応</td><td><Link href="/monitoring">監視・保守</Link></td></tr>
           <tr><td className="hl">法令・コンプライアンス</td><td>法律や規約を守る</td><td>プライバシーポリシー、Cookie、アクセシビリティ</td><td><Link href="/ops/compliance">法令・コンプライアンス</Link></td></tr>
         </tbody>
       </table>
@@ -82,7 +81,7 @@ export default function Page() {
       </Analogy>
 
       <Heading num="02">Webサービスを回すための運用ページ</Heading>
-      <p>ここでは公開したWebサービスを「動かし続け、育てる」ための運用を3つの局面に分けて扱います。なお、<Term>インフラ基盤そのものの監視・障害切り分け</Term>は<Link href="/infra/monitoring">インフラ</Link>へ、<Term>端末管理・プリンターなどの社内IT</Term>は<Link href="/computer/client">コンピュータ</Link>へ、<Term>「環境」という語の整理</Term>は<Link href="/dev/environments">開発</Link>へ移し、ここではアプリケーション運用に絞っています。</p>
+      <p>ここでは公開したWebサービスを「動かし続け、育てる」ための運用を3つの局面に分けて扱います。なお、<Term>インフラ基盤そのものの監視・障害切り分け</Term>は<Link href="/monitoring/infra">インフラ</Link>へ、<Term>端末管理・プリンターなどの社内IT</Term>は<Link href="/computer/client">コンピュータ</Link>へ、<Term>「環境」という語の整理</Term>は<Link href="/dev/environments">開発</Link>へ移し、ここではアプリケーション運用に絞っています。</p>
 
       {groups.map((group, gi) => {
         const offset = groups.slice(0, gi).reduce((sum, g) => sum + g.topics.length, 0);

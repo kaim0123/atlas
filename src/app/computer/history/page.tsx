@@ -207,7 +207,7 @@ export default function Page() {
       <RelatedNav>
         <RelatedList>
           <RelatedLink href="/internet/history" tag="インターネット">インターネットの歴史</RelatedLink>
-          <RelatedLink href="/computer/os" tag="コンピュータ">OSの仕組み ― プロセス・スレッド・カーネル</RelatedLink>
+          <RelatedLink href="/os" tag="OS">OSの仕組み ― プロセス・スレッド・カーネル</RelatedLink>
           <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み ― レジスタからストレージまで</RelatedLink>
         </RelatedList>
       </RelatedNav>

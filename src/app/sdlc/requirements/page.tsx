@@ -25,7 +25,7 @@ export default function Page() {
   return (
     <DocsPage>
       <Hero>
-        <Eyebrow>開発技術</Eyebrow>
+        <Eyebrow>開発工程・管理</Eyebrow>
         <h1>要件定義 ― 何を作るかを決める</h1>
         <Lead>
           開発の最上流にあるのが要件定義です。ここで「何を作るか」を取り違えると、その誤りは設計・実装・テストのすべてに波及します。中心となるのは<Term>機能要件</Term>と<Term>非機能要件</Term>の区別、そして関係者との<Term>合意</Term>です。
@@ -66,13 +66,13 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/sdlc/requirements/modeling" tag="開発技術">要件の表現方法</RelatedLink>
-          <RelatedLink href="/sdlc/design/basics" tag="開発技術">設計の全体像</RelatedLink>
+          <RelatedLink href="/sdlc/requirements/modeling" tag="開発工程・管理">要件の表現方法</RelatedLink>
+          <RelatedLink href="/design" tag="設計">設計の全体像</RelatedLink>
           <RelatedLink href="/design/methodology/use-case-driven" tag="設計">ユースケース中心設計</RelatedLink>
         </RelatedList>
       </RelatedNav>
 
-      <DocsFooter>Atlas &middot; 開発技術 &middot; 要件定義</DocsFooter>
+      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; 要件定義</DocsFooter>
     </DocsPage>
   );
 }

@@ -25,7 +25,7 @@ export default function Page() {
   return (
     <DocsPage>
       <Hero>
-        <Eyebrow>開発技術</Eyebrow>
+        <Eyebrow>開発工程・管理</Eyebrow>
         <h1>要件の表現方法 ― 言葉のあいまいさを図と表で減らす</h1>
         <Lead>
           <Link href="/sdlc/requirements">要件定義</Link>で「何を作るか」を決めても、文章だけでは受け取り方に幅が出ます。そこで<Term>ユースケース</Term>や<Term>DFD</Term>、<Term>UML</Term>といった図・表を使い、利用者の使い方や情報の流れを目に見える形にします。ここでは代表的な表現方法と、要件を最後まで追える<Term>トレーサビリティ</Term>の考え方を押さえます。
@@ -60,9 +60,9 @@ export default function Page() {
           <tr><th>図</th><th>表すもの</th><th>詳しく</th></tr>
         </thead>
         <tbody>
-          <tr><td className="hl">DFD</td><td>データの流れ（どこから来て、どう処理され、どこへ行くか）</td><td><Link href="/sdlc/design/structured">構造化設計</Link></td></tr>
-          <tr><td className="hl">ER図</td><td>データの構造（実体と、その間の関連）</td><td><Link href="/sdlc/design/data-centered">データ中心設計</Link></td></tr>
-          <tr><td className="hl">UML</td><td>ユースケース図・クラス図など、オブジェクト指向の共通言語</td><td><Link href="/sdlc/design/object">オブジェクト指向設計</Link></td></tr>
+          <tr><td className="hl">DFD</td><td>データの流れ（どこから来て、どう処理され、どこへ行くか）</td><td><Link href="/design/paradigm/structured">構造化設計</Link></td></tr>
+          <tr><td className="hl">ER図</td><td>データの構造（実体と、その間の関連）</td><td><Link href="/design/methodology/data-centric">データ中心設計</Link></td></tr>
+          <tr><td className="hl">UML</td><td>ユースケース図・クラス図など、オブジェクト指向の共通言語</td><td><Link href="/design/paradigm/oop">オブジェクト指向設計</Link></td></tr>
         </tbody>
       </table>
 
@@ -78,13 +78,13 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/sdlc/requirements" tag="開発技術">要件定義</RelatedLink>
+          <RelatedLink href="/sdlc/requirements" tag="開発工程・管理">要件定義</RelatedLink>
           <RelatedLink href="/design/methodology/use-case-driven" tag="設計">ユースケース中心設計</RelatedLink>
-          <RelatedLink href="/sdlc/design/data-centered" tag="開発技術">データ中心設計</RelatedLink>
+          <RelatedLink href="/design/methodology/data-centric" tag="設計">データ中心設計</RelatedLink>
         </RelatedList>
       </RelatedNav>
 
-      <DocsFooter>Atlas &middot; 開発技術 &middot; 要件の表現方法</DocsFooter>
+      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; 要件の表現方法</DocsFooter>
     </DocsPage>
   );
 }

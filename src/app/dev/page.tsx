@@ -22,7 +22,7 @@ const topics = [
   { href: "/dev/tooling", title: "パッケージ管理とビルド", desc: "npm・pnpm・Vite ― コードから動くアプリへ" },
   { href: "/dev/environments", title: "環境の全体像", desc: "「環境」という言葉の4つの意味を整理する" },
   { href: "/dev/framework", title: "フレームワーク・ライブラリ", desc: "React・Next.js・Tailwindで組み立てる" },
-  { href: "/dev/database", title: "データベース(追補)", desc: "物理設計・運用と歴史(基礎はデータベースセクション)" },
+  { href: "/dev/implementation", title: "実装", desc: "コーディング標準・命名規則・構造化プログラミング・部品化・デバッグ" },
   { href: "/dev/cache", title: "キャッシュの全体像", desc: "場所や規模が変わっても変わらない、キャッシュの定義" },
   { href: "/sdlc/overview", title: "開発の流れ", desc: "要件定義から保守まで、開発工程の全体像(開発技術セクション)" },
 ];
@@ -34,7 +34,7 @@ export default function Page() {
         <Eyebrow>開発</Eyebrow>
         <h1>開発</h1>
         <Lead>
-          コードを書いて動かすための技術と道具を、学ぶ順に並べています。ターミナル・シェルで環境を整えるところから、言語・Web基礎・ランタイム、パッケージ管理、フレームワーク・データベース、そして横断的なキャッシュの考え方まで。
+          コードを書いて動かすための技術と道具を、学ぶ順に並べています。ターミナル・シェルで環境を整えるところから、言語・Web基礎・ランタイム、パッケージ管理、フレームワーク、そして横断的なキャッシュの考え方まで。
         </Lead>
       </Hero>
 

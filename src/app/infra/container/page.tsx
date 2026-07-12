@@ -209,8 +209,8 @@ export default function Page() {
       <RelatedNav>
         <RelatedList>
           <RelatedLink href="/infra/virtualization" tag="インフラ">仮想化の仕組み ― ハイパーバイザー型とコンテナ型</RelatedLink>
-          <RelatedLink href="/infra/aws/container" tag="インフラ">AWSのコンテナサービス</RelatedLink>
-          <RelatedLink href="/computer/os" tag="コンピュータ">OSの仕組み ― カーネルとプロセス</RelatedLink>
+          <RelatedLink href="/cloud/aws/container" tag="AWS">AWSのコンテナサービス</RelatedLink>
+          <RelatedLink href="/os" tag="OS">OSの仕組み ― カーネルとプロセス</RelatedLink>
         </RelatedList>
       </RelatedNav>
 
