@@ -30,7 +30,7 @@ export default function Page() {
         <Eyebrow>開発 &middot; データベース</Eyebrow>
         <h1>物理設計と運用 ― インデックス・冗長化・バックアップ</h1>
         <Lead>
-          前のページ「<Link href="/dev/database/design">概念設計と正規化</Link>」で固めたテーブル定義(概念スキーマ)を、実際にDBMS上でどう実体化し、ディスク障害やサーバー障害からどう守るか。<Link href="/dev/database">データベース</Link>の最初のページで触れた<Term>内部スキーマ</Term>の中身 ― インデックス・ストレージ冗長化・レプリケーション・バックアップ・リカバリを見ていきます。
+          「<Link href="/database/design">ER図と正規化</Link>」で固めたテーブル定義(概念スキーマ)を、実際にDBMS上でどう実体化し、ディスク障害やサーバー障害からどう守るか。「<Link href="/database/model">関係モデルと3層スキーマ</Link>」で触れた<Term>内部スキーマ</Term>の中身 ― インデックス・ストレージ冗長化・レプリケーション・バックアップ・リカバリを見ていきます。
         </Lead>
       </Hero>
 
@@ -145,12 +145,12 @@ CREATE INDEX idx_orders_customer_id ON orders(customer_id);`}</code>
         <Card><CardNumber>3</CardNumber><h4>バックアップは容量とリストア速度のトレードオフ</h4><p>差分は復元がシンプル、増分は取得が軽量という違いがあります。</p></Card>
         <Card><CardNumber>4</CardNumber><h4>リカバリ=リストア+ロールフォワード</h4><p>バックアップを戻すだけでなく、トランザクションログの再生で直近の損失を最小化します。</p></Card>
       </CardGrid>
-      <p>ここまでで、業務要件からテーブルを導く概念設計(<Link href="/dev/database/design">概念設計と正規化</Link>)から、それを実体化し障害から守る物理設計・運用まで、データベースの土台を一通り見てきました。どのインデックスをどう設計するか、どのクエリが遅いのかを見極めるパフォーマンスの話は、この続きとして別途扱う予定です。</p>
+      <p>ここまでで、業務要件からテーブルを導く概念設計(<Link href="/database/design">ER図と正規化</Link>)から、それを実体化し障害から守る物理設計・運用まで、データベースの土台を一通り見てきました。どのインデックスをどう設計するか、どのクエリが遅いのかを見極めるパフォーマンスの話は、この続きとして別途扱う予定です。</p>
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/dev/database" tag="開発">データベース概要</RelatedLink>
-          <RelatedLink href="/dev/database/design" tag="開発">概念設計と正規化</RelatedLink>
+          <RelatedLink href="/database/model" tag="データベース">関係モデルと3層スキーマ</RelatedLink>
+          <RelatedLink href="/database/design" tag="データベース">ER図と正規化</RelatedLink>
           <RelatedLink href="/dev/database/history" tag="開発">データベースの歴史</RelatedLink>
           <RelatedLink href="/ops/data" tag="運用">データ管理</RelatedLink>
         </RelatedList>

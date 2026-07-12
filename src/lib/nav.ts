@@ -3,6 +3,7 @@ import {
   Cpu,
   Network,
   Globe,
+  Database,
   Code2,
   Shapes,
   FlaskConical,
@@ -151,6 +152,19 @@ export const sections: NavSection[] = [
     ],
   },
   {
+    href: "/database",
+    title: "データベース",
+    icon: Database,
+    tree: [
+      { href: "/database/basics", title: "役割と種類" },
+      { href: "/database/model", title: "関係モデルと3層スキーマ" },
+      { href: "/database/design", title: "ER図と正規化" },
+      { href: "/database/sql", title: "SQLとデータ操作" },
+      { href: "/database/transaction", title: "トランザクションと整合性" },
+      { href: "/database/advanced/index", title: "索引とアクセス制御" },
+    ],
+  },
+  {
     href: "/dev",
     title: "開発",
     icon: Code2,
@@ -189,10 +203,9 @@ export const sections: NavSection[] = [
         ],
       },
       {
-        title: "データベース",
+        title: "データベース(追補)",
         children: [
-          { href: "/dev/database", title: "データベース概要" },
-          { href: "/dev/database/design", title: "概念設計と正規化" },
+          { href: "/dev/database", title: "データベース(開発者向け)" },
           { href: "/dev/database/physical", title: "物理設計と運用" },
           { href: "/dev/database/history", title: "データベースの歴史" },
         ],

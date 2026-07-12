@@ -32,7 +32,7 @@ export default function Page() {
         <Eyebrow>開発 &middot; データベース</Eyebrow>
         <h1>データベースの歴史 ― 50年経っても現役の理由</h1>
         <Lead>
-          スマートフォンもWebフレームワークも数年で古くなるIT業界で、1970年代に生まれた<Term>SQL</Term>は今もコンビニ決済・口座残高照会・ネットショッピングの裏側で動き続けています。一度はNoSQLに主役を奪われかけながら、なぜ関係データベースは半世紀も生き残ったのか。粘土板から始まるデータ管理の系譜と、<Link href="/dev/database">前のページ</Link>で見た関係モデルがどんな必要から生まれたのかを、時間軸で追っていきます。
+          スマートフォンもWebフレームワークも数年で古くなるIT業界で、1970年代に生まれた<Term>SQL</Term>は今もコンビニ決済・口座残高照会・ネットショッピングの裏側で動き続けています。一度はNoSQLに主役を奪われかけながら、なぜ関係データベースは半世紀も生き残ったのか。粘土板から始まるデータ管理の系譜と、「<Link href="/database/model">関係モデルと3層スキーマ</Link>」で見た関係モデルがどんな必要から生まれたのかを、時間軸で追っていきます。
         </Lead>
       </Hero>
 
@@ -63,7 +63,7 @@ export default function Page() {
       </Analogy>
 
       <Heading num="03">コッドとリレーショナルモデル ― 物理から論理を切り離す</Heading>
-      <p>1970年、IBM研究所の数学者<Term>E. F. コッド</Term>が、歴史を変える論文「大規模共有データバンクのためのデータのリレーショナルモデル」を発表します。核心は、<strong>データがどこに物理的に保存されているかを人間が気にしなくてよい</strong>という、論理構造と物理構造の完全な分離でした。<Link href="/dev/database">前のページ</Link>で見た<Term>データ独立性</Term>や<Term>3層スキーマ</Term>の思想は、ここに源流があります。</p>
+      <p>1970年、IBM研究所の数学者<Term>E. F. コッド</Term>が、歴史を変える論文「大規模共有データバンクのためのデータのリレーショナルモデル」を発表します。核心は、<strong>データがどこに物理的に保存されているかを人間が気にしなくてよい</strong>という、論理構造と物理構造の完全な分離でした。「<Link href="/database/model">関係モデルと3層スキーマ</Link>」で見た<Term>データ独立性</Term>や<Term>3層スキーマ</Term>の思想は、ここに源流があります。</p>
       <p>利用者は「どう取るか(手順)」ではなく「何が欲しいか」だけを宣言すればよい ― この考え方を<Term>宣言型</Term>と呼びます。図書館で棚番号を知らなくても、司書に「この本ください」と言えば済むように、です。コッドはこれを<Term>集合論</Term>で厳密に定義しました。データを<Term>関係(リレーション=テーブル)</Term>として扱い、集合演算で操作を記述したのです。</p>
       <Aside label="なぜ数学だったのか">
         コッドがモデルを数学の上に築いたことが、後の生存の根本理由になりました。数学に基づく以上、ハードウェアや記憶媒体がどれだけ変わっても本質は揺らぎません。事実、この後にディスクもメモリもネットワークも激変しましたが、関係モデルはそのまま生き延びました。
@@ -167,12 +167,12 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>ACIDが金融の信頼を勝ち取った</h4><p>「絶対に嘘をつかない」保証が、銀行や基幹系でSQLを手放させませんでした。</p></Card>
         <Card><CardNumber>4</CardNumber><h4>NoSQLを経てNewSQLで復活</h4><p>スケールのためACIDを捨てた反動が、分散対応のSQLとして最強の姿で戻ってきました。</p></Card>
       </CardGrid>
-      <p>データベースの土台となる考え方は<Link href="/dev/database">データベース概要</Link>で、要件からテーブルを導く手順は<Link href="/dev/database/design">概念設計と正規化</Link>で、障害から守る仕組みは<Link href="/dev/database/physical">物理設計と運用</Link>で、それぞれ詳しく見ていきます。</p>
+      <p>データベースの土台となる考え方は「<Link href="/database/model">関係モデルと3層スキーマ</Link>」で、要件からテーブルを導く手順は「<Link href="/database/design">ER図と正規化</Link>」で、障害から守る仕組みは「<Link href="/dev/database/physical">物理設計と運用</Link>」で、それぞれ詳しく見ていきます。</p>
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/dev/database" tag="開発">データベース概要</RelatedLink>
-          <RelatedLink href="/dev/database/design" tag="開発">概念設計と正規化</RelatedLink>
+          <RelatedLink href="/dev/database" tag="開発">データベース(開発者向け)</RelatedLink>
+          <RelatedLink href="/database/design" tag="データベース">ER図と正規化</RelatedLink>
           <RelatedLink href="/dev/database/physical" tag="開発">物理設計と運用</RelatedLink>
           <RelatedLink href="/dev/language-basics/history" tag="開発">プログラミング言語の歴史</RelatedLink>
         </RelatedList>
