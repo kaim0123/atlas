@@ -9,6 +9,7 @@ import {
   FlaskConical,
   ShieldCheck,
   AppWindow,
+  Palette,
   Server,
   Settings2,
   type LucideIcon,
@@ -409,6 +410,19 @@ export const sections: NavSection[] = [
       { href: "/ui/design", title: "画面設計と入力チェック" },
       { href: "/ui/web", title: "Web UIデザイン" },
       { href: "/ui/hcd", title: "人間中心設計と評価" },
+    ],
+  },
+  {
+    href: "/media",
+    title: "情報メディア",
+    icon: Palette,
+    tree: [
+      { href: "/media/basics", title: "マルチメディアの全体像" },
+      { href: "/media/audio", title: "音声フォーマット" },
+      { href: "/media/image", title: "画像フォーマット" },
+      { href: "/media/video", title: "動画フォーマット" },
+      { href: "/media/compression", title: "圧縮の考え方" },
+      { href: "/media/graphics", title: "色・解像度・グラフィックス応用" },
     ],
   },
   {
