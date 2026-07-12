@@ -27,6 +27,8 @@ const topics = [
   { href: "/security/session-cookie", title: "セッション・Cookieの全体像", desc: "ログイン状態だけの言葉ではない" },
   { href: "/security/token", title: "トークンの全体像", desc: "「何を証明するための紙切れか」で意味が変わる" },
   { href: "/security/identity", title: "認証プロトコルの変遷", desc: "LDAPからPasskeyまで、「誰か」を確かめる仕組みの移り変わり" },
+  { href: "/security/crypto", title: "暗号の歴史と公開鍵暗号", desc: "シーザー暗号からRSA・量子暗号まで、「作る者」と「解く者」の攻防" },
+  { href: "/security/hash", title: "ハッシュ関数と衝突攻撃", desc: "パスワード保存や改ざん検知を支える「戻せない壁」と、その破り方" },
   { href: "/security/cache", title: "キャッシュ制御", desc: "個人向けのページが、他人の画面に表示されてしまう事故" },
   { href: "/security/logging", title: "ログ出力設計", desc: "攻撃の予兆に気づき、事後に調査できる記録の残し方" },
   { href: "/security/headers", title: "セキュリティヘッダ", desc: "配信の入口でヘッダを足し、XSSやクリックジャッキングを抑える" },

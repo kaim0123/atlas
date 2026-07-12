@@ -316,6 +316,13 @@ export const sections: NavSection[] = [
         ],
       },
       {
+        title: "暗号技術",
+        children: [
+          { href: "/security/crypto", title: "暗号の歴史と公開鍵暗号" },
+          { href: "/security/hash", title: "ハッシュ関数と衝突攻撃" },
+        ],
+      },
+      {
         title: "防御・運用",
         children: [
           { href: "/security/headers", title: "セキュリティヘッダ" },
