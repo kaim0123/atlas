@@ -32,8 +32,47 @@ export const sections: NavSection[] = [
     tree: [
       { href: "/computer/history", title: "コンピュータの歴史" },
       { href: "/computer/basics", title: "PCハードウェアの基礎" },
-      { href: "/computer/memory", title: "メモリの仕組み" },
-      { href: "/computer/os", title: "OSの仕組み" },
+      {
+        title: "半導体",
+        children: [
+          { href: "/computer/semiconductor", title: "半導体の全体像" },
+          { href: "/computer/semiconductor/transistor", title: "トランジスタの正体" },
+          { href: "/computer/semiconductor/logic", title: "直列と並列で論理をつくる" },
+          { href: "/computer/semiconductor/adder", title: "足し算をつくる" },
+        ],
+      },
+      {
+        title: "メモリ",
+        children: [
+          { href: "/computer/memory", title: "メモリの仕組み" },
+          { href: "/computer/memory/virtual", title: "仮想メモリとソフトウェアの肥大化" },
+          { href: "/computer/memory/speed", title: "速さの壁 ― キャッシュ・帯域・HBM" },
+          { href: "/computer/memory/stack", title: "スタックと関数呼び出しの舞台裏" },
+          { href: "/computer/memory/history", title: "記憶装置の歴史" },
+        ],
+      },
+      {
+        title: "OS",
+        children: [
+          { href: "/computer/os", title: "OSの仕組み" },
+          { href: "/computer/os/kernel", title: "カーネルの役割と設計" },
+          { href: "/computer/os/process", title: "プロセスとスレッド" },
+          { href: "/computer/os/syscall", title: "システムコール" },
+          { href: "/computer/os/shell", title: "シェル" },
+          { href: "/computer/os/filesystem", title: "ファイルシステム" },
+          {
+            title: "歴史と系譜",
+            children: [
+              { href: "/computer/os/unix", title: "UNIXの歴史と哲学" },
+              { href: "/computer/os/posix", title: "UNIX・BSD・Linuxの違い" },
+              { href: "/computer/os/gnu", title: "GNUとフリーソフトウェア" },
+              { href: "/computer/os/linux", title: "Linuxの歴史" },
+            ],
+          },
+        ],
+      },
+      { href: "/computer/client", title: "クライアント管理の実務" },
+      { href: "/computer/printer", title: "プリンターの仕組み" },
     ],
   },
   {
@@ -69,6 +108,7 @@ export const sections: NavSection[] = [
     icon: Code2,
     tree: [
       { href: "/dev/workspace", title: "開発環境" },
+      { href: "/dev/environments", title: "環境の全体像" },
       { href: "/dev/language-basics", title: "プログラミング言語の仕組み" },
       { href: "/dev/language-basics/history", title: "プログラミング言語の歴史" },
       { href: "/dev/language", title: "JavaScript・TypeScript" },
@@ -106,6 +146,7 @@ export const sections: NavSection[] = [
           { href: "/dev/database", title: "データベース概要" },
           { href: "/dev/database/design", title: "概念設計と正規化" },
           { href: "/dev/database/physical", title: "物理設計と運用" },
+          { href: "/dev/database/history", title: "データベースの歴史" },
         ],
       },
       { href: "/dev/cache", title: "キャッシュの全体像" },
@@ -254,19 +295,35 @@ export const sections: NavSection[] = [
     title: "セキュリティ",
     icon: ShieldCheck,
     tree: [
-      { href: "/security/injection", title: "インジェクション攻撃" },
-      { href: "/security/xss", title: "XSSと出力エスケープ" },
-      { href: "/security/sqli", title: "SQLインジェクション対策" },
-      { href: "/security/csrf", title: "CSRF対策" },
-      { href: "/security/auth", title: "認証" },
-      { href: "/security/authz", title: "認可" },
-      { href: "/security/session", title: "セッションとCookie管理" },
-      { href: "/security/session-cookie", title: "セッション・Cookieの全体像" },
-      { href: "/security/token", title: "トークンの全体像" },
-      { href: "/security/identity", title: "認証プロトコルの変遷" },
-      { href: "/security/cache", title: "キャッシュ制御" },
-      { href: "/security/logging", title: "ログ出力設計" },
-      { href: "/security/network-defense", title: "ネットワーク層の防御" },
+      {
+        title: "攻撃と対策",
+        children: [
+          { href: "/security/injection", title: "インジェクション攻撃" },
+          { href: "/security/xss", title: "XSSと出力エスケープ" },
+          { href: "/security/sqli", title: "SQLインジェクション対策" },
+          { href: "/security/csrf", title: "CSRF対策" },
+        ],
+      },
+      {
+        title: "認証・認可",
+        children: [
+          { href: "/security/auth", title: "認証" },
+          { href: "/security/authz", title: "認可" },
+          { href: "/security/session", title: "セッションとCookie管理" },
+          { href: "/security/session-cookie", title: "セッション・Cookieの全体像" },
+          { href: "/security/token", title: "トークンの全体像" },
+          { href: "/security/identity", title: "認証プロトコルの変遷" },
+        ],
+      },
+      {
+        title: "防御・運用",
+        children: [
+          { href: "/security/headers", title: "セキュリティヘッダ" },
+          { href: "/security/cache", title: "キャッシュ制御" },
+          { href: "/security/logging", title: "ログ出力設計" },
+          { href: "/security/network-defense", title: "ネットワーク層の防御" },
+        ],
+      },
     ],
   },
   {
@@ -275,11 +332,24 @@ export const sections: NavSection[] = [
     icon: Server,
     tree: [
       { href: "/infra/virtualization", title: "仮想化の仕組み" },
+      {
+        title: "コンテナ",
+        children: [
+          { href: "/infra/container", title: "コンテナの仕組み" },
+          { href: "/infra/container/docker", title: "Docker" },
+          { href: "/infra/container/kubernetes", title: "Kubernetes" },
+          { href: "/infra/container/observability", title: "オブザーバビリティ" },
+          { href: "/infra/container/security", title: "コンテナセキュリティ" },
+        ],
+      },
       { href: "/infra/storage", title: "ストレージの仕組み" },
       { href: "/infra/storage/backup", title: "バックアップと復旧" },
+      { href: "/infra/monitoring", title: "インフラの監視" },
+      { href: "/infra/incident", title: "インフラ障害の切り分け" },
       {
         title: "AWS",
         children: [
+          { href: "/infra/aws", title: "AWS概要" },
           { href: "/infra/aws/basics", title: "AWSの基礎" },
           {
             title: "コンピューティング",
@@ -347,7 +417,6 @@ export const sections: NavSection[] = [
     title: "運用",
     icon: Settings2,
     tree: [
-      { href: "/ops/environments", title: "環境の全体像" },
       { href: "/ops/deploy", title: "インフラとデプロイ" },
       { href: "/ops/monitoring", title: "監視・保守" },
       { href: "/ops/performance", title: "パフォーマンス" },
@@ -356,10 +425,6 @@ export const sections: NavSection[] = [
       { href: "/ops/content", title: "コンテンツ管理" },
       { href: "/ops/cost", title: "コスト管理" },
       { href: "/ops/compliance", title: "法令・コンプライアンス" },
-      { href: "/ops/client", title: "クライアント管理の実務" },
-      { href: "/ops/printer", title: "プリンターの仕組み" },
-      { href: "/ops/infra-monitoring", title: "インフラの監視" },
-      { href: "/ops/incident", title: "インフラ障害の切り分け" },
     ],
   },
 ];

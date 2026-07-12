@@ -145,6 +145,7 @@ CREATE TABLE orders (
         <RelatedList>
           <RelatedLink href="/dev/database/design" tag="開発">概念設計と正規化</RelatedLink>
           <RelatedLink href="/dev/database/physical" tag="開発">物理設計と運用</RelatedLink>
+          <RelatedLink href="/dev/database/history" tag="開発">データベースの歴史</RelatedLink>
           <RelatedLink href="/dev/framework" tag="開発">フレームワーク・ライブラリ</RelatedLink>
           <RelatedLink href="/security/sqli" tag="セキュリティ">SQLインジェクション対策</RelatedLink>
           <RelatedLink href="/ops/data" tag="運用">データ管理 ― バックアップ・マイグレーション</RelatedLink>

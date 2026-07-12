@@ -151,6 +151,7 @@ CREATE INDEX idx_orders_customer_id ON orders(customer_id);`}</code>
         <RelatedList>
           <RelatedLink href="/dev/database" tag="開発">データベース概要</RelatedLink>
           <RelatedLink href="/dev/database/design" tag="開発">概念設計と正規化</RelatedLink>
+          <RelatedLink href="/dev/database/history" tag="開発">データベースの歴史</RelatedLink>
           <RelatedLink href="/ops/data" tag="運用">データ管理</RelatedLink>
         </RelatedList>
       </RelatedNav>

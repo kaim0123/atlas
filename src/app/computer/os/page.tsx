@@ -18,7 +18,21 @@ import {
   RelatedLink,
   Timeline,
   TimelineItem,
+  IndexGrid,
+  IndexCard,
 } from "@/components/docs";
+
+const subTopics = [
+  { href: "/computer/os/kernel", title: "カーネルの役割と設計", desc: "OSの中核・4層構造・モノリシック/マイクロ・特権モード" },
+  { href: "/computer/os/process", title: "プロセスとスレッド", desc: "メモリ空間・PCB・スケジューリング・IPC・fork/exec" },
+  { href: "/computer/os/syscall", title: "システムコール", desc: "アプリとカーネルをつなぐ唯一の窓口とその内部動作" },
+  { href: "/computer/os/shell", title: "シェル", desc: "コマンドを解釈する殻 ― sh・Bash・zshの系譜" },
+  { href: "/computer/os/filesystem", title: "ファイルシステム", desc: "FAT・NTFS・ext・APFS ― データを配置し守る仕組み" },
+  { href: "/computer/os/unix", title: "UNIXの歴史と哲学", desc: "1969年ベル研から始まった現代OSの源流" },
+  { href: "/computer/os/posix", title: "UNIX・BSD・Linuxの違い", desc: "似て非なる3ファミリーとPOSIXという共通基盤" },
+  { href: "/computer/os/gnu", title: "GNUとフリーソフトウェア", desc: "「自由」の理念とコピーレフト(GPL)" },
+  { href: "/computer/os/linux", title: "Linuxの歴史", desc: "趣味のプロジェクトが世界を動かすまで" },
+];
 
 export const metadata: Metadata = {
   title: "OSの仕組み",
@@ -128,6 +142,21 @@ export default function Page() {
 
       <Heading num="05">OSとどう対話するか ― GUIとCLI</Heading>
       <p>私たちが普段アイコンをクリックして操作している画面は「システムプログラム」の層にあたる<Term>GUI(グラフィカルユーザーインターフェース)</Term>です。一方、文字でコマンドを打ち込んでOSに直接指示を出す方法を<Term>CLI(コマンドラインインターフェース)</Term>と呼び、その入力窓口が<Term>ターミナル</Term>、命令を解釈してカーネルに伝える係が<Term>シェル</Term>です。ターミナル・シェルの具体的な使い方は、次のカテゴリ「開発基盤」の「<Link href="/dev/workspace">開発環境</Link>」ページで扱います。</p>
+
+      <Heading num="06">さらに深く ― 個別テーマへ</Heading>
+      <p>このページはOSの骨組みを俯瞰したものです。ここから先は、それぞれの仕組みと歴史を個別のページで掘り下げていきます。</p>
+      <IndexGrid>
+        {subTopics.map((topic, i) => (
+          <IndexCard
+            key={topic.href}
+            href={topic.href}
+            num={String(i + 1).padStart(2, "0")}
+            title={topic.title}
+          >
+            {topic.desc}
+          </IndexCard>
+        ))}
+      </IndexGrid>
 
       <Heading num="まとめ">OSは「調整役」</Heading>
       <CardGrid>

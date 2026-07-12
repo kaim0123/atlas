@@ -191,6 +191,7 @@ export default function Page() {
         <RelatedList>
           <RelatedLink href="/dev/database" tag="開発">データベース概要</RelatedLink>
           <RelatedLink href="/dev/database/physical" tag="開発">物理設計と運用</RelatedLink>
+          <RelatedLink href="/dev/database/history" tag="開発">データベースの歴史</RelatedLink>
           <RelatedLink href="/design/methodology/data-centric" tag="設計">データ中心設計</RelatedLink>
         </RelatedList>
       </RelatedNav>

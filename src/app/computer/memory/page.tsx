@@ -154,13 +154,40 @@ export default function Page() {
           <p>命令(コード)、共有データ(データ領域)、自由に確保するデータ(ヒープ)、一時的な作業(スタック)は、それぞれ性質もライフサイクルも異なります。</p>
         </Card>
       </CardGrid>
-      <p>ここまでで、コンピュータの成り立ち・OS・メモリという「1台のコンピュータの中」の話を一周しました。次は、そのメモリの上でプログラムがどんな考え方で書かれ、どうやって実際に動く命令になるのか、「プログラミング言語の仕組み」を見ていきましょう。</p>
+      <Heading num="次へ">メモリをもっと深く知る4つの寄り道</Heading>
+      <p>ここまでは「メモリとは何か」の全体像でした。ここから先は、同じメモリを別々の角度から掘り下げる4つのページに分かれています。歴史から入っても、スタックの深掘りから入っても構いません。</p>
+      <CardGrid>
+        <Card>
+          <CardNumber>1</CardNumber>
+          <h4>記憶装置の歴史</h4>
+          <p>紙に穴を開けた時代からDRAM・640KBの壁まで。「足りない」という感覚が技術を進めてきた60年の物語。</p>
+        </Card>
+        <Card>
+          <CardNumber>2</CardNumber>
+          <h4>仮想メモリとソフトウェアの肥大化</h4>
+          <p>OSがつく「やさしい嘘」と、その副作用としてソフトが際限なく太っていくヴィルトの法則。</p>
+        </Card>
+        <Card>
+          <CardNumber>3</CardNumber>
+          <h4>速さの壁</h4>
+          <p>主役が量から速度へ。キャッシュ階層・HBM、そしてAI推論の帯域ボトルネックまで。</p>
+        </Card>
+        <Card>
+          <CardNumber>4</CardNumber>
+          <h4>スタックと関数呼び出しの舞台裏</h4>
+          <p>関数を呼ぶたびメモリで何が起きるか。フレーム・呼び出し規約・スタックオーバーフローを覗く。</p>
+        </Card>
+      </CardGrid>
+      <p>一周した後は、そのメモリの上でプログラムがどんな考え方で書かれ、どうやって実際に動く命令になるのか ―「プログラミング言語の仕組み」へ進むのがおすすめです。</p>
 
       <RelatedNav>
         <RelatedList>
+          <RelatedLink href="/computer/memory/history" tag="コンピュータ">記憶装置の歴史 ― 「足りない」の系譜</RelatedLink>
+          <RelatedLink href="/computer/memory/virtual" tag="コンピュータ">仮想メモリとソフトウェアの肥大化</RelatedLink>
+          <RelatedLink href="/computer/memory/speed" tag="コンピュータ">速さの壁 ― キャッシュ・帯域・HBM</RelatedLink>
+          <RelatedLink href="/computer/memory/stack" tag="コンピュータ">スタックと関数呼び出しの舞台裏</RelatedLink>
           <RelatedLink href="/dev/language-basics" tag="開発">プログラミング言語の仕組み</RelatedLink>
           <RelatedLink href="/computer/os" tag="コンピュータ">OSの仕組み ― プロセス・スレッド・カーネル</RelatedLink>
-          <RelatedLink href="/computer/history" tag="コンピュータ">コンピュータの歴史</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

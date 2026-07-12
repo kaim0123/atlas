@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { SectionFooterNav } from "@/components/layout/section-footer-nav";
 
 export function DocsPage({ children }: { children: ReactNode }) {
   return (
@@ -38,5 +39,10 @@ export function Heading({ num, children }: { num: ReactNode; children: ReactNode
 }
 
 export function DocsFooter({ children }: { children: ReactNode }) {
-  return <footer className="mt-12 text-[0.82rem] text-muted-foreground">{children}</footer>;
+  return (
+    <>
+      <SectionFooterNav />
+      <footer className="mt-12 text-[0.82rem] text-muted-foreground">{children}</footer>
+    </>
+  );
 }

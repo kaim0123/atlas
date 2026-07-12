@@ -27,6 +27,11 @@ const topics = [
     desc: "ハイパーバイザー型・コンテナ型 ― 物理基盤を抽象化する技術",
   },
   {
+    href: "/infra/container",
+    title: "コンテナ",
+    desc: "namespaces・cgroupsの仕組みから、Docker・Kubernetes・観測・セキュリティまで",
+  },
+  {
     href: "/infra/storage",
     title: "ストレージの仕組み",
     desc: "NAS・SAN・RAID・ファイル共有と、バックアップ・復旧",

@@ -29,6 +29,7 @@ const topics = [
   { href: "/security/identity", title: "認証プロトコルの変遷", desc: "LDAPからPasskeyまで、「誰か」を確かめる仕組みの移り変わり" },
   { href: "/security/cache", title: "キャッシュ制御", desc: "個人向けのページが、他人の画面に表示されてしまう事故" },
   { href: "/security/logging", title: "ログ出力設計", desc: "攻撃の予兆に気づき、事後に調査できる記録の残し方" },
+  { href: "/security/headers", title: "セキュリティヘッダ", desc: "配信の入口でヘッダを足し、XSSやクリックジャッキングを抑える" },
   { href: "/security/network-defense", title: "ネットワーク層の防御", desc: "EDR/XDR・ゼロトラスト・IDS/IPSで守る、コードの外側" },
 ];
 

@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import { DocsPage, Hero, Eyebrow, Lead, DocsFooter, IndexGrid, IndexCard } from "@/components/docs";
+import Link from "next/link";
+import { DocsPage, Hero, Eyebrow, Lead, DocsFooter } from "@/components/docs";
+import { sections, type NavNode } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "Atlas",
 };
 
-const sections = [
-  { href: "/computer", num: "01", title: "コンピュータ", desc: "OS・メモリの仕組みから、PCハードウェアの基礎・端末管理まで" },
-  { href: "/network", num: "02", title: "ネットワーク", desc: "OSI参照モデル・IP・ポートから、配線・機器・Wi-Fiまで" },
-  { href: "/internet", num: "03", title: "インターネット", desc: "DNS・Web・メールの仕組みから、サーバー・ISP接続まで" },
-  { href: "/dev", num: "04", title: "開発", desc: "言語・フレームワーク・DBから、パッケージ管理・開発環境まで" },
-  { href: "/design", num: "05", title: "設計", desc: "パラダイムから9つのアーキテクチャ、設計原則まで" },
-  { href: "/test", num: "06", title: "テスト", desc: "静的解析からE2E、パフォーマンス、CI/CDまでの品質計画" },
-  { href: "/security", num: "07", title: "セキュリティ", desc: "インジェクション攻撃から認証・認可まで" },
-  { href: "/infra", num: "08", title: "インフラ", desc: "仮想化・クラウド(AWS)・ストレージから、基盤の監視・障害切り分けまで" },
-  { href: "/ops", num: "09", title: "運用", desc: "デプロイ・監視・パフォーマンスから、分析・コスト・コンプライアンスまで" },
-];
+// 子孫を辿って最初のリンク先を返す(グループ自体にhrefが無い場合の遷移先)
+function firstHref(node: NavNode): string | undefined {
+  if (node.href) return node.href;
+  for (const child of node.children ?? []) {
+    const href = firstHref(child);
+    if (href) return href;
+  }
+  return undefined;
+}
 
 export default function Home() {
   return (
@@ -23,16 +23,52 @@ export default function Home() {
       <Hero>
         <Eyebrow>Atlas</Eyebrow>
         <h1>個人の知識地図</h1>
-        <Lead>コンピュータ・ネットワークの基礎から、開発・設計・セキュリティ、インフラ実務まで分野ごとに整理しています。</Lead>
+        <Lead>
+          コンピュータ・ネットワークの基礎から、開発・設計・セキュリティ、インフラ実務まで分野ごとに整理しています。
+        </Lead>
       </Hero>
 
-      <IndexGrid>
-        {sections.map((section) => (
-          <IndexCard key={section.href} href={section.href} num={section.num} title={section.title}>
-            {section.desc}
-          </IndexCard>
-        ))}
-      </IndexGrid>
+      <div className="my-8 flex flex-col gap-8">
+        {sections.map((section, i) => {
+          const Icon = section.icon;
+          return (
+            <section key={section.href}>
+              <Link
+                href={section.href}
+                className="group flex items-center gap-2.5 text-foreground no-underline"
+              >
+                <span className="text-[0.8rem] font-bold tabular-nums text-primary">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <Icon className="size-[18px] text-primary" aria-hidden />
+                <h2 className="m-0 text-lg font-semibold group-hover:text-primary">
+                  {section.title}
+                </h2>
+              </Link>
+
+              <ul className="mt-2.5 flex flex-wrap gap-2 border-l-2 border-border pl-4 sm:ml-[9px]">
+                {section.tree.map((node) => {
+                  const href = firstHref(node);
+                  const key = node.href ?? node.title;
+                  const className =
+                    "inline-block rounded-md border border-border bg-card px-2.5 py-1 text-[0.85rem] text-muted-foreground no-underline transition-colors hover:border-primary hover:text-primary";
+                  return (
+                    <li key={key}>
+                      {href ? (
+                        <Link href={href} className={className}>
+                          {node.title}
+                        </Link>
+                      ) : (
+                        <span className={className}>{node.title}</span>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
+          );
+        })}
+      </div>
 
       <DocsFooter>Atlas</DocsFooter>
     </DocsPage>
