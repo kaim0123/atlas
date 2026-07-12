@@ -8,6 +8,7 @@ import {
   Shapes,
   FlaskConical,
   ShieldCheck,
+  AppWindow,
   Server,
   Settings2,
   type LucideIcon,
@@ -356,13 +357,22 @@ export const sections: NavSection[] = [
     title: "セキュリティ",
     icon: ShieldCheck,
     tree: [
+      { href: "/security/basics", title: "情報セキュリティの目的と脅威" },
       {
-        title: "攻撃と対策",
+        title: "攻撃手法",
         children: [
+          { href: "/security/attacks", title: "攻撃手法の概観" },
           { href: "/security/injection", title: "インジェクション攻撃" },
           { href: "/security/xss", title: "XSSと出力エスケープ" },
           { href: "/security/sqli", title: "SQLインジェクション対策" },
           { href: "/security/csrf", title: "CSRF対策" },
+        ],
+      },
+      {
+        title: "暗号技術",
+        children: [
+          { href: "/security/crypto", title: "暗号の歴史と公開鍵暗号" },
+          { href: "/security/hash", title: "ハッシュ関数と衝突攻撃" },
         ],
       },
       {
@@ -376,22 +386,29 @@ export const sections: NavSection[] = [
           { href: "/security/identity", title: "認証プロトコルの変遷" },
         ],
       },
+      { href: "/security/management", title: "リスクマネジメント" },
       {
-        title: "暗号技術",
+        title: "セキュリティ対策・実装",
         children: [
-          { href: "/security/crypto", title: "暗号の歴史と公開鍵暗号" },
-          { href: "/security/hash", title: "ハッシュ関数と衝突攻撃" },
-        ],
-      },
-      {
-        title: "防御・運用",
-        children: [
+          { href: "/security/countermeasures", title: "セキュリティ対策の概観" },
+          { href: "/security/network-defense", title: "ネットワーク層の防御" },
           { href: "/security/headers", title: "セキュリティヘッダ" },
           { href: "/security/cache", title: "キャッシュ制御" },
           { href: "/security/logging", title: "ログ出力設計" },
-          { href: "/security/network-defense", title: "ネットワーク層の防御" },
         ],
       },
+    ],
+  },
+  {
+    href: "/ui",
+    title: "ユーザーインタフェース",
+    icon: AppWindow,
+    tree: [
+      { href: "/ui/basics", title: "UI・ユーザビリティ・アクセシビリティ" },
+      { href: "/ui/gui", title: "GUIの部品" },
+      { href: "/ui/design", title: "画面設計と入力チェック" },
+      { href: "/ui/web", title: "Web UIデザイン" },
+      { href: "/ui/hcd", title: "人間中心設計と評価" },
     ],
   },
   {
