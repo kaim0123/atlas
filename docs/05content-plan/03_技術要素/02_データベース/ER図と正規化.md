@@ -1,7 +1,7 @@
 # データベース｜ER図と正規化
 
 > 分割元: [`00_分割元_データベース基礎.md`](../00_分割元_データベース基礎.md) §3
-> 対応ページ: `database/design/`
+> 対応ページ（実装済み）: [`/database/design`](../../../../src/app/database/design/page.tsx)（旧 `/dev/database/design` から移動・リダイレクト済み）
 
 要件を表構造に落とす設計の手順（ER図と第1〜第3正規化）を整理します。
 

@@ -1,7 +1,7 @@
 # データベース｜トランザクションとACID
 
 > 分割元: [`00_分割元_データベース基礎.md`](../00_分割元_データベース基礎.md) §4
-> 対応ページ: `database/transaction/`
+> 対応ページ（実装済み）: [`/database/transaction`](../../../../src/app/database/transaction/page.tsx)（RAID・レプリケーション等の実務は `/dev/database/physical`）
 
 まとめて成功するか取り消すか、という単位（トランザクション）と、その保証（ACID）を整理します。
 

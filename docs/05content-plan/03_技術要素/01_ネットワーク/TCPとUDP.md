@@ -1,7 +1,7 @@
 # ネットワーク｜TCPとUDP
 
 > 分割元: [`00_分割元_ネットワーク基礎.md`](../00_分割元_ネットワーク基礎.md) §3
-> 対応ページ: `network/transport/`
+> 対応ページ（実装済み）: [`/network/transport`](../../../../src/app/network/transport/page.tsx)
 
 信頼性のある転送（TCP）と軽量な転送（UDP）の使い分け、ポート番号を整理します。
 
@@ -18,5 +18,5 @@
 ## この先どこで使うか
 
 - 住所づけ（IP・サブネット）→ [`IPアドレスと経路.md`](IPアドレスと経路.md)（`network/ip/`）
-- HTTP・メールなどアプリケーション層の代表例 → `network/applications/`
-- セキュリティの考え方（CIA・脅威）→ `security/basics/`
+- HTTP・メールなどアプリケーション層の代表例 → [`/network/applications`](../../../../src/app/network/applications/page.tsx)
+- セキュリティの考え方（CIA・脅威）→ [`/security/basics`](../../../../src/app/security/basics/page.tsx)
