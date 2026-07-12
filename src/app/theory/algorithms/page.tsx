@@ -148,7 +148,7 @@ export default function Page() {
         <RelatedList>
           <RelatedLink href="/theory/algorithms/graphs" tag="情報科学">グラフと最短経路</RelatedLink>
           <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み</RelatedLink>
-          <RelatedLink href="/dev/database/design" tag="開発">概念設計と正規化</RelatedLink>
+          <RelatedLink href="/database/design" tag="データベース">ER図と正規化</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

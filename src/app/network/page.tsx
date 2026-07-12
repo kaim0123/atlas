@@ -14,12 +14,14 @@ export const metadata: Metadata = {
 };
 
 const topics = [
-  { href: "/network/protocols", title: "通信プロトコル", desc: "OSI参照モデルとTCP/IP ― 通信を階層で捉える" },
-  { href: "/network/ip", title: "IPアドレスとルーティング", desc: "宛先を決めてパケットを届ける、ネットワーク層の仕事" },
-  { href: "/network/port", title: "ポートの全体像", desc: "TCP・UDPとポート番号 ― どのアプリに届けるか" },
-  { href: "/network/cabling", title: "ケーブルと規格", desc: "LANケーブル・光ファイバー・コネクタと給電" },
-  { href: "/network/devices", title: "ネットワーク機器の役割", desc: "ルーター・スイッチ・ファイアウォールが何をするか" },
-  { href: "/network/wifi", title: "Wi-Fiの仕組み", desc: "電波・規格・セキュリティまで、無線LANの実務" },
+  { href: "/network/basics", title: "ネットワークの全体像", desc: "LAN・WAN・パケット交換・転送速度 ― 階層に入る前の地図" },
+  { href: "/network/layers", title: "階層モデル", desc: "OSI参照モデルとTCP/IP ― 通信を階層で捉える" },
+  { href: "/network/topology", title: "トポロジと接続装置", desc: "ネットワークの形と、ルーター・スイッチなどの機器" },
+  { href: "/network/ip", title: "IPアドレスと経路", desc: "住所づけからサブネット・NAT・ルーティングまで" },
+  { href: "/network/transport", title: "トランスポート層", desc: "TCP・UDPとポート番号 ― どのアプリに届けるか" },
+  { href: "/network/link", title: "データリンク層と物理層", desc: "MAC・イーサネット・ケーブル・光ファイバー・給電" },
+  { href: "/network/link/wireless", title: "無線LAN(Wi-Fi)", desc: "電波・規格・セキュリティまで、無線LANの実務" },
+  { href: "/network/applications", title: "アプリケーション層", desc: "HTTP・メール・DNS ― 利用者が触れるプロトコル" },
 ];
 
 export default function Page() {

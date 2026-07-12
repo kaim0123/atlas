@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  Aside,
   Diagram,
   RelatedNav,
   RelatedList,
@@ -34,7 +33,23 @@ export default function Page() {
         </Lead>
       </Hero>
 
-      <p>パソコンを開けると、役割の異なる部品がいくつも組み合わさっています。大きく分けると「計算し、記憶する部品」「起動時に信頼性を確保する仕組み」「電気を届け、外部とつなぐ規格」の3つの視点で整理できます。</p>
+      <Heading num="00">五大装置 ― コンピュータの地図</Heading>
+      <p>個々の部品に入る前に、コンピュータ全体の「地図」を押さえておきます。どんなコンピュータも、役割で見ると次の<Term>五大装置</Term>に整理できます。この5つは以降のすべての話の土台です。</p>
+
+      <table>
+        <tbody>
+          <tr><th>装置</th><th>役割</th><th>例</th></tr>
+          <tr><td className="hl">入力装置</td><td>外部からデータや命令を取り込む</td><td>キーボード、マウス</td></tr>
+          <tr><td className="hl">出力装置</td><td>処理結果を外に出す</td><td>ディスプレイ、プリンタ</td></tr>
+          <tr><td className="hl">記憶装置</td><td>プログラムとデータを保持する</td><td>主記憶(メモリ)、補助記憶(SSD/HDD)</td></tr>
+          <tr><td className="hl">演算装置</td><td>四則演算・論理演算を行う</td><td>CPUの一部</td></tr>
+          <tr><td className="hl">制御装置</td><td>各装置への指示とタイミングを制御する</td><td>CPUの一部</td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>演算装置と制御装置をまとめたものが<Term>CPU</Term></strong>です。また記憶装置は、電源を切ると消える<Term>主記憶(揮発性)</Term>と、切っても残る<Term>補助記憶(不揮発性)</Term>の2種類に分かれます。CPUが記憶装置から命令を取り出して実行する流れは「<Link href="/computer/cpu">CPUと命令実行</Link>」で、記憶の速さと容量の階層は「<Link href="/computer/memory">メモリの仕組み</Link>」で詳しく扱います。</p>
+
+      <p>ここから先は、この五大装置を実際の1台のPCとして開けたときに見える物理部品を、「計算し、記憶する部品」「起動時に信頼性を確保する仕組み」「電気を届け、外部とつなぐ規格」の3つの視点で見ていきます。</p>
 
       <Heading num="01">演算・記憶系 ― 計算する部品、覚えておく部品</Heading>
       <p>まずは、実際に「計算する」部品と、その結果やデータを「覚えておく」部品を見ていきます。</p>
@@ -69,7 +84,7 @@ export default function Page() {
       </Diagram>
 
       <h3>CPU ― すべての計算の中心</h3>
-      <p><Term>CPU(Central Processing Unit、中央演算処理装置)</Term>は、プログラムの命令を1つずつ読み込んで実行する、パソコンの頭脳にあたる部品です。処理を担当する「コア」の数や、1秒間に何回計算できるかを表す「クロック周波数」が、CPUの処理能力を左右します。</p>
+      <p><Term>CPU(Central Processing Unit、中央演算処理装置)</Term>は、プログラムの命令を1つずつ読み込んで実行する、パソコンの頭脳にあたる部品です。処理を担当する「コア」の数や、1秒間に何回計算できるかを表す「クロック周波数」が、CPUの処理能力を左右します。命令をどう1つずつ処理するか(命令サイクル)や、CPI・MIPSといった性能指標は「<Link href="/computer/cpu">CPUと命令実行</Link>」で詳しく扱います。</p>
 
       <h3>GPU ― 大量の計算を同時にこなす専門家</h3>
       <p><Term>GPU(Graphics Processing Unit)</Term>は、本来は画面に映る大量のピクセルを同時に計算するために生まれた部品です。CPUが「複雑な処理を順番にこなす少数の職人」だとすれば、GPUは「単純な計算を同時並行でこなす大人数の作業員」に近い構造をしています。この特性は画像処理だけでなく、近年では機械学習・AIの計算にも広く使われています。</p>
@@ -120,25 +135,8 @@ export default function Page() {
       <h3>電源ユニット(PSU) ― 部品ごとに電気を届ける</h3>
       <p><Term>電源ユニット(PSU、Power Supply Unit)</Term>は、コンセントからの交流電流を、CPUやGPU、ストレージなど各部品が必要とする直流電流に変換して届ける部品です。搭載する部品の消費電力の合計に対して余裕を持った「容量(W、ワット数)」を選ぶ必要があり、特に消費電力の大きいGPUを積む構成では、電源ユニットの容量不足が起動不能や動作不安定の原因になります。</p>
 
-      <h3>USB ― 世代を重ねて速くなってきた汎用規格</h3>
-      <p><Term>USB(Universal Serial Bus)</Term>は、キーボードやマウス、外付けストレージなど幅広い周辺機器を接続できる汎用規格です。世代が進むごとに転送速度が向上しており、同じ「USB」という名前でも世代によって性能が大きく異なります。</p>
-
-      <table>
-        <tbody>
-          <tr><th>規格</th><th>最大転送速度</th></tr>
-          <tr><td className="hl">USB 2.0</td><td>480Mbps</td></tr>
-          <tr><td className="hl">USB 3.0 / 3.1 Gen1</td><td>5Gbps</td></tr>
-          <tr><td className="hl">USB 3.1 Gen2 / 3.2</td><td>10〜20Gbps</td></tr>
-          <tr><td className="hl">USB4</td><td>40Gbps</td></tr>
-        </tbody>
-      </table>
-
-      <h3>Thunderbolt ― 映像も電力も1本のケーブルで</h3>
-      <p><Term>Thunderbolt</Term>は、Intelが中心となって開発した高速インターフェース規格です。Thunderbolt 3以降はUSB-C(Type-C)と同じ形状のコネクタを採用しており、データ転送だけでなく映像出力・電力供給までを1本のケーブルでまかなえます。見た目がUSB-Cと同じでも、実際にThunderboltとして機能するかはケーブルとポート双方の対応状況次第という点には注意が必要です。</p>
-
-      <Aside label="豆知識">
-        USB-Cはあくまでコネクタの「形状」の規格名で、転送速度やThunderbolt対応を保証するものではありません。同じUSB-C端子の機器やケーブルでも、実際に対応する規格は製品によって異なります。
-      </Aside>
+      <h3>USB・Thunderbolt ― 周辺機器をつなぐ規格</h3>
+      <p><Term>USB(Universal Serial Bus)</Term>はキーボード・マウス・外付けストレージなどをつなぐ汎用規格で、世代が進むごとに高速化しています。<Term>Thunderbolt</Term>はデータ・映像・給電を1本でまかなえる高速規格です。USBの世代別の速度、Thunderboltとの違い、DMAやプラグアンドプレイといった接続の仕組みは「<Link href="/computer/io/interface">入出力インタフェース</Link>」で詳しく扱います。</p>
 
       <Heading num="まとめ">覚えておきたい3つの視点</Heading>
       <CardGrid>
@@ -162,9 +160,10 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
+          <RelatedLink href="/computer/cpu" tag="コンピュータ">CPUと命令実行</RelatedLink>
           <RelatedLink href="/network/ip" tag="ネットワーク">IPアドレスとルーティングの実務</RelatedLink>
           <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み</RelatedLink>
-          <RelatedLink href="/network/wifi" tag="ネットワーク">Wi-Fiの仕組み</RelatedLink>
+          <RelatedLink href="/network/link/wireless" tag="ネットワーク">無線LAN(Wi-Fi)</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

@@ -3,10 +3,13 @@ import {
   Cpu,
   Network,
   Globe,
+  Database,
   Code2,
   Shapes,
   FlaskConical,
   ShieldCheck,
+  AppWindow,
+  Palette,
   Server,
   Settings2,
   type LucideIcon,
@@ -59,6 +62,13 @@ export const sections: NavSection[] = [
         ],
       },
       {
+        title: "CPU",
+        children: [
+          { href: "/computer/cpu", title: "CPUと命令実行" },
+          { href: "/computer/cpu/performance", title: "性能と高速化" },
+        ],
+      },
+      {
         title: "メモリ",
         children: [
           { href: "/computer/memory", title: "メモリの仕組み" },
@@ -69,11 +79,20 @@ export const sections: NavSection[] = [
         ],
       },
       {
+        title: "入出力",
+        children: [
+          { href: "/computer/io/bus", title: "バス" },
+          { href: "/computer/io/interface", title: "入出力インタフェース" },
+          { href: "/computer/io/devices", title: "入出力装置" },
+        ],
+      },
+      {
         title: "OS",
         children: [
           { href: "/computer/os", title: "OSの仕組み" },
           { href: "/computer/os/kernel", title: "カーネルの役割と設計" },
           { href: "/computer/os/process", title: "プロセスとスレッド" },
+          { href: "/computer/os/memory", title: "記憶管理と仮想記憶" },
           { href: "/computer/os/syscall", title: "システムコール" },
           { href: "/computer/os/shell", title: "シェル" },
           { href: "/computer/os/filesystem", title: "ファイルシステム" },
@@ -88,6 +107,14 @@ export const sections: NavSection[] = [
           },
         ],
       },
+      {
+        title: "システム構成",
+        children: [
+          { href: "/computer/system/architecture", title: "処理形態とシステム構成" },
+          { href: "/computer/system/reliability", title: "信頼性と冗長化" },
+          { href: "/computer/system/metrics", title: "性能と経済性の評価" },
+        ],
+      },
       { href: "/computer/client", title: "クライアント管理の実務" },
       { href: "/computer/printer", title: "プリンターの仕組み" },
     ],
@@ -97,12 +124,19 @@ export const sections: NavSection[] = [
     title: "ネットワーク",
     icon: Network,
     tree: [
-      { href: "/network/protocols", title: "通信プロトコル" },
-      { href: "/network/ip", title: "IPアドレスとルーティング" },
-      { href: "/network/port", title: "ポートの全体像" },
-      { href: "/network/cabling", title: "ケーブルと規格" },
-      { href: "/network/devices", title: "ネットワーク機器の役割" },
-      { href: "/network/wifi", title: "Wi-Fiの仕組み" },
+      { href: "/network/basics", title: "ネットワークの全体像" },
+      { href: "/network/layers", title: "階層モデル" },
+      { href: "/network/topology", title: "トポロジと接続装置" },
+      { href: "/network/ip", title: "IPアドレスと経路" },
+      { href: "/network/transport", title: "トランスポート層" },
+      {
+        title: "データリンク層と物理層",
+        children: [
+          { href: "/network/link", title: "データリンク層と物理層" },
+          { href: "/network/link/wireless", title: "無線LAN(Wi-Fi)" },
+        ],
+      },
+      { href: "/network/applications", title: "アプリケーション層" },
     ],
   },
   {
@@ -117,6 +151,19 @@ export const sections: NavSection[] = [
       { href: "/internet/isp", title: "ISP接続とCDN" },
       { href: "/internet/server", title: "サーバーの全体像" },
       { href: "/internet/server/build", title: "サーバー構築の実務" },
+    ],
+  },
+  {
+    href: "/database",
+    title: "データベース",
+    icon: Database,
+    tree: [
+      { href: "/database/basics", title: "役割と種類" },
+      { href: "/database/model", title: "関係モデルと3層スキーマ" },
+      { href: "/database/design", title: "ER図と正規化" },
+      { href: "/database/sql", title: "SQLとデータ操作" },
+      { href: "/database/transaction", title: "トランザクションと整合性" },
+      { href: "/database/advanced/index", title: "索引とアクセス制御" },
     ],
   },
   {
@@ -158,10 +205,9 @@ export const sections: NavSection[] = [
         ],
       },
       {
-        title: "データベース",
+        title: "データベース(追補)",
         children: [
-          { href: "/dev/database", title: "データベース概要" },
-          { href: "/dev/database/design", title: "概念設計と正規化" },
+          { href: "/dev/database", title: "データベース(開発者向け)" },
           { href: "/dev/database/physical", title: "物理設計と運用" },
           { href: "/dev/database/history", title: "データベースの歴史" },
         ],
@@ -312,13 +358,22 @@ export const sections: NavSection[] = [
     title: "セキュリティ",
     icon: ShieldCheck,
     tree: [
+      { href: "/security/basics", title: "情報セキュリティの目的と脅威" },
       {
-        title: "攻撃と対策",
+        title: "攻撃手法",
         children: [
+          { href: "/security/attacks", title: "攻撃手法の概観" },
           { href: "/security/injection", title: "インジェクション攻撃" },
           { href: "/security/xss", title: "XSSと出力エスケープ" },
           { href: "/security/sqli", title: "SQLインジェクション対策" },
           { href: "/security/csrf", title: "CSRF対策" },
+        ],
+      },
+      {
+        title: "暗号技術",
+        children: [
+          { href: "/security/crypto", title: "暗号の歴史と公開鍵暗号" },
+          { href: "/security/hash", title: "ハッシュ関数と衝突攻撃" },
         ],
       },
       {
@@ -332,22 +387,42 @@ export const sections: NavSection[] = [
           { href: "/security/identity", title: "認証プロトコルの変遷" },
         ],
       },
+      { href: "/security/management", title: "リスクマネジメント" },
       {
-        title: "暗号技術",
+        title: "セキュリティ対策・実装",
         children: [
-          { href: "/security/crypto", title: "暗号の歴史と公開鍵暗号" },
-          { href: "/security/hash", title: "ハッシュ関数と衝突攻撃" },
-        ],
-      },
-      {
-        title: "防御・運用",
-        children: [
+          { href: "/security/countermeasures", title: "セキュリティ対策の概観" },
+          { href: "/security/network-defense", title: "ネットワーク層の防御" },
           { href: "/security/headers", title: "セキュリティヘッダ" },
           { href: "/security/cache", title: "キャッシュ制御" },
           { href: "/security/logging", title: "ログ出力設計" },
-          { href: "/security/network-defense", title: "ネットワーク層の防御" },
         ],
       },
+    ],
+  },
+  {
+    href: "/ui",
+    title: "ユーザーインタフェース",
+    icon: AppWindow,
+    tree: [
+      { href: "/ui/basics", title: "UI・ユーザビリティ・アクセシビリティ" },
+      { href: "/ui/gui", title: "GUIの部品" },
+      { href: "/ui/design", title: "画面設計と入力チェック" },
+      { href: "/ui/web", title: "Web UIデザイン" },
+      { href: "/ui/hcd", title: "人間中心設計と評価" },
+    ],
+  },
+  {
+    href: "/media",
+    title: "情報メディア",
+    icon: Palette,
+    tree: [
+      { href: "/media/basics", title: "マルチメディアの全体像" },
+      { href: "/media/audio", title: "音声フォーマット" },
+      { href: "/media/image", title: "画像フォーマット" },
+      { href: "/media/video", title: "動画フォーマット" },
+      { href: "/media/compression", title: "圧縮の考え方" },
+      { href: "/media/graphics", title: "色・解像度・グラフィックス応用" },
     ],
   },
   {

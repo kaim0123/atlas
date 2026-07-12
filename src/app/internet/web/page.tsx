@@ -295,7 +295,7 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/network/protocols" tag="ネットワーク">通信プロトコル ― OSI参照モデルとTCP/IP</RelatedLink>
+          <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル ― OSI参照モデルとTCP/IP</RelatedLink>
           <RelatedLink href="/internet/history" tag="インターネット">インターネットの歴史</RelatedLink>
           <RelatedLink href="/computer/os" tag="コンピュータ">OSの仕組み</RelatedLink>
         </RelatedList>

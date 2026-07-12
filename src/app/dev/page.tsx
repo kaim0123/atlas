@@ -22,7 +22,7 @@ const topics = [
   { href: "/dev/tooling", title: "パッケージ管理とビルド", desc: "npm・pnpm・Vite ― コードから動くアプリへ" },
   { href: "/dev/environments", title: "環境の全体像", desc: "「環境」という言葉の4つの意味を整理する" },
   { href: "/dev/framework", title: "フレームワーク・ライブラリ", desc: "React・Next.js・Tailwindで組み立てる" },
-  { href: "/dev/database", title: "データベース", desc: "概念設計・正規化から物理設計・運用まで" },
+  { href: "/dev/database", title: "データベース(追補)", desc: "物理設計・運用と歴史(基礎はデータベースセクション)" },
   { href: "/dev/cache", title: "キャッシュの全体像", desc: "場所や規模が変わっても変わらない、キャッシュの定義" },
 ];
 

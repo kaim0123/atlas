@@ -66,7 +66,7 @@ export default function Page() {
         <Card><CardNumber>2</CardNumber><h4>一貫性と引き換えにマークアップが長くなる</h4><p>数値スケールが決まっている分デザインはぶれにくいが、クラス指定は長くなりがち。</p></Card>
         <Card><CardNumber>3</CardNumber><h4>shadcn/uiはコピーして所有する</h4><p>依存パッケージではなくソースコードとして取り込み、自由に編集できます。</p></Card>
       </CardGrid>
-      <p>ここまでで、コードを書き実行するための基本的な道具立て ― HTML/CSS・JavaScript/TypeScript・実行環境・フレームワーク・ライブラリ ― が一通り揃いました。次のページ「<Link href="/dev/database">データベース</Link>」では、これらを使って作ったアプリのデータをどう構造化して保存するか、リレーショナルデータベースの基礎を見ていきます。</p>
+      <p>ここまでで、コードを書き実行するための基本的な道具立て ― HTML/CSS・JavaScript/TypeScript・実行環境・フレームワーク・ライブラリ ― が一通り揃いました。次は「<Link href="/database/basics">データベース</Link>」で、これらを使って作ったアプリのデータをどう構造化して保存するか、リレーショナルデータベースの基礎を見ていきます。</p>
 
       <RelatedNav>
         <RelatedList>

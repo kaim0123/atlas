@@ -120,7 +120,7 @@ export default function Page() {
         <Card><CardNumber>2</CardNumber><h4>ライブラリは主導権を渡さない</h4><p>あなたのコードが必要な関数を呼び出して使います(Tailwind CSS・shadcn/ui)。組み合わせの自由度が高い分、型は決まっていません。</p></Card>
         <Card><CardNumber>3</CardNumber><h4>分類は目的で決まる</h4><p>フロントエンド・バックエンド・モバイルなど、作りたいものが決まれば07節の表から候補を絞り込めます。</p></Card>
       </CardGrid>
-      <p>ここまでで、コードを書き実行するための基本的な道具立て ― HTML/CSS・JavaScript/TypeScript・実行環境・フレームワーク・ライブラリ ― が一通り揃いました。次のページ「<Link href="/dev/database">データベース</Link>」では、これらを使って作ったアプリのデータをどう構造化して保存するか、リレーショナルデータベースの基礎を見ていきます。</p>
+      <p>ここまでで、コードを書き実行するための基本的な道具立て ― HTML/CSS・JavaScript/TypeScript・実行環境・フレームワーク・ライブラリ ― が一通り揃いました。次は「<Link href="/database/basics">データベース</Link>」で、これらを使って作ったアプリのデータをどう構造化して保存するか、リレーショナルデータベースの基礎を見ていきます。</p>
 
       <RelatedNav>
         <RelatedList>

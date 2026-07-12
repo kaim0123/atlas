@@ -40,7 +40,7 @@ export default function Page() {
       <p>ブラウザを開いてから閉じるまでの一続きの期間そのものを「セッション」と呼ぶこともあります。JavaScriptの<code>sessionStorage</code>という保存領域の名前はここから来ていて、タブやウィンドウを閉じるとデータが消えます。これは意味1のようにサーバー側が管理する状態ではなく、あくまでブラウザという1つのソフトウェアの生存期間を指す、まったく別の話です。</p>
 
       <Heading num="03">意味3: TCPセッション ― 通信そのものの一続きの単位</Heading>
-      <p>「<Link href="/network/protocols">通信プロトコル</Link>」で見たOSI参照モデルには<Term>セッション層</Term>という層があり、接続の確立から維持・終了までの一連のやり取りそのものを「セッション」と呼びます。ログインしているかどうかとは無関係な、通信インフラの下位レイヤーの話です。実際のTCP/IPモデルでは他の層と統合されて扱われますが、「セッション」という名前は用語として残っています。</p>
+      <p>「<Link href="/network/layers">階層モデル</Link>」で見たOSI参照モデルには<Term>セッション層</Term>という層があり、接続の確立から維持・終了までの一連のやり取りそのものを「セッション」と呼びます。ログインしているかどうかとは無関係な、通信インフラの下位レイヤーの話です。実際のTCP/IPモデルでは他の層と統合されて扱われますが、「セッション」という名前は用語として残っています。</p>
 
       <Heading num="04">罠: Cookie自身にも「セッション」という種類名がある</Heading>
       <p>「<Link href="/security/session">セッションとCookie管理</Link>」でCookieの<Term>HttpOnly・Secure・SameSite</Term>という3属性を見ましたが、それとは別の軸として、Cookieには<Term>有効期限の設定有無</Term>による分類があります。</p>
@@ -72,7 +72,7 @@ export default function Page() {
       <RelatedNav>
         <RelatedList>
           <RelatedLink href="/security/session" tag="セキュリティ">セッションとCookie管理</RelatedLink>
-          <RelatedLink href="/network/protocols" tag="ネットワーク">通信プロトコル</RelatedLink>
+          <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル</RelatedLink>
           <RelatedLink href="/security/token" tag="セキュリティ">トークンの全体像</RelatedLink>
         </RelatedList>
       </RelatedNav>

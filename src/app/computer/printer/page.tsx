@@ -112,7 +112,7 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
-          <RelatedLink href="/network/cabling" tag="ネットワーク">ケーブルと規格</RelatedLink>
+          <RelatedLink href="/network/link" tag="ネットワーク">データリンク層と物理層</RelatedLink>
           <RelatedLink href="/internet/mail" tag="インターネット">メールの仕組み</RelatedLink>
           <RelatedLink href="/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
         </RelatedList>

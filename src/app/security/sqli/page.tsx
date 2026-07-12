@@ -31,7 +31,7 @@ export default function Page() {
         <Eyebrow>セキュリティ</Eyebrow>
         <h1>SQLインジェクション対策</h1>
         <Lead>
-          <Link href="/security/injection">インジェクション攻撃の基本形</Link>で見た「データが命令として実行されてしまう」問題を、データベースへの命令(SQL)で起こすのが<Term>SQLインジェクション(SQLi)</Term>です。入力欄に仕込まれた文字列によって、想定していたSQL文の意味そのものが書き換えられてしまいます。テーブルや行・列といったDBの基本構造は<Link href="/dev/database">データベース</Link>のページで扱っています。
+          <Link href="/security/injection">インジェクション攻撃の基本形</Link>で見た「データが命令として実行されてしまう」問題を、データベースへの命令(SQL)で起こすのが<Term>SQLインジェクション(SQLi)</Term>です。入力欄に仕込まれた文字列によって、想定していたSQL文の意味そのものが書き換えられてしまいます。テーブルや行・列といったDBの基本構造は「<Link href="/database/model">関係モデルと3層スキーマ</Link>」で扱っています。
         </Lead>
       </Hero>
 
@@ -96,7 +96,7 @@ export default function Page() {
         <RelatedList>
           <RelatedLink href="/security/injection" tag="セキュリティ">インジェクション攻撃の基本形</RelatedLink>
           <RelatedLink href="/security/xss" tag="セキュリティ">XSSと出力エスケープ</RelatedLink>
-          <RelatedLink href="/dev/database" tag="開発">データベース</RelatedLink>
+          <RelatedLink href="/database/sql" tag="データベース">SQLとデータ操作</RelatedLink>
         </RelatedList>
       </RelatedNav>
 
