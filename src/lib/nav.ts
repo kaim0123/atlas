@@ -12,6 +12,7 @@ import {
   Palette,
   Server,
   Settings2,
+  Workflow,
   type LucideIcon,
 } from "lucide-react";
 
@@ -164,6 +165,48 @@ export const sections: NavSection[] = [
       { href: "/database/sql", title: "SQLとデータ操作" },
       { href: "/database/transaction", title: "トランザクションと整合性" },
       { href: "/database/advanced/index", title: "索引とアクセス制御" },
+    ],
+  },
+  {
+    href: "/sdlc",
+    title: "開発技術",
+    icon: Workflow,
+    tree: [
+      { href: "/sdlc/overview", title: "開発の全体像" },
+      { href: "/sdlc/process", title: "開発プロセスと手法" },
+      { href: "/sdlc/process/agile", title: "スクラムとアジャイル実践" },
+      { href: "/sdlc/requirements", title: "要件定義" },
+      { href: "/sdlc/requirements/modeling", title: "要件の表現方法" },
+      {
+        title: "設計",
+        children: [
+          { href: "/sdlc/design/basics", title: "設計の全体像" },
+          { href: "/sdlc/design/structured", title: "構造化設計" },
+          { href: "/sdlc/design/data-centered", title: "データ中心設計" },
+          { href: "/sdlc/design/object", title: "オブジェクト指向設計" },
+          { href: "/sdlc/design/architecture", title: "システム構成とアーキテクチャ" },
+        ],
+      },
+      { href: "/sdlc/implementation", title: "実装" },
+      {
+        title: "テスト",
+        children: [
+          { href: "/sdlc/testing/levels", title: "テストの段階" },
+          { href: "/sdlc/testing/techniques", title: "テスト技法" },
+        ],
+      },
+      { href: "/sdlc/review", title: "レビューと品質確認" },
+      { href: "/sdlc/deployment", title: "導入と受入れ" },
+      { href: "/sdlc/maintenance", title: "保守" },
+      {
+        title: "開発管理",
+        children: [
+          { href: "/sdlc/management/config", title: "構成管理" },
+          { href: "/sdlc/management/change", title: "変更管理" },
+          { href: "/sdlc/management/ip", title: "知的財産とライセンス" },
+        ],
+      },
+      { href: "/sdlc/process/advanced", title: "プロセス成熟度（発展）" },
     ],
   },
   {

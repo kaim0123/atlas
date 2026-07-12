@@ -24,6 +24,7 @@ const topics = [
   { href: "/dev/framework", title: "フレームワーク・ライブラリ", desc: "React・Next.js・Tailwindで組み立てる" },
   { href: "/dev/database", title: "データベース(追補)", desc: "物理設計・運用と歴史(基礎はデータベースセクション)" },
   { href: "/dev/cache", title: "キャッシュの全体像", desc: "場所や規模が変わっても変わらない、キャッシュの定義" },
+  { href: "/sdlc/overview", title: "開発の流れ", desc: "要件定義から保守まで、開発工程の全体像(開発技術セクション)" },
 ];
 
 export default function Page() {

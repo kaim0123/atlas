@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import {
   DocsPage,
@@ -95,7 +94,7 @@ export default function Page() {
         <RelatedList>
           <RelatedLink href="/ui/basics" tag="ユーザーインタフェース">UI・ユーザビリティ・アクセシビリティ</RelatedLink>
           <RelatedLink href="/ui/design" tag="ユーザーインタフェース">画面設計と入力チェック</RelatedLink>
-          <RelatedLink href="/test/review" tag="テスト">レビュー観点</RelatedLink>
+          <RelatedLink href="/sdlc/review" tag="開発技術">レビューと品質確認</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

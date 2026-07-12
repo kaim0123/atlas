@@ -18,7 +18,7 @@
 
 ---
 
-## 全体マップ(学習順・トップ9)
+## 全体マップ(学習順・トップ10)
 
 ```
 Atlas
@@ -27,6 +27,7 @@ Atlas
 ├── 2. network     ネットワーク(全体像・階層・トポロジ・IP・トランスポート・リンク・アプリ層)
 ├── 3. internet    インターネット(DNS・Web・メール・ISP・サーバー概観)
 ├── ★ database     データベース(役割・関係モデル・設計・SQL・トランザクション・索引) ← 技術要素で新設
+├── ★ sdlc         開発技術(工程・プロセス・設計・テスト・保守・開発管理) ← 開発技術で新設
 ├── 4. dev         開発(環境→言語→FW→DB追補→キャッシュ)
 ├── 5. design      設計
 ├── 6. test        テスト・品質
@@ -39,7 +40,7 @@ Atlas
 └── 9. ops         運用(デプロイ・監視 … + 端末/プリンター等の社内IT運用)
 
 ※ 先頭に theory(情報科学)、末尾付近に上記を配置。search/ はサイト機能のため構成外
-※ nav 上の並び: … internet → database → dev → design → test → security → ui → media → infra → ops
+※ nav 上の並び: … internet → database → sdlc → dev → design → test → security → ui → media → infra → ops
 ```
 
 **二層構造**: `computer`/`network`/`internet`/`security`/`ops` は**フェーズ1で概念、フェーズ2で実務**を同じディレクトリで2回くぐる。`infra` はフェーズ2寄りの基盤セクション。
@@ -123,6 +124,40 @@ database/
 └── advanced/
     └── index/    ＋✓ ← physical §01           索引とアクセス制御 …… B-tree/ハッシュ / GRANT・REVOKE
 ```
+
+## ★ sdlc/ — 開発技術(開発技術・新設)
+
+e-Words「テクノロジ系 開発技術」を、開発ライフサイクルの学習順に再構成したトップセクション(nav 上は database と dev の間)。詳細計画は [`04_開発技術/ディレクトリ.md`](04_開発技術/ディレクトリ.md)。`design/`・`test/`・`dev/`・`ops/` の実務ページは維持し、相互リンクで繋ぐ(物理移動は `test/review` → `sdlc/review` のみ)。
+
+```
+sdlc/
+├── page.tsx              ✓ 索引(学習順IndexGrid)
+├── overview/             ✓ ← 01_overview        開発の全体像 …… 工程と成果物 / WF・アジャイル入口
+├── process/              ✓ ← 用語集_管理§1       開発プロセスと手法 …… WF/プロトタイピング/段階的/アジャイル
+│   ├── agile/            ✓                        スクラムとアジャイル実践 …… PO/SM/スプリント/XP/TDD/CI・CD
+│   └── advanced/         ✓                        プロセス成熟度(発展) …… 形式手法/SLCP/CMMI
+├── requirements/         ✓ ← 02_requirements     要件定義 …… 機能/非機能要件 / ステークホルダ
+│   └── modeling/         ✓                        要件の表現方法 …… ユースケース/DFD/ER/UML入口
+├── design/
+│   ├── basics/           ✓ ← 03_design           設計の全体像 …… 外部/内部設計 / 結合度・凝集度
+│   ├── structured/       ✓                        構造化設計 …… 流れ図/DFD/STS・TR分割(≠構造化プログラミング)
+│   ├── data-centered/    ✓                        データ中心設計 …… データモデル/ER/正規化入口
+│   ├── object/           ✓                        オブジェクト指向設計 …… クラス/継承/多相性/クラス図(試験向け)
+│   └── architecture/     ✓                        システム構成とアーキテクチャ …… CS/分散/MVC(概要)
+├── implementation/       ✓ ← 用語集_システム§3    実装 …… コーディング標準/構造化プログラミング/部品化
+├── testing/
+│   ├── levels/           ✓ ← 04_testing          テストの段階 …… 単体/結合/システム/受入れ/回帰
+│   └── techniques/       ✓                        テスト技法 …… 命令/条件/判定条件/複数条件網羅/バグ曲線
+├── review/               ✓ ← test/review(移動)    レビューと品質確認 …… インスペクション/ウォークスルー
+├── deployment/           ✓                        導入と受入れ …… リリース/受入れテスト/検収
+├── maintenance/          ✓                        保守 …… 是正/適応/予防保守/リファクタリング
+├── management/
+│   ├── config/           ✓ ← 用語集_管理§3        構成管理 …… 構成品目/バージョン管理/SBOM
+│   ├── change/           ✓                        変更管理 …… 目的と手順/一貫性
+│   └── ip/               ✓ ← 用語集_管理§2        知的財産とライセンス …… 著作権/特許/DRM
+```
+
+旧 `test/review` は `RedirectTo` スタブで `sdlc/review` へ転送(静的エクスポートのため `next.config` redirects は不可)。
 
 ## 4. dev/ — 開発 ★impl を統合
 

@@ -91,8 +91,8 @@ export default function Page() {
         <RelatedList>
           <RelatedLink href="/infra/aws/network" tag="AWS">ネットワーキングとコンテンツ配信</RelatedLink>
           <RelatedLink href="/infra/aws/cicd" tag="AWS">CI/CD</RelatedLink>
-          <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
-          <RelatedLink href="/ops/performance" tag="運用">パフォーマンス</RelatedLink>
+          <RelatedLink href="/sdlc/deployment" tag="開発技術">導入と受入れ</RelatedLink>
+          <RelatedLink href="/sdlc/management/config" tag="開発技術">構成管理</RelatedLink>
         </RelatedList>
       </RelatedNav>
 

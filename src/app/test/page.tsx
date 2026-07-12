@@ -25,7 +25,7 @@ const topics = [
   { href: "/test/e2e", title: "E2Eテスト", desc: "ページオブジェクトパターンとテストデータ戦略で、ユーザー動線を丸ごと確認する" },
   { href: "/test/tools", title: "Vitest・Playwright", desc: "テストピラミッドを実際に動かす、JS/TSの2大テストツール" },
   { href: "/test/patterns", title: "テストパターン", desc: "Test Data Builder・Object Mother・Golden Master・Contract Testingなど、テストコードを書く・保つための定石" },
-  { href: "/test/review", title: "レビュー観点", desc: "動かして確認できない成果物を、人の目で確認する品質保証" },
+  { href: "/sdlc/review", title: "レビューと品質確認", desc: "動かして確認できない成果物を人の目で確認する品質保証（開発技術セクションへ移動）" },
   { href: "/test/code-review", title: "コードレビュー", desc: "コードに詳しくなくても確認できる観点と、分からない部分の扱い方" },
 ];
 
