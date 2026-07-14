@@ -185,7 +185,7 @@ export const sections: NavSection[] = [
       { href: "/sdlc/requirements", title: "要件定義" },
       { href: "/sdlc/requirements/modeling", title: "要件の表現方法" },
       { href: "/design", title: "設計（設計セクションへ）" },
-      { href: "/dev/implementation", title: "実装" },
+      { href: "/dev/implementation", title: "実装（実装セクションへ）" },
       { href: "/test", title: "テスト（テストセクションへ）" },
       { href: "/sdlc/review", title: "レビューと品質確認" },
       { href: "/sdlc/deployment", title: "導入と受入れ" },
@@ -203,7 +203,7 @@ export const sections: NavSection[] = [
   },
   {
     href: "/dev",
-    title: "開発",
+    title: "実装",
     icon: Code2,
     tree: [
       { href: "/dev/workspace", title: "開発環境" },
