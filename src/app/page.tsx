@@ -22,7 +22,7 @@ export default function Home() {
     <DocsPage>
       <Hero>
         <Eyebrow>Atlas</Eyebrow>
-        <h1>個人の知識地図</h1>
+        <h1>知識地図</h1>
         <Lead>
           コンピュータ・ネットワークの基礎から、開発・設計・セキュリティ、インフラ実務まで分野ごとに整理しています。
         </Lead>

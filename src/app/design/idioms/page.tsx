@@ -81,6 +81,8 @@ export default function Page() {
         </tbody>
       </table>
 
+      <p>このうち<Mark tier="must">必修</Mark>の5つ(Guard Clause・Dependency Injection・Builder・Middleware Chain・Optional Chaining)は、<Link href="/design/idioms/essentials">必修イディオムを深く理解する</Link>でBefore/Afterのコードとともに1つずつ掘り下げます。</p>
+
       <Heading num="03">設計パターンとの違い</Heading>
       <p><Term>Dependency Injection</Term>は<Link href="/design/principles/solid">依存性逆転の原則(DIP)</Link>という設計原則を、具体的なコードとして実現する手段の1つです。<Term>Null Object</Term>はGoFのデザインパターンの1つとして扱われることもありますが、実務では「言語にnull安全の機構がどれだけあるか」によって必要性が大きく変わるため、ここでは言語依存の工夫として整理しています。同様に<Term>Middleware Chain</Term>は<Link href="/design/patterns">Chain of Responsibility</Link>パターンの考え方を、Webフレームワークの慣習として具体化したものです。</p>
 
@@ -127,6 +129,7 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
+          <RelatedLink href="/design/idioms/essentials" tag="設計">必修イディオムを深く理解する</RelatedLink>
           <RelatedLink href="/design/patterns" tag="設計">設計パターン</RelatedLink>
           <RelatedLink href="/design/conventions" tag="設計">コーディング規約・スタイル</RelatedLink>
           <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>

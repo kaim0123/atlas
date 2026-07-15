@@ -21,7 +21,7 @@ const topics = [
   { href: "/computer/memory", title: "メモリの仕組み", desc: "速さと容量のトレードオフを埋める記憶の階層" },
   { href: "/computer/io/bus", title: "入出力とバス", desc: "バス・USB・DMA・入出力装置 ― 部品と外界をつなぐ" },
   { href: "/computer/system/architecture", title: "システム構成", desc: "処理形態・冗長化・RASIS・スループット・TCO ― 1台を超えた設計と評価" },
-  { href: "/computer/client", title: "クライアント管理の実務", desc: "キッティング・資産管理・MDM・更新管理・BitLocker ― 台数を運用する" },
+  { href: "/computer/client", title: "クライアント管理の実務", desc: "資産管理・キッティング・ライセンス・セキュリティ・保守・廃棄 ― 端末のライフサイクルを回す" },
   { href: "/computer/printer", title: "プリンターの仕組み", desc: "共有プリンタ・ドライバー・スキャン ― 社内の周辺機器" },
 ];
 

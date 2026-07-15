@@ -53,7 +53,7 @@ function NavTree({
   parentKey: string;
   depth: number;
   overrides: Record<string, boolean>;
-  onToggle: (key: string) => void;
+  onToggle: (key: string, currentOpen: boolean) => void;
   onNavigate: () => void;
 }) {
   const textClass = depthTextClass[Math.min(depth, depthTextClass.length - 1)];
@@ -77,11 +77,11 @@ function NavTree({
               <div
                 role="button"
                 tabIndex={0}
-                onClick={() => onToggle(key)}
+                onClick={() => onToggle(key, isOpen)}
                 onKeyDown={(event) => {
                   if (event.key === "Enter" || event.key === " ") {
                     event.preventDefault();
-                    onToggle(key);
+                    onToggle(key, isOpen);
                   }
                 }}
                 className="flex min-w-0 cursor-pointer items-center gap-2 rounded-md px-2 py-1.5 hover:bg-sidebar-accent/60"
@@ -139,8 +139,8 @@ function SectionFlyout({
   const pathname = usePathname();
   const [overrides, setOverrides] = React.useState<Record<string, boolean>>({});
 
-  const handleToggle = React.useCallback((key: string) => {
-    setOverrides((prev) => ({ ...prev, [key]: !(prev[key] ?? true) }));
+  const handleToggle = React.useCallback((key: string, currentOpen: boolean) => {
+    setOverrides((prev) => ({ ...prev, [key]: !(prev[key] ?? currentOpen) }));
   }, []);
 
   return (

@@ -98,7 +98,18 @@ export const sections: NavSection[] = [
           { href: "/computer/system/metrics", title: "性能と経済性の評価" },
         ],
       },
-      { href: "/computer/client", title: "クライアント管理の実務" },
+      {
+        title: "クライアント管理",
+        children: [
+          { href: "/computer/client", title: "クライアント管理の実務(総論)" },
+          { href: "/computer/client/asset", title: "資産管理 ― 台帳・在庫・棚卸" },
+          { href: "/computer/client/kitting", title: "キッティングと配布・回収" },
+          { href: "/computer/client/license", title: "ライセンス管理" },
+          { href: "/computer/client/security", title: "端末セキュリティ管理" },
+          { href: "/computer/client/maintenance", title: "更新管理と保守・故障対応" },
+          { href: "/computer/client/disposal", title: "廃棄管理" },
+        ],
+      },
       { href: "/computer/printer", title: "プリンターの仕組み" },
     ],
   },
@@ -357,7 +368,13 @@ export const sections: NavSection[] = [
         ],
       },
       { href: "/design/patterns", title: "設計パターン(横断インデックス)" },
-      { href: "/design/idioms", title: "実装パターン・イディオム" },
+      {
+        title: "実装パターン・イディオム",
+        children: [
+          { href: "/design/idioms", title: "実装パターン・イディオム一覧" },
+          { href: "/design/idioms/essentials", title: "必修イディオムを深く理解する" },
+        ],
+      },
       { href: "/design/object", title: "オブジェクトの全体像" },
       {
         title: "コーディング規約・スタイル",
@@ -384,7 +401,6 @@ export const sections: NavSection[] = [
       { href: "/test/e2e", title: "E2Eテスト" },
       { href: "/test/tools", title: "Vitest・Playwright" },
       { href: "/test/patterns", title: "テストパターン" },
-      { href: "/test/review", title: "レビュー観点" },
       { href: "/test/code-review", title: "コードレビュー" },
     ],
   },
