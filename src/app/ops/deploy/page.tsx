@@ -40,7 +40,7 @@ export default function Page() {
           <tr><th>方式</th><th>代表例</th><th>特徴</th></tr>
         </thead>
         <tbody>
-          <tr><td className="hl">PaaS(フルマネージド)</td><td>Vercel、Netlify、Cloudflare Pages</td><td>GitリポジトリをつなぐだけでビルドとCDN配信を代行。Next.jsのISR/Server Actionsなど動的機能もフルサポート</td></tr>
+          <tr><td className="hl">PaaS(フルマネージド)</td><td>Vercel、Netlify、<Link href="/cloud/cloudflare">Cloudflare Pages</Link></td><td>GitリポジトリをつなぐだけでビルドとCDN配信を代行。Next.jsのISR/Server Actionsなど動的機能もフルサポート</td></tr>
           <tr><td className="hl">クラウドの部品を自分で組む</td><td>S3 + CloudFront、EC2、ECS</td><td>静的ファイルをオブジェクトストレージに置き、CDNを前段に構える。<Link href="/cloud/aws/network">構成の自由度が高い代わりに自分で組む手間が増える</Link></td></tr>
         </tbody>
       </table>

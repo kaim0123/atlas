@@ -153,7 +153,13 @@ export const sections: NavSection[] = [
       { href: "/internet/history", title: "インターネットの歴史" },
       { href: "/internet/dns", title: "DNS" },
       { href: "/internet/web", title: "Webの仕組み" },
-      { href: "/internet/mail", title: "メールの仕組み" },
+      {
+        title: "メール",
+        children: [
+          { href: "/internet/mail", title: "メールの仕組み" },
+          { href: "/internet/mail/hosting", title: "会社ドメインのメールを用意する" },
+        ],
+      },
       { href: "/internet/isp", title: "ISP接続とCDN" },
       { href: "/internet/server", title: "サーバーの全体像" },
       { href: "/internet/server/build", title: "サーバー構築の実務" },
@@ -180,6 +186,7 @@ export const sections: NavSection[] = [
     icon: Workflow,
     tree: [
       { href: "/sdlc/overview", title: "開発の全体像" },
+      { href: "/sdlc/history", title: "開発手法の変遷" },
       { href: "/sdlc/process", title: "開発プロセスと手法" },
       { href: "/sdlc/process/agile", title: "スクラムとアジャイル実践" },
       { href: "/sdlc/requirements", title: "要件定義" },
@@ -544,6 +551,7 @@ export const sections: NavSection[] = [
           { href: "/cloud/aws/iac", title: "IaC" },
         ],
       },
+      { href: "/cloud/cloudflare", title: "Cloudflare" },
     ],
   },
   {

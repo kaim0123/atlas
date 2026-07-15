@@ -135,6 +135,7 @@ export default function Page() {
 
       <RelatedNav>
         <RelatedList>
+          <RelatedLink href="/internet/mail/hosting" tag="インターネット">会社ドメインのメールを用意する</RelatedLink>
           <RelatedLink href="/network/applications" tag="ネットワーク">アプリケーション層のプロトコル</RelatedLink>
           <RelatedLink href="/infra/storage/backup" tag="インフラ">バックアップと復旧</RelatedLink>
           <RelatedLink href="/computer/printer" tag="コンピュータ">プリンターの仕組み</RelatedLink>

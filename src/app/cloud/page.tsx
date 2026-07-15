@@ -26,6 +26,11 @@ const topics = [
     title: "AWS",
     desc: "リージョン・AZの基礎から、コンピューティング・ストレージ、CI/CD・アプリケーション統合まで",
   },
+  {
+    href: "/cloud/cloudflare",
+    title: "Cloudflare",
+    desc: "CDN・DNS・セキュリティを本業とするエッジプラットフォーム。Workersでのエッジ実行、Pagesでのデプロイ、独自ドメインのメール送受信まで",
+  },
 ];
 
 export default function Page() {
