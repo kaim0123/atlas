@@ -231,6 +231,7 @@ export const sections: NavSection[] = [
       { href: "/dev/language", title: "JavaScript・TypeScript" },
       { href: "/dev/web-basics", title: "Web基礎" },
       { href: "/dev/runtime", title: "ランタイム" },
+      { href: "/dev/http", title: "HTTP通信（Fetch・axios）" },
       { href: "/dev/tooling", title: "パッケージ管理とビルド" },
       {
         title: "フレームワーク・ライブラリ",
@@ -257,6 +258,7 @@ export const sections: NavSection[] = [
           { href: "/dev/framework/tailwind", title: "Tailwind CSS" },
         ],
       },
+      { href: "/dev/stack", title: "技術スタックの組み合わせ" },
       { href: "/dev/implementation", title: "実装" },
       { href: "/dev/cache", title: "キャッシュの全体像" },
     ],
