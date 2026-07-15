@@ -90,7 +90,7 @@ export default function Page() {
       <p><Term>Tailwind CSS</Term>は、<code>p-4</code>や<code>text-white</code>のように1つの役割だけを持つ小さなクラスを大量に用意し、HTML側でそれらを組み合わせてスタイルを直接指定する<Term>ユーティリティファースト</Term>のCSSライブラリです。この上に成り立つコンポーネント集<Term>shadcn/ui</Term>とあわせて、<Link href="/dev/framework/tailwind">Tailwind CSSのページ</Link>で詳しく見ていきます。</p>
 
       <Heading num="07">分類早見表 ― 用途ごとに見る代表例</Heading>
-      <p>ここまで見てきたReact・Next.js・Express・Hono・Tailwind CSSはフレームワーク/ライブラリ全体のごく一部です。「何を作るための道具か」という目的で分類すると、次のように整理できます。</p>
+      <p>ここまで見てきたReact・Next.js・Express・Hono・Tailwind CSSはフレームワーク/ライブラリ全体のごく一部です。「何のための道具か」という目的で分類すると、次のように整理できます。前半は「何を作るか」というアプリの種類、後半はその中で「どの役割を担うか」という部品の分類です。</p>
       <table>
         <thead>
           <tr><th>分類</th><th>目的</th><th>有名なもの</th><th>主な言語</th></tr>
@@ -106,6 +106,16 @@ export default function Page() {
           <tr><td className="hl">AI・機械学習</td><td>AIモデル開発</td><td>TensorFlow、PyTorch、Keras</td><td>Python</td></tr>
           <tr><td className="hl">テスト</td><td>テスト自動化</td><td>Jest、Vitest、Playwright、Cypress、JUnit、pytest</td><td>各言語</td></tr>
           <tr><td className="hl">CSS/UI</td><td>デザイン・レイアウト</td><td>Tailwind CSS、Bootstrap、Bulma</td><td>CSS</td></tr>
+          <tr><td className="hl">状態管理</td><td>クライアント側の状態を一元管理する</td><td>Redux、Zustand、Jotai、Recoil、Pinia</td><td>JavaScript / TypeScript</td></tr>
+          <tr><td className="hl">データ取得・サーバー状態</td><td>APIのデータを取得・キャッシュ・再取得する</td><td>TanStack Query、SWR、Apollo Client</td><td>JavaScript / TypeScript</td></tr>
+          <tr><td className="hl">フォーム</td><td>入力フォームの値と検証を扱う</td><td>React Hook Form、Formik、VeeValidate</td><td>JavaScript / TypeScript</td></tr>
+          <tr><td className="hl">バリデーション</td><td>データの形を検証し型を付ける</td><td>Zod、Yup、Valibot、Joi</td><td>JavaScript / TypeScript</td></tr>
+          <tr><td className="hl">ORM・DB接続</td><td>オブジェクトとDBを橋渡しする</td><td>Prisma、Drizzle、Mongoose、TypeORM、SQLAlchemy</td><td>JavaScript、Python など</td></tr>
+          <tr><td className="hl">認証・認可</td><td>ログインとアクセス制御を実装する</td><td>Auth.js(NextAuth)、Passport、Clerk</td><td>JavaScript / TypeScript</td></tr>
+          <tr><td className="hl">Lint・整形</td><td>コードの品質と体裁を揃える</td><td>ESLint、Prettier、Biome</td><td>JavaScript / TypeScript</td></tr>
+          <tr><td className="hl">ビルド・バンドル</td><td>コードをまとめて配信用に変換する</td><td>Vite、webpack、esbuild、Rollup、Turbopack</td><td>JavaScript / TypeScript</td></tr>
+          <tr><td className="hl">日付・ユーティリティ</td><td>日付処理や汎用的な小道具</td><td>date-fns、Day.js、Lodash</td><td>JavaScript / TypeScript</td></tr>
+          <tr><td className="hl">アニメーション</td><td>UIに動きをつける</td><td>Framer Motion、GSAP、React Spring</td><td>JavaScript / TypeScript</td></tr>
         </tbody>
       </table>
       <p>この表の「分類」は一般的な呼び方に沿ったもので、必ずしも01節の「制御の反転」の定義に厳密に一致するわけではありません。たとえばCSS/UI行のTailwind CSSは、01節の定義では自分のコードから呼び出す<Term>ライブラリ</Term>です。このAtlasが扱うNext.jsは「メタフレームワーク」かつ「フルスタック」に位置づけられます。</p>
