@@ -17,6 +17,7 @@ import {
   Settings2,
   Workflow,
   Users,
+  Landmark,
   type LucideIcon,
 } from "lucide-react";
 
@@ -651,6 +652,47 @@ export const sections: NavSection[] = [
       },
       { href: "/management/context", title: "経営・社会とのつながり" },
       { href: "/management/theory", title: "マネジメント理論家" },
+    ],
+  },
+  {
+    href: "/finance",
+    title: "会計・財務",
+    icon: Landmark,
+    tree: [
+      { href: "/finance", title: "会計・財務の全体像" },
+      {
+        title: "決算書を読む（基礎）",
+        children: [
+          { href: "/finance/statements", title: "財務三表の全体像" },
+          { href: "/finance/pl", title: "損益計算書（PL）― 5つの利益" },
+          { href: "/finance/bs", title: "貸借対照表（BS）の読み方" },
+          { href: "/finance/cf", title: "キャッシュフローと三表のつながり" },
+          { href: "/finance/cost", title: "固定費・変動費・限界利益" },
+        ],
+      },
+      {
+        title: "会社を分析する",
+        children: [
+          { href: "/finance/analysis", title: "三表から会社を診断する" },
+          { href: "/finance/metrics", title: "収益性と効率の指標" },
+          { href: "/finance/valuation", title: "企業価値と株価（PBR）" },
+        ],
+      },
+      {
+        title: "現金で経営を見る",
+        children: [
+          { href: "/finance/cash", title: "現金がすべて ― 黒字倒産と負債" },
+          { href: "/finance/ratios", title: "指標に惑わされない" },
+        ],
+      },
+      { href: "/finance/payroll", title: "粗利益で人件費・給与を設計する" },
+      {
+        title: "ファイナンス思考",
+        children: [
+          { href: "/finance/thinking", title: "会計 vs ファイナンス" },
+          { href: "/finance/pe", title: "PE・LBO・MBOの仕組み" },
+        ],
+      },
     ],
   },
 ];
