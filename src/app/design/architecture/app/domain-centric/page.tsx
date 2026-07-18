@@ -14,7 +14,6 @@ import {
   Analogy,
   Mark,
   MarkNote,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -63,15 +62,15 @@ export default function Page() {
         <Card><CardNumber>4</CardNumber><h4>Clean Architecture</h4><p>Onion/Hexagonalを整理し、技術からの独立を徹底する。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/architecture/app/data-access" tag="設計">データアクセス系</RelatedLink>
-          <RelatedLink href="/design/architecture/app/cqrs" tag="設計">高度な設計系(CQRS)</RelatedLink>
-          <RelatedLink href="/design/architecture" tag="設計">アーキテクチャ一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; ドメイン中心アーキテクチャ系(アプリケーションアーキテクチャ)</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/architecture/app/data-access" tag="設計">データアクセス系</RelatedLink>
+                    <RelatedLink href="/design/architecture/app/cqrs" tag="設計">高度な設計系(CQRS)</RelatedLink>
+                    <RelatedLink href="/design/architecture" tag="設計">アーキテクチャ一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

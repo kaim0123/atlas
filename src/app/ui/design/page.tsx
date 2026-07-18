@@ -11,7 +11,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -79,15 +78,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>コード設計はデータの識別法</h4><p>順番・区分・表意・合成を、可読性と拡張性のバランスで選びます。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/ui/web" tag="ユーザーインタフェース">Web UIデザイン</RelatedLink>
-          <RelatedLink href="/ui/gui" tag="ユーザーインタフェース">GUIの部品</RelatedLink>
-          <RelatedLink href="/dev/web-basics" tag="開発">Web基礎</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; ユーザーインタフェース &middot; 画面設計と入力チェック</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/ui/web" tag="ユーザーインタフェース">Web UIデザイン</RelatedLink>
+                    <RelatedLink href="/ui/gui" tag="ユーザーインタフェース">GUIの部品</RelatedLink>
+                    <RelatedLink href="/dev/web-basics" tag="開発">Web基礎</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

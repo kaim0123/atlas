@@ -11,7 +11,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -119,15 +118,15 @@ export default function Page() {
 
       <p>三表を読めるようになったら、次はこの線を使って第三者の会社を「診断」します。<Link href="/finance/analysis">三表から会社を診断する</Link>へ進みましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/finance/analysis" tag="会計・財務">三表から会社を診断する</RelatedLink>
-          <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標（ROA・CCC）</RelatedLink>
-          <RelatedLink href="/finance/thinking" tag="会計・財務">会計 vs ファイナンス</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 会計・財務 &middot; キャッシュフローと三表のつながり</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/finance/analysis" tag="会計・財務">三表から会社を診断する</RelatedLink>
+                    <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標（ROA・CCC）</RelatedLink>
+                    <RelatedLink href="/finance/thinking" tag="会計・財務">会計 vs ファイナンス</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

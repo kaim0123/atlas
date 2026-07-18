@@ -14,7 +14,6 @@ import {
   Aside,
   Diagram,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -157,15 +156,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>タダではない</h4><p>切り替えにはオーバーヘッドがあるため、呼び出し回数を減らす工夫が性能を左右します。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/os/kernel" tag="OS">カーネルの役割と設計</RelatedLink>
-          <RelatedLink href="/os/process" tag="OS">プロセスとスレッド</RelatedLink>
-          <RelatedLink href="/os" tag="OS">OSの仕組み</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; OS &middot; システムコール</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/os/kernel" tag="OS">カーネルの役割と設計</RelatedLink>
+                    <RelatedLink href="/os/process" tag="OS">プロセスとスレッド</RelatedLink>
+                    <RelatedLink href="/os" tag="OS">OSの仕組み</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -1,15 +1,8 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-export function RelatedNav({ children }: { children: ReactNode }) {
-  return (
-    <nav className="mt-16 border-t border-border pt-6">
-      <h2 className="mb-4 text-xl">関連ページ</h2>
-      {children}
-    </nav>
-  );
-}
-
+// RelatedList / RelatedLink は DocsFooter の related プロップで関連ページを
+// 手動上書きするときに使う。見出し・枠は PageFooter 側が描画する。
 export function RelatedList({ children }: { children: ReactNode }) {
   return (
     <ul className="m-0 grid list-none grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-2.5 p-0">

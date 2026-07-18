@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -169,16 +168,16 @@ export default function Page() {
       </CardGrid>
       <p>データベースの土台となる考え方は「<Link href="/database/model">関係モデルと3層スキーマ</Link>」で、要件からテーブルを導く手順は「<Link href="/database/design">ER図と正規化</Link>」で、障害から守る仕組みは「<Link href="/database/physical">物理設計と運用</Link>」で、それぞれ詳しく見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/database" tag="データベース">データベース(開発者向け)</RelatedLink>
-          <RelatedLink href="/database/design" tag="データベース">ER図と正規化</RelatedLink>
-          <RelatedLink href="/database/physical" tag="データベース">物理設計と運用</RelatedLink>
-          <RelatedLink href="/dev/language-basics/history" tag="開発">プログラミング言語の歴史</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; データベース &middot; データベースの歴史</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/database" tag="データベース">データベース(開発者向け)</RelatedLink>
+                    <RelatedLink href="/database/design" tag="データベース">ER図と正規化</RelatedLink>
+                    <RelatedLink href="/database/physical" tag="データベース">物理設計と運用</RelatedLink>
+                    <RelatedLink href="/dev/language-basics/history" tag="開発">プログラミング言語の歴史</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

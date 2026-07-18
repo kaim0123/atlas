@@ -13,7 +13,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -131,15 +130,15 @@ export default function Page() {
         </Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/computer/semiconductor" tag="コンピュータ">半導体の全体像</RelatedLink>
-          <RelatedLink href="/computer/semiconductor/logic" tag="コンピュータ">直列と並列で論理をつくる ― AND・ORゲート</RelatedLink>
-          <RelatedLink href="/computer/semiconductor/adder" tag="コンピュータ">足し算をつくる ― 半加算器と全加算器</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; コンピュータ &middot; トランジスタの正体</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/computer/semiconductor" tag="コンピュータ">半導体の全体像</RelatedLink>
+                    <RelatedLink href="/computer/semiconductor/logic" tag="コンピュータ">直列と並列で論理をつくる ― AND・ORゲート</RelatedLink>
+                    <RelatedLink href="/computer/semiconductor/adder" tag="コンピュータ">足し算をつくる ― 半加算器と全加算器</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

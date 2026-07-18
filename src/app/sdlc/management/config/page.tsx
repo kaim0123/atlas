@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -53,15 +52,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>SBOMで中身を可視化</h4><p>部品表により、脆弱性の影響範囲を素早く判断できます。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/sdlc/management/change" tag="開発工程・管理">変更管理</RelatedLink>
-          <RelatedLink href="/dev/tooling" tag="開発">パッケージ管理とビルド</RelatedLink>
-          <RelatedLink href="/sdlc/overview" tag="開発工程・管理">開発の全体像</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; 構成管理</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/sdlc/management/change" tag="開発工程・管理">変更管理</RelatedLink>
+                    <RelatedLink href="/dev/tooling" tag="開発">パッケージ管理とビルド</RelatedLink>
+                    <RelatedLink href="/sdlc/overview" tag="開発工程・管理">開発の全体像</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

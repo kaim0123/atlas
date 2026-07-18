@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -71,16 +70,16 @@ export default function Page() {
 
       <p>これで<Link href="/design/methodology">設計思想・方法論</Link>の7つを見終えました。次のページでは、これらの方法論を実践するときの、より細かいコードレベルの判断基準である<Link href="/design/principles">設計原則</Link>を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/methodology/ddd/tactical" tag="設計">戦術的DDDをコードに書く</RelatedLink>
-          <RelatedLink href="/design/methodology/use-case-driven" tag="設計">ユースケース中心設計</RelatedLink>
-          <RelatedLink href="/design/architecture/sys/microservices" tag="設計">マイクロサービスアーキテクチャ</RelatedLink>
-          <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; 設計思想・方法論 &middot; ドメイン駆動設計</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/methodology/ddd/tactical" tag="設計">戦術的DDDをコードに書く</RelatedLink>
+                    <RelatedLink href="/design/methodology/use-case-driven" tag="設計">ユースケース中心設計</RelatedLink>
+                    <RelatedLink href="/design/architecture/sys/microservices" tag="設計">マイクロサービスアーキテクチャ</RelatedLink>
+                    <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

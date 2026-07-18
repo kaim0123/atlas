@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -65,14 +64,14 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>データ変換の連鎖に強い</h4><p>コンパイラ・ETL・バッチ処理など、段階的な加工が主目的の処理に向く。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/architecture/sys/layered" tag="設計">レイヤードアーキテクチャ</RelatedLink>
-          <RelatedLink href="/design/architecture/sys/microkernel" tag="設計">マイクロカーネルアーキテクチャ</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; パイプラインアーキテクチャ</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/architecture/sys/layered" tag="設計">レイヤードアーキテクチャ</RelatedLink>
+                    <RelatedLink href="/design/architecture/sys/microkernel" tag="設計">マイクロカーネルアーキテクチャ</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -13,7 +13,6 @@ import {
   Analogy,
   Mark,
   MarkNote,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -55,15 +54,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>Template View</h4><p>HTMLテンプレートにデータを差し込み、構造とロジックを分離する。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/architecture/app/gui" tag="設計">GUI系</RelatedLink>
-          <RelatedLink href="/design/architecture/app/domain-model" tag="設計">ドメインモデル系</RelatedLink>
-          <RelatedLink href="/design/architecture" tag="設計">アーキテクチャ一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; Web系(アプリケーションアーキテクチャ)</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/architecture/app/gui" tag="設計">GUI系</RelatedLink>
+                    <RelatedLink href="/design/architecture/app/domain-model" tag="設計">ドメインモデル系</RelatedLink>
+                    <RelatedLink href="/design/architecture" tag="設計">アーキテクチャ一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

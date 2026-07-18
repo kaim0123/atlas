@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -139,15 +138,15 @@ export default function Page() {
 
       <p>器と配置が決まったら、次は仕事を実際に「渡す」段です。<Link href="/management/org/delegation">権限委譲</Link>へ進みましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/org/delegation" tag="マネジメント">権限委譲</RelatedLink>
-          <RelatedLink href="/management/individual/onboarding" tag="マネジメント">採用・オンボーディング・育成</RelatedLink>
-          <RelatedLink href="/management/team/operation" tag="マネジメント">チーム運営と3つの力</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; 組織構造とアサイン</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/org/delegation" tag="マネジメント">権限委譲</RelatedLink>
+                    <RelatedLink href="/management/individual/onboarding" tag="マネジメント">採用・オンボーディング・育成</RelatedLink>
+                    <RelatedLink href="/management/team/operation" tag="マネジメント">チーム運営と3つの力</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

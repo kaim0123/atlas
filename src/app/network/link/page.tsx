@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -118,15 +117,15 @@ export default function Page() {
 
       <p>ケーブルを使わず電波で隣へ届ける無線LANは、次の「無線LAN」で見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/network/link/wireless" tag="ネットワーク">無線LAN ― Wi-Fiの仕組み</RelatedLink>
-          <RelatedLink href="/network/topology" tag="ネットワーク">トポロジと接続装置</RelatedLink>
-          <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; ネットワーク &middot; データリンク層と物理層</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/network/link/wireless" tag="ネットワーク">無線LAN ― Wi-Fiの仕組み</RelatedLink>
+                    <RelatedLink href="/network/topology" tag="ネットワーク">トポロジと接続装置</RelatedLink>
+                    <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

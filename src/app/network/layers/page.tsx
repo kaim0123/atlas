@@ -12,7 +12,6 @@ import {
   CardNumber,
   Analogy,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -134,15 +133,15 @@ export default function Page() {
       </CardGrid>
       <p>まずはネットワーク層で「宛先」を決めるIPアドレスから見ていきましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/network/ip" tag="ネットワーク">IPアドレスと経路</RelatedLink>
-          <RelatedLink href="/network/transport" tag="ネットワーク">トランスポート層 ― TCPとUDP</RelatedLink>
-          <RelatedLink href="/network/applications" tag="ネットワーク">アプリケーション層のプロトコル</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; ネットワーク &middot; 階層モデル</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/network/ip" tag="ネットワーク">IPアドレスと経路</RelatedLink>
+                    <RelatedLink href="/network/transport" tag="ネットワーク">トランスポート層 ― TCPとUDP</RelatedLink>
+                    <RelatedLink href="/network/applications" tag="ネットワーク">アプリケーション層のプロトコル</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

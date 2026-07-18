@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -68,15 +67,15 @@ export default function Page() {
 
       <p>次のページでは、対照的にデータモデル(スキーマ)を最初に固定してしまう<Link href="/design/methodology/data-centric">データ中心設計</Link>を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/methodology" tag="設計">設計思想・方法論</RelatedLink>
-          <RelatedLink href="/design/methodology/data-centric" tag="設計">データ中心設計</RelatedLink>
-          <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; 設計思想・方法論 &middot; 情報隠蔽</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/methodology" tag="設計">設計思想・方法論</RelatedLink>
+                    <RelatedLink href="/design/methodology/data-centric" tag="設計">データ中心設計</RelatedLink>
+                    <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

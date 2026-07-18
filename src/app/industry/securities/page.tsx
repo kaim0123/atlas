@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -119,16 +118,16 @@ export default function Page() {
       </CardGrid>
       <p>証券の会計を支える基礎は<Link href="/finance/statements">財務三表の全体像</Link>で、投資手法としての資本市場の見方は<Link href="/finance/valuation">企業価値と株価（PBR）</Link>や<Link href="/finance/thinking">会計 vs ファイナンス</Link>で、それぞれ詳しく扱っています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/bank" tag="業界">銀行</RelatedLink>
-          <RelatedLink href="/industry/insurance" tag="業界">生命保険・損害保険</RelatedLink>
-          <RelatedLink href="/finance/valuation" tag="会計・財務">企業価値と株価（PBR）</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; 証券</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/bank" tag="業界">銀行</RelatedLink>
+                    <RelatedLink href="/industry/insurance" tag="業界">生命保険・損害保険</RelatedLink>
+                    <RelatedLink href="/finance/valuation" tag="会計・財務">企業価値と株価（PBR）</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

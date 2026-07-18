@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -78,15 +77,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>CG・CAD・XRへ応用が広がる</h4><p>VR・AR・MR(XR)やメタバースへと発展しています。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/media/image" tag="情報メディア">画像フォーマット</RelatedLink>
-          <RelatedLink href="/media/basics" tag="情報メディア">マルチメディアの全体像</RelatedLink>
-          <RelatedLink href="/media/compression" tag="情報メディア">圧縮の考え方</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 情報メディア &middot; 色・解像度・グラフィックス応用</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/media/image" tag="情報メディア">画像フォーマット</RelatedLink>
+                    <RelatedLink href="/media/basics" tag="情報メディア">マルチメディアの全体像</RelatedLink>
+                    <RelatedLink href="/media/compression" tag="情報メディア">圧縮の考え方</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

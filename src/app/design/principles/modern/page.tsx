@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -85,15 +84,15 @@ export default function Page() {
 
       <p>ここまで<Link href="/design/principles/foundations">黎明期の原則</Link>・<Link href="/design/principles/cohesion">保守性の基本4原則</Link>・<Link href="/design/principles/solid">SOLID</Link>・現代の原則で、設計原則の全体像を見てきました。次のページからは、これらの原則が実際にどんな構造として現れるかを、システム全体の組み方である<Link href="/design/architecture">アーキテクチャ</Link>で見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/principles/solid" tag="設計">SOLID</RelatedLink>
-          <RelatedLink href="/design/architecture" tag="設計">アーキテクチャ一覧</RelatedLink>
-          <RelatedLink href="/design/paradigm/functional" tag="設計">関数型</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; 設計原則 &middot; 現代の原則</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/principles/solid" tag="設計">SOLID</RelatedLink>
+                    <RelatedLink href="/design/architecture" tag="設計">アーキテクチャ一覧</RelatedLink>
+                    <RelatedLink href="/design/paradigm/functional" tag="設計">関数型</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

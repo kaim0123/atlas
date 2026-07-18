@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -64,15 +63,15 @@ export default function Page() {
 
       <p>次のページでは、データや責務ではなく、ユーザーとシステムのやり取りの「シナリオ」から設計する<Link href="/design/methodology/use-case-driven">ユースケース中心設計</Link>を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/methodology/contract" tag="設計">契約による設計</RelatedLink>
-          <RelatedLink href="/design/methodology/use-case-driven" tag="設計">ユースケース中心設計</RelatedLink>
-          <RelatedLink href="/design/principles" tag="設計">設計原則(SRP)</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; 設計思想・方法論 &middot; 責務駆動設計</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/methodology/contract" tag="設計">契約による設計</RelatedLink>
+                    <RelatedLink href="/design/methodology/use-case-driven" tag="設計">ユースケース中心設計</RelatedLink>
+                    <RelatedLink href="/design/principles" tag="設計">設計原則(SRP)</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -66,15 +65,15 @@ export default function Page() {
 
       <p>次のページでは、データではなく「役割」からクラスを設計する<Link href="/design/methodology/responsibility-driven">責務駆動設計</Link>を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/methodology/object-centric" tag="設計">オブジェクト中心設計</RelatedLink>
-          <RelatedLink href="/design/methodology/responsibility-driven" tag="設計">責務駆動設計</RelatedLink>
-          <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; 設計思想・方法論 &middot; 契約による設計</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/methodology/object-centric" tag="設計">オブジェクト中心設計</RelatedLink>
+                    <RelatedLink href="/design/methodology/responsibility-driven" tag="設計">責務駆動設計</RelatedLink>
+                    <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

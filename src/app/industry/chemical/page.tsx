@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -135,17 +134,17 @@ export default function Page() {
       </CardGrid>
       <p>化学の会計を支える基礎は<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/analysis">三表から会社を診断する</Link>で、多角化企業の事業別効率を測るROICなどの見方は<Link href="/finance/metrics">収益性と効率の指標</Link>で、それぞれ詳しく扱っています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/oil" tag="業界">石油・石炭</RelatedLink>
-          <RelatedLink href="/industry/pharma" tag="業界">医薬品</RelatedLink>
-          <RelatedLink href="/industry/steel" tag="業界">鉄鋼・非鉄金属</RelatedLink>
-          <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; 化学・石油化学</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/oil" tag="業界">石油・石炭</RelatedLink>
+                    <RelatedLink href="/industry/pharma" tag="業界">医薬品</RelatedLink>
+                    <RelatedLink href="/industry/steel" tag="業界">鉄鋼・非鉄金属</RelatedLink>
+                    <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

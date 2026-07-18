@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -160,17 +159,17 @@ export default function Page() {
       </CardGrid>
       <p>自動車会計の基礎は<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/analysis">三表から会社を診断する</Link>で、収益性の測り方は<Link href="/finance/metrics">収益性と効率の指標</Link>で、それぞれ詳しく扱っています。製造業と金融業の合算をどう読み解くかを意識すれば、この巨大産業の決算がぐっと見通しやすくなります。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/electronics" tag="業界">電機・電子部品・半導体</RelatedLink>
-          <RelatedLink href="/industry/machinery" tag="業界">機械・産業機械</RelatedLink>
-          <RelatedLink href="/industry/steel" tag="業界">鉄鋼・非鉄金属</RelatedLink>
-          <RelatedLink href="/finance/analysis" tag="会計・財務">三表から会社を診断する</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; 自動車・自動車部品</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/electronics" tag="業界">電機・電子部品・半導体</RelatedLink>
+                    <RelatedLink href="/industry/machinery" tag="業界">機械・産業機械</RelatedLink>
+                    <RelatedLink href="/industry/steel" tag="業界">鉄鋼・非鉄金属</RelatedLink>
+                    <RelatedLink href="/finance/analysis" tag="会計・財務">三表から会社を診断する</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

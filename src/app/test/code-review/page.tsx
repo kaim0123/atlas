@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -97,15 +96,15 @@ export default function Page() {
         <Card><CardNumber>4</CardNumber><h4>疑問形で伝える</h4><p>断定せず質問の形にすると、間違った指摘のリスクも減らせます。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/sdlc/review" tag="開発工程・管理">レビューと品質確認</RelatedLink>
-          <RelatedLink href="/test/design-techniques" tag="テスト">テスト設計技法</RelatedLink>
-          <RelatedLink href="/test/quality-plan" tag="テスト">品質計画</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; テスト &middot; コードレビュー</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/sdlc/review" tag="開発工程・管理">レビューと品質確認</RelatedLink>
+                    <RelatedLink href="/test/design-techniques" tag="テスト">テスト設計技法</RelatedLink>
+                    <RelatedLink href="/test/quality-plan" tag="テスト">品質計画</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

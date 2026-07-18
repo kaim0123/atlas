@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -128,16 +127,16 @@ export default function Page() {
       </CardGrid>
       <p>キャッシュのほかにも、「サーバー」「オブジェクト」「ポート」など、コンピュータの世界には同じ言葉が文脈によって姿を変える例がいくつもあります。次のページ「<Link href="/internet/server">サーバーの全体像</Link>」から、続けてそれらを整理していきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み</RelatedLink>
-          <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
-          <RelatedLink href="/security/cache" tag="セキュリティ">キャッシュ制御と情報漏洩</RelatedLink>
-          <RelatedLink href="/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; キャッシュの全体像</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み</RelatedLink>
+                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                    <RelatedLink href="/security/cache" tag="セキュリティ">キャッシュ制御と情報漏洩</RelatedLink>
+                    <RelatedLink href="/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

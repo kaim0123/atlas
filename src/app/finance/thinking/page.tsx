@@ -14,7 +14,6 @@ import {
   Card,
   CardGrid,
   CardNumber,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -132,16 +131,16 @@ export default function Page() {
       </CardGrid>
       <p>キャッシュフロー思考をさらに実践に落とすと、<Link href="/finance/pe">PE・LBO・MBO</Link>のような「安く買って価値を上げ高く売る」投資手法にたどり着きます。次はその仕組みを見ていきましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/finance/pe" tag="会計・財務">PE・LBO・MBOの仕組み</RelatedLink>
-          <RelatedLink href="/finance/cf" tag="会計・財務">キャッシュフローと三表のつながり</RelatedLink>
-          <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標（ROA・CCC）</RelatedLink>
-          <RelatedLink href="/finance/cash" tag="会計・財務">現金がすべて ― 黒字倒産と負債</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 会計・財務 &middot; 会計 vs ファイナンス</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/finance/pe" tag="会計・財務">PE・LBO・MBOの仕組み</RelatedLink>
+                    <RelatedLink href="/finance/cf" tag="会計・財務">キャッシュフローと三表のつながり</RelatedLink>
+                    <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標（ROA・CCC）</RelatedLink>
+                    <RelatedLink href="/finance/cash" tag="会計・財務">現金がすべて ― 黒字倒産と負債</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

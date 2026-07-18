@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -65,15 +64,15 @@ export default function Page() {
       </CardGrid>
       <p>実際に「誰が何をしたか」を追跡する仕組みは<Link href="/cloud/aws/monitoring">モニタリングと管理</Link>ページで見たCloudTrailが担います。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/monitoring" tag="AWS">モニタリングと管理</RelatedLink>
-          <RelatedLink href="/security/logging" tag="セキュリティ">ログ出力設計</RelatedLink>
-          <RelatedLink href="/cloud/aws/cicd" tag="AWS">CI/CD</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; AWS &middot; モニタリングと管理 &middot; CloudWatch</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/monitoring" tag="AWS">モニタリングと管理</RelatedLink>
+                    <RelatedLink href="/security/logging" tag="セキュリティ">ログ出力設計</RelatedLink>
+                    <RelatedLink href="/cloud/aws/cicd" tag="AWS">CI/CD</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

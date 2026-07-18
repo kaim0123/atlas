@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -101,15 +100,15 @@ DELETE FROM customers WHERE id = 10;`}</code>
       </CardGrid>
       <p>SQLで安全に更新するには、複数の操作をひとまとまりで扱う仕組みが要ります。次は「トランザクションと整合性」を見ていきましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/database/transaction" tag="データベース">トランザクションと整合性</RelatedLink>
-          <RelatedLink href="/database/model" tag="データベース">関係モデルと3層スキーマ</RelatedLink>
-          <RelatedLink href="/security/sqli" tag="セキュリティ">SQLインジェクション対策</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; データベース &middot; SQLとデータ操作</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/database/transaction" tag="データベース">トランザクションと整合性</RelatedLink>
+                    <RelatedLink href="/database/model" tag="データベース">関係モデルと3層スキーマ</RelatedLink>
+                    <RelatedLink href="/security/sqli" tag="セキュリティ">SQLインジェクション対策</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

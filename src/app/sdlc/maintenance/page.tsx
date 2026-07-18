@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -62,15 +61,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>回帰テストで守る</h4><p>変更のたびに既存機能を再確認し、完整性を保ちます。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/sdlc/deployment" tag="開発工程・管理">導入と受入れ</RelatedLink>
-          <RelatedLink href="/sdlc/management/change" tag="開発工程・管理">変更管理</RelatedLink>
-          <RelatedLink href="/monitoring" tag="監視">監視・保守</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; 保守</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/sdlc/deployment" tag="開発工程・管理">導入と受入れ</RelatedLink>
+                    <RelatedLink href="/sdlc/management/change" tag="開発工程・管理">変更管理</RelatedLink>
+                    <RelatedLink href="/monitoring" tag="監視">監視・保守</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

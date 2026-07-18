@@ -11,7 +11,6 @@ import {
   Card,
   CardGrid,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -193,15 +192,15 @@ export default function Page() {
 
       <p>関数の中で扱う<Term>変数</Term>の命名にも同じ考え方が続く。次のページでは、変数名の付け方とよく使われる略語を見ていく。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/conventions/variables" tag="設計">変数・略語の命名</RelatedLink>
-          <RelatedLink href="/design/conventions/classes" tag="設計">クラス・接尾辞の命名</RelatedLink>
-          <RelatedLink href="/design/conventions" tag="設計">コーディング規約・スタイル</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; コーディング規約・スタイル &middot; 関数・イベントハンドラの命名</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/conventions/variables" tag="設計">変数・略語の命名</RelatedLink>
+                    <RelatedLink href="/design/conventions/classes" tag="設計">クラス・接尾辞の命名</RelatedLink>
+                    <RelatedLink href="/design/conventions" tag="設計">コーディング規約・スタイル</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

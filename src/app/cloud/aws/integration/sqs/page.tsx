@@ -14,7 +14,6 @@ import {
   Mark,
   MarkNote,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -74,15 +73,15 @@ export default function Page() {
       <div className="mb-1.5"><Mark tier="niche">補足</Mark></div>
       <MarkNote>→ SQSは基本的に1対1(1つのメッセージを1つの受信側が処理する)のキューです。同じ出来事を複数の宛先に一斉配信したい場合は、次に見る<Link href="/cloud/aws/integration/sns">SNS</Link>と組み合わせます。</MarkNote>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/integration" tag="AWS">アプリケーション統合</RelatedLink>
-          <RelatedLink href="/cloud/aws/integration/sns" tag="AWS">SNS</RelatedLink>
-          <RelatedLink href="/design/architecture/sys/event-driven" tag="設計">イベント駆動アーキテクチャ</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; AWS &middot; アプリケーション統合 &middot; SQS</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/integration" tag="AWS">アプリケーション統合</RelatedLink>
+                    <RelatedLink href="/cloud/aws/integration/sns" tag="AWS">SNS</RelatedLink>
+                    <RelatedLink href="/design/architecture/sys/event-driven" tag="設計">イベント駆動アーキテクチャ</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

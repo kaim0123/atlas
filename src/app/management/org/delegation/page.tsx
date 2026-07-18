@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -113,15 +112,15 @@ export default function Page() {
       </CardGrid>
       <p>権限委譲は、どんなチーム構造の上で行うかによって渡し方が変わります。文鎮型・構造型といった<Link href="/management/org/structure">組織構造とアサイン</Link>とあわせて考えると、より実践的になります。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/org/structure" tag="マネジメント">組織構造とアサイン</RelatedLink>
-          <RelatedLink href="/management/team/rules" tag="マネジメント">ルールと相互理解</RelatedLink>
-          <RelatedLink href="/management/team/operation" tag="マネジメント">チーム運営と3つの力</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; 権限委譲</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/org/structure" tag="マネジメント">組織構造とアサイン</RelatedLink>
+                    <RelatedLink href="/management/team/rules" tag="マネジメント">ルールと相互理解</RelatedLink>
+                    <RelatedLink href="/management/team/operation" tag="マネジメント">チーム運営と3つの力</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

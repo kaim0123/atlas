@@ -17,7 +17,6 @@ import {
   Timeline,
   TimelineItem,
   TimelineLabel,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -147,15 +146,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>公開鍵暗号が変えたもの</h4><p>「鍵を秘密裏に届ける」必要をなくしたことが、不特定多数と安全に通信するインターネットを可能にしました。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/security/hash" tag="セキュリティ">ハッシュ関数と衝突攻撃</RelatedLink>
-          <RelatedLink href="/security/identity" tag="セキュリティ">認証プロトコルの変遷</RelatedLink>
-          <RelatedLink href="/internet/web" tag="インターネット">Webと暗号化通信</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; セキュリティ &middot; 暗号の歴史と公開鍵暗号</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/security/hash" tag="セキュリティ">ハッシュ関数と衝突攻撃</RelatedLink>
+                    <RelatedLink href="/security/identity" tag="セキュリティ">認証プロトコルの変遷</RelatedLink>
+                    <RelatedLink href="/internet/web" tag="インターネット">Webと暗号化通信</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

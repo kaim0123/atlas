@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -67,16 +66,16 @@ export default function Page() {
       </CardGrid>
       <p>フレームワークが大枠の型を決めるのに対し、その中で使う個々の部品は自分で選んで組み込みます。次のページ「<Link href="/dev/framework/tailwind">Tailwind CSS</Link>」では、Next.jsの中に組み込んで使うCSSライブラリを見ていきます。Server/Clientコンポーネントの境界の引き方、データフェッチ・キャッシュ、配信の最適化といった、より実践的なNext.jsパターンは<Link href="/dev/framework/nextjs/components">Server/Clientコンポーネントの境界</Link>から扱います。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/dev/framework/nextjs/components" tag="開発">Server/Clientコンポーネントの境界</RelatedLink>
-          <RelatedLink href="/dev/framework" tag="開発">フレームワーク・ライブラリ概要</RelatedLink>
-          <RelatedLink href="/dev/framework/react" tag="開発">React</RelatedLink>
-          <RelatedLink href="/dev/framework/tailwind" tag="開発">Tailwind CSS</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; フレームワーク・ライブラリ &middot; Next.js</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/dev/framework/nextjs/components" tag="開発">Server/Clientコンポーネントの境界</RelatedLink>
+                    <RelatedLink href="/dev/framework" tag="開発">フレームワーク・ライブラリ概要</RelatedLink>
+                    <RelatedLink href="/dev/framework/react" tag="開発">React</RelatedLink>
+                    <RelatedLink href="/dev/framework/tailwind" tag="開発">Tailwind CSS</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

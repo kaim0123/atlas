@@ -861,3 +861,153 @@ export function getBreadcrumbTrail(pathname: string): BreadcrumbCrumb[] {
   }
   return trail;
 }
+
+// ---------------------------------------------------------------------------
+// ページフッター(前へ/次へ・関連ページ)の自動導出
+// すべて sections ツリーから機械的に計算する。ディレクトリ構成が変わっても
+// nav.ts を更新するだけで全ページのフッターが追従する。
+// ---------------------------------------------------------------------------
+
+export type PageRef = {
+  href: string;
+  title: string;
+  sectionHref: string;
+  sectionTitle: string;
+};
+
+// trailingSlash: true のため usePathname() は "/industry/steel/" のように末尾
+// スラッシュ付きで返る。nav の href(スラッシュ無し)と一致させるため正規化する。
+export function normalizePath(pathname: string): string {
+  if (pathname.length > 1 && pathname.endsWith("/")) return pathname.slice(0, -1);
+  return pathname;
+}
+
+// 各ページが「自分の居場所」とするセクション。foreignな相互参照リンク
+// (例: /sdlc ツリーに置かれた /design へのリンク)は home ではないので除外する。
+function isHome(href: string, section: NavSection): boolean {
+  return href === section.href || href.startsWith(`${section.href}/`);
+}
+
+// pre-order DFS で読み進み順の全ページ列を作る(セクション索引→配下の順)。
+function buildOrderedPages(): PageRef[] {
+  const pages: PageRef[] = [];
+  const seen = new Set<string>();
+  const push = (href: string, title: string, section: NavSection) => {
+    if (seen.has(href)) return;
+    seen.add(href);
+    pages.push({ href, title, sectionHref: section.href, sectionTitle: section.title });
+  };
+  const visit = (nodes: NavNode[], section: NavSection) => {
+    for (const node of nodes) {
+      if (node.href && isHome(node.href, section)) {
+        push(node.href, node.title, section);
+      }
+      if (node.children) visit(node.children, section);
+    }
+  };
+  for (const section of sections) {
+    const before = seen.size;
+    visit(section.tree, section);
+    // ツリーがセクション索引を含まない場合は先頭に補う。
+    if (!seen.has(section.href)) {
+      const inserted: PageRef = {
+        href: section.href,
+        title: section.title,
+        sectionHref: section.href,
+        sectionTitle: section.title,
+      };
+      pages.splice(pages.length - (seen.size - before), 0, inserted);
+      seen.add(section.href);
+    }
+  }
+  return pages;
+}
+
+const orderedPages = buildOrderedPages();
+const orderIndex = new Map(orderedPages.map((p, i) => [p.href, i]));
+
+export type Pager = { prev: PageRef | null; next: PageRef | null };
+
+// 前後のページ。セクションをまたぐ場合も全体の読み進み列で連結する。
+export function getPager(pathname: string): Pager {
+  const i = orderIndex.get(normalizePath(pathname));
+  if (i === undefined) return { prev: null, next: null };
+  return {
+    prev: i > 0 ? orderedPages[i - 1] : null,
+    next: i < orderedPages.length - 1 ? orderedPages[i + 1] : null,
+  };
+}
+
+// href → 兄弟ノード配列 / 子ノード配列 を引くための索引。
+type RelatedEntry = { siblings: NavNode[]; children: NavNode[]; section: NavSection };
+function buildRelatedMap(): Map<string, RelatedEntry> {
+  const map = new Map<string, RelatedEntry>();
+  const walk = (nodes: NavNode[], siblings: NavNode[], section: NavSection) => {
+    for (const node of nodes) {
+      if (node.href) {
+        map.set(node.href, { siblings, children: node.children ?? [], section });
+      }
+      if (node.children) walk(node.children, node.children, section);
+    }
+  };
+  for (const section of sections) walk(section.tree, section.tree, section);
+  return map;
+}
+const relatedMap = buildRelatedMap();
+
+// 関連ページの自動導出。索引/グループページなら配下、末端ページなら同階層の
+// 兄弟。加えてセクション索引を必ず含める。最大6件。
+export function getRelated(pathname: string, limit = 6): PageRef[] {
+  const path = normalizePath(pathname);
+  const entry = relatedMap.get(path);
+  if (!entry) return [];
+  const { section } = entry;
+  const toRef = (node: NavNode): PageRef | null =>
+    node.href
+      ? {
+          href: node.href,
+          title: node.title,
+          sectionHref: section.href,
+          sectionTitle: section.title,
+        }
+      : null;
+
+  const base = entry.children.length > 0 ? entry.children : entry.siblings;
+  const seen = new Set<string>([path]);
+  const out: PageRef[] = [];
+
+  // セクション索引を先頭に(自分自身でなければ)。
+  const sectionLabel = labelMap.get(section.href) ?? section.title;
+  if (section.href !== path) {
+    out.push({
+      href: section.href,
+      title: sectionLabel,
+      sectionHref: section.href,
+      sectionTitle: section.title,
+    });
+    seen.add(section.href);
+  }
+
+  for (const node of base) {
+    if (out.length >= limit) break;
+    const ref = toRef(node);
+    if (ref && !seen.has(ref.href)) {
+      seen.add(ref.href);
+      out.push(ref);
+    }
+  }
+  return out.slice(0, limit);
+}
+
+// フッターのメタ行 "Atlas · セクション · ページ"。
+export function getFooterMeta(pathname: string): string {
+  const path = normalizePath(pathname);
+  const section = sections.find((s) => isHome(path, s));
+  const parts = ["Atlas"];
+  if (section) {
+    parts.push(section.title);
+    const current = labelMap.get(path);
+    if (current && current !== section.title) parts.push(current);
+  }
+  return parts.join(" · ");
+}

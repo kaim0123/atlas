@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -146,16 +145,16 @@ export default function Page() {
         </Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
-          <RelatedLink href="/infra/virtualization" tag="インフラ">仮想化の仕組み</RelatedLink>
-          <RelatedLink href="/database/physical" tag="データベース">物理設計と運用</RelatedLink>
-          <RelatedLink href="/ops/data" tag="運用">データ管理 ― バックアップ・リストア戦略</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; インフラ &middot; ストレージの仕組み</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
+                    <RelatedLink href="/infra/virtualization" tag="インフラ">仮想化の仕組み</RelatedLink>
+                    <RelatedLink href="/database/physical" tag="データベース">物理設計と運用</RelatedLink>
+                    <RelatedLink href="/ops/data" tag="運用">データ管理 ― バックアップ・リストア戦略</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

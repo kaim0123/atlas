@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -100,16 +99,16 @@ export default function Page() {
         </Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/computer/system/architecture" tag="コンピュータ">処理形態とシステム構成</RelatedLink>
-          <RelatedLink href="/computer/system/reliability" tag="コンピュータ">信頼性と冗長化 ― RASIS・稼働率</RelatedLink>
-          <RelatedLink href="/ops/performance" tag="運用">パフォーマンス</RelatedLink>
-          <RelatedLink href="/ops/cost" tag="運用">コスト管理</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; コンピュータ &middot; 性能と経済性の評価</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/computer/system/architecture" tag="コンピュータ">処理形態とシステム構成</RelatedLink>
+                    <RelatedLink href="/computer/system/reliability" tag="コンピュータ">信頼性と冗長化 ― RASIS・稼働率</RelatedLink>
+                    <RelatedLink href="/ops/performance" tag="運用">パフォーマンス</RelatedLink>
+                    <RelatedLink href="/ops/cost" tag="運用">コスト管理</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

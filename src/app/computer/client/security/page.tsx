@@ -13,7 +13,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -105,15 +104,15 @@ export default function Page() {
         </Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/security/basics" tag="セキュリティ">情報セキュリティの目的と脅威</RelatedLink>
-          <RelatedLink href="/security/management" tag="セキュリティ">リスクマネジメント</RelatedLink>
-          <RelatedLink href="/computer/client/maintenance" tag="コンピュータ">更新管理と保守・故障対応</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; コンピュータ &middot; 端末セキュリティ管理</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/security/basics" tag="セキュリティ">情報セキュリティの目的と脅威</RelatedLink>
+                    <RelatedLink href="/security/management" tag="セキュリティ">リスクマネジメント</RelatedLink>
+                    <RelatedLink href="/computer/client/maintenance" tag="コンピュータ">更新管理と保守・故障対応</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

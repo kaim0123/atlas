@@ -14,7 +14,6 @@ import {
   Analogy,
   Mark,
   MarkNote,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -143,15 +142,15 @@ for (const n of doubled) {
 
       <p>次のページでは、関数の引数の一部だけを先に固定する<Link href="/design/paradigm/functional/currying">引数を固定する</Link>技法(カリー化・部分適用)を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/paradigm/functional/foundations" tag="設計">純粋関数とイミュータビリティ</RelatedLink>
-          <RelatedLink href="/design/paradigm/functional/currying" tag="設計">引数を固定する</RelatedLink>
-          <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; パラダイム &middot; 関数型 &middot; パターン &middot; 関数を組み合わせる</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/paradigm/functional/foundations" tag="設計">純粋関数とイミュータビリティ</RelatedLink>
+                    <RelatedLink href="/design/paradigm/functional/currying" tag="設計">引数を固定する</RelatedLink>
+                    <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

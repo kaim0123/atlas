@@ -17,7 +17,6 @@ import {
   Timeline,
   TimelineItem,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -138,15 +137,15 @@ export default function Page() {
         Dockerは、専門家しか運転できなかった重機に、誰でも操れる<strong>ハンドルとペダル</strong>を付けて一般に開放したようなものです。エンジン(コンテナの仕組み)自体は前からありましたが、操作性を整えたことで一気に日常の道具になりました。
       </Analogy>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/infra/container" tag="インフラ">コンテナの仕組み ― namespaces・cgroups・イメージ</RelatedLink>
-          <RelatedLink href="/infra/container/kubernetes" tag="インフラ">Kubernetes ― 大量のコンテナを束ねる</RelatedLink>
-          <RelatedLink href="/dev/tooling" tag="開発">パッケージ管理とビルド</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; インフラ &middot; Docker</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/infra/container" tag="インフラ">コンテナの仕組み ― namespaces・cgroups・イメージ</RelatedLink>
+                    <RelatedLink href="/infra/container/kubernetes" tag="インフラ">Kubernetes ― 大量のコンテナを束ねる</RelatedLink>
+                    <RelatedLink href="/dev/tooling" tag="開発">パッケージ管理とビルド</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

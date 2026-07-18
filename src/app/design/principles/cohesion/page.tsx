@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -81,15 +80,15 @@ export default function Page() {
 
       <p>次のページでは、この4原則をオブジェクト指向設計に特化する形で体系化した<Link href="/design/principles/solid">SOLID</Link>を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/principles/foundations" tag="設計">黎明期の原則</RelatedLink>
-          <RelatedLink href="/design/principles/solid" tag="設計">SOLID</RelatedLink>
-          <RelatedLink href="/design/paradigm" tag="設計">パラダイム</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; 設計原則 &middot; 保守性の基本4原則</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/principles/foundations" tag="設計">黎明期の原則</RelatedLink>
+                    <RelatedLink href="/design/principles/solid" tag="設計">SOLID</RelatedLink>
+                    <RelatedLink href="/design/paradigm" tag="設計">パラダイム</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

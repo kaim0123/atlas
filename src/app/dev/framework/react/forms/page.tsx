@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Mark,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -111,15 +110,15 @@ export default function Page() {
         <Card><CardNumber>2</CardNumber><h4>Uncontrolled Component</h4><p>DOMが値の本体。refで必要な時だけ読み取り、再レンダリングを避ける。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/dev/framework/react/composition" tag="開発">コンポーネントを組み合わせる</RelatedLink>
-          <RelatedLink href="/dev/framework/react/logic-reuse" tag="開発">ロジックを再利用する</RelatedLink>
-          <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; フレームワーク &middot; React &middot; パターン &middot; フォームの値を管理する</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/dev/framework/react/composition" tag="開発">コンポーネントを組み合わせる</RelatedLink>
+                    <RelatedLink href="/dev/framework/react/logic-reuse" tag="開発">ロジックを再利用する</RelatedLink>
+                    <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

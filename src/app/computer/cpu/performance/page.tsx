@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -89,15 +88,15 @@ export default function Page() {
         </Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/computer/cpu" tag="コンピュータ">CPUと命令実行 ― 命令サイクル・レジスタ・割込み</RelatedLink>
-          <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み ― キャッシュと実効アクセス時間</RelatedLink>
-          <RelatedLink href="/computer/basics" tag="コンピュータ">PCハードウェアの基礎</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; コンピュータ &middot; CPUの性能と高速化</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/computer/cpu" tag="コンピュータ">CPUと命令実行 ― 命令サイクル・レジスタ・割込み</RelatedLink>
+                    <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み ― キャッシュと実効アクセス時間</RelatedLink>
+                    <RelatedLink href="/computer/basics" tag="コンピュータ">PCハードウェアの基礎</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

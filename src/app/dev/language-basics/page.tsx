@@ -13,7 +13,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -152,15 +151,15 @@ export default function Page() {
       </CardGrid>
       <p>これら3つの軸は互いに独立しており、1つの言語がどの組み合わせを選んでいるかで特徴が決まります。次は再び視点を広げ、コンピュータ同士がどんな共通ルールでやり取りしているのか、「通信プロトコル」を見ていきましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル ― OSI参照モデルとTCP/IP</RelatedLink>
-          <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み ― レジスタからストレージまで</RelatedLink>
-          <RelatedLink href="/os" tag="OS">OSの仕組み ― プロセス・スレッド・カーネル</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; プログラミング言語の仕組み</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル ― OSI参照モデルとTCP/IP</RelatedLink>
+                    <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み ― レジスタからストレージまで</RelatedLink>
+                    <RelatedLink href="/os" tag="OS">OSの仕組み ― プロセス・スレッド・カーネル</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -114,15 +113,15 @@ export default function Page() {
       </CardGrid>
       <p>効力感を育てる土台は率直に言える場です。<Link href="/management/team/psychological-safety">心理的安全性</Link>と、勢いをつくる<Link href="/management/team/momentum">戦略方針とモメンタム</Link>へ進みましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/team/psychological-safety" tag="マネジメント">心理的安全性</RelatedLink>
-          <RelatedLink href="/management/individual/motivation" tag="マネジメント">モチベーション理論の歴史</RelatedLink>
-          <RelatedLink href="/management/team/momentum" tag="マネジメント">戦略方針とモメンタム</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; 組織効力感</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/team/psychological-safety" tag="マネジメント">心理的安全性</RelatedLink>
+                    <RelatedLink href="/management/individual/motivation" tag="マネジメント">モチベーション理論の歴史</RelatedLink>
+                    <RelatedLink href="/management/team/momentum" tag="マネジメント">戦略方針とモメンタム</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

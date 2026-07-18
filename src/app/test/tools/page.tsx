@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -99,15 +98,15 @@ test("正しい認証情報でログインできる", async ({ page }) => {
         <Card><CardNumber>3</CardNumber><h4>ページオブジェクトと組み合わせる</h4><p>Playwrightのテストコードを画面構造から独立させ、変更に強くします。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/test/unit" tag="テスト">Unitテスト</RelatedLink>
-          <RelatedLink href="/test/e2e" tag="テスト">E2Eテスト</RelatedLink>
-          <RelatedLink href="/test/quality-plan" tag="テスト">品質計画</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; テスト &middot; Vitest・Playwright</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/test/unit" tag="テスト">Unitテスト</RelatedLink>
+                    <RelatedLink href="/test/e2e" tag="テスト">E2Eテスト</RelatedLink>
+                    <RelatedLink href="/test/quality-plan" tag="テスト">品質計画</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

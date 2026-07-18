@@ -13,7 +13,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -114,17 +113,17 @@ export default function Page() {
         </Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/computer/semiconductor/transistor" tag="コンピュータ">トランジスタの正体 ― n型・p型と巨大プリン</RelatedLink>
-          <RelatedLink href="/computer/semiconductor/logic" tag="コンピュータ">直列と並列で論理をつくる ― AND・ORゲート</RelatedLink>
-          <RelatedLink href="/computer/semiconductor/adder" tag="コンピュータ">足し算をつくる ― 半加算器と全加算器</RelatedLink>
-          <RelatedLink href="/computer/basics" tag="コンピュータ">PCハードウェアの基礎</RelatedLink>
-          <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; コンピュータ &middot; 半導体の全体像</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/computer/semiconductor/transistor" tag="コンピュータ">トランジスタの正体 ― n型・p型と巨大プリン</RelatedLink>
+                    <RelatedLink href="/computer/semiconductor/logic" tag="コンピュータ">直列と並列で論理をつくる ― AND・ORゲート</RelatedLink>
+                    <RelatedLink href="/computer/semiconductor/adder" tag="コンピュータ">足し算をつくる ― 半加算器と全加算器</RelatedLink>
+                    <RelatedLink href="/computer/basics" tag="コンピュータ">PCハードウェアの基礎</RelatedLink>
+                    <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

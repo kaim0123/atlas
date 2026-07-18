@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -105,17 +104,17 @@ export default function Page() {
       </CardGrid>
       <p>品質計画は、<Link href="/design">設計</Link>で見た原則やパターンを実際に守れているかを検証する仕組みでもあります。良い設計は、テストのしやすさという形でも報われます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/test/strategy" tag="テスト">品質戦略とテストピラミッド</RelatedLink>
-          <RelatedLink href="/test/tools" tag="テスト">Vitest・Playwright</RelatedLink>
-          <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
-          <RelatedLink href="/dev/tooling" tag="開発">パッケージ管理とビルド</RelatedLink>
-          <RelatedLink href="/security/logging" tag="セキュリティ">ログ出力設計</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; テスト &middot; 品質計画</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/test/strategy" tag="テスト">品質戦略とテストピラミッド</RelatedLink>
+                    <RelatedLink href="/test/tools" tag="テスト">Vitest・Playwright</RelatedLink>
+                    <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
+                    <RelatedLink href="/dev/tooling" tag="開発">パッケージ管理とビルド</RelatedLink>
+                    <RelatedLink href="/security/logging" tag="セキュリティ">ログ出力設計</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

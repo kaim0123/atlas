@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -60,15 +59,15 @@ export default function Page() {
         <Card><CardNumber>4</CardNumber><h4>Feature Folder Architecture</h4><p>フォルダ構成自体を技術的役割ではなく機能単位にする。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/architecture" tag="設計">アーキテクチャ一覧</RelatedLink>
-          <RelatedLink href="/design/architecture/sys/layered" tag="設計">レイヤードアーキテクチャ(システム版)</RelatedLink>
-          <RelatedLink href="/design/architecture/app/gui" tag="設計">GUI系</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; レイヤー系(アプリケーションアーキテクチャ)</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/architecture" tag="設計">アーキテクチャ一覧</RelatedLink>
+                    <RelatedLink href="/design/architecture/sys/layered" tag="設計">レイヤードアーキテクチャ(システム版)</RelatedLink>
+                    <RelatedLink href="/design/architecture/app/gui" tag="設計">GUI系</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

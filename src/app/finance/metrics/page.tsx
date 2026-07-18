@@ -14,7 +14,6 @@ import {
   CardGrid,
   Card,
   CardNumber,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -123,16 +122,16 @@ export default function Page() {
       </CardGrid>
       <p>資本効率まで診られたら、次は<Link href="/finance/valuation">企業価値と株価（PBR）</Link>へ。市場が会社の「未来」をどう値付けしているかを読みます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/finance/valuation" tag="会計・財務">企業価値と株価（PBR）</RelatedLink>
-          <RelatedLink href="/finance/ratios" tag="会計・財務">指標に惑わされない</RelatedLink>
-          <RelatedLink href="/finance/cf" tag="会計・財務">キャッシュフローと三表のつながり</RelatedLink>
-          <RelatedLink href="/finance" tag="会計・財務">会計・財務の全体像</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 会計・財務 &middot; 収益性と効率の指標</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/finance/valuation" tag="会計・財務">企業価値と株価（PBR）</RelatedLink>
+                    <RelatedLink href="/finance/ratios" tag="会計・財務">指標に惑わされない</RelatedLink>
+                    <RelatedLink href="/finance/cf" tag="会計・財務">キャッシュフローと三表のつながり</RelatedLink>
+                    <RelatedLink href="/finance" tag="会計・財務">会計・財務の全体像</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

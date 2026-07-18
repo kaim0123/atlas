@@ -13,7 +13,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -187,15 +186,15 @@ export default function Page() {
 
       <p>ここまでは記憶装置を「上から」眺めてきました。最後に視点をぐっと下げ、プログラムが関数を呼ぶたびにメモリの中で何が起きているのか ―「スタックと関数呼び出しの舞台裏」を覗いてみましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/computer/memory/stack" tag="コンピュータ">スタックと関数呼び出しの舞台裏</RelatedLink>
-          <RelatedLink href="/computer/memory/virtual" tag="コンピュータ">仮想メモリとソフトウェアの肥大化</RelatedLink>
-          <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み ― 記憶階層と4領域</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; コンピュータ &middot; 速さの壁</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/computer/memory/stack" tag="コンピュータ">スタックと関数呼び出しの舞台裏</RelatedLink>
+                    <RelatedLink href="/computer/memory/virtual" tag="コンピュータ">仮想メモリとソフトウェアの肥大化</RelatedLink>
+                    <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み ― 記憶階層と4領域</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

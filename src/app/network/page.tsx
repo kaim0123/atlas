@@ -48,7 +48,7 @@ export default function Page() {
         ))}
       </IndexGrid>
 
-      <DocsFooter>Atlas &middot; ネットワーク</DocsFooter>
+      <DocsFooter />
     </DocsPage>
   );
 }

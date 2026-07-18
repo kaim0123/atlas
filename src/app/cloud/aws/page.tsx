@@ -51,7 +51,7 @@ export default function Page() {
         ))}
       </IndexGrid>
 
-      <DocsFooter>Atlas &middot; AWS</DocsFooter>
+      <DocsFooter />
     </DocsPage>
   );
 }

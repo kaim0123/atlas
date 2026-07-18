@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -85,16 +84,16 @@ export default function Page() {
       </CardGrid>
       <p>ここまでは「セッションを乗っ取られない・偽装されない」ための守り方でした。ここからは一歩視点を変えて、次のページ「<Link href="/security/auth">認証</Link>」で、そもそも「あなたが誰であるか」をどうやって確認するのか ― ログインの仕組みそのものを見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/security/csrf" tag="セキュリティ">CSRF対策</RelatedLink>
-          <RelatedLink href="/security/xss" tag="セキュリティ">XSSと出力エスケープ</RelatedLink>
-          <RelatedLink href="/security/auth" tag="セキュリティ">認証</RelatedLink>
-          <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; セキュリティ &middot; セッションとCookie管理</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/security/csrf" tag="セキュリティ">CSRF対策</RelatedLink>
+                    <RelatedLink href="/security/xss" tag="セキュリティ">XSSと出力エスケープ</RelatedLink>
+                    <RelatedLink href="/security/auth" tag="セキュリティ">認証</RelatedLink>
+                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -97,15 +96,15 @@ export default function Page() {
 
       <p>規格と制御のしくみがわかったら、次はその先につながる実際の機器 ― 入力装置と出力装置を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/computer/io/devices" tag="コンピュータ">入出力装置 ― 入力機器と出力機器</RelatedLink>
-          <RelatedLink href="/computer/io/bus" tag="コンピュータ">バス ― 部品どうしをつなぐ通り道</RelatedLink>
-          <RelatedLink href="/computer/basics" tag="コンピュータ">PCハードウェアの基礎</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; コンピュータ &middot; 入出力インタフェース</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/computer/io/devices" tag="コンピュータ">入出力装置 ― 入力機器と出力機器</RelatedLink>
+                    <RelatedLink href="/computer/io/bus" tag="コンピュータ">バス ― 部品どうしをつなぐ通り道</RelatedLink>
+                    <RelatedLink href="/computer/basics" tag="コンピュータ">PCハードウェアの基礎</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

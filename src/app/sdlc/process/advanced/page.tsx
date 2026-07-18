@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -55,15 +54,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>実力を測るCMMI</h4><p>プロセス成熟度を段階で評価し、改善の指針にします。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/sdlc/process" tag="開発工程・管理">開発プロセスと手法</RelatedLink>
-          <RelatedLink href="/sdlc/overview" tag="開発工程・管理">開発の全体像</RelatedLink>
-          <RelatedLink href="/sdlc/management/config" tag="開発工程・管理">構成管理</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; プロセス成熟度（発展）</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/sdlc/process" tag="開発工程・管理">開発プロセスと手法</RelatedLink>
+                    <RelatedLink href="/sdlc/overview" tag="開発工程・管理">開発の全体像</RelatedLink>
+                    <RelatedLink href="/sdlc/management/config" tag="開発工程・管理">構成管理</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -155,16 +154,16 @@ export default function Page() {
       </CardGrid>
       <p>銀行の会計を支える基礎は<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/analysis">三表から会社を診断する</Link>で、産業史の背景にある金融の仕組みは<Link href="/finance/thinking">会計 vs ファイナンス</Link>で、それぞれ詳しく扱っています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/securities" tag="業界">証券</RelatedLink>
-          <RelatedLink href="/industry/insurance" tag="業界">生命保険・損害保険</RelatedLink>
-          <RelatedLink href="/finance/analysis" tag="会計・財務">三表から会社を診断する</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; 銀行</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/securities" tag="業界">証券</RelatedLink>
+                    <RelatedLink href="/industry/insurance" tag="業界">生命保険・損害保険</RelatedLink>
+                    <RelatedLink href="/finance/analysis" tag="会計・財務">三表から会社を診断する</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

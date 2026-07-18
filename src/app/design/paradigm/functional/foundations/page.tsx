@@ -14,7 +14,6 @@ import {
   Analogy,
   Mark,
   CodeCompare,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -181,18 +180,18 @@ function addItem(cart: Item[], item: Item): Item[] {
 
       <p>この2つの性質を土台に、次のページでは<code>map</code>/<code>filter</code>/<code>reduce</code>や関数合成など、実際に純粋関数を組み合わせて処理を組み立てる<Link href="/design/paradigm/functional/composition">関数を組み合わせる</Link>技法を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/paradigm/functional" tag="設計">関数型パラダイム</RelatedLink>
-          <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
-          <RelatedLink href="/design/paradigm/functional/composition" tag="設計">関数を組み合わせる</RelatedLink>
-          <RelatedLink href="/design/principles/cohesion" tag="設計">保守性の基本4原則(DRY)</RelatedLink>
-          <RelatedLink href="/design/architecture/app/data-access/patterns" tag="設計">永続化層の定石(Repository)</RelatedLink>
-          <RelatedLink href="/dev/framework/react/logic-reuse" tag="開発">ロジックを再利用する(Custom Hooks)</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; パラダイム &middot; 関数型 &middot; パターン &middot; 純粋関数とイミュータビリティ</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/paradigm/functional" tag="設計">関数型パラダイム</RelatedLink>
+                    <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
+                    <RelatedLink href="/design/paradigm/functional/composition" tag="設計">関数を組み合わせる</RelatedLink>
+                    <RelatedLink href="/design/principles/cohesion" tag="設計">保守性の基本4原則(DRY)</RelatedLink>
+                    <RelatedLink href="/design/architecture/app/data-access/patterns" tag="設計">永続化層の定石(Repository)</RelatedLink>
+                    <RelatedLink href="/dev/framework/react/logic-reuse" tag="開発">ロジックを再利用する(Custom Hooks)</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

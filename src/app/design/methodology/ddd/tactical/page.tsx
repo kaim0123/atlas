@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Mark,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -175,15 +174,15 @@ class PrismaOrderRepository implements OrderRepository {
 
       <p>戦略的DDD(境界づけられたコンテキスト・コンテキストマップ)との関係は<Link href="/design/methodology/ddd">設計方法論のDDDページ</Link>を、永続化層のより広いパターンは<Link href="/design/architecture/app/data-access/patterns">エンタープライズパターン(永続化層の定石)</Link>を参照してください。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/methodology/ddd" tag="設計">DDD(ドメイン駆動設計)</RelatedLink>
-          <RelatedLink href="/design/architecture/app/data-access/patterns" tag="設計">エンタープライズパターン(永続化層の定石)</RelatedLink>
-          <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; 設計思想・方法論 &middot; DDD &middot; パターン &middot; 戦術的DDDをコードに書く</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/methodology/ddd" tag="設計">DDD(ドメイン駆動設計)</RelatedLink>
+                    <RelatedLink href="/design/architecture/app/data-access/patterns" tag="設計">エンタープライズパターン(永続化層の定石)</RelatedLink>
+                    <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

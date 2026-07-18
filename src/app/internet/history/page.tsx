@@ -12,7 +12,6 @@ import {
   CardNumber,
   Analogy,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -136,15 +135,15 @@ export default function Page() {
       </CardGrid>
       <p>複数のコンピュータ同士がつながる歴史を見たところで、次はもう一度視点を1台のコンピュータの中に戻し、「OSの仕組み」を見ていきましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/computer/history" tag="コンピュータ">コンピュータの歴史</RelatedLink>
-          <RelatedLink href="/os" tag="OS">OSの仕組み</RelatedLink>
-          <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル ― OSI参照モデルとTCP/IP</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; インターネット &middot; インターネットの歴史</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/computer/history" tag="コンピュータ">コンピュータの歴史</RelatedLink>
+                    <RelatedLink href="/os" tag="OS">OSの仕組み</RelatedLink>
+                    <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル ― OSI参照モデルとTCP/IP</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

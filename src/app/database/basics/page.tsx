@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -74,15 +73,15 @@ export default function Page() {
       </CardGrid>
       <p>次は、RDBがデータを表でどう表し、論理と物理をどう分けて考えるのか、「関係モデルと3層スキーマ」を見ていきましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/database/model" tag="データベース">関係モデルと3層スキーマ</RelatedLink>
-          <RelatedLink href="/database/transaction" tag="データベース">トランザクションと整合性</RelatedLink>
-          <RelatedLink href="/database" tag="データベース">データベース(開発者向け)</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; データベース &middot; 役割と種類</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/database/model" tag="データベース">関係モデルと3層スキーマ</RelatedLink>
+                    <RelatedLink href="/database/transaction" tag="データベース">トランザクションと整合性</RelatedLink>
+                    <RelatedLink href="/database" tag="データベース">データベース(開発者向け)</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

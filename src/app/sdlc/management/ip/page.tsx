@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -64,15 +63,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>使う前に条件を確認</h4><p>他者の成果物はライセンス条件を確認してから利用します。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/sdlc/management/config" tag="開発工程・管理">構成管理</RelatedLink>
-          <RelatedLink href="/ops/compliance" tag="運用">法令・コンプライアンス</RelatedLink>
-          <RelatedLink href="/sdlc/overview" tag="開発工程・管理">開発の全体像</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; 知的財産とライセンス</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/sdlc/management/config" tag="開発工程・管理">構成管理</RelatedLink>
+                    <RelatedLink href="/ops/compliance" tag="運用">法令・コンプライアンス</RelatedLink>
+                    <RelatedLink href="/sdlc/overview" tag="開発工程・管理">開発の全体像</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -152,16 +151,16 @@ export default function Page() {
       </CardGrid>
       <p>ソフトウェアの会計を支える基礎は<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/analysis">三表から会社を診断する</Link>で、成長企業の赤字と黒字倒産の見分け方は<Link href="/finance/cash">黒字倒産と負債</Link>で、それぞれ詳しく扱っています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/it-services" tag="業界">ITサービス</RelatedLink>
-          <RelatedLink href="/industry/entertainment" tag="業界">エンターテインメント</RelatedLink>
-          <RelatedLink href="/finance/valuation" tag="会計・財務">企業価値とPBR</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; ソフトウェア</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/it-services" tag="業界">ITサービス</RelatedLink>
+                    <RelatedLink href="/industry/entertainment" tag="業界">エンターテインメント</RelatedLink>
+                    <RelatedLink href="/finance/valuation" tag="会計・財務">企業価値とPBR</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

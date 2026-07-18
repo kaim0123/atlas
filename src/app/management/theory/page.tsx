@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -91,15 +90,15 @@ export default function Page() {
       </CardGrid>
       <p>理論は地図であり、地図だけでは山は登れません。次は現場で使える歩き方 ― <Link href="/management/team/operation">実践編：チーム運営と3つの力</Link>へ進みましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/team/operation" tag="マネジメント">実践編 ― チーム運営と3つの力</RelatedLink>
-          <RelatedLink href="/management/individual" tag="マネジメント">個人のマネジメント（ミクロ）</RelatedLink>
-          <RelatedLink href="/management" tag="マネジメント">マネジメントの全体像</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; マネジメント理論家</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/team/operation" tag="マネジメント">実践編 ― チーム運営と3つの力</RelatedLink>
+                    <RelatedLink href="/management/individual" tag="マネジメント">個人のマネジメント（ミクロ）</RelatedLink>
+                    <RelatedLink href="/management" tag="マネジメント">マネジメントの全体像</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -60,15 +59,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>構成管理と一対</h4><p>「今の正」を記録する構成管理と、「更新のルール」を定める変更管理で一貫性を保ちます。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/sdlc/management/config" tag="開発工程・管理">構成管理</RelatedLink>
-          <RelatedLink href="/sdlc/maintenance" tag="開発工程・管理">保守</RelatedLink>
-          <RelatedLink href="/sdlc/overview" tag="開発工程・管理">開発の全体像</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; 変更管理</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/sdlc/management/config" tag="開発工程・管理">構成管理</RelatedLink>
+                    <RelatedLink href="/sdlc/maintenance" tag="開発工程・管理">保守</RelatedLink>
+                    <RelatedLink href="/sdlc/overview" tag="開発工程・管理">開発の全体像</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

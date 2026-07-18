@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -152,16 +151,16 @@ export default function Page() {
       </CardGrid>
       <p>会計の基礎は<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/analysis">三表から会社を診断する</Link>で、収益性の見方は<Link href="/finance/metrics">収益性と効率の指標</Link>で、それぞれ詳しく扱っています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/mass-media" tag="業界">マスコミ</RelatedLink>
-          <RelatedLink href="/industry/entertainment" tag="業界">エンターテインメント</RelatedLink>
-          <RelatedLink href="/finance/analysis" tag="会計・財務">三表から会社を診断する</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; 広告・出版</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/mass-media" tag="業界">マスコミ</RelatedLink>
+                    <RelatedLink href="/industry/entertainment" tag="業界">エンターテインメント</RelatedLink>
+                    <RelatedLink href="/finance/analysis" tag="会計・財務">三表から会社を診断する</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

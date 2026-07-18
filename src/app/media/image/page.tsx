@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -75,15 +74,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>解像度は画素の密度</h4><p>dpi・ppiで表し、数値が大きいほどきめ細かくなります。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/media/video" tag="情報メディア">動画フォーマット</RelatedLink>
-          <RelatedLink href="/media/graphics" tag="情報メディア">色・解像度・グラフィックス応用</RelatedLink>
-          <RelatedLink href="/media/compression" tag="情報メディア">圧縮の考え方</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 情報メディア &middot; 画像フォーマット</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/media/video" tag="情報メディア">動画フォーマット</RelatedLink>
+                    <RelatedLink href="/media/graphics" tag="情報メディア">色・解像度・グラフィックス応用</RelatedLink>
+                    <RelatedLink href="/media/compression" tag="情報メディア">圧縮の考え方</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

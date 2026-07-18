@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Mark,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   ArchList,
@@ -129,15 +128,15 @@ export default function Page() {
 
       <p>この5つはSOLID全体・アーキテクチャの選択・パラダイムの使い分けのどの場面でも判断基準として繰り返し登場します。次のページからは、まず<Link href="/design/principles/foundations">黎明期の原則</Link>である関心の分離・情報隠蔽・最小権限の原則から見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/methodology" tag="設計">設計思想・方法論</RelatedLink>
-          <RelatedLink href="/design/architecture" tag="設計">アーキテクチャ一覧</RelatedLink>
-          <RelatedLink href="/design/architecture/app/cqrs" tag="設計">高度な設計系(CQRS)</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; 設計原則</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/methodology" tag="設計">設計思想・方法論</RelatedLink>
+                    <RelatedLink href="/design/architecture" tag="設計">アーキテクチャ一覧</RelatedLink>
+                    <RelatedLink href="/design/architecture/app/cqrs" tag="設計">高度な設計系(CQRS)</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { SectionFooterNav } from "@/components/layout/section-footer-nav";
+import { PageFooter } from "@/components/layout/page-footer";
 
 export function DocsPage({ children }: { children: ReactNode }) {
   return (
@@ -38,11 +38,14 @@ export function Heading({ num, children }: { num: ReactNode; children: ReactNode
   );
 }
 
-export function DocsFooter({ children }: { children: ReactNode }) {
-  return (
-    <>
-      <SectionFooterNav />
-      <footer className="mt-12 text-[0.82rem] text-muted-foreground">{children}</footer>
-    </>
-  );
+// フッターは PageFooter が nav.ts から自動生成する(前へ/次へ・関連ページ・
+// セクション目次・メタ)。related を渡した場合のみ関連ページを手動で上書きする。
+// children(旧メタ文字列)は後方互換のため受け取るが使用しない。
+export function DocsFooter({
+  related,
+}: {
+  related?: ReactNode;
+  children?: ReactNode;
+}) {
+  return <PageFooter related={related} />;
 }

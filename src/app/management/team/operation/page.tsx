@@ -15,7 +15,6 @@ import {
   Diagram,
   IndexGrid,
   IndexCard,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -94,15 +93,15 @@ export default function Page() {
 
       <p>次は実践の第一歩、<Link href="/management/team/goals">目標設定</Link>から見ていきましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/team/goals" tag="マネジメント">目標設定</RelatedLink>
-          <RelatedLink href="/management/org/structure" tag="マネジメント">組織構造とアサイン</RelatedLink>
-          <RelatedLink href="/management" tag="マネジメント">マネジメントの全体像</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; チーム運営と3つの力</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/team/goals" tag="マネジメント">目標設定</RelatedLink>
+                    <RelatedLink href="/management/org/structure" tag="マネジメント">組織構造とアサイン</RelatedLink>
+                    <RelatedLink href="/management" tag="マネジメント">マネジメントの全体像</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

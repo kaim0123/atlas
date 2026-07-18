@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -100,15 +99,15 @@ export default function Page() {
         <Card><CardNumber>4</CardNumber><h4>純粋関数を切り出す</h4><p>「同じ入力→同じ出力」かつ「外の世界に触れない」処理をlibへ分離し、DIで副作用も扱いやすくします。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/test/strategy" tag="テスト">品質戦略とテストピラミッド</RelatedLink>
-          <RelatedLink href="/test/integration" tag="テスト">Integrationテスト</RelatedLink>
-          <RelatedLink href="/test/strategy" tag="テスト">テストの段階</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; テスト &middot; Unitテスト</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/test/strategy" tag="テスト">品質戦略とテストピラミッド</RelatedLink>
+                    <RelatedLink href="/test/integration" tag="テスト">Integrationテスト</RelatedLink>
+                    <RelatedLink href="/test/strategy" tag="テスト">テストの段階</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

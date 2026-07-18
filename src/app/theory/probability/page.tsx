@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -140,15 +139,15 @@ export default function Page() {
         </Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/theory/probability/inference" tag="情報科学">推定と仮説検定</RelatedLink>
-          <RelatedLink href="/theory/encoding" tag="情報科学">文字コード</RelatedLink>
-          <RelatedLink href="/security/hash" tag="セキュリティ">ハッシュ関数と衝突攻撃</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 情報科学 &middot; 確率・統計と情報理論</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/theory/probability/inference" tag="情報科学">推定と仮説検定</RelatedLink>
+                    <RelatedLink href="/theory/encoding" tag="情報科学">文字コード</RelatedLink>
+                    <RelatedLink href="/security/hash" tag="セキュリティ">ハッシュ関数と衝突攻撃</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

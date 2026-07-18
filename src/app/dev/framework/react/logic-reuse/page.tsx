@@ -14,7 +14,6 @@ import {
   Analogy,
   Mark,
   MarkNote,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -153,15 +152,15 @@ function UserListScreen() {
 
       <p>次は、複数のコンポーネントが暗黙的に状態を共有しながら連携する<Link href="/dev/framework/react/composition">コンポーネントを組み合わせる</Link>パターンを見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/dev/framework/react/composition" tag="開発">コンポーネントを組み合わせる</RelatedLink>
-          <RelatedLink href="/dev/framework/react/forms" tag="開発">フォームの値を管理する</RelatedLink>
-          <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; フレームワーク &middot; React &middot; パターン &middot; ロジックを再利用する</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/dev/framework/react/composition" tag="開発">コンポーネントを組み合わせる</RelatedLink>
+                    <RelatedLink href="/dev/framework/react/forms" tag="開発">フォームの値を管理する</RelatedLink>
+                    <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

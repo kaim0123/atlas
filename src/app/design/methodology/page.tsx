@@ -12,7 +12,6 @@ import {
   CardGrid,
   Mark,
   MarkNote,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   ArchList,
@@ -108,15 +107,15 @@ export default function Page() {
 
       <p>次のページでは、これらの方法論を実践するときの、より細かいコードレベルの判断基準である<Link href="/design/principles">設計原則</Link>を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/paradigm" tag="設計">パラダイム</RelatedLink>
-          <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
-          <RelatedLink href="/design/architecture/sys/microservices" tag="設計">マイクロサービスアーキテクチャ</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; 設計思想・方法論</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/paradigm" tag="設計">パラダイム</RelatedLink>
+                    <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
+                    <RelatedLink href="/design/architecture/sys/microservices" tag="設計">マイクロサービスアーキテクチャ</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

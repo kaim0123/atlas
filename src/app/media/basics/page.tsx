@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -56,15 +55,15 @@ export default function Page() {
       </CardGrid>
       <p>次からは、音声・画像・動画それぞれのフォーマットを具体的に見ていきましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/media/image" tag="情報メディア">画像フォーマット</RelatedLink>
-          <RelatedLink href="/media/compression" tag="情報メディア">圧縮の考え方</RelatedLink>
-          <RelatedLink href="/theory/encoding" tag="情報科学">文字コード</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 情報メディア &middot; マルチメディアの全体像</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/media/image" tag="情報メディア">画像フォーマット</RelatedLink>
+                    <RelatedLink href="/media/compression" tag="情報メディア">圧縮の考え方</RelatedLink>
+                    <RelatedLink href="/theory/encoding" tag="情報科学">文字コード</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -16,7 +16,6 @@ import {
   Diagram,
   Timeline,
   TimelineItem,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -141,15 +140,15 @@ export default function Page() {
       </CardGrid>
       <p>個々の理論家の位置づけは<Link href="/management/theory">マネジメント理論家</Link>のページでも俯瞰できます。理論を踏まえたうえで、次は現場でどう意欲を設計するか ― <Link href="/management/team/goals">目標設定</Link>や<Link href="/management/org/delegation">権限委譲</Link>へ進みましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/individual" tag="マネジメント">個人のマネジメント（ミクロ）</RelatedLink>
-          <RelatedLink href="/management/theory" tag="マネジメント">マネジメント理論家</RelatedLink>
-          <RelatedLink href="/management/team/goals" tag="マネジメント">実践編 ― 目標設定</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; モチベーション理論の歴史</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/individual" tag="マネジメント">個人のマネジメント（ミクロ）</RelatedLink>
+                    <RelatedLink href="/management/theory" tag="マネジメント">マネジメント理論家</RelatedLink>
+                    <RelatedLink href="/management/team/goals" tag="マネジメント">実践編 ― 目標設定</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

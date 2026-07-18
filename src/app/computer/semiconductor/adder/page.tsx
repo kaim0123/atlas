@@ -14,7 +14,6 @@ import {
   Aside,
   Diagram,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -176,16 +175,16 @@ export default function Page() {
         </Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/computer/semiconductor/logic" tag="コンピュータ">直列と並列で論理をつくる ― AND・ORゲート</RelatedLink>
-          <RelatedLink href="/computer/semiconductor" tag="コンピュータ">半導体の全体像</RelatedLink>
-          <RelatedLink href="/computer/basics" tag="コンピュータ">PCハードウェアの基礎</RelatedLink>
-          <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; コンピュータ &middot; 足し算をつくる</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/computer/semiconductor/logic" tag="コンピュータ">直列と並列で論理をつくる ― AND・ORゲート</RelatedLink>
+                    <RelatedLink href="/computer/semiconductor" tag="コンピュータ">半導体の全体像</RelatedLink>
+                    <RelatedLink href="/computer/basics" tag="コンピュータ">PCハードウェアの基礎</RelatedLink>
+                    <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

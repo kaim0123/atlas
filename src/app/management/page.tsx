@@ -102,7 +102,7 @@ export default function Page() {
 
       <p>マネジメントは<Link href="/sdlc/overview">開発工程・管理</Link>や<Link href="/ops/compliance">運用の法令・コンプライアンス</Link>とも地続きです。組織で成果を出すという観点から、あわせて読むと理解が深まります。</p>
 
-      <DocsFooter>Atlas &middot; マネジメント</DocsFooter>
+      <DocsFooter />
     </DocsPage>
   );
 }

@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -120,16 +119,16 @@ export default function Page() {
       </CardGrid>
       <p>この産業の会計を支える基礎は<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/analysis">三表から会社を診断する</Link>で、預金を持つ<Link href="/industry/bank">銀行</Link>との違いを対比すると、金融各業種の資金構造がよりくっきり見えてきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/bank" tag="業界">銀行</RelatedLink>
-          <RelatedLink href="/industry/securities" tag="業界">証券</RelatedLink>
-          <RelatedLink href="/finance/cash" tag="会計・財務">現金がすべて ― 黒字倒産と負債</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; 信販・クレジット・リース</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/bank" tag="業界">銀行</RelatedLink>
+                    <RelatedLink href="/industry/securities" tag="業界">証券</RelatedLink>
+                    <RelatedLink href="/finance/cash" tag="会計・財務">現金がすべて ― 黒字倒産と負債</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

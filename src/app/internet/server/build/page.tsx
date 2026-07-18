@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -142,15 +141,15 @@ export default function Page() {
         </Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
-          <RelatedLink href="/network/topology" tag="ネットワーク">トポロジと接続装置</RelatedLink>
-          <RelatedLink href="/internet/isp" tag="インターネット">ISP接続とCDN</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; インターネット &middot; サーバー構築の実務</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
+                    <RelatedLink href="/network/topology" tag="ネットワーク">トポロジと接続装置</RelatedLink>
+                    <RelatedLink href="/internet/isp" tag="インターネット">ISP接続とCDN</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

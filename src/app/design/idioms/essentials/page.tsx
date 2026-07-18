@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -276,17 +275,17 @@ const city = user?.profile?.address?.city ?? "未設定";
         次は、コードの見た目や書き方そのものを揃える<Link href="/design/conventions">コーディング規約・スタイル</Link>を見ていきましょう。
       </p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/idioms" tag="設計">実装パターン・イディオム(一覧)</RelatedLink>
-          <RelatedLink href="/design/principles/solid" tag="設計">SOLID</RelatedLink>
-          <RelatedLink href="/design/patterns" tag="設計">設計パターン</RelatedLink>
-          <RelatedLink href="/design/paradigm/functional/safety" tag="設計">安全に分岐する</RelatedLink>
-          <RelatedLink href="/design/conventions" tag="設計">コーディング規約・スタイル</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; 実装パターン・イディオム &middot; 必修イディオムを深く理解する</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/idioms" tag="設計">実装パターン・イディオム(一覧)</RelatedLink>
+                    <RelatedLink href="/design/principles/solid" tag="設計">SOLID</RelatedLink>
+                    <RelatedLink href="/design/patterns" tag="設計">設計パターン</RelatedLink>
+                    <RelatedLink href="/design/paradigm/functional/safety" tag="設計">安全に分岐する</RelatedLink>
+                    <RelatedLink href="/design/conventions" tag="設計">コーディング規約・スタイル</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

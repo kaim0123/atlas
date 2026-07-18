@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Mark,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -142,16 +141,16 @@ class CommandHistory {
 
       <p>次は、複数のオブジェクトがどう連携し、通知し合い、走査し合うかを扱う<Link href="/design/paradigm/oop/gof/collaboration">連携・通知・走査</Link>のパターンを見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/paradigm/oop/gof/structure" tag="設計">構造を包む・繋ぐ</RelatedLink>
-          <RelatedLink href="/design/paradigm/oop/gof/collaboration" tag="設計">連携・通知・走査</RelatedLink>
-          <RelatedLink href="/design/paradigm/oop" tag="設計">オブジェクト指向</RelatedLink>
-          <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; パラダイム &middot; オブジェクト指向 &middot; GoF &middot; 振る舞いをオブジェクト化する</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/paradigm/oop/gof/structure" tag="設計">構造を包む・繋ぐ</RelatedLink>
+                    <RelatedLink href="/design/paradigm/oop/gof/collaboration" tag="設計">連携・通知・走査</RelatedLink>
+                    <RelatedLink href="/design/paradigm/oop" tag="設計">オブジェクト指向</RelatedLink>
+                    <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

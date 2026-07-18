@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -87,16 +86,16 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>デプロイを自動化する</h4><p>Gitのブランチ戦略とCI/CDで、pushからデプロイまでを再現性のある流れにする。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/network" tag="AWS">ネットワーキングとコンテンツ配信</RelatedLink>
-          <RelatedLink href="/cloud/aws/cicd" tag="AWS">CI/CD</RelatedLink>
-          <RelatedLink href="/sdlc/deployment" tag="開発工程・管理">導入と受入れ</RelatedLink>
-          <RelatedLink href="/sdlc/management/config" tag="開発工程・管理">構成管理</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 運用 &middot; インフラとデプロイ</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/network" tag="AWS">ネットワーキングとコンテンツ配信</RelatedLink>
+                    <RelatedLink href="/cloud/aws/cicd" tag="AWS">CI/CD</RelatedLink>
+                    <RelatedLink href="/sdlc/deployment" tag="開発工程・管理">導入と受入れ</RelatedLink>
+                    <RelatedLink href="/sdlc/management/config" tag="開発工程・管理">構成管理</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

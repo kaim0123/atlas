@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -131,16 +130,16 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>迷ったらPrisma+PostgreSQL</h4><p>型が一貫し関連も厳密。Next.js+tRPCと組むと型がフロントまで直通します。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/dev/framework" tag="開発">フレームワーク・ライブラリ</RelatedLink>
-          <RelatedLink href="/dev/http" tag="開発">HTTP通信</RelatedLink>
-          <RelatedLink href="/database/basics" tag="データベース">役割と種類</RelatedLink>
-          <RelatedLink href="/database/model" tag="データベース">関係モデルと3層スキーマ</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; 技術スタックの組み合わせ</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/dev/framework" tag="開発">フレームワーク・ライブラリ</RelatedLink>
+                    <RelatedLink href="/dev/http" tag="開発">HTTP通信</RelatedLink>
+                    <RelatedLink href="/database/basics" tag="データベース">役割と種類</RelatedLink>
+                    <RelatedLink href="/database/model" tag="データベース">関係モデルと3層スキーマ</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

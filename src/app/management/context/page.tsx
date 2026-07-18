@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -89,15 +88,15 @@ export default function Page() {
       </CardGrid>
       <p>これで個人→チーム→組織→社会という体系のレイヤーを一通り見ました。最後に、ここまでの各テーマを支える<Link href="/management/theory">マネジメント理論家</Link>の系譜を押さえておきましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/theory" tag="マネジメント">マネジメント理論家</RelatedLink>
-          <RelatedLink href="/management/org" tag="マネジメント">組織のマネジメント（マクロ）</RelatedLink>
-          <RelatedLink href="/ops/compliance" tag="運用">運用 ― 法令・コンプライアンス</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; 経営・社会とのつながり</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/theory" tag="マネジメント">マネジメント理論家</RelatedLink>
+                    <RelatedLink href="/management/org" tag="マネジメント">組織のマネジメント（マクロ）</RelatedLink>
+                    <RelatedLink href="/ops/compliance" tag="運用">運用 ― 法令・コンプライアンス</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

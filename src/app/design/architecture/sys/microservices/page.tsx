@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -62,15 +61,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>分散が生む複雑さと引き換え</h4><p>結果整合性・分散トランザクション・運用面の重複という新しい課題を負う。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/architecture/sys/service-based" tag="設計">サービスベースアーキテクチャ</RelatedLink>
-          <RelatedLink href="/design/architecture/sys/event-driven" tag="設計">イベント駆動アーキテクチャ</RelatedLink>
-          <RelatedLink href="/design/architecture/sys/modular-monolith" tag="設計">モジュラーモノリス</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; マイクロサービスアーキテクチャ</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/architecture/sys/service-based" tag="設計">サービスベースアーキテクチャ</RelatedLink>
+                    <RelatedLink href="/design/architecture/sys/event-driven" tag="設計">イベント駆動アーキテクチャ</RelatedLink>
+                    <RelatedLink href="/design/architecture/sys/modular-monolith" tag="設計">モジュラーモノリス</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

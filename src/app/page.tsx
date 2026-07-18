@@ -70,7 +70,7 @@ export default function Home() {
         })}
       </div>
 
-      <DocsFooter>Atlas</DocsFooter>
+      <DocsFooter />
     </DocsPage>
   );
 }

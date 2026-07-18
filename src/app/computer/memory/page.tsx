@@ -13,7 +13,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -187,18 +186,18 @@ export default function Page() {
       </CardGrid>
       <p>一周した後は、そのメモリの上でプログラムがどんな考え方で書かれ、どうやって実際に動く命令になるのか ―「プログラミング言語の仕組み」へ進むのがおすすめです。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/computer/memory/history" tag="コンピュータ">記憶装置の歴史 ― 「足りない」の系譜</RelatedLink>
-          <RelatedLink href="/computer/memory/virtual" tag="コンピュータ">仮想メモリとソフトウェアの肥大化</RelatedLink>
-          <RelatedLink href="/computer/memory/speed" tag="コンピュータ">速さの壁 ― キャッシュ・帯域・HBM</RelatedLink>
-          <RelatedLink href="/computer/memory/stack" tag="コンピュータ">スタックと関数呼び出しの舞台裏</RelatedLink>
-          <RelatedLink href="/dev/language-basics" tag="開発">プログラミング言語の仕組み</RelatedLink>
-          <RelatedLink href="/os" tag="OS">OSの仕組み ― プロセス・スレッド・カーネル</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; コンピュータ &middot; メモリの仕組み</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/computer/memory/history" tag="コンピュータ">記憶装置の歴史 ― 「足りない」の系譜</RelatedLink>
+                    <RelatedLink href="/computer/memory/virtual" tag="コンピュータ">仮想メモリとソフトウェアの肥大化</RelatedLink>
+                    <RelatedLink href="/computer/memory/speed" tag="コンピュータ">速さの壁 ― キャッシュ・帯域・HBM</RelatedLink>
+                    <RelatedLink href="/computer/memory/stack" tag="コンピュータ">スタックと関数呼び出しの舞台裏</RelatedLink>
+                    <RelatedLink href="/dev/language-basics" tag="開発">プログラミング言語の仕組み</RelatedLink>
+                    <RelatedLink href="/os" tag="OS">OSの仕組み ― プロセス・スレッド・カーネル</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

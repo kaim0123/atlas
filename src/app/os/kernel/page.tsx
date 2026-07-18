@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -175,15 +174,15 @@ export default function Page() {
       </CardGrid>
       <p>ここではカーネルが「何を管理し、どう設計され、どんな特権を持つか」という骨格を見ました。次は、その管理対象の筆頭である<Link href="/os/process">プロセスとスレッド</Link>を掘り下げ、その後アプリとカーネルの架け橋である<Link href="/os/syscall">システムコール</Link>の内部動作へと進みます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/os/process" tag="OS">プロセスとスレッド</RelatedLink>
-          <RelatedLink href="/os/syscall" tag="OS">システムコール</RelatedLink>
-          <RelatedLink href="/os" tag="OS">OSの仕組み</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; OS &middot; カーネルの役割と設計</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/os/process" tag="OS">プロセスとスレッド</RelatedLink>
+                    <RelatedLink href="/os/syscall" tag="OS">システムコール</RelatedLink>
+                    <RelatedLink href="/os" tag="OS">OSの仕組み</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

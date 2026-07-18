@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -112,15 +111,15 @@ export default function Page() {
       </CardGrid>
       <p>ルールと相互理解は、方針に沿って前進する<Link href="/management/team/momentum">戦略方針とモメンタム</Link>や、チームを対象にした<Link href="/management/team">チームのマネジメント（メゾ）</Link>と響き合います。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/team/momentum" tag="マネジメント">戦略方針とモメンタム</RelatedLink>
-          <RelatedLink href="/management/team" tag="マネジメント">チームのマネジメント（メゾ）</RelatedLink>
-          <RelatedLink href="/management/team/operation" tag="マネジメント">チーム運営と3つの力</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; ルールと相互理解</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/team/momentum" tag="マネジメント">戦略方針とモメンタム</RelatedLink>
+                    <RelatedLink href="/management/team" tag="マネジメント">チームのマネジメント（メゾ）</RelatedLink>
+                    <RelatedLink href="/management/team/operation" tag="マネジメント">チーム運営と3つの力</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -186,16 +185,16 @@ export default function Page() {
 
       <p>セキュリティヘッダはあくまで「もう一枚の壁」です。<Link href="/security/xss">出力エスケープ</Link>のような根本対策を土台にしたうえで重ねてこそ、多層防御になります。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/security/xss" tag="セキュリティ">XSSと出力エスケープ</RelatedLink>
-          <RelatedLink href="/security/network-defense" tag="セキュリティ">ネットワーク層の防御</RelatedLink>
-          <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
-          <RelatedLink href="/ops/deploy" tag="運用">インフラとデプロイ</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; セキュリティ &middot; セキュリティヘッダ</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/security/xss" tag="セキュリティ">XSSと出力エスケープ</RelatedLink>
+                    <RelatedLink href="/security/network-defense" tag="セキュリティ">ネットワーク層の防御</RelatedLink>
+                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                    <RelatedLink href="/ops/deploy" tag="運用">インフラとデプロイ</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

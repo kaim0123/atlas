@@ -13,7 +13,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -156,15 +155,15 @@ export default function Page() {
         </Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
-          <RelatedLink href="/internet/mail" tag="インターネット">メールの仕組み</RelatedLink>
-          <RelatedLink href="/computer/printer" tag="コンピュータ">プリンターの仕組み</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; インフラ &middot; バックアップと復旧</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
+                    <RelatedLink href="/internet/mail" tag="インターネット">メールの仕組み</RelatedLink>
+                    <RelatedLink href="/computer/printer" tag="コンピュータ">プリンターの仕組み</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

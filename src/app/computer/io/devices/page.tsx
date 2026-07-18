@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -78,15 +77,15 @@ export default function Page() {
         </Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/computer/io/interface" tag="コンピュータ">入出力インタフェース ― つなぐ約束ごと</RelatedLink>
-          <RelatedLink href="/computer/printer" tag="コンピュータ">プリンターの仕組み ― 共有・ドライバー・スキャン</RelatedLink>
-          <RelatedLink href="/computer/io/bus" tag="コンピュータ">バス ― 部品どうしをつなぐ通り道</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; コンピュータ &middot; 入出力装置</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/computer/io/interface" tag="コンピュータ">入出力インタフェース ― つなぐ約束ごと</RelatedLink>
+                    <RelatedLink href="/computer/printer" tag="コンピュータ">プリンターの仕組み ― 共有・ドライバー・スキャン</RelatedLink>
+                    <RelatedLink href="/computer/io/bus" tag="コンピュータ">バス ― 部品どうしをつなぐ通り道</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -82,15 +81,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>公開前後にレビュー・棚卸しの工程を置く</h4><p>誤った情報・古い情報が放置されないようにする。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/storage" tag="AWS">ストレージ</RelatedLink>
-          <RelatedLink href="/ops/performance" tag="運用">パフォーマンス</RelatedLink>
-          <RelatedLink href="/ops/deploy" tag="運用">インフラとデプロイ</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 運用 &middot; コンテンツ管理</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/storage" tag="AWS">ストレージ</RelatedLink>
+                    <RelatedLink href="/ops/performance" tag="運用">パフォーマンス</RelatedLink>
+                    <RelatedLink href="/ops/deploy" tag="運用">インフラとデプロイ</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

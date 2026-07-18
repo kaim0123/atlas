@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -63,15 +62,15 @@ export default function Page() {
 
       <p>次のページでは、逆にドメインの「名詞」からオブジェクトを見出そうとした初期のオブジェクト指向分析、<Link href="/design/methodology/object-centric">オブジェクト中心設計</Link>を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/methodology/info-hiding" tag="設計">情報隠蔽</RelatedLink>
-          <RelatedLink href="/design/methodology/object-centric" tag="設計">オブジェクト中心設計</RelatedLink>
-          <RelatedLink href="/design/architecture/app/data-access" tag="設計">データアクセス系アーキテクチャ</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; 設計思想・方法論 &middot; データ中心設計</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/methodology/info-hiding" tag="設計">情報隠蔽</RelatedLink>
+                    <RelatedLink href="/design/methodology/object-centric" tag="設計">オブジェクト中心設計</RelatedLink>
+                    <RelatedLink href="/design/architecture/app/data-access" tag="設計">データアクセス系アーキテクチャ</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

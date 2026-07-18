@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -157,15 +156,15 @@ export default function Page() {
       </CardGrid>
       <p>ここまでで、住所づけ(IP)から経路の判断(ルーティング・NAT)までを見てきました。次は、その1つ上でデータの届け先アプリを選ぶトランスポート層へ進みましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/network/transport" tag="ネットワーク">トランスポート層 ― TCPとUDP</RelatedLink>
-          <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル</RelatedLink>
-          <RelatedLink href="/network/topology" tag="ネットワーク">トポロジと接続装置</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; ネットワーク &middot; IPアドレスと経路</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/network/transport" tag="ネットワーク">トランスポート層 ― TCPとUDP</RelatedLink>
+                    <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル</RelatedLink>
+                    <RelatedLink href="/network/topology" tag="ネットワーク">トポロジと接続装置</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

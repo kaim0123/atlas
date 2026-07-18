@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -158,16 +157,16 @@ export default function Page() {
       </CardGrid>
       <p>物理的な部品がそろったら、次はそれらのパソコンがどうやって他のコンピュータと通信するのかを見ていきましょう。まずは、実務で使うIPアドレスの設計とトラブルシュートを扱います。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/computer/cpu" tag="コンピュータ">CPUと命令実行</RelatedLink>
-          <RelatedLink href="/network/ip" tag="ネットワーク">IPアドレスとルーティングの実務</RelatedLink>
-          <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み</RelatedLink>
-          <RelatedLink href="/network/link/wireless" tag="ネットワーク">無線LAN(Wi-Fi)</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; コンピュータ &middot; PCハードウェアの基礎</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/computer/cpu" tag="コンピュータ">CPUと命令実行</RelatedLink>
+                    <RelatedLink href="/network/ip" tag="ネットワーク">IPアドレスとルーティングの実務</RelatedLink>
+                    <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み</RelatedLink>
+                    <RelatedLink href="/network/link/wireless" tag="ネットワーク">無線LAN(Wi-Fi)</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

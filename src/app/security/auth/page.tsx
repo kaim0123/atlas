@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -93,16 +92,16 @@ export default function Page() {
       </CardGrid>
       <p>これで「あなたが誰か」を確認する認証の要点が揃いました。しかし認証だけでは、ログインした人が「何をしてよいか」までは決まりません。次のページ「<Link href="/security/authz">認可</Link>」では、この「誰が・何をしてよいか」を判定する仕組みを見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/security/session" tag="セキュリティ">セッションとCookie管理</RelatedLink>
-          <RelatedLink href="/security/csrf" tag="セキュリティ">CSRF対策</RelatedLink>
-          <RelatedLink href="/security/authz" tag="セキュリティ">認可</RelatedLink>
-          <RelatedLink href="/security/identity" tag="セキュリティ">認証プロトコルの変遷</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; セキュリティ &middot; 認証</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/security/session" tag="セキュリティ">セッションとCookie管理</RelatedLink>
+                    <RelatedLink href="/security/csrf" tag="セキュリティ">CSRF対策</RelatedLink>
+                    <RelatedLink href="/security/authz" tag="セキュリティ">認可</RelatedLink>
+                    <RelatedLink href="/security/identity" tag="セキュリティ">認証プロトコルの変遷</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

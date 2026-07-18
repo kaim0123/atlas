@@ -53,7 +53,7 @@ export default function Page() {
         ))}
       </IndexGrid>
 
-      <DocsFooter>Atlas &middot; 開発</DocsFooter>
+      <DocsFooter />
     </DocsPage>
   );
 }

@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -144,15 +143,15 @@ export default function Page() {
         </tbody>
       </table>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/infra/container/kubernetes" tag="インフラ">Kubernetes ― 大量のコンテナを束ねる</RelatedLink>
-          <RelatedLink href="/infra/container/security" tag="インフラ">コンテナセキュリティ ― 5大リスクと防御</RelatedLink>
-          <RelatedLink href="/monitoring" tag="監視">監視・保守</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; インフラ &middot; オブザーバビリティ</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/infra/container/kubernetes" tag="インフラ">Kubernetes ― 大量のコンテナを束ねる</RelatedLink>
+                    <RelatedLink href="/infra/container/security" tag="インフラ">コンテナセキュリティ ― 5大リスクと防御</RelatedLink>
+                    <RelatedLink href="/monitoring" tag="監視">監視・保守</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

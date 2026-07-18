@@ -15,7 +15,6 @@ import {
   Aside,
   Diagram,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -136,14 +135,14 @@ export default function Page() {
       </CardGrid>
       <p>ターミナルとシェルの使い方がわかったところで、次はいよいよ「コードをどう管理し、どう動く形に組み立てるか」という話に進みます。次のページ「<Link href="/dev/tooling">パッケージ管理とビルド</Link>」では、npm・pnpm・Viteといった、実際の開発で毎日触れる道具を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/dev/tooling" tag="開発">パッケージ管理とビルド</RelatedLink>
-          <RelatedLink href="/os" tag="OS">OSの仕組み</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; 開発環境</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/dev/tooling" tag="開発">パッケージ管理とビルド</RelatedLink>
+                    <RelatedLink href="/os" tag="OS">OSの仕組み</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

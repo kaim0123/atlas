@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -68,15 +67,15 @@ export default function Page() {
       </CardGrid>
       <p>ここまでで、コードを書き実行するための基本的な道具立て ― HTML/CSS・JavaScript/TypeScript・実行環境・フレームワーク・ライブラリ ― が一通り揃いました。次は「<Link href="/database/basics">データベース</Link>」で、これらを使って作ったアプリのデータをどう構造化して保存するか、リレーショナルデータベースの基礎を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/dev/framework" tag="開発">フレームワーク・ライブラリ概要</RelatedLink>
-          <RelatedLink href="/dev/framework/nextjs" tag="開発">Next.js</RelatedLink>
-          <RelatedLink href="/dev/web-basics" tag="開発">Web基礎</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; フレームワーク・ライブラリ &middot; Tailwind CSS</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/dev/framework" tag="開発">フレームワーク・ライブラリ概要</RelatedLink>
+                    <RelatedLink href="/dev/framework/nextjs" tag="開発">Next.js</RelatedLink>
+                    <RelatedLink href="/dev/web-basics" tag="開発">Web基礎</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

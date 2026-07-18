@@ -15,7 +15,6 @@ import {
   Aside,
   Mark,
   MarkNote,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -258,22 +257,22 @@ export default function Page() {
 
       <p>次のページでは、これらのパターンをさらに特定の言語機能に落とし込んだ、より実装レベルの<Link href="/design/idioms">実装パターン・イディオム</Link>を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/paradigm/functional/foundations" tag="設計">関数型パターン</RelatedLink>
-          <RelatedLink href="/dev/framework/react/logic-reuse" tag="開発">Reactパターン(ロジックの再利用)</RelatedLink>
-          <RelatedLink href="/dev/framework/nextjs/components" tag="開発">Next.jsパターン(Server/Client境界)</RelatedLink>
-          <RelatedLink href="/design/paradigm/oop/gof/structure" tag="設計">GoFパターン(構造)</RelatedLink>
-          <RelatedLink href="/design/methodology/ddd/tactical" tag="設計">DDD戦術パターンをコードに書く</RelatedLink>
-          <RelatedLink href="/design/methodology/ddd" tag="設計">DDD(ドメイン駆動設計)</RelatedLink>
-          <RelatedLink href="/design/architecture/sys/microservices" tag="設計">マイクロサービスアーキテクチャ</RelatedLink>
-          <RelatedLink href="/design/architecture/app/cqrs" tag="設計">高度な設計系(CQRS)</RelatedLink>
-          <RelatedLink href="/design/idioms" tag="設計">実装パターン・イディオム</RelatedLink>
-          <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; 設計パターン</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/paradigm/functional/foundations" tag="設計">関数型パターン</RelatedLink>
+                    <RelatedLink href="/dev/framework/react/logic-reuse" tag="開発">Reactパターン(ロジックの再利用)</RelatedLink>
+                    <RelatedLink href="/dev/framework/nextjs/components" tag="開発">Next.jsパターン(Server/Client境界)</RelatedLink>
+                    <RelatedLink href="/design/paradigm/oop/gof/structure" tag="設計">GoFパターン(構造)</RelatedLink>
+                    <RelatedLink href="/design/methodology/ddd/tactical" tag="設計">DDD戦術パターンをコードに書く</RelatedLink>
+                    <RelatedLink href="/design/methodology/ddd" tag="設計">DDD(ドメイン駆動設計)</RelatedLink>
+                    <RelatedLink href="/design/architecture/sys/microservices" tag="設計">マイクロサービスアーキテクチャ</RelatedLink>
+                    <RelatedLink href="/design/architecture/app/cqrs" tag="設計">高度な設計系(CQRS)</RelatedLink>
+                    <RelatedLink href="/design/idioms" tag="設計">実装パターン・イディオム</RelatedLink>
+                    <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

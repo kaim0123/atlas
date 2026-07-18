@@ -16,7 +16,6 @@ import {
   Analogy,
   Steps,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -120,15 +119,15 @@ export default function Page() {
       <div className="mb-1.5"><Mark tier="niche">補足</Mark></div>
       <MarkNote>→ SNSの配信は「購読しているかどうか」だけが基準です。メッセージの内容そのものに応じて振り分け先を柔軟に変えたい場合は、次に見る<Link href="/cloud/aws/integration/eventbridge">EventBridge</Link>のルールベースのルーティングがより向いています。</MarkNote>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/integration/sqs" tag="AWS">SQS</RelatedLink>
-          <RelatedLink href="/cloud/aws/integration/eventbridge" tag="AWS">EventBridge</RelatedLink>
-          <RelatedLink href="/design/architecture/sys/event-driven" tag="設計">イベント駆動アーキテクチャ</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; AWS &middot; アプリケーション統合 &middot; SNS</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/integration/sqs" tag="AWS">SQS</RelatedLink>
+                    <RelatedLink href="/cloud/aws/integration/eventbridge" tag="AWS">EventBridge</RelatedLink>
+                    <RelatedLink href="/design/architecture/sys/event-driven" tag="設計">イベント駆動アーキテクチャ</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

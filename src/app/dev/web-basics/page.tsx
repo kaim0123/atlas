@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -163,15 +162,15 @@ export default function Page() {
       </CardGrid>
       <p>HTML・CSSだけでも静的なページは作れますが、ボタンを押したときの反応やデータの取得といった「動き」を持たせるには、もう1つの要素が必要です。次のページ「<Link href="/dev/language">JavaScript・TypeScript</Link>」では、ページに命を吹き込む言語そのものを見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/dev/language" tag="開発">JavaScript・TypeScript</RelatedLink>
-          <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
-          <RelatedLink href="/dev" tag="開発">実装 一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; Web基礎</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/dev/language" tag="開発">JavaScript・TypeScript</RelatedLink>
+                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                    <RelatedLink href="/dev" tag="開発">実装 一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

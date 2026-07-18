@@ -104,7 +104,7 @@ export default function Page() {
         );
       })}
 
-      <DocsFooter>Atlas &middot; 運用</DocsFooter>
+      <DocsFooter />
     </DocsPage>
   );
 }

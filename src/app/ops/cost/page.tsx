@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -87,16 +86,16 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>予算アラートで先に気づく</h4><p>請求書で驚く前に、しきい値超過を通知する仕組みを入れておく。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/compute" tag="AWS">コンピューティング</RelatedLink>
-          <RelatedLink href="/cloud/aws/storage" tag="AWS">ストレージ</RelatedLink>
-          <RelatedLink href="/monitoring" tag="監視">監視・保守</RelatedLink>
-          <RelatedLink href="/ops/data" tag="運用">データ管理</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 運用 &middot; コスト管理</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/compute" tag="AWS">コンピューティング</RelatedLink>
+                    <RelatedLink href="/cloud/aws/storage" tag="AWS">ストレージ</RelatedLink>
+                    <RelatedLink href="/monitoring" tag="監視">監視・保守</RelatedLink>
+                    <RelatedLink href="/ops/data" tag="運用">データ管理</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

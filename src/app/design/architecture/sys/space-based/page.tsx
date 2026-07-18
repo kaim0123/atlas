@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -65,14 +64,14 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>永続化は非同期・後追いで</h4><p>データポンプを介して、応答をブロックせずにデータベースへ反映する。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/architecture/sys/event-driven" tag="設計">イベント駆動アーキテクチャ</RelatedLink>
-          <RelatedLink href="/design/architecture/sys/service-based" tag="設計">サービスベースアーキテクチャ</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; スペースベースアーキテクチャ</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/architecture/sys/event-driven" tag="設計">イベント駆動アーキテクチャ</RelatedLink>
+                    <RelatedLink href="/design/architecture/sys/service-based" tag="設計">サービスベースアーキテクチャ</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

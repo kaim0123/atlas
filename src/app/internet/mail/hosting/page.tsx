@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -113,16 +112,16 @@ export default function Page() {
         </Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/internet/mail" tag="インターネット">メールの仕組み</RelatedLink>
-          <RelatedLink href="/cloud/cloudflare" tag="クラウド">Cloudflare</RelatedLink>
-          <RelatedLink href="/internet/dns" tag="インターネット">DNS</RelatedLink>
-          <RelatedLink href="/ops/deploy" tag="運用">インフラとデプロイ</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; インターネット &middot; 会社ドメインのメールを用意する</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/internet/mail" tag="インターネット">メールの仕組み</RelatedLink>
+                    <RelatedLink href="/cloud/cloudflare" tag="クラウド">Cloudflare</RelatedLink>
+                    <RelatedLink href="/internet/dns" tag="インターネット">DNS</RelatedLink>
+                    <RelatedLink href="/ops/deploy" tag="運用">インフラとデプロイ</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

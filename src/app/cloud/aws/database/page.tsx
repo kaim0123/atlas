@@ -14,7 +14,6 @@ import {
   Mark,
   MarkNote,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -82,15 +81,15 @@ export default function Page() {
       </CardGrid>
       <p>データベースを含むすべてのサービスは、実際に「今どう動いているか」を可視化しなければ異常に気づけません。次のページでは「<Link href="/cloud/aws/monitoring">モニタリングと管理</Link>」を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/storage" tag="AWS">ストレージ</RelatedLink>
-          <RelatedLink href="/cloud/aws/monitoring" tag="AWS">モニタリングと管理</RelatedLink>
-          <RelatedLink href="/design/methodology/data-centric" tag="設計">データ中心設計</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; AWS &middot; データベース</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/storage" tag="AWS">ストレージ</RelatedLink>
+                    <RelatedLink href="/cloud/aws/monitoring" tag="AWS">モニタリングと管理</RelatedLink>
+                    <RelatedLink href="/design/methodology/data-centric" tag="設計">データ中心設計</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

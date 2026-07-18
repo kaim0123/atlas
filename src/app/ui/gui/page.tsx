@@ -11,7 +11,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -63,15 +62,15 @@ export default function Page() {
       </CardGrid>
       <p>次は、これらの部品を組み合わせて業務画面を設計するときの考え方と、入力値のチェックを見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/ui/design" tag="ユーザーインタフェース">画面設計と入力チェック</RelatedLink>
-          <RelatedLink href="/ui/basics" tag="ユーザーインタフェース">UI・ユーザビリティ・アクセシビリティ</RelatedLink>
-          <RelatedLink href="/dev/web-basics" tag="開発">Web基礎</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; ユーザーインタフェース &middot; GUIの部品</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/ui/design" tag="ユーザーインタフェース">画面設計と入力チェック</RelatedLink>
+                    <RelatedLink href="/ui/basics" tag="ユーザーインタフェース">UI・ユーザビリティ・アクセシビリティ</RelatedLink>
+                    <RelatedLink href="/dev/web-basics" tag="開発">Web基礎</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

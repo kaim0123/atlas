@@ -13,7 +13,6 @@ import {
   Analogy,
   Mark,
   MarkNote,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -215,16 +214,16 @@ export default function Page() {
 
       <p>アプリケーションアーキテクチャの22種は、上表の「系統」ごとに(<Link href="/design/architecture/app/layered">レイヤー系</Link>〜<Link href="/design/architecture/app/cqrs">高度な設計系</Link>)にまとめて詳しく解説しています。次のページからは、まずシステムアーキテクチャの1つ目「<Link href="/design/architecture/sys/layered">レイヤードアーキテクチャ</Link>」です。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/paradigm" tag="設計">パラダイム</RelatedLink>
-          <RelatedLink href="/design/architecture/sys/layered" tag="設計">レイヤードアーキテクチャ</RelatedLink>
-          <RelatedLink href="/design/architecture/app/layered" tag="設計">レイヤー系(アプリ)</RelatedLink>
-          <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; アーキテクチャ一覧</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/paradigm" tag="設計">パラダイム</RelatedLink>
+                    <RelatedLink href="/design/architecture/sys/layered" tag="設計">レイヤードアーキテクチャ</RelatedLink>
+                    <RelatedLink href="/design/architecture/app/layered" tag="設計">レイヤー系(アプリ)</RelatedLink>
+                    <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

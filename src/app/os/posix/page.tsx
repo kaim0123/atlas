@@ -16,7 +16,6 @@ import {
   Timeline,
   TimelineItem,
   TimelineLabel,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -169,15 +168,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>POSIXが橋渡し</h4><p>最低限の共通ルールにより、別々に育った3ファミリーが「似たように動く」状態を保っています。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/os/unix" tag="OS">UNIXの歴史と哲学</RelatedLink>
-          <RelatedLink href="/os/linux" tag="OS">Linuxの歴史</RelatedLink>
-          <RelatedLink href="/os/gnu" tag="OS">GNUとフリーソフトウェア</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; OS &middot; UNIX・BSD・Linuxの違い</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/os/unix" tag="OS">UNIXの歴史と哲学</RelatedLink>
+                    <RelatedLink href="/os/linux" tag="OS">Linuxの歴史</RelatedLink>
+                    <RelatedLink href="/os/gnu" tag="OS">GNUとフリーソフトウェア</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

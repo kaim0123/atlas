@@ -14,7 +14,6 @@ import {
   Analogy,
   Diagram,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -189,15 +188,15 @@ export default function Page() {
       </CardGrid>
       <p>ターミナル・シェルでコマンドを実行し、npmやpnpmでパッケージを取り込み、Viteで実行可能な形に組み立てる ― これで、実際にコードを書き始める土台がほぼ整いました。次のページ「<Link href="/dev/environments">環境の全体像</Link>」では、ここまで何度も出てきた「環境」という言葉自体を整理します。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/dev/workspace" tag="開発">開発環境</RelatedLink>
-          <RelatedLink href="/dev/environments" tag="開発">環境の全体像</RelatedLink>
-          <RelatedLink href="/dev" tag="開発">開発基盤 一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; パッケージ管理とビルド</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/dev/workspace" tag="開発">開発環境</RelatedLink>
+                    <RelatedLink href="/dev/environments" tag="開発">環境の全体像</RelatedLink>
+                    <RelatedLink href="/dev" tag="開発">開発基盤 一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -16,7 +16,6 @@ import {
   Diagram,
   IndexGrid,
   IndexCard,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -206,15 +205,15 @@ export default function Page() {
         ))}
       </IndexGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/infra/virtualization" tag="インフラ">仮想化の仕組み ― ハイパーバイザー型とコンテナ型</RelatedLink>
-          <RelatedLink href="/cloud/aws/container" tag="AWS">AWSのコンテナサービス</RelatedLink>
-          <RelatedLink href="/os" tag="OS">OSの仕組み ― カーネルとプロセス</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; インフラ &middot; コンテナの仕組み</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/infra/virtualization" tag="インフラ">仮想化の仕組み ― ハイパーバイザー型とコンテナ型</RelatedLink>
+                    <RelatedLink href="/cloud/aws/container" tag="AWS">AWSのコンテナサービス</RelatedLink>
+                    <RelatedLink href="/os" tag="OS">OSの仕組み ― カーネルとプロセス</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

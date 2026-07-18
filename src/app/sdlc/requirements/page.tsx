@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -64,15 +63,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>合意はコミュニケーション</h4><p>ステークホルダを特定し、認識のずれを埋めることが要件確定の前提です。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/sdlc/requirements/modeling" tag="開発工程・管理">要件の表現方法</RelatedLink>
-          <RelatedLink href="/design" tag="設計">設計の全体像</RelatedLink>
-          <RelatedLink href="/design/methodology/use-case-driven" tag="設計">ユースケース中心設計</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; 要件定義</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/sdlc/requirements/modeling" tag="開発工程・管理">要件の表現方法</RelatedLink>
+                    <RelatedLink href="/design" tag="設計">設計の全体像</RelatedLink>
+                    <RelatedLink href="/design/methodology/use-case-driven" tag="設計">ユースケース中心設計</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

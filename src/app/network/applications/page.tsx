@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -99,15 +98,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>メールは送信と受信で別</h4><p>送信はSMTP、受信はPOP3/IMAP。用途で使うプロトコルが分かれています。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
-          <RelatedLink href="/internet/mail" tag="インターネット">メールの仕組み</RelatedLink>
-          <RelatedLink href="/network/transport" tag="ネットワーク">トランスポート層</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; ネットワーク &middot; アプリケーション層</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                    <RelatedLink href="/internet/mail" tag="インターネット">メールの仕組み</RelatedLink>
+                    <RelatedLink href="/network/transport" tag="ネットワーク">トランスポート層</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

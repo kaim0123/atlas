@@ -255,7 +255,7 @@ export default function Page() {
         ))}
       </IndexGrid>
 
-      <DocsFooter>Atlas &middot; 設計</DocsFooter>
+      <DocsFooter />
     </DocsPage>
   );
 }

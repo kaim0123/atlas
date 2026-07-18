@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -121,16 +120,16 @@ export default function Page() {
 
       <p>「どう組むか」を見たら、次は「どれだけ壊れにくいか」を測る番です。信頼性の指標と設計思想へ進みます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/computer/system/reliability" tag="コンピュータ">信頼性と冗長化 ― RASIS・MTBF/MTTR</RelatedLink>
-          <RelatedLink href="/computer/system/metrics" tag="コンピュータ">性能と経済性の評価 ― スループット・TCO</RelatedLink>
-          <RelatedLink href="/infra/virtualization" tag="インフラ">仮想化の仕組み</RelatedLink>
-          <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; コンピュータ &middot; 処理形態とシステム構成</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/computer/system/reliability" tag="コンピュータ">信頼性と冗長化 ― RASIS・MTBF/MTTR</RelatedLink>
+                    <RelatedLink href="/computer/system/metrics" tag="コンピュータ">性能と経済性の評価 ― スループット・TCO</RelatedLink>
+                    <RelatedLink href="/infra/virtualization" tag="インフラ">仮想化の仕組み</RelatedLink>
+                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

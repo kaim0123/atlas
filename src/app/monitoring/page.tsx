@@ -14,7 +14,6 @@ import {
   Analogy,
   Mark,
   MarkNote,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -107,16 +106,16 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>保守で先回りする</h4><p>依存関係・証明書の更新を仕組み化し、障害が起きる前に手を打つ。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/monitoring" tag="AWS">モニタリングと管理</RelatedLink>
-          <RelatedLink href="/security/logging" tag="セキュリティ">ログ出力設計</RelatedLink>
-          <RelatedLink href="/test/quality-plan" tag="テスト">品質計画</RelatedLink>
-          <RelatedLink href="/ops/cost" tag="運用">コスト管理</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 監視 &middot; 監視・保守</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/monitoring" tag="AWS">モニタリングと管理</RelatedLink>
+                    <RelatedLink href="/security/logging" tag="セキュリティ">ログ出力設計</RelatedLink>
+                    <RelatedLink href="/test/quality-plan" tag="テスト">品質計画</RelatedLink>
+                    <RelatedLink href="/ops/cost" tag="運用">コスト管理</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

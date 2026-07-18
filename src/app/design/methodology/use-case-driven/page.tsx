@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -64,15 +63,15 @@ export default function Page() {
 
       <p>次のページでは、ここまでの方法論の到達点として、業務知識とコードを同じ言葉でつなぐ<Link href="/design/methodology/ddd">ドメイン駆動設計(DDD)</Link>を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/methodology/responsibility-driven" tag="設計">責務駆動設計</RelatedLink>
-          <RelatedLink href="/design/methodology/ddd" tag="設計">ドメイン駆動設計</RelatedLink>
-          <RelatedLink href="/design/architecture/app/domain-centric" tag="設計">ドメイン中心アーキテクチャ系</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; 設計思想・方法論 &middot; ユースケース中心設計</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/methodology/responsibility-driven" tag="設計">責務駆動設計</RelatedLink>
+                    <RelatedLink href="/design/methodology/ddd" tag="設計">ドメイン駆動設計</RelatedLink>
+                    <RelatedLink href="/design/architecture/app/domain-centric" tag="設計">ドメイン中心アーキテクチャ系</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

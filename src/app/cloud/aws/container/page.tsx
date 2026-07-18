@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -67,15 +66,15 @@ export default function Page() {
       </CardGrid>
       <p>ここまでで、AWSの基礎・コンピューティング・ストレージ・ネットワーキング・セキュリティ・データベース・モニタリング・コンテナという、地理構造とリソースを「動かす・置く・守る・見る」ための8分野を見てきました。次は、こうして作ったコンテナやコードを、どう自動でビルド・デプロイするかという「<Link href="/cloud/aws/cicd">CI/CD</Link>」です。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/compute" tag="AWS">コンピューティング</RelatedLink>
-          <RelatedLink href="/cloud/aws/monitoring" tag="AWS">モニタリングと管理</RelatedLink>
-          <RelatedLink href="/cloud/aws/cicd" tag="AWS">CI/CD</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; AWS &middot; コンテナ</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/compute" tag="AWS">コンピューティング</RelatedLink>
+                    <RelatedLink href="/cloud/aws/monitoring" tag="AWS">モニタリングと管理</RelatedLink>
+                    <RelatedLink href="/cloud/aws/cicd" tag="AWS">CI/CD</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

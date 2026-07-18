@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -53,15 +52,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>境界の維持は規律次第</h4><p>強制力が弱い分、放置すると密結合なモノリスに逆戻りするリスクがある。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/architecture/sys/microservices" tag="設計">マイクロサービスアーキテクチャ</RelatedLink>
-          <RelatedLink href="/design/architecture/app/layered" tag="設計">アプリケーションアーキテクチャ(レイヤー系)</RelatedLink>
-          <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; モジュラーモノリス</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/architecture/sys/microservices" tag="設計">マイクロサービスアーキテクチャ</RelatedLink>
+                    <RelatedLink href="/design/architecture/app/layered" tag="設計">アプリケーションアーキテクチャ(レイヤー系)</RelatedLink>
+                    <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

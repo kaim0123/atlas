@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -65,15 +64,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>実践と自動化が支える</h4><p>TDD・ペアプロなどの実践と、CI/CD・DevOpsの自動化が反復を成立させます。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/sdlc/process" tag="開発工程・管理">開発プロセスと手法</RelatedLink>
-          <RelatedLink href="/cloud/aws/cicd" tag="AWS">CI/CD</RelatedLink>
-          <RelatedLink href="/ops/deploy" tag="運用">インフラとデプロイ</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; スクラムとアジャイル実践</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/sdlc/process" tag="開発工程・管理">開発プロセスと手法</RelatedLink>
+                    <RelatedLink href="/cloud/aws/cicd" tag="AWS">CI/CD</RelatedLink>
+                    <RelatedLink href="/ops/deploy" tag="運用">インフラとデプロイ</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

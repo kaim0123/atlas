@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -119,16 +118,16 @@ export default function Page() {
       </CardGrid>
       <p>一人ひとりへの関わりを押さえたら、次は複数人をまとめる<Link href="/management/team">チームのマネジメント（メゾ）</Link>へ進みましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/individual/motivation" tag="マネジメント">モチベーション理論の歴史</RelatedLink>
-          <RelatedLink href="/management/team" tag="マネジメント">チームのマネジメント（メゾ）</RelatedLink>
-          <RelatedLink href="/management/individual/onboarding" tag="マネジメント">実践編 ― 採用・オンボーディング・育成</RelatedLink>
-          <RelatedLink href="/management/team/goals" tag="マネジメント">実践編 ― 目標設定</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; 個人のマネジメント（ミクロ）</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/individual/motivation" tag="マネジメント">モチベーション理論の歴史</RelatedLink>
+                    <RelatedLink href="/management/team" tag="マネジメント">チームのマネジメント（メゾ）</RelatedLink>
+                    <RelatedLink href="/management/individual/onboarding" tag="マネジメント">実践編 ― 採用・オンボーディング・育成</RelatedLink>
+                    <RelatedLink href="/management/team/goals" tag="マネジメント">実践編 ― 目標設定</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

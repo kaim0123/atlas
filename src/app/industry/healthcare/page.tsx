@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -144,16 +143,16 @@ export default function Page() {
       </CardGrid>
       <p>この産業の会計を読み解く基礎は<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/analysis">三表から会社を診断する</Link>で、稼働率・人件費率といった採算指標の見方は<Link href="/finance/metrics">収益性と効率の指標</Link>で、それぞれ詳しく扱っています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/pharma" tag="業界">医薬品</RelatedLink>
-          <RelatedLink href="/industry/government" tag="業界">政府・自治体</RelatedLink>
-          <RelatedLink href="/finance/analysis" tag="会計・財務">三表から会社を診断する</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; 医療・福祉</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/pharma" tag="業界">医薬品</RelatedLink>
+                    <RelatedLink href="/industry/government" tag="業界">政府・自治体</RelatedLink>
+                    <RelatedLink href="/finance/analysis" tag="会計・財務">三表から会社を診断する</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

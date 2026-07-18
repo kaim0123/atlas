@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -63,16 +62,16 @@ export default function Page() {
 
       <p>オブジェクト指向という設計単位は、より大きな粒度では<Link href="/design/methodology/responsibility-driven">責務駆動設計</Link>や<Link href="/design/methodology/ddd">ドメイン駆動設計</Link>、<Link href="/design/architecture/sys/microservices">マイクロサービス</Link>にも同じ発想として現れます。より小さな粒度、クラス数個で繰り返し現れる定石としては<Link href="/design/paradigm/oop/gof/creation">GoFデザインパターン</Link>があります。次のページでは、副作用を持たない純粋関数を基本単位とする<Link href="/design/paradigm/functional">関数型プログラミング</Link>を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/paradigm/oop/gof/creation" tag="設計">GoFデザインパターン</RelatedLink>
-          <RelatedLink href="/design/paradigm/structured" tag="設計">構造化</RelatedLink>
-          <RelatedLink href="/design/paradigm/functional" tag="設計">関数型</RelatedLink>
-          <RelatedLink href="/design/methodology/ddd" tag="設計">ドメイン駆動設計</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; パラダイム &middot; オブジェクト指向</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/paradigm/oop/gof/creation" tag="設計">GoFデザインパターン</RelatedLink>
+                    <RelatedLink href="/design/paradigm/structured" tag="設計">構造化</RelatedLink>
+                    <RelatedLink href="/design/paradigm/functional" tag="設計">関数型</RelatedLink>
+                    <RelatedLink href="/design/methodology/ddd" tag="設計">ドメイン駆動設計</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -103,15 +102,15 @@ export default function Page() {
 
       <p>目標が定まったら、次はそれを実現する方向性を置き、チームの勢いをつくります。<Link href="/management/team/momentum">戦略方針とモメンタム</Link>へ進みましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/team/momentum" tag="マネジメント">戦略方針とモメンタム</RelatedLink>
-          <RelatedLink href="/management/org/structure" tag="マネジメント">組織構造とアサイン</RelatedLink>
-          <RelatedLink href="/management/team/operation" tag="マネジメント">チーム運営と3つの力</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; 目標設定</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/team/momentum" tag="マネジメント">戦略方針とモメンタム</RelatedLink>
+                    <RelatedLink href="/management/org/structure" tag="マネジメント">組織構造とアサイン</RelatedLink>
+                    <RelatedLink href="/management/team/operation" tag="マネジメント">チーム運営と3つの力</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

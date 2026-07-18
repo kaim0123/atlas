@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -141,15 +140,15 @@ export default function Page() {
         </Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/theory/numbers" tag="情報科学">数と基数変換</RelatedLink>
-          <RelatedLink href="/computer/semiconductor/logic" tag="コンピュータ">半導体 ― 直列と並列で論理をつくる</RelatedLink>
-          <RelatedLink href="/theory/probability" tag="情報科学">確率・統計と情報理論</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 情報科学 &middot; 論理と真理値表</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/theory/numbers" tag="情報科学">数と基数変換</RelatedLink>
+                    <RelatedLink href="/computer/semiconductor/logic" tag="コンピュータ">半導体 ― 直列と並列で論理をつくる</RelatedLink>
+                    <RelatedLink href="/theory/probability" tag="情報科学">確率・統計と情報理論</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

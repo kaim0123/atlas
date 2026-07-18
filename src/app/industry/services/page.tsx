@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -137,16 +136,16 @@ export default function Page() {
       </CardGrid>
       <p>この産業の会計を支える基礎は<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/analysis">三表から会社を診断する</Link>で、前受金がもたらす資金繰りの妙は<Link href="/finance/cash">黒字倒産と負債</Link>で、それぞれ詳しく扱っています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/staffing" tag="業界">人材サービス</RelatedLink>
-          <RelatedLink href="/industry/healthcare" tag="業界">医療・福祉</RelatedLink>
-          <RelatedLink href="/finance/cash" tag="会計・財務">黒字倒産と負債</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; その他サービス</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/staffing" tag="業界">人材サービス</RelatedLink>
+                    <RelatedLink href="/industry/healthcare" tag="業界">医療・福祉</RelatedLink>
+                    <RelatedLink href="/finance/cash" tag="会計・財務">黒字倒産と負債</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

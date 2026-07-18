@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -147,16 +146,16 @@ CREATE INDEX idx_orders_customer_id ON orders(customer_id);`}</code>
       </CardGrid>
       <p>ここまでで、業務要件からテーブルを導く概念設計(<Link href="/database/design">ER図と正規化</Link>)から、それを実体化し障害から守る物理設計・運用まで、データベースの土台を一通り見てきました。どのインデックスをどう設計するか、どのクエリが遅いのかを見極めるパフォーマンスの話は、この続きとして別途扱う予定です。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/database/model" tag="データベース">関係モデルと3層スキーマ</RelatedLink>
-          <RelatedLink href="/database/design" tag="データベース">ER図と正規化</RelatedLink>
-          <RelatedLink href="/database/history" tag="データベース">データベースの歴史</RelatedLink>
-          <RelatedLink href="/ops/data" tag="運用">データ管理</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; データベース &middot; 物理設計と運用</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/database/model" tag="データベース">関係モデルと3層スキーマ</RelatedLink>
+                    <RelatedLink href="/database/design" tag="データベース">ER図と正規化</RelatedLink>
+                    <RelatedLink href="/database/history" tag="データベース">データベースの歴史</RelatedLink>
+                    <RelatedLink href="/ops/data" tag="運用">データ管理</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

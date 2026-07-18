@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -112,15 +111,15 @@ export default function Page() {
       </CardGrid>
       <p>理論の歴史的な流れをたどりたい場合は<Link href="/management/org/theory">組織・リーダーシップ理論の歴史</Link>へ、リーダーシップを含むチーム運営全体は<Link href="/management/team/operation">チーム運営と3つの力</Link>へ進みましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/team" tag="マネジメント">チームのマネジメント（メゾ）</RelatedLink>
-          <RelatedLink href="/management/org/theory" tag="マネジメント">組織・リーダーシップ理論の歴史</RelatedLink>
-          <RelatedLink href="/management/team/operation" tag="マネジメント">チーム運営と3つの力</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; リーダーシップの実践</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/team" tag="マネジメント">チームのマネジメント（メゾ）</RelatedLink>
+                    <RelatedLink href="/management/org/theory" tag="マネジメント">組織・リーダーシップ理論の歴史</RelatedLink>
+                    <RelatedLink href="/management/team/operation" tag="マネジメント">チーム運営と3つの力</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

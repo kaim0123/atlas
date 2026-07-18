@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -65,15 +64,15 @@ export default function Page() {
 
       <p>次のページでは、GOTO文が引き起こす「スパゲッティコード」問題を、決まった形の制御構造だけで解決しようとした<Link href="/design/paradigm/structured">構造化プログラミング</Link>を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/paradigm" tag="設計">パラダイム一覧</RelatedLink>
-          <RelatedLink href="/design/paradigm/structured" tag="設計">構造化</RelatedLink>
-          <RelatedLink href="/design/methodology/data-centric" tag="設計">データ中心設計</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; パラダイム &middot; 手続き型</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/paradigm" tag="設計">パラダイム一覧</RelatedLink>
+                    <RelatedLink href="/design/paradigm/structured" tag="設計">構造化</RelatedLink>
+                    <RelatedLink href="/design/methodology/data-centric" tag="設計">データ中心設計</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

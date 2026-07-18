@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -147,15 +146,15 @@ export default function Page() {
       </CardGrid>
       <p>有線・無線を含め、隣の機器へどう届けるかを見てきました。それぞれの層の全体像は「階層モデル」で振り返ることができます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/network/link" tag="ネットワーク">データリンク層と物理層</RelatedLink>
-          <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル</RelatedLink>
-          <RelatedLink href="/network/topology" tag="ネットワーク">トポロジと接続装置</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; ネットワーク &middot; 無線LAN</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/network/link" tag="ネットワーク">データリンク層と物理層</RelatedLink>
+                    <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル</RelatedLink>
+                    <RelatedLink href="/network/topology" tag="ネットワーク">トポロジと接続装置</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -115,15 +114,15 @@ export default function Page() {
       </CardGrid>
       <p>チームの内側を押さえたら、次はさらに視野を広げて<Link href="/management/org">組織のマネジメント（マクロ）</Link>へ進みましょう。制度と構造の話に移ります。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/org" tag="マネジメント">組織のマネジメント（マクロ）</RelatedLink>
-          <RelatedLink href="/management/team/rules" tag="マネジメント">実践編 ― ルールと相互理解</RelatedLink>
-          <RelatedLink href="/management/team/momentum" tag="マネジメント">実践編 ― 戦略方針とモメンタム</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; チームのマネジメント（メゾ）</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/org" tag="マネジメント">組織のマネジメント（マクロ）</RelatedLink>
+                    <RelatedLink href="/management/team/rules" tag="マネジメント">実践編 ― ルールと相互理解</RelatedLink>
+                    <RelatedLink href="/management/team/momentum" tag="マネジメント">実践編 ― 戦略方針とモメンタム</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

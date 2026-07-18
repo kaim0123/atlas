@@ -12,7 +12,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -169,15 +168,15 @@ export default function Page() {
       </CardGrid>
       <p>ここではUNIXという幹をたどりました。次はそこから枝分かれしたUNIX・BSD・Linuxの違いと、それらを橋渡しするPOSIX、そして「自由」を掲げたGNU、趣味から始まったLinuxの物語へと進んでいきましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/os/posix" tag="OS">UNIX・BSD・Linuxの違い</RelatedLink>
-          <RelatedLink href="/os/gnu" tag="OS">GNUとフリーソフトウェア</RelatedLink>
-          <RelatedLink href="/os/linux" tag="OS">Linuxの歴史</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; OS &middot; UNIXの歴史と哲学</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/os/posix" tag="OS">UNIX・BSD・Linuxの違い</RelatedLink>
+                    <RelatedLink href="/os/gnu" tag="OS">GNUとフリーソフトウェア</RelatedLink>
+                    <RelatedLink href="/os/linux" tag="OS">Linuxの歴史</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

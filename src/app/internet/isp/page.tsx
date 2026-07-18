@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -145,15 +144,15 @@ export default function Page() {
       </CardGrid>
       <p>ここまででネットワークの入り口から出口までを見てきました。次は、実際にサーバーを構築・運用する現場の実務を「<Link href="/internet/server/build">サーバー構築の実務</Link>」で見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/network/topology" tag="ネットワーク">トポロジと接続装置</RelatedLink>
-          <RelatedLink href="/internet/dns" tag="インターネット">DNS ― 名前をIPアドレスに変える電話帳</RelatedLink>
-          <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み ― URLからレンダリングまで</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; インターネット &middot; ISP接続とCDN</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/network/topology" tag="ネットワーク">トポロジと接続装置</RelatedLink>
+                    <RelatedLink href="/internet/dns" tag="インターネット">DNS ― 名前をIPアドレスに変える電話帳</RelatedLink>
+                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み ― URLからレンダリングまで</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

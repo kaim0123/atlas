@@ -12,7 +12,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -131,15 +130,15 @@ export default function Page() {
       </CardGrid>
       <p>シェルが「コマンドをカーネルに伝える」とき、その裏では何が起きているのでしょうか。次は、アプリとカーネルをつなぐ唯一の正式な窓口 ―「システムコール」を見ていきましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/os/unix" tag="OS">UNIXの歴史と哲学</RelatedLink>
-          <RelatedLink href="/os/syscall" tag="OS">システムコール</RelatedLink>
-          <RelatedLink href="/dev/workspace" tag="開発">開発環境</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; OS &middot; シェル</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/os/unix" tag="OS">UNIXの歴史と哲学</RelatedLink>
+                    <RelatedLink href="/os/syscall" tag="OS">システムコール</RelatedLink>
+                    <RelatedLink href="/dev/workspace" tag="開発">開発環境</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

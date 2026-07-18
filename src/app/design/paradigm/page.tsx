@@ -14,7 +14,6 @@ import {
   Analogy,
   Mark,
   MarkNote,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -191,15 +190,15 @@ export default function Page() {
 
       <p>次のページからは、何を軸にモジュールを切り出すかという「<Link href="/design/methodology">設計思想・方法論</Link>」、コードの内部をどう構造化するかの指針である「<Link href="/design/principles">設計原則</Link>」、そしてシステム全体をどう組み立てるかの指針である「<Link href="/design/architecture">アーキテクチャ</Link>」を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/methodology" tag="設計">設計思想・方法論</RelatedLink>
-          <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
-          <RelatedLink href="/design/architecture" tag="設計">アーキテクチャ一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; パラダイム</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/methodology" tag="設計">設計思想・方法論</RelatedLink>
+                    <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
+                    <RelatedLink href="/design/architecture" tag="設計">アーキテクチャ一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

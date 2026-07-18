@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -119,16 +118,16 @@ export default function Page() {
       </CardGrid>
       <p>保険の会計を支える基礎は<Link href="/finance/statements">財務三表の全体像</Link>で、運用資産の評価や現在価値の考え方は<Link href="/finance/thinking">会計 vs ファイナンス</Link>で、それぞれ詳しく扱っています。同じ金融でも構造の違う<Link href="/industry/bank">銀行</Link>とあわせて読むと、金融各業種の「クセ」がくっきり見えてきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/bank" tag="業界">銀行</RelatedLink>
-          <RelatedLink href="/industry/securities" tag="業界">証券</RelatedLink>
-          <RelatedLink href="/industry/credit" tag="業界">信販・クレジット・リース</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; 生命保険・損害保険</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/bank" tag="業界">銀行</RelatedLink>
+                    <RelatedLink href="/industry/securities" tag="業界">証券</RelatedLink>
+                    <RelatedLink href="/industry/credit" tag="業界">信販・クレジット・リース</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

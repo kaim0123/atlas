@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -156,16 +155,16 @@ export default function Page() {
       </CardGrid>
       <p>エンタメ会計を支える基礎は<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/analysis">三表から会社を診断する</Link>で、ヒット依存の利益をどう読むかは<Link href="/finance/metrics">収益性と効率の指標</Link>で、それぞれ詳しく扱っています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/software" tag="業界">ソフトウェア</RelatedLink>
-          <RelatedLink href="/industry/electronics" tag="業界">電機・電子部品</RelatedLink>
-          <RelatedLink href="/finance/analysis" tag="会計・財務">三表から会社を診断する</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; エンターテインメント</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/software" tag="業界">ソフトウェア</RelatedLink>
+                    <RelatedLink href="/industry/electronics" tag="業界">電機・電子部品</RelatedLink>
+                    <RelatedLink href="/finance/analysis" tag="会計・財務">三表から会社を診断する</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

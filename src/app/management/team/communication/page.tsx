@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -131,15 +130,15 @@ export default function Page() {
       </CardGrid>
       <p>対話の技は、率直に話せる土台があってこそ効きます。<Link href="/management/team/psychological-safety">心理的安全性</Link>とセットで押さえ、対立が起きたときの扱いは<Link href="/management/team/conflict">コンフリクトマネジメント</Link>へ進みましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/team" tag="マネジメント">チームのマネジメント（メゾ）</RelatedLink>
-          <RelatedLink href="/management/team/psychological-safety" tag="マネジメント">心理的安全性</RelatedLink>
-          <RelatedLink href="/management/team/conflict" tag="マネジメント">コンフリクトマネジメント</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; コミュニケーション</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/team" tag="マネジメント">チームのマネジメント（メゾ）</RelatedLink>
+                    <RelatedLink href="/management/team/psychological-safety" tag="マネジメント">心理的安全性</RelatedLink>
+                    <RelatedLink href="/management/team/conflict" tag="マネジメント">コンフリクトマネジメント</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

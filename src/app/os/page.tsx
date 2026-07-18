@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -167,15 +166,15 @@ export default function Page() {
       </CardGrid>
       <p>ここではOSがプロセスやメモリをどう管理するかという骨組みを見てきました。次は、その中でも触れた「メモリ」そのものが、レジスタからストレージまでどんな階層になっているのかを詳しく見ていきましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み</RelatedLink>
-          <RelatedLink href="/computer/history" tag="コンピュータ">コンピュータの歴史</RelatedLink>
-          <RelatedLink href="/internet/history" tag="インターネット">インターネットの歴史</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; OS &middot; OSの仕組み</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み</RelatedLink>
+                    <RelatedLink href="/computer/history" tag="コンピュータ">コンピュータの歴史</RelatedLink>
+                    <RelatedLink href="/internet/history" tag="インターネット">インターネットの歴史</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

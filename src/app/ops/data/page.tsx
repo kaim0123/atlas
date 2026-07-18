@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -78,18 +77,18 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>スキーマ変更は段階的に</h4><p>後方互換を保ちながら小さいステップで進め、いつでも切り戻せる状態を保つ。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/database" tag="データベース">データベース ― 設計と運用</RelatedLink>
-          <RelatedLink href="/infra/storage" tag="インフラ">ストレージの仕組み ― NAS・SAN・RAID</RelatedLink>
-          <RelatedLink href="/cloud/aws/database" tag="AWS">データベース</RelatedLink>
-          <RelatedLink href="/cloud/aws/storage" tag="AWS">ストレージ</RelatedLink>
-          <RelatedLink href="/monitoring" tag="監視">監視・保守</RelatedLink>
-          <RelatedLink href="/ops/cost" tag="運用">コスト管理</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 運用 &middot; データ管理</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/database" tag="データベース">データベース ― 設計と運用</RelatedLink>
+                    <RelatedLink href="/infra/storage" tag="インフラ">ストレージの仕組み ― NAS・SAN・RAID</RelatedLink>
+                    <RelatedLink href="/cloud/aws/database" tag="AWS">データベース</RelatedLink>
+                    <RelatedLink href="/cloud/aws/storage" tag="AWS">ストレージ</RelatedLink>
+                    <RelatedLink href="/monitoring" tag="監視">監視・保守</RelatedLink>
+                    <RelatedLink href="/ops/cost" tag="運用">コスト管理</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

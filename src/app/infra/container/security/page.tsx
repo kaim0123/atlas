@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -118,15 +117,15 @@ export default function Page() {
         </Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/infra/container" tag="インフラ">コンテナの仕組み ― 隔離 ≠ 完全な安全</RelatedLink>
-          <RelatedLink href="/infra/container/observability" tag="インフラ">オブザーバビリティ ― ログの集約</RelatedLink>
-          <RelatedLink href="/security/network-defense" tag="セキュリティ">ネットワーク層の防御</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; インフラ &middot; コンテナセキュリティ</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/infra/container" tag="インフラ">コンテナの仕組み ― 隔離 ≠ 完全な安全</RelatedLink>
+                    <RelatedLink href="/infra/container/observability" tag="インフラ">オブザーバビリティ ― ログの集約</RelatedLink>
+                    <RelatedLink href="/security/network-defense" tag="セキュリティ">ネットワーク層の防御</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

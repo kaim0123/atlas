@@ -13,7 +13,6 @@ import {
   CardNumber,
   Steps,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -76,15 +75,15 @@ export default function Page() {
       </CardGrid>
       <p>ビルドされた成果物をどう複数のステージに乗せて本番まで届けるかは、次に見る<Link href="/cloud/aws/cicd/codepipeline">CodePipeline</Link>の役割です。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/cicd" tag="AWS">CI/CD</RelatedLink>
-          <RelatedLink href="/cloud/aws/cicd/codepipeline" tag="AWS">CodePipeline</RelatedLink>
-          <RelatedLink href="/cloud/aws/storage/s3" tag="AWS">S3</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; AWS &middot; CI/CD &middot; CodeBuild</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/cicd" tag="AWS">CI/CD</RelatedLink>
+                    <RelatedLink href="/cloud/aws/cicd/codepipeline" tag="AWS">CodePipeline</RelatedLink>
+                    <RelatedLink href="/cloud/aws/storage/s3" tag="AWS">S3</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -56,15 +55,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>ゲートウェイは任意</h4><p>横断的な処理をまとめるか、サービスに直接繋ぐかを選べる。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/architecture/sys/space-based" tag="設計">スペースベースアーキテクチャ</RelatedLink>
-          <RelatedLink href="/design/architecture/sys/soa" tag="設計">オーケストレーション駆動SOA</RelatedLink>
-          <RelatedLink href="/design/architecture/sys/microservices" tag="設計">マイクロサービスアーキテクチャ</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; サービスベースアーキテクチャ</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/architecture/sys/space-based" tag="設計">スペースベースアーキテクチャ</RelatedLink>
+                    <RelatedLink href="/design/architecture/sys/soa" tag="設計">オーケストレーション駆動SOA</RelatedLink>
+                    <RelatedLink href="/design/architecture/sys/microservices" tag="設計">マイクロサービスアーキテクチャ</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

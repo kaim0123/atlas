@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -128,15 +127,15 @@ export default function Page() {
       </CardGrid>
       <p>理論史の中での位置づけは<Link href="/management/org/theory">組織・リーダーシップ理論の歴史</Link>へ、現場での発揮の仕方は<Link href="/management/team/leadership">リーダーシップの実践</Link>へ進みましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/team/leadership" tag="マネジメント">リーダーシップの実践</RelatedLink>
-          <RelatedLink href="/management/org/theory" tag="マネジメント">組織・リーダーシップ理論の歴史</RelatedLink>
-          <RelatedLink href="/management/theory" tag="マネジメント">マネジメント理論家</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; マネジリアル・グリッド</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/team/leadership" tag="マネジメント">リーダーシップの実践</RelatedLink>
+                    <RelatedLink href="/management/org/theory" tag="マネジメント">組織・リーダーシップ理論の歴史</RelatedLink>
+                    <RelatedLink href="/management/theory" tag="マネジメント">マネジメント理論家</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

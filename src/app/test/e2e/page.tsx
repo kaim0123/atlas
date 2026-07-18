@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -80,15 +79,15 @@ export default function Page() {
         <Card><CardNumber>4</CardNumber><h4>副作用のある外部依存はモックする</h4><p>課金や外部送信が絡む境界だけ、意図的に本物を避けます。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/test/integration" tag="テスト">Integrationテスト</RelatedLink>
-          <RelatedLink href="/test/quality-plan" tag="テスト">品質計画</RelatedLink>
-          <RelatedLink href="/test/strategy" tag="テスト">テストの段階</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; テスト &middot; E2Eテスト</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/test/integration" tag="テスト">Integrationテスト</RelatedLink>
+                    <RelatedLink href="/test/quality-plan" tag="テスト">品質計画</RelatedLink>
+                    <RelatedLink href="/test/strategy" tag="テスト">テストの段階</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Mark,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -142,16 +141,16 @@ for (const n of new Range(1, 4)) console.log(n); // 1, 2, 3`}</code>
 
       <p>次は、アルゴリズム・状態・命令をオブジェクト化する<Link href="/design/paradigm/oop/gof/algorithms">振る舞いをオブジェクト化する</Link>を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/paradigm/oop/gof/algorithms" tag="設計">振る舞いをオブジェクト化する</RelatedLink>
-          <RelatedLink href="/design/paradigm/oop/gof/creation" tag="設計">生成を工夫する</RelatedLink>
-          <RelatedLink href="/design/paradigm/oop" tag="設計">オブジェクト指向</RelatedLink>
-          <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; パラダイム &middot; オブジェクト指向 &middot; GoF &middot; 連携・通知・走査</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/paradigm/oop/gof/algorithms" tag="設計">振る舞いをオブジェクト化する</RelatedLink>
+                    <RelatedLink href="/design/paradigm/oop/gof/creation" tag="設計">生成を工夫する</RelatedLink>
+                    <RelatedLink href="/design/paradigm/oop" tag="設計">オブジェクト指向</RelatedLink>
+                    <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

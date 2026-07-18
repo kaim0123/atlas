@@ -62,7 +62,7 @@ export default function Page() {
         ))}
       </IndexGrid>
 
-      <DocsFooter>Atlas &middot; インフラ</DocsFooter>
+      <DocsFooter />
     </DocsPage>
   );
 }

@@ -14,7 +14,6 @@ import {
   Analogy,
   Mark,
   MarkNote,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -124,15 +123,15 @@ function parsePrice(input: string): Result<number, string> {
 
       <p>ここまで4ページで、純粋関数とイミュータビリティを土台に、関数を組み合わせ、引数を固定し、値の有無・成否を安全に扱う技法まで、関数型で最低限押さえておきたい12個の技法を見てきました。次は、これらの技法が言語ごとにどう実装として現れるかを、<Link href="/design/idioms">実装パターン・イディオム</Link>で見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/paradigm/functional/currying" tag="設計">引数を固定する</RelatedLink>
-          <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
-          <RelatedLink href="/design/idioms" tag="設計">実装パターン・イディオム</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; パラダイム &middot; 関数型 &middot; パターン &middot; 安全に分岐する</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/paradigm/functional/currying" tag="設計">引数を固定する</RelatedLink>
+                    <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
+                    <RelatedLink href="/design/idioms" tag="設計">実装パターン・イディオム</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

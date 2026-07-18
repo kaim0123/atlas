@@ -14,7 +14,6 @@ import {
   CardGrid,
   Card,
   CardNumber,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -91,15 +90,15 @@ export default function Page() {
       </CardGrid>
       <p>まずは一番わかりやすい<Link href="/finance/pl">損益計算書（PL）― 5つの利益</Link>から読み解いていきましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/finance/pl" tag="会計・財務">損益計算書（PL）― 5つの利益</RelatedLink>
-          <RelatedLink href="/finance/bs" tag="会計・財務">貸借対照表（BS）の読み方</RelatedLink>
-          <RelatedLink href="/finance/cf" tag="会計・財務">キャッシュフローと三表のつながり</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 会計・財務 &middot; 財務三表の全体像</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/finance/pl" tag="会計・財務">損益計算書（PL）― 5つの利益</RelatedLink>
+                    <RelatedLink href="/finance/bs" tag="会計・財務">貸借対照表（BS）の読み方</RelatedLink>
+                    <RelatedLink href="/finance/cf" tag="会計・財務">キャッシュフローと三表のつながり</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

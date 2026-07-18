@@ -12,7 +12,6 @@ import {
   CardNumber,
   Analogy,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -90,15 +89,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>評価で思い込みを検証する</h4><p>ヒューリスティック評価とユーザビリティテストで、実際の使いやすさを確かめます。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/ui/basics" tag="ユーザーインタフェース">UI・ユーザビリティ・アクセシビリティ</RelatedLink>
-          <RelatedLink href="/ui/design" tag="ユーザーインタフェース">画面設計と入力チェック</RelatedLink>
-          <RelatedLink href="/sdlc/review" tag="開発工程・管理">レビューと品質確認</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; ユーザーインタフェース &middot; 人間中心設計と評価</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/ui/basics" tag="ユーザーインタフェース">UI・ユーザビリティ・アクセシビリティ</RelatedLink>
+                    <RelatedLink href="/ui/design" tag="ユーザーインタフェース">画面設計と入力チェック</RelatedLink>
+                    <RelatedLink href="/sdlc/review" tag="開発工程・管理">レビューと品質確認</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

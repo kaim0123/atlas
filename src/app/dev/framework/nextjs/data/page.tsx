@@ -14,7 +14,6 @@ import {
   Analogy,
   Mark,
   MarkNote,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -134,15 +133,15 @@ export async function createPost(formData: FormData) {
 
       <p>次は、キャッシュされない・ランタイムに依存する処理をどう配信するかを、<Link href="/dev/framework/nextjs/rendering">配信を最適化する</Link>で見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/dev/framework/nextjs/components" tag="開発">Server/Clientコンポーネントの境界</RelatedLink>
-          <RelatedLink href="/dev/framework/nextjs/rendering" tag="開発">配信を最適化する</RelatedLink>
-          <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; フレームワーク &middot; Next.js &middot; パターン &middot; データフェッチ・キャッシュ・再検証</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/dev/framework/nextjs/components" tag="開発">Server/Clientコンポーネントの境界</RelatedLink>
+                    <RelatedLink href="/dev/framework/nextjs/rendering" tag="開発">配信を最適化する</RelatedLink>
+                    <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -11,7 +11,6 @@ import {
   Card,
   CardGrid,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -83,15 +82,15 @@ export default function Page() {
 
       <p>ここまで<Link href="/design/conventions/functions">関数</Link>・<Link href="/design/conventions/variables">変数</Link>・<Link href="/design/conventions/classes">クラス</Link>・ファイルの4つの粒度で命名規則を見てきました。これで<Term>設計</Term>の各テーマを一通り見終えたことになります。パラダイムから設計思想・方法論、設計原則、アーキテクチャ、設計パターン、実装パターン・イディオム、そして規約・スタイルまで、粒度の異なる7つのレベルを通して「どう組み立てるか」を見てきました。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/conventions/classes" tag="設計">クラス・接尾辞の命名</RelatedLink>
-          <RelatedLink href="/design/conventions" tag="設計">コーディング規約・スタイル</RelatedLink>
-          <RelatedLink href="/design" tag="設計">設計一覧に戻る</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; コーディング規約・スタイル &middot; ファイル・ディレクトリの命名</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/conventions/classes" tag="設計">クラス・接尾辞の命名</RelatedLink>
+                    <RelatedLink href="/design/conventions" tag="設計">コーディング規約・スタイル</RelatedLink>
+                    <RelatedLink href="/design" tag="設計">設計一覧に戻る</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

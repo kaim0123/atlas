@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -66,15 +65,15 @@ export default function Page() {
       </CardGrid>
       <p>Lambdaが返す・受け取るイベントの多くは<Link href="/cloud/aws/integration">アプリケーション統合</Link>で見たSQS・SNS・EventBridge経由でやり取りされます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/compute" tag="AWS">コンピューティング</RelatedLink>
-          <RelatedLink href="/cloud/aws/integration/sqs" tag="AWS">SQS</RelatedLink>
-          <RelatedLink href="/cloud/aws/cicd/codebuild" tag="AWS">CodeBuild</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; AWS &middot; コンピューティング &middot; Lambda</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/compute" tag="AWS">コンピューティング</RelatedLink>
+                    <RelatedLink href="/cloud/aws/integration/sqs" tag="AWS">SQS</RelatedLink>
+                    <RelatedLink href="/cloud/aws/cicd/codebuild" tag="AWS">CodeBuild</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

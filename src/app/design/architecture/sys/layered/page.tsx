@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -69,15 +68,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>レイヤーの追加で拡張</h4><p>既存レイヤーを壊さず、新しい関心事を1枚のレイヤーとして差し込める。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/architecture" tag="設計">アーキテクチャ一覧</RelatedLink>
-          <RelatedLink href="/design/architecture/sys/pipeline" tag="設計">パイプラインアーキテクチャ</RelatedLink>
-          <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; レイヤードアーキテクチャ</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/architecture" tag="設計">アーキテクチャ一覧</RelatedLink>
+                    <RelatedLink href="/design/architecture/sys/pipeline" tag="設計">パイプラインアーキテクチャ</RelatedLink>
+                    <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

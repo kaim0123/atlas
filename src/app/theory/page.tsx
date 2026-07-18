@@ -46,7 +46,7 @@ export default function Page() {
         ))}
       </IndexGrid>
 
-      <DocsFooter>Atlas &middot; 情報科学</DocsFooter>
+      <DocsFooter />
     </DocsPage>
   );
 }

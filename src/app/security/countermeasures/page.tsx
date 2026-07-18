@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -78,15 +77,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>運用が最後の砦</h4><p>パッチ管理・アクセス制御・セキュアプログラミングを継続します。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/security/network-defense" tag="セキュリティ">ネットワーク層の防御</RelatedLink>
-          <RelatedLink href="/security/headers" tag="セキュリティ">セキュリティヘッダ</RelatedLink>
-          <RelatedLink href="/security/crypto" tag="セキュリティ">暗号の歴史と公開鍵暗号</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; セキュリティ &middot; 対策と実装</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/security/network-defense" tag="セキュリティ">ネットワーク層の防御</RelatedLink>
+                    <RelatedLink href="/security/headers" tag="セキュリティ">セキュリティヘッダ</RelatedLink>
+                    <RelatedLink href="/security/crypto" tag="セキュリティ">暗号の歴史と公開鍵暗号</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -59,15 +58,15 @@ export default function Page() {
       </CardGrid>
       <p>CloudFrontで使う証明書をどう発行・自動更新するかは<Link href="/cloud/aws/network/acm">ACM</Link>のページで扱います。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/network" tag="AWS">ネットワーキングとコンテンツ配信</RelatedLink>
-          <RelatedLink href="/cloud/aws/network/acm" tag="AWS">ACM</RelatedLink>
-          <RelatedLink href="/cloud/aws/storage/s3" tag="AWS">S3</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; AWS &middot; ネットワーキングとコンテンツ配信 &middot; CloudFront</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/network" tag="AWS">ネットワーキングとコンテンツ配信</RelatedLink>
+                    <RelatedLink href="/cloud/aws/network/acm" tag="AWS">ACM</RelatedLink>
+                    <RelatedLink href="/cloud/aws/storage/s3" tag="AWS">S3</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

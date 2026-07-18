@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -180,15 +179,15 @@ export default function Page() {
         1人の学生の「趣味」が、GNUのツール群とGPL、そして世界中の協力を得て、地球上で最も使われるOSの一つになりました。次は、このLinuxが「本物のUNIX」やBSDとどう違うのか ― <Link href="/os/posix">UNIX・BSD・Linuxの違い</Link>で整理しましょう。
       </p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/os/gnu" tag="OS">GNUとフリーソフトウェア</RelatedLink>
-          <RelatedLink href="/os/unix" tag="OS">UNIXの歴史と哲学</RelatedLink>
-          <RelatedLink href="/os/posix" tag="OS">UNIX・BSD・Linuxの違い</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; OS &middot; Linuxの歴史</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/os/gnu" tag="OS">GNUとフリーソフトウェア</RelatedLink>
+                    <RelatedLink href="/os/unix" tag="OS">UNIXの歴史と哲学</RelatedLink>
+                    <RelatedLink href="/os/posix" tag="OS">UNIX・BSD・Linuxの違い</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

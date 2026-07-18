@@ -11,7 +11,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -59,15 +58,15 @@ export default function Page() {
         <Card><CardNumber>4</CardNumber><h4>Document-View</h4><p>編集対象のデータと表示を分離し、複数Viewを持たせやすくする。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/architecture/app/layered" tag="設計">レイヤー系</RelatedLink>
-          <RelatedLink href="/design/architecture/app/web" tag="設計">Web系</RelatedLink>
-          <RelatedLink href="/design/architecture" tag="設計">アーキテクチャ一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; GUI系(アプリケーションアーキテクチャ)</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/architecture/app/layered" tag="設計">レイヤー系</RelatedLink>
+                    <RelatedLink href="/design/architecture/app/web" tag="設計">Web系</RelatedLink>
+                    <RelatedLink href="/design/architecture" tag="設計">アーキテクチャ一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

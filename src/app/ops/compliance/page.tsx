@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -86,15 +85,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>誰もが使える作りにする</h4><p>セマンティックHTML・コントラスト・キーボード操作でアクセシビリティを確保する。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/security/session-cookie" tag="セキュリティ">セッション・Cookieの全体像</RelatedLink>
-          <RelatedLink href="/dev/web-basics" tag="開発">Web基礎</RelatedLink>
-          <RelatedLink href="/ops/analytics" tag="運用">分析・改善</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 運用 &middot; 法令・コンプライアンス</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/security/session-cookie" tag="セキュリティ">セッション・Cookieの全体像</RelatedLink>
+                    <RelatedLink href="/dev/web-basics" tag="開発">Web基礎</RelatedLink>
+                    <RelatedLink href="/ops/analytics" tag="運用">分析・改善</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -76,15 +75,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>要求の性質で選ぶ</h4><p>要求が固いか変わりやすいかで、向くプロセスは変わります。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/sdlc/overview" tag="開発工程・管理">開発の全体像</RelatedLink>
-          <RelatedLink href="/sdlc/process/agile" tag="開発工程・管理">スクラムとアジャイル実践</RelatedLink>
-          <RelatedLink href="/sdlc/requirements" tag="開発工程・管理">要件定義</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; 開発プロセスと手法</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/sdlc/overview" tag="開発工程・管理">開発の全体像</RelatedLink>
+                    <RelatedLink href="/sdlc/process/agile" tag="開発工程・管理">スクラムとアジャイル実践</RelatedLink>
+                    <RelatedLink href="/sdlc/requirements" tag="開発工程・管理">要件定義</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

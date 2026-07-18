@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -128,15 +127,15 @@ CREATE TABLE orders (
       </CardGrid>
       <p>次は、要件からこの概念スキーマ(テーブル設計)を導く手順、「ER図と正規化」を見ていきましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/database/design" tag="データベース">ER図と正規化</RelatedLink>
-          <RelatedLink href="/database/sql" tag="データベース">SQLとデータ操作</RelatedLink>
-          <RelatedLink href="/database/basics" tag="データベース">役割と種類</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; データベース &middot; 関係モデルと3層スキーマ</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/database/design" tag="データベース">ER図と正規化</RelatedLink>
+                    <RelatedLink href="/database/sql" tag="データベース">SQLとデータ操作</RelatedLink>
+                    <RelatedLink href="/database/basics" tag="データベース">役割と種類</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

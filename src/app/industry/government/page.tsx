@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -145,16 +144,16 @@ export default function Page() {
       </CardGrid>
       <p>公会計と対比される企業会計の基礎は<Link href="/finance/statements">財務三表の全体像</Link>で、ストック（資産・負債）を映す<Link href="/finance/bs">貸借対照表（BS）</Link>、現金の流れを追う<Link href="/finance/cf">キャッシュフロー</Link>、そして負債と資金繰りの怖さは<Link href="/finance/cash">黒字倒産と負債</Link>で、それぞれ詳しく扱っています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/healthcare" tag="業界">医療・福祉</RelatedLink>
-          <RelatedLink href="/industry/education" tag="業界">教育</RelatedLink>
-          <RelatedLink href="/finance/cash" tag="会計・財務">黒字倒産と負債</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; 政府・自治体</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/healthcare" tag="業界">医療・福祉</RelatedLink>
+                    <RelatedLink href="/industry/education" tag="業界">教育</RelatedLink>
+                    <RelatedLink href="/finance/cash" tag="会計・財務">黒字倒産と負債</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

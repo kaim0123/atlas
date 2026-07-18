@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -65,15 +64,15 @@ export default function Page() {
       </CardGrid>
       <p>これで「開発基盤」カテゴリは一通り完結です。ターミナル・シェルの使い方から、npm・pnpm・Viteによるパッケージ管理とビルド、そして「環境」という言葉の整理まで、実際にコードを書き始める土台が整いました。次のカテゴリ「実装」では、JavaScript・TypeScriptといった言語そのものや、React・Next.jsといったフレームワークを見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/dev/workspace" tag="開発">開発環境</RelatedLink>
-          <RelatedLink href="/dev/runtime" tag="開発">ランタイム</RelatedLink>
-          <RelatedLink href="/os" tag="OS">OSの仕組み</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; 環境の全体像</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/dev/workspace" tag="開発">開発環境</RelatedLink>
+                    <RelatedLink href="/dev/runtime" tag="開発">ランタイム</RelatedLink>
+                    <RelatedLink href="/os" tag="OS">OSの仕組み</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

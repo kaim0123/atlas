@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -76,15 +75,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>双方向にたどれる状態に</h4><p>トレーサビリティが要件の漏れ・過剰と、変更時の影響把握を支えます。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/sdlc/requirements" tag="開発工程・管理">要件定義</RelatedLink>
-          <RelatedLink href="/design/methodology/use-case-driven" tag="設計">ユースケース中心設計</RelatedLink>
-          <RelatedLink href="/design/methodology/data-centric" tag="設計">データ中心設計</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; 要件の表現方法</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/sdlc/requirements" tag="開発工程・管理">要件定義</RelatedLink>
+                    <RelatedLink href="/design/methodology/use-case-driven" tag="設計">ユースケース中心設計</RelatedLink>
+                    <RelatedLink href="/design/methodology/data-centric" tag="設計">データ中心設計</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

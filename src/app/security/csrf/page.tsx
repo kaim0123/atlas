@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -98,14 +97,14 @@ export default function Page() {
       </CardGrid>
       <p>CSRFトークンもSameSite Cookieも、結局は「Cookie(セッションID)がどう扱われているか」という話に行き着きます。次のページ「<Link href="/security/session">セッションとCookie管理</Link>」では、このセッションの仕組み自体をもう一段掘り下げて見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/security/session" tag="セキュリティ">セッションとCookie管理</RelatedLink>
-          <RelatedLink href="/security/xss" tag="セキュリティ">XSSと出力エスケープ</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; セキュリティ &middot; CSRF対策</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/security/session" tag="セキュリティ">セッションとCookie管理</RelatedLink>
+                    <RelatedLink href="/security/xss" tag="セキュリティ">XSSと出力エスケープ</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

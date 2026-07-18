@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -65,15 +64,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>ZIPはまとめて可逆圧縮</h4><p>アーカイブ(まとめる)と圧縮を兼ね、配布・保存に使われます。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/theory/probability" tag="情報科学">確率・統計と情報理論</RelatedLink>
-          <RelatedLink href="/media/image" tag="情報メディア">画像フォーマット</RelatedLink>
-          <RelatedLink href="/media/graphics" tag="情報メディア">色・解像度・グラフィックス応用</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 情報メディア &middot; 圧縮の考え方</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/theory/probability" tag="情報科学">確率・統計と情報理論</RelatedLink>
+                    <RelatedLink href="/media/image" tag="情報メディア">画像フォーマット</RelatedLink>
+                    <RelatedLink href="/media/graphics" tag="情報メディア">色・解像度・グラフィックス応用</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -112,15 +111,15 @@ export default function Page() {
         <Card><CardNumber>4</CardNumber><h4>「落ちた」はまず切り分ける</h4><p>機械全体か、特定のプロセスか、どの役割かを分けて考えることが障害対応の第一歩です。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
-          <RelatedLink href="/dev/framework" tag="開発">フレームワーク・ライブラリ</RelatedLink>
-          <RelatedLink href="/dev/tooling" tag="開発">パッケージ管理とビルド</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; インターネット &middot; サーバーの全体像</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                    <RelatedLink href="/dev/framework" tag="開発">フレームワーク・ライブラリ</RelatedLink>
+                    <RelatedLink href="/dev/tooling" tag="開発">パッケージ管理とビルド</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

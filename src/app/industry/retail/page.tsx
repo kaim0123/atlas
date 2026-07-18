@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -142,17 +141,17 @@ export default function Page() {
       </CardGrid>
       <p>小売の会計を支える基礎は<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/analysis">三表から会社を診断する</Link>で、店舗投資や過剰債務が招くリスクは<Link href="/finance/cash">黒字倒産と負債</Link>で、それぞれ詳しく扱っています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/specialty" tag="業界">専門店</RelatedLink>
-          <RelatedLink href="/industry/trading" tag="業界">商社</RelatedLink>
-          <RelatedLink href="/industry/food" tag="業界">食品・飲料</RelatedLink>
-          <RelatedLink href="/finance/analysis" tag="会計・財務">三表から会社を診断する</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; 百貨店・スーパー・コンビニ</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/specialty" tag="業界">専門店</RelatedLink>
+                    <RelatedLink href="/industry/trading" tag="業界">商社</RelatedLink>
+                    <RelatedLink href="/industry/food" tag="業界">食品・飲料</RelatedLink>
+                    <RelatedLink href="/finance/analysis" tag="会計・財務">三表から会社を診断する</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

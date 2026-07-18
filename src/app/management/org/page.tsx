@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -103,15 +102,15 @@ export default function Page() {
       </CardGrid>
       <p>組織の内部設計を押さえたら、最後は視野を組織の外へ広げます。<Link href="/management/context">経営・社会とのつながり</Link>へ進みましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/context" tag="マネジメント">経営・社会とのつながり</RelatedLink>
-          <RelatedLink href="/management/org/structure" tag="マネジメント">実践編 ― 組織構造とアサイン</RelatedLink>
-          <RelatedLink href="/management/org/delegation" tag="マネジメント">実践編 ― 権限委譲</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; 組織のマネジメント（マクロ）</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/context" tag="マネジメント">経営・社会とのつながり</RelatedLink>
+                    <RelatedLink href="/management/org/structure" tag="マネジメント">実践編 ― 組織構造とアサイン</RelatedLink>
+                    <RelatedLink href="/management/org/delegation" tag="マネジメント">実践編 ― 権限委譲</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

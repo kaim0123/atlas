@@ -14,7 +14,6 @@ import {
   Analogy,
   Mark,
   MarkNote,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -127,16 +126,16 @@ export default function Page() {
 
       <p>次のページでは、コードの見た目や書き方そのものを揃える<Link href="/design/conventions">コーディング規約・スタイル</Link>を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/idioms/essentials" tag="設計">必修イディオムを深く理解する</RelatedLink>
-          <RelatedLink href="/design/patterns" tag="設計">設計パターン</RelatedLink>
-          <RelatedLink href="/design/conventions" tag="設計">コーディング規約・スタイル</RelatedLink>
-          <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; 実装パターン・イディオム</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/idioms/essentials" tag="設計">必修イディオムを深く理解する</RelatedLink>
+                    <RelatedLink href="/design/patterns" tag="設計">設計パターン</RelatedLink>
+                    <RelatedLink href="/design/conventions" tag="設計">コーディング規約・スタイル</RelatedLink>
+                    <RelatedLink href="/design/principles" tag="設計">設計原則</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -80,15 +79,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>部品化とテストを近づける</h4><p>再利用できる部品に分け、単体テストとセットで確かめると、欠陥を早く見つけられます。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design" tag="設計">設計の全体像</RelatedLink>
-          <RelatedLink href="/design/paradigm/structured" tag="設計">構造化</RelatedLink>
-          <RelatedLink href="/design/conventions" tag="設計">コーディング規約・スタイル</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; 実装</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design" tag="設計">設計の全体像</RelatedLink>
+                    <RelatedLink href="/design/paradigm/structured" tag="設計">構造化</RelatedLink>
+                    <RelatedLink href="/design/conventions" tag="設計">コーディング規約・スタイル</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

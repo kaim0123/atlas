@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Mark,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -160,15 +159,15 @@ const orders = await db.order.findMany({ include: { customer: true } });`}</code
 
       <p>これらのパターンが実際のアプリケーションのどの層に位置づけられるかは、<Link href="/design/architecture/app/data-access">データアクセス系アーキテクチャ</Link>で扱っています。業務ロジックをどこに置くかという次の問いは、<Link href="/design/architecture/app/domain-model/patterns">業務ロジックの置き場所</Link>で見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/architecture/app/domain-model/patterns" tag="設計">業務ロジックの置き場所</RelatedLink>
-          <RelatedLink href="/design/architecture/app/data-access" tag="設計">データアクセス系アーキテクチャ</RelatedLink>
-          <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; アーキテクチャ &middot; アプリケーション視点 &middot; エンタープライズパターン &middot; 永続化層の定石</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/architecture/app/domain-model/patterns" tag="設計">業務ロジックの置き場所</RelatedLink>
+                    <RelatedLink href="/design/architecture/app/data-access" tag="設計">データアクセス系アーキテクチャ</RelatedLink>
+                    <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

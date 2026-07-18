@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -67,14 +66,14 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>コントラクトが要</h4><p>プラグインが守るべき共通インターフェースの設計が柔軟性を左右する。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/architecture/sys/pipeline" tag="設計">パイプラインアーキテクチャ</RelatedLink>
-          <RelatedLink href="/design/architecture/sys/soa" tag="設計">オーケストレーション駆動SOA</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; マイクロカーネルアーキテクチャ</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/architecture/sys/pipeline" tag="設計">パイプラインアーキテクチャ</RelatedLink>
+                    <RelatedLink href="/design/architecture/sys/soa" tag="設計">オーケストレーション駆動SOA</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

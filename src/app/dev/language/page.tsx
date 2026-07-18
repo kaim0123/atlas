@@ -14,7 +14,6 @@ import {
   Analogy,
   Diagram,
   CodeCompare,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -255,15 +254,15 @@ async function main() {
       </CardGrid>
       <p>JavaScript・TypeScriptという言語そのものを見てきましたが、この言語のコードは一体どこで実行されているのでしょうか。次のページ「<Link href="/dev/runtime">ランタイム</Link>」では、ブラウザ・Node.js・Deno・Bunという、コードを実際に動かす実行環境の違いを見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/dev/runtime" tag="開発">ランタイム</RelatedLink>
-          <RelatedLink href="/dev/web-basics" tag="開発">Web基礎</RelatedLink>
-          <RelatedLink href="/dev/tooling" tag="開発">パッケージ管理とビルド</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; JavaScript・TypeScript</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/dev/runtime" tag="開発">ランタイム</RelatedLink>
+                    <RelatedLink href="/dev/web-basics" tag="開発">Web基礎</RelatedLink>
+                    <RelatedLink href="/dev/tooling" tag="開発">パッケージ管理とビルド</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

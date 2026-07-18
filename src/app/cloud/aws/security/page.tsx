@@ -14,7 +14,6 @@ import {
   Mark,
   MarkNote,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -89,15 +88,15 @@ export default function Page() {
       </CardGrid>
       <p>誰が何にアクセスできるかを決めたら、次はそのアクセス先である「<Link href="/cloud/aws/database">データベース</Link>」自体の話です。また、実際に何が起きたかを追跡する仕組みは次のページ「<Link href="/cloud/aws/monitoring">モニタリングと管理</Link>」で扱います。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/monitoring" tag="AWS">モニタリングと管理</RelatedLink>
-          <RelatedLink href="/cloud/aws/network" tag="AWS">ネットワーキングとコンテンツ配信</RelatedLink>
-          <RelatedLink href="/security/authz" tag="セキュリティ">認可</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; AWS &middot; セキュリティ、アイデンティティ、コンプライアンス</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/monitoring" tag="AWS">モニタリングと管理</RelatedLink>
+                    <RelatedLink href="/cloud/aws/network" tag="AWS">ネットワーキングとコンテンツ配信</RelatedLink>
+                    <RelatedLink href="/security/authz" tag="セキュリティ">認可</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

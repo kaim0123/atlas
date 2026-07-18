@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -71,16 +70,16 @@ export default function Page() {
       </CardGrid>
       <p>ここまでで、アプリ単体の中の話は一通り整理できました。最後の「<Link href="/security/identity">認証プロトコルの変遷</Link>」では、この視点をさらに引いて、LDAPやOAuthといった仕組みが複数のアプリ・複数の会社をまたいで「あなたは誰か」を確かめるためにどう生まれてきたかを見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/security/csrf" tag="セキュリティ">CSRF対策</RelatedLink>
-          <RelatedLink href="/security/session" tag="セキュリティ">セッションとCookie管理</RelatedLink>
-          <RelatedLink href="/security/auth" tag="セキュリティ">認証</RelatedLink>
-          <RelatedLink href="/security/identity" tag="セキュリティ">認証プロトコルの変遷</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; セキュリティ &middot; トークンの全体像</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/security/csrf" tag="セキュリティ">CSRF対策</RelatedLink>
+                    <RelatedLink href="/security/session" tag="セキュリティ">セッションとCookie管理</RelatedLink>
+                    <RelatedLink href="/security/auth" tag="セキュリティ">認証</RelatedLink>
+                    <RelatedLink href="/security/identity" tag="セキュリティ">認証プロトコルの変遷</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

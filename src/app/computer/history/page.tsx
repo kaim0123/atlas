@@ -13,7 +13,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -204,15 +203,15 @@ export default function Page() {
       </CardGrid>
       <p>次は、同じ頃に育っていったもう一つの物語 ―「インターネットの歴史」を見ていきましょう。コンピュータ同士がどうやってつながり合うようになったのかを追いかけます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/internet/history" tag="インターネット">インターネットの歴史</RelatedLink>
-          <RelatedLink href="/os" tag="OS">OSの仕組み ― プロセス・スレッド・カーネル</RelatedLink>
-          <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み ― レジスタからストレージまで</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; コンピュータ &middot; コンピュータの歴史</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/internet/history" tag="インターネット">インターネットの歴史</RelatedLink>
+                    <RelatedLink href="/os" tag="OS">OSの仕組み ― プロセス・スレッド・カーネル</RelatedLink>
+                    <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み ― レジスタからストレージまで</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

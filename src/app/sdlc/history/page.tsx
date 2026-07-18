@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -215,17 +214,17 @@ export default function Page() {
         </Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/sdlc/overview" tag="開発工程・管理">開発の全体像</RelatedLink>
-          <RelatedLink href="/sdlc/process" tag="開発工程・管理">開発プロセスと手法</RelatedLink>
-          <RelatedLink href="/sdlc/process/agile" tag="開発工程・管理">スクラムとアジャイル実践</RelatedLink>
-          <RelatedLink href="/design/paradigm" tag="設計">パラダイム一覧</RelatedLink>
-          <RelatedLink href="/test/strategy" tag="テスト">品質戦略とテストピラミッド</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; 開発手法の変遷</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/sdlc/overview" tag="開発工程・管理">開発の全体像</RelatedLink>
+                    <RelatedLink href="/sdlc/process" tag="開発工程・管理">開発プロセスと手法</RelatedLink>
+                    <RelatedLink href="/sdlc/process/agile" tag="開発工程・管理">スクラムとアジャイル実践</RelatedLink>
+                    <RelatedLink href="/design/paradigm" tag="設計">パラダイム一覧</RelatedLink>
+                    <RelatedLink href="/test/strategy" tag="テスト">品質戦略とテストピラミッド</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

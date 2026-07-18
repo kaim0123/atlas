@@ -14,7 +14,6 @@ import {
   Analogy,
   Mark,
   MarkNote,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -59,16 +58,16 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>Domain Model</h4><p>業務ルールをオブジェクトのメソッドとして表現する。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/architecture/app/domain-model/patterns" tag="設計">業務ロジックの置き場所</RelatedLink>
-          <RelatedLink href="/design/architecture/app/web" tag="設計">Web系</RelatedLink>
-          <RelatedLink href="/design/architecture/app/data-access" tag="設計">データアクセス系</RelatedLink>
-          <RelatedLink href="/design/architecture/app/domain-centric" tag="設計">ドメイン中心アーキテクチャ系</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; ドメインモデル系(アプリケーションアーキテクチャ)</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/architecture/app/domain-model/patterns" tag="設計">業務ロジックの置き場所</RelatedLink>
+                    <RelatedLink href="/design/architecture/app/web" tag="設計">Web系</RelatedLink>
+                    <RelatedLink href="/design/architecture/app/data-access" tag="設計">データアクセス系</RelatedLink>
+                    <RelatedLink href="/design/architecture/app/domain-centric" tag="設計">ドメイン中心アーキテクチャ系</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

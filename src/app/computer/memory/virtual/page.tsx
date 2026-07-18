@@ -13,7 +13,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -146,16 +145,16 @@ export default function Page() {
       </CardGrid>
       <p>ここまでは「量(どれだけ覚えられるか)」の物語でした。しかし2000年代、問題の軸は静かに移り始めます。次のページ「速さの壁」では、<strong>量ではなく速度と帯域</strong>が主役になる時代を見ていきましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/os/memory" tag="OS">記憶管理と仮想記憶 ― ページング・LRU・スラッシング</RelatedLink>
-          <RelatedLink href="/computer/memory/speed" tag="コンピュータ">速さの壁 ― キャッシュ・帯域・HBM</RelatedLink>
-          <RelatedLink href="/computer/memory/history" tag="コンピュータ">記憶装置の歴史</RelatedLink>
-          <RelatedLink href="/os" tag="OS">OSの仕組み ― プロセス・スレッド・カーネル</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; コンピュータ &middot; 仮想メモリとソフトウェアの肥大化</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/os/memory" tag="OS">記憶管理と仮想記憶 ― ページング・LRU・スラッシング</RelatedLink>
+                    <RelatedLink href="/computer/memory/speed" tag="コンピュータ">速さの壁 ― キャッシュ・帯域・HBM</RelatedLink>
+                    <RelatedLink href="/computer/memory/history" tag="コンピュータ">記憶装置の歴史</RelatedLink>
+                    <RelatedLink href="/os" tag="OS">OSの仕組み ― プロセス・スレッド・カーネル</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

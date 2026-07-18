@@ -13,7 +13,6 @@ import {
   Analogy,
   Mark,
   MarkNote,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -146,15 +145,15 @@ useToggle((state, action) => (isLocked ? state : defaultReducer(state, action)))
         <Card><CardNumber>3</CardNumber><h4>State Reducer</h4><p>状態遷移ロジックそのものを、利用側からカスタマイズ可能にする。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/dev/framework/react/logic-reuse" tag="開発">ロジックを再利用する</RelatedLink>
-          <RelatedLink href="/dev/framework/react/forms" tag="開発">フォームの値を管理する</RelatedLink>
-          <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; フレームワーク &middot; React &middot; パターン &middot; コンポーネントを組み合わせる</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/dev/framework/react/logic-reuse" tag="開発">ロジックを再利用する</RelatedLink>
+                    <RelatedLink href="/dev/framework/react/forms" tag="開発">フォームの値を管理する</RelatedLink>
+                    <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

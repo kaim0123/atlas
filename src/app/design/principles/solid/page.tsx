@@ -14,7 +14,6 @@ import {
   Analogy,
   Mark,
   MarkNote,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -89,15 +88,15 @@ export default function Page() {
 
       <p>次のページでは、SOLID以降、2000年代以降に定着した<Link href="/design/principles/modern">現代の原則</Link>(Fail Fast・継承より合成・不変性など)を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/principles/cohesion" tag="設計">保守性の基本4原則</RelatedLink>
-          <RelatedLink href="/design/principles/modern" tag="設計">現代の原則</RelatedLink>
-          <RelatedLink href="/design/paradigm/oop" tag="設計">オブジェクト指向</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; 設計原則 &middot; SOLID</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/principles/cohesion" tag="設計">保守性の基本4原則</RelatedLink>
+                    <RelatedLink href="/design/principles/modern" tag="設計">現代の原則</RelatedLink>
+                    <RelatedLink href="/design/paradigm/oop" tag="設計">オブジェクト指向</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

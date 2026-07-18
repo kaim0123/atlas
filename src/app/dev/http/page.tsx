@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -171,16 +170,16 @@ clearTimeout(timer);`}</code>
         <Card><CardNumber>3</CardNumber><h4>axiosは便利機能込み</h4><p>自動JSON変換・エラーの例外化・インターセプターを、依存1つと引き換えに手に入れます。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/dev/language" tag="開発">JavaScript・TypeScript</RelatedLink>
-          <RelatedLink href="/dev/framework/nextjs/data" tag="開発">データフェッチ・キャッシュ・再検証</RelatedLink>
-          <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
-          <RelatedLink href="/dev" tag="開発">実装 一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; HTTP通信</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/dev/language" tag="開発">JavaScript・TypeScript</RelatedLink>
+                    <RelatedLink href="/dev/framework/nextjs/data" tag="開発">データフェッチ・キャッシュ・再検証</RelatedLink>
+                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                    <RelatedLink href="/dev" tag="開発">実装 一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

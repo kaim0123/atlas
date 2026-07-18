@@ -15,7 +15,6 @@ import {
   Aside,
   Diagram,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -183,15 +182,15 @@ export default function Page() {
       </Steps>
       <p>これがUnix/Linuxにおけるプログラム実行の標準的な流れです。プロセスの生成・メモリ・スケジューリング・通信 ― すべてはこの単純な流れを安全に支えるための仕組みでした。次は、そのforkやexecを含む「アプリからカーネルへの正式な依頼窓口」であるシステムコールを見ていきましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/os/syscall" tag="OS">システムコール</RelatedLink>
-          <RelatedLink href="/os/kernel" tag="OS">カーネルの役割と設計</RelatedLink>
-          <RelatedLink href="/computer/memory/stack" tag="コンピュータ">スタックと関数呼び出し</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; OS &middot; プロセスとスレッド</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/os/syscall" tag="OS">システムコール</RelatedLink>
+                    <RelatedLink href="/os/kernel" tag="OS">カーネルの役割と設計</RelatedLink>
+                    <RelatedLink href="/computer/memory/stack" tag="コンピュータ">スタックと関数呼び出し</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

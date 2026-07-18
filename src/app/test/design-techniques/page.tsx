@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -119,15 +118,15 @@ export default function Page() {
         <Card><CardNumber>5</CardNumber><h4>状態と経過も資産にする</h4><p>状態遷移テストで仕様の抜けを見つけ、回帰テストとして繰り返し実行する仕組みにします。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/test/design-techniques" tag="テスト">テスト技法（網羅率・バグ曲線）</RelatedLink>
-          <RelatedLink href="/test/strategy" tag="テスト">品質戦略とテストピラミッド</RelatedLink>
-          <RelatedLink href="/sdlc/review" tag="開発工程・管理">レビューと品質確認</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; テスト &middot; テスト設計技法</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/test/design-techniques" tag="テスト">テスト技法（網羅率・バグ曲線）</RelatedLink>
+                    <RelatedLink href="/test/strategy" tag="テスト">品質戦略とテストピラミッド</RelatedLink>
+                    <RelatedLink href="/sdlc/review" tag="開発工程・管理">レビューと品質確認</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

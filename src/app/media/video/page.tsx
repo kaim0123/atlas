@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -63,15 +62,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>高解像度ほど高効率圧縮が必要</h4><p>4K/8Kのデータ量には、HEVCのような効率のよいコーデックが欠かせません。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/media/compression" tag="情報メディア">圧縮の考え方</RelatedLink>
-          <RelatedLink href="/media/graphics" tag="情報メディア">色・解像度・グラフィックス応用</RelatedLink>
-          <RelatedLink href="/media/basics" tag="情報メディア">マルチメディアの全体像</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 情報メディア &middot; 動画フォーマット</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/media/compression" tag="情報メディア">圧縮の考え方</RelatedLink>
+                    <RelatedLink href="/media/graphics" tag="情報メディア">色・解像度・グラフィックス応用</RelatedLink>
+                    <RelatedLink href="/media/basics" tag="情報メディア">マルチメディアの全体像</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

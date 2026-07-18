@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -117,15 +116,15 @@ it.each([
         <Card><CardNumber>5</CardNumber><h4>網羅性を上げる</h4><p>Parameterized/Property-based Testingで、入力パターンを機械的に増やす。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/test/unit" tag="テスト">Unitテスト</RelatedLink>
-          <RelatedLink href="/test/integration" tag="テスト">Integrationテスト</RelatedLink>
-          <RelatedLink href="/test" tag="テスト">テスト一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; テスト &middot; テストパターン</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/test/unit" tag="テスト">Unitテスト</RelatedLink>
+                    <RelatedLink href="/test/integration" tag="テスト">Integrationテスト</RelatedLink>
+                    <RelatedLink href="/test" tag="テスト">テスト一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

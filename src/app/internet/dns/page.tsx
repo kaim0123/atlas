@@ -17,7 +17,6 @@ import {
   Timeline,
   TimelineItem,
   TimelineLabel,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -182,15 +181,15 @@ export default function Page() {
       </CardGrid>
       <p>次にネットが急につながらなくなったら、サーバーが死んだのではなく、電話帳が一瞬迷子になっただけかもしれません。名前解決の後、実際にコンテンツがブラウザへ届くまでの続きは「<Link href="/internet/web">Webの仕組み</Link>」で見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル ― OSI参照モデルとTCP/IP</RelatedLink>
-          <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み ― URLからレンダリングまで</RelatedLink>
-          <RelatedLink href="/cloud/aws/network/route53" tag="AWS">Route 53 ― ドメイン名を宛先へ振り分ける</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; インターネット &middot; DNS</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル ― OSI参照モデルとTCP/IP</RelatedLink>
+                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み ― URLからレンダリングまで</RelatedLink>
+                    <RelatedLink href="/cloud/aws/network/route53" tag="AWS">Route 53 ― ドメイン名を宛先へ振り分ける</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

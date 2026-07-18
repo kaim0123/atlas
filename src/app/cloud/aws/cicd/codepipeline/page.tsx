@@ -14,7 +14,6 @@ import {
   Mark,
   MarkNote,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -67,15 +66,15 @@ export default function Page() {
       <div className="mb-1.5"><Mark tier="niche">補足</Mark></div>
       <MarkNote>→ デプロイ先が複数のサービスに分かれている場合、デプロイが終わった後にそれらのサービス同士へ処理結果を伝える仕組みとして<Link href="/cloud/aws/integration">アプリケーション統合</Link>で見たSNS・EventBridgeが使われることもある。</MarkNote>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/cicd/codebuild" tag="AWS">CodeBuild</RelatedLink>
-          <RelatedLink href="/cloud/aws/cicd" tag="AWS">CI/CD</RelatedLink>
-          <RelatedLink href="/cloud/aws/integration" tag="AWS">アプリケーション統合</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; AWS &middot; CI/CD &middot; CodePipeline</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/cicd/codebuild" tag="AWS">CodeBuild</RelatedLink>
+                    <RelatedLink href="/cloud/aws/cicd" tag="AWS">CI/CD</RelatedLink>
+                    <RelatedLink href="/cloud/aws/integration" tag="AWS">アプリケーション統合</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

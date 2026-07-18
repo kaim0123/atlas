@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -144,15 +143,15 @@ export default function Page() {
       </CardGrid>
       <p>XSSと同じ「インジェクションの型」を、今度はデータベースへの命令という形で悪用するのが「<Link href="/security/sqli">SQLインジェクション</Link>」です。次のページで見ていきましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/security/injection" tag="セキュリティ">インジェクション攻撃の基本形</RelatedLink>
-          <RelatedLink href="/security/session" tag="セキュリティ">セッションとCookie管理</RelatedLink>
-          <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; セキュリティ &middot; XSSと出力エスケープ</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/security/injection" tag="セキュリティ">インジェクション攻撃の基本形</RelatedLink>
+                    <RelatedLink href="/security/session" tag="セキュリティ">セッションとCookie管理</RelatedLink>
+                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

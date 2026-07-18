@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -69,15 +68,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>MIDIは波形でなく演奏情報</h4><p>WAV・MP3が音そのもの、MIDIは「鳴らし方」を記録します。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/media/image" tag="情報メディア">画像フォーマット</RelatedLink>
-          <RelatedLink href="/media/compression" tag="情報メディア">圧縮の考え方</RelatedLink>
-          <RelatedLink href="/media/basics" tag="情報メディア">マルチメディアの全体像</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 情報メディア &middot; 音声フォーマット</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/media/image" tag="情報メディア">画像フォーマット</RelatedLink>
+                    <RelatedLink href="/media/compression" tag="情報メディア">圧縮の考え方</RelatedLink>
+                    <RelatedLink href="/media/basics" tag="情報メディア">マルチメディアの全体像</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

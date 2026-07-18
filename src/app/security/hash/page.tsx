@@ -15,7 +15,6 @@ import {
   Aside,
   Diagram,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -138,15 +137,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>常に次の世代を用意する</h4><p>MD5→SHA-1→SHA-2→SHA-3という乗り換えのように、「破られる前提で移行先を先に決めておく」のが暗号運用の基本姿勢です。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/security/crypto" tag="セキュリティ">暗号の歴史と公開鍵暗号</RelatedLink>
-          <RelatedLink href="/security/auth" tag="セキュリティ">認証</RelatedLink>
-          <RelatedLink href="/internet/web" tag="インターネット">Webと暗号化通信</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; セキュリティ &middot; ハッシュ関数と衝突攻撃</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/security/crypto" tag="セキュリティ">暗号の歴史と公開鍵暗号</RelatedLink>
+                    <RelatedLink href="/security/auth" tag="セキュリティ">認証</RelatedLink>
+                    <RelatedLink href="/internet/web" tag="インターネット">Webと暗号化通信</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -14,7 +14,6 @@ import {
   Card,
   CardGrid,
   CardNumber,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -116,16 +115,16 @@ export default function Page() {
       </CardGrid>
       <p>PEの儲けの構造は、<Link href="/finance/thinking">ファイナンス思考</Link>（キャッシュと資本効率で決める）の応用そのものです。会社を「読む」第1章から「決める」この第5章まで、財務・会計の視点は一本の線でつながっています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/finance/thinking" tag="会計・財務">会計 vs ファイナンス</RelatedLink>
-          <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標（ROA・CCC）</RelatedLink>
-          <RelatedLink href="/finance/valuation" tag="会計・財務">企業価値と株価（PBR）</RelatedLink>
-          <RelatedLink href="/finance/cash" tag="会計・財務">現金がすべて ― 黒字倒産と負債</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 会計・財務 &middot; PE・LBO・MBOの仕組み</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/finance/thinking" tag="会計・財務">会計 vs ファイナンス</RelatedLink>
+                    <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標（ROA・CCC）</RelatedLink>
+                    <RelatedLink href="/finance/valuation" tag="会計・財務">企業価値と株価（PBR）</RelatedLink>
+                    <RelatedLink href="/finance/cash" tag="会計・財務">現金がすべて ― 黒字倒産と負債</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -14,7 +14,6 @@ import {
   Mark,
   MarkNote,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -88,15 +87,15 @@ export default function Page() {
       </CardGrid>
       <p>最後に、これらのサービスをどう「箱」にまとめてデプロイするかを見るために、次のページでは「<Link href="/cloud/aws/container">コンテナ</Link>」を扱います。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/security" tag="AWS">セキュリティ、アイデンティティ、コンプライアンス</RelatedLink>
-          <RelatedLink href="/cloud/aws/container" tag="AWS">コンテナ</RelatedLink>
-          <RelatedLink href="/security/logging" tag="セキュリティ">ログ出力設計</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; AWS &middot; モニタリングと管理</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/security" tag="AWS">セキュリティ、アイデンティティ、コンプライアンス</RelatedLink>
+                    <RelatedLink href="/cloud/aws/container" tag="AWS">コンテナ</RelatedLink>
+                    <RelatedLink href="/security/logging" tag="セキュリティ">ログ出力設計</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

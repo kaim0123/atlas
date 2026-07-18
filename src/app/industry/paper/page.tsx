@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -141,16 +140,16 @@ export default function Page() {
       </CardGrid>
       <p>この産業の会計を支える基礎は<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/analysis">三表から会社を診断する</Link>で、重い設備投資が生む資金繰りの論点は<Link href="/finance/cf">キャッシュフロー</Link>で、それぞれ詳しく扱っています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/chemical" tag="業界">化学・石油化学</RelatedLink>
-          <RelatedLink href="/industry/advertising" tag="業界">広告・出版</RelatedLink>
-          <RelatedLink href="/finance/cf" tag="会計・財務">キャッシュフロー</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; 紙・パルプ・印刷</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/chemical" tag="業界">化学・石油化学</RelatedLink>
+                    <RelatedLink href="/industry/advertising" tag="業界">広告・出版</RelatedLink>
+                    <RelatedLink href="/finance/cf" tag="会計・財務">キャッシュフロー</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -63,15 +62,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>追跡できる備え</h4><p>トレーサビリティがインシデント対応と影響範囲の特定を支えます。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/test/strategy" tag="テスト">テストの段階</RelatedLink>
-          <RelatedLink href="/sdlc/maintenance" tag="開発工程・管理">保守</RelatedLink>
-          <RelatedLink href="/ops/deploy" tag="運用">インフラとデプロイ</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; 導入と受入れ</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/test/strategy" tag="テスト">テストの段階</RelatedLink>
+                    <RelatedLink href="/sdlc/maintenance" tag="開発工程・管理">保守</RelatedLink>
+                    <RelatedLink href="/ops/deploy" tag="運用">インフラとデプロイ</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

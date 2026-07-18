@@ -12,7 +12,6 @@ import {
   Diagram,
   IndexGrid,
   IndexCard,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -126,15 +125,15 @@ export default function Page() {
         端末のライフサイクル管理は、英語では <strong>IT Asset Management(ITAM)</strong> や <strong>PC ライフサイクル管理(PCLM)</strong> と呼ばれます。近年は個々の作業を人手で行うのではなく、MDM やクラウド管理サービスで自動化し、調達から廃棄までを1つのダッシュボードで追える形が主流になりつつあります。
       </Aside>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/computer/basics" tag="コンピュータ">PCハードウェアの基礎</RelatedLink>
-          <RelatedLink href="/security/basics" tag="セキュリティ">情報セキュリティの目的と脅威</RelatedLink>
-          <RelatedLink href="/ops/cost" tag="運用">コスト管理</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; コンピュータ &middot; クライアント管理の実務</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/computer/basics" tag="コンピュータ">PCハードウェアの基礎</RelatedLink>
+                    <RelatedLink href="/security/basics" tag="セキュリティ">情報セキュリティの目的と脅威</RelatedLink>
+                    <RelatedLink href="/ops/cost" tag="運用">コスト管理</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -14,7 +14,6 @@ import {
   Analogy,
   Mark,
   MarkNote,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -137,15 +136,15 @@ class OrderService {
 
       <p>永続化そのものの定石については<Link href="/design/architecture/app/data-access/patterns">永続化層の定石</Link>を、Domain Modelを中心に据えたアプリケーション全体の構造については<Link href="/design/architecture/app/domain-model">ドメインモデル系アーキテクチャ</Link>を参照してください。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/architecture/app/data-access/patterns" tag="設計">永続化層の定石</RelatedLink>
-          <RelatedLink href="/design/architecture/app/domain-model" tag="設計">ドメインモデル系アーキテクチャ</RelatedLink>
-          <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; アーキテクチャ &middot; アプリケーション視点 &middot; エンタープライズパターン &middot; 業務ロジックの置き場所</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/architecture/app/data-access/patterns" tag="設計">永続化層の定石</RelatedLink>
+                    <RelatedLink href="/design/architecture/app/domain-model" tag="設計">ドメインモデル系アーキテクチャ</RelatedLink>
+                    <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

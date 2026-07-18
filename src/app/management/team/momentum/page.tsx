@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -91,15 +90,15 @@ export default function Page() {
 
       <p>方向と勢いが定まったら、それを支える器 ― 組織の形とメンバーの配置を考えます。<Link href="/management/org/structure">組織構造とアサイン</Link>へ進みましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/team/goals" tag="マネジメント">目標設定</RelatedLink>
-          <RelatedLink href="/management/org/structure" tag="マネジメント">組織構造とアサイン</RelatedLink>
-          <RelatedLink href="/management/team/operation" tag="マネジメント">チーム運営と3つの力</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; 戦略方針とモメンタム</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/team/goals" tag="マネジメント">目標設定</RelatedLink>
+                    <RelatedLink href="/management/org/structure" tag="マネジメント">組織構造とアサイン</RelatedLink>
+                    <RelatedLink href="/management/team/operation" tag="マネジメント">チーム運営と3つの力</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

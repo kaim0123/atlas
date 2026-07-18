@@ -14,7 +14,6 @@ import {
   CardGrid,
   Card,
   CardNumber,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -135,16 +134,16 @@ export default function Page() {
       </CardGrid>
       <p>ここまでは<Term>投資家が会社を選ぶ物差し</Term>（ROA・PBR）を見てきました。次章<Link href="/finance/cash">現金がすべて</Link>では視点を反転させ、その物差しでは測れない「現金」で会社を見る経営者の目を扱います。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/finance/cash" tag="会計・財務">現金がすべて ― 黒字倒産と負債</RelatedLink>
-          <RelatedLink href="/finance/ratios" tag="会計・財務">指標に惑わされない</RelatedLink>
-          <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標</RelatedLink>
-          <RelatedLink href="/finance" tag="会計・財務">会計・財務の全体像</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 会計・財務 &middot; 企業価値と株価（PBR）</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/finance/cash" tag="会計・財務">現金がすべて ― 黒字倒産と負債</RelatedLink>
+                    <RelatedLink href="/finance/ratios" tag="会計・財務">指標に惑わされない</RelatedLink>
+                    <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標</RelatedLink>
+                    <RelatedLink href="/finance" tag="会計・財務">会計・財務の全体像</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

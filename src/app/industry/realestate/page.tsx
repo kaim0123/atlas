@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -135,16 +134,16 @@ export default function Page() {
       </CardGrid>
       <p>不動産の会計を支える基礎は<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/analysis">三表から会社を診断する</Link>で、簿価と実態のギャップを読み解く視点は<Link href="/finance/valuation">企業価値とPBR</Link>で、それぞれ詳しく扱っています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/construction" tag="業界">建設・設備</RelatedLink>
-          <RelatedLink href="/industry/housing" tag="業界">住宅・住設機器</RelatedLink>
-          <RelatedLink href="/finance/valuation" tag="会計・財務">企業価値とPBR</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; 不動産</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/construction" tag="業界">建設・設備</RelatedLink>
+                    <RelatedLink href="/industry/housing" tag="業界">住宅・住設機器</RelatedLink>
+                    <RelatedLink href="/finance/valuation" tag="会計・財務">企業価値とPBR</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

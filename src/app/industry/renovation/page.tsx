@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -133,16 +132,16 @@ export default function Page() {
       </CardGrid>
       <p>会計の基礎は<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/analysis">三表から会社を診断する</Link>で、在庫を抱えるビジネスの資金の回り方は<Link href="/finance/cash">黒字倒産と負債</Link>で、それぞれ詳しく扱っています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/realestate" tag="業界">不動産</RelatedLink>
-          <RelatedLink href="/industry/housing" tag="業界">住宅・住設機器</RelatedLink>
-          <RelatedLink href="/finance/cash" tag="会計・財務">黒字倒産と負債</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; リフォーム・リノベーション</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/realestate" tag="業界">不動産</RelatedLink>
+                    <RelatedLink href="/industry/housing" tag="業界">住宅・住設機器</RelatedLink>
+                    <RelatedLink href="/finance/cash" tag="会計・財務">黒字倒産と負債</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

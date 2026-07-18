@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -125,15 +124,15 @@ export default function Page() {
         <Card><CardNumber>5</CardNumber><h4>リスクに応じて濃淡をつける</h4><p>すべてを均等にではなく、影響が大きい機能を重点的にテストします。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/test/design-techniques" tag="テスト">テスト設計技法</RelatedLink>
-          <RelatedLink href="/test/unit" tag="テスト">Unitテスト</RelatedLink>
-          <RelatedLink href="/test/quality-plan" tag="テスト">品質計画</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; テスト &middot; 品質戦略とテストピラミッド</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/test/design-techniques" tag="テスト">テスト設計技法</RelatedLink>
+                    <RelatedLink href="/test/unit" tag="テスト">Unitテスト</RelatedLink>
+                    <RelatedLink href="/test/quality-plan" tag="テスト">品質計画</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

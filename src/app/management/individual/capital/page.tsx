@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -138,15 +137,15 @@ export default function Page() {
       </CardGrid>
       <p>能力（A）を3源泉に分けて磨いたら、それを発揮させる<Link href="/management/individual/motivation">動機づけ（M）</Link>と、力を成果へ変える<Link href="/management/org/delegation">機会（O）</Link>を組み合わせる ― これがAMOフレームワークの実践です。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/individual" tag="マネジメント">個人のマネジメント（ミクロ）</RelatedLink>
-          <RelatedLink href="/management/individual/motivation" tag="マネジメント">モチベーション理論の歴史</RelatedLink>
-          <RelatedLink href="/management/individual/onboarding" tag="マネジメント">採用・オンボーディング・育成</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; 個人の力の3つの源泉</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/individual" tag="マネジメント">個人のマネジメント（ミクロ）</RelatedLink>
+                    <RelatedLink href="/management/individual/motivation" tag="マネジメント">モチベーション理論の歴史</RelatedLink>
+                    <RelatedLink href="/management/individual/onboarding" tag="マネジメント">採用・オンボーディング・育成</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

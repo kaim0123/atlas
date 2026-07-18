@@ -11,7 +11,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -156,15 +155,15 @@ export default function Page() {
 
       <p>BSで「安全性」を読んだら、次は<Link href="/finance/cf">キャッシュフローと三表のつながり</Link>で現金の実際の動きを見ます。BSを投資家でなく経営者の目で読み直すと、まったく違う結論が出る ― それが<Link href="/finance/cash">現金がすべて ― 黒字倒産と負債</Link>のテーマです。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/finance/cf" tag="会計・財務">キャッシュフローと三表のつながり</RelatedLink>
-          <RelatedLink href="/finance/cash" tag="会計・財務">現金がすべて ― 黒字倒産と負債</RelatedLink>
-          <RelatedLink href="/finance/analysis" tag="会計・財務">三表から会社を診断する</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 会計・財務 &middot; 貸借対照表（BS）の読み方</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/finance/cf" tag="会計・財務">キャッシュフローと三表のつながり</RelatedLink>
+                    <RelatedLink href="/finance/cash" tag="会計・財務">現金がすべて ― 黒字倒産と負債</RelatedLink>
+                    <RelatedLink href="/finance/analysis" tag="会計・財務">三表から会社を診断する</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

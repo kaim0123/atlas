@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -91,15 +90,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>最新の脅威にも注意</h4><p>攻撃の一連の流れ(サイバーキルチェーン)や、未知の脆弱性を突くゼロデイ攻撃も押さえておきます。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/security/injection" tag="セキュリティ">インジェクション攻撃の基本形</RelatedLink>
-          <RelatedLink href="/security/countermeasures" tag="セキュリティ">セキュリティ対策と実装</RelatedLink>
-          <RelatedLink href="/security/basics" tag="セキュリティ">情報セキュリティの目的と脅威</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; セキュリティ &middot; 攻撃手法</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/security/injection" tag="セキュリティ">インジェクション攻撃の基本形</RelatedLink>
+                    <RelatedLink href="/security/countermeasures" tag="セキュリティ">セキュリティ対策と実装</RelatedLink>
+                    <RelatedLink href="/security/basics" tag="セキュリティ">情報セキュリティの目的と脅威</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

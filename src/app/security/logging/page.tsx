@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -96,15 +95,15 @@ export default function Page() {
       </CardGrid>
       <p>ここまでで、入力を汚染する攻撃(インジェクション・XSS・SQLインジェクション)から、ログイン状態を乗っ取る攻撃(CSRF・セッション)、誰が・何をしてよいかの判定(認証・認可)、周辺の運用観点(キャッシュ・ログ)までを一通り見てきました。これは<Link href="/security">セキュリティの一覧ページ</Link>で紹介した多層防御の図のうち、主に開発者がコードで直接手を動かせる「アプリケーション層」と「セッション層」を掘り下げたものです。残るページでは、ここまで繰り返し登場した「<Link href="/security/session-cookie">セッション・Cookie</Link>」「<Link href="/security/token">トークン</Link>」という言葉自体を、文脈ごとの意味の違いという観点から整理します。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/security/cache" tag="セキュリティ">キャッシュ制御</RelatedLink>
-          <RelatedLink href="/security/authz" tag="セキュリティ">認可</RelatedLink>
-          <RelatedLink href="/security/session-cookie" tag="セキュリティ">セッション・Cookieの全体像</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; セキュリティ &middot; ログ出力設計</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/security/cache" tag="セキュリティ">キャッシュ制御</RelatedLink>
+                    <RelatedLink href="/security/authz" tag="セキュリティ">認可</RelatedLink>
+                    <RelatedLink href="/security/session-cookie" tag="セキュリティ">セッション・Cookieの全体像</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

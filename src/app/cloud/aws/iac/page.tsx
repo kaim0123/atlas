@@ -14,7 +14,6 @@ import {
   Mark,
   MarkNote,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -106,15 +105,15 @@ export default function Page() {
       </CardGrid>
       <p>これでAWSの基礎から、インフラを実際に定義してデプロイする層までを一通り見たことになります。手を動かして構築する際は、<Link href="/cloud/aws/basics">AWSの基礎</Link>で見たリージョン・AZの構造を踏まえながら、まずはL2 Constructから書き始めるのが定石です。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/cicd/codepipeline" tag="AWS">CodePipeline</RelatedLink>
-          <RelatedLink href="/cloud/aws/compute/lambda" tag="AWS">Lambda</RelatedLink>
-          <RelatedLink href="/cloud/aws/integration/sqs" tag="AWS">SQS</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; AWS &middot; IaC</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/cicd/codepipeline" tag="AWS">CodePipeline</RelatedLink>
+                    <RelatedLink href="/cloud/aws/compute/lambda" tag="AWS">Lambda</RelatedLink>
+                    <RelatedLink href="/cloud/aws/integration/sqs" tag="AWS">SQS</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

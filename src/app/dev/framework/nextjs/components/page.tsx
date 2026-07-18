@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Mark,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -148,15 +147,15 @@ export default function Page() {
 
       <p>次のページでは、この境界を前提にした<Link href="/dev/framework/nextjs/data">データフェッチ・キャッシュ・再検証</Link>の定石を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/dev/framework/nextjs/data" tag="開発">データフェッチ・キャッシュ・再検証</RelatedLink>
-          <RelatedLink href="/dev/framework/nextjs/rendering" tag="開発">配信を最適化する</RelatedLink>
-          <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; フレームワーク &middot; Next.js &middot; パターン &middot; Server/Clientコンポーネントの境界</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/dev/framework/nextjs/data" tag="開発">データフェッチ・キャッシュ・再検証</RelatedLink>
+                    <RelatedLink href="/dev/framework/nextjs/rendering" tag="開発">配信を最適化する</RelatedLink>
+                    <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

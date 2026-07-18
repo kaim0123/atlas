@@ -15,7 +15,6 @@ import {
   Aside,
   Diagram,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -293,15 +292,15 @@ export default function Page() {
       </CardGrid>
       <p>ここまでの説明の中には、DNSの問い合わせ結果や<code>Cache-Control</code>ヘッダなど、「キャッシュ」という言葉が繰り返し登場していました。最後のページでは、これら各所に散らばったキャッシュを1枚の地図に整理する「<Link href="/dev/cache">キャッシュの全体像</Link>」を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル ― OSI参照モデルとTCP/IP</RelatedLink>
-          <RelatedLink href="/internet/history" tag="インターネット">インターネットの歴史</RelatedLink>
-          <RelatedLink href="/os" tag="OS">OSの仕組み</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; インターネット &middot; Webの仕組み</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル ― OSI参照モデルとTCP/IP</RelatedLink>
+                    <RelatedLink href="/internet/history" tag="インターネット">インターネットの歴史</RelatedLink>
+                    <RelatedLink href="/os" tag="OS">OSの仕組み</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

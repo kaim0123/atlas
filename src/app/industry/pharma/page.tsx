@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -147,17 +146,17 @@ export default function Page() {
       </CardGrid>
       <p>製薬の会計を支える基礎は<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/bs">貸借対照表（BS）</Link>で、大型買収の負債と資金繰りの論点は<Link href="/finance/cash">黒字倒産と負債</Link>で、それぞれ詳しく扱っています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/chemical" tag="業界">化学・石油化学</RelatedLink>
-          <RelatedLink href="/industry/cosmetics" tag="業界">化粧品・生活用品</RelatedLink>
-          <RelatedLink href="/industry/healthcare" tag="業界">医療・福祉</RelatedLink>
-          <RelatedLink href="/finance/bs" tag="会計・財務">貸借対照表（BS）</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; 医薬品</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/chemical" tag="業界">化学・石油化学</RelatedLink>
+                    <RelatedLink href="/industry/cosmetics" tag="業界">化粧品・生活用品</RelatedLink>
+                    <RelatedLink href="/industry/healthcare" tag="業界">医療・福祉</RelatedLink>
+                    <RelatedLink href="/finance/bs" tag="会計・財務">貸借対照表（BS）</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -148,17 +147,17 @@ export default function Page() {
       </CardGrid>
       <p>財務三表の基礎は<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/analysis">三表から会社を診断する</Link>で、投資先行でキャッシュが振れる論点は<Link href="/finance/cf">キャッシュフロー計算書</Link>で、それぞれ詳しく扱っています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/auto" tag="業界">自動車・自動車部品</RelatedLink>
-          <RelatedLink href="/industry/machinery" tag="業界">機械・産業機械</RelatedLink>
-          <RelatedLink href="/industry/telecom" tag="業界">インターネット・通信</RelatedLink>
-          <RelatedLink href="/finance/analysis" tag="会計・財務">三表から会社を診断する</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; 電機・電子部品・半導体</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/auto" tag="業界">自動車・自動車部品</RelatedLink>
+                    <RelatedLink href="/industry/machinery" tag="業界">機械・産業機械</RelatedLink>
+                    <RelatedLink href="/industry/telecom" tag="業界">インターネット・通信</RelatedLink>
+                    <RelatedLink href="/finance/analysis" tag="会計・財務">三表から会社を診断する</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

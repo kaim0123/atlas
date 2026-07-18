@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -95,15 +94,15 @@ export default function Page() {
       </CardGrid>
       <p>基礎を押さえたら、次は対象を一人ひとりに絞った<Link href="/management/individual">個人のマネジメント（ミクロ）</Link>へ進みましょう。採用から労務までを見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/individual" tag="マネジメント">個人のマネジメント（ミクロ）</RelatedLink>
-          <RelatedLink href="/management/team/operation" tag="マネジメント">実践編 ― チーム運営と3つの力</RelatedLink>
-          <RelatedLink href="/management/theory" tag="マネジメント">マネジメント理論家</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; 人事マネジメントとは</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/individual" tag="マネジメント">個人のマネジメント（ミクロ）</RelatedLink>
+                    <RelatedLink href="/management/team/operation" tag="マネジメント">実践編 ― チーム運営と3つの力</RelatedLink>
+                    <RelatedLink href="/management/theory" tag="マネジメント">マネジメント理論家</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

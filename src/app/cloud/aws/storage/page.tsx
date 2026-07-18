@@ -14,7 +14,6 @@ import {
   Mark,
   MarkNote,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -83,15 +82,15 @@ export default function Page() {
       </CardGrid>
       <p>保存したデータをどう検索・集計するかは、次のページで見る「<Link href="/cloud/aws/database">データベース</Link>」の役割です。一方、これらのストレージやサーバーを外部からどう到達可能にするかは「<Link href="/cloud/aws/network">ネットワーキング</Link>」が扱います。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/compute" tag="AWS">コンピューティング</RelatedLink>
-          <RelatedLink href="/cloud/aws/database" tag="AWS">データベース</RelatedLink>
-          <RelatedLink href="/dev/cache" tag="開発">キャッシュの全体像</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; AWS &middot; ストレージ</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/compute" tag="AWS">コンピューティング</RelatedLink>
+                    <RelatedLink href="/cloud/aws/database" tag="AWS">データベース</RelatedLink>
+                    <RelatedLink href="/dev/cache" tag="開発">キャッシュの全体像</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

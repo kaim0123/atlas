@@ -15,7 +15,6 @@ import {
   Aside,
   Diagram,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -92,15 +91,15 @@ export default function Page() {
       </CardGrid>
       <p>ここまではブラウザとサーバーの間で完結する話でしたが、次のページ「<Link href="/security/csrf">CSRF対策</Link>」では、ログイン中の利用者に、本人が意図しない操作を第三者のサイト経由で実行させてしまう攻撃を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/security/injection" tag="セキュリティ">インジェクション攻撃の基本形</RelatedLink>
-          <RelatedLink href="/security/xss" tag="セキュリティ">XSSと出力エスケープ</RelatedLink>
-          <RelatedLink href="/database/sql" tag="データベース">SQLとデータ操作</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; セキュリティ &middot; SQLインジェクション対策</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/security/injection" tag="セキュリティ">インジェクション攻撃の基本形</RelatedLink>
+                    <RelatedLink href="/security/xss" tag="セキュリティ">XSSと出力エスケープ</RelatedLink>
+                    <RelatedLink href="/database/sql" tag="データベース">SQLとデータ操作</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

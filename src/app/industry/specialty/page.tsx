@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -145,16 +144,16 @@ export default function Page() {
       </CardGrid>
       <p>専門店の会計を支える基礎は<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/analysis">三表から会社を診断する</Link>で、在庫や資産の効率を測る視点は<Link href="/finance/metrics">収益性と効率の指標</Link>で、それぞれ詳しく扱っています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/apparel" tag="業界">繊維・アパレル</RelatedLink>
-          <RelatedLink href="/industry/retail" tag="業界">百貨店・スーパー・コンビニ</RelatedLink>
-          <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; 専門店</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/apparel" tag="業界">繊維・アパレル</RelatedLink>
+                    <RelatedLink href="/industry/retail" tag="業界">百貨店・スーパー・コンビニ</RelatedLink>
+                    <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

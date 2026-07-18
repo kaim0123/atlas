@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -129,15 +128,15 @@ export default function Page() {
       </CardGrid>
       <p>制度という「仕組み」を押さえたら、それが現場でどう運用されるかは<Link href="/management/individual/evaluation">人事評価</Link>へ、器と配置の話は<Link href="/management/org/structure">組織構造とアサイン</Link>へ進みましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/org" tag="マネジメント">組織のマネジメント（マクロ）</RelatedLink>
-          <RelatedLink href="/management/individual/evaluation" tag="マネジメント">人事評価</RelatedLink>
-          <RelatedLink href="/management/org/structure" tag="マネジメント">組織構造とアサイン</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; 人事制度</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/org" tag="マネジメント">組織のマネジメント（マクロ）</RelatedLink>
+                    <RelatedLink href="/management/individual/evaluation" tag="マネジメント">人事評価</RelatedLink>
+                    <RelatedLink href="/management/org/structure" tag="マネジメント">組織構造とアサイン</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

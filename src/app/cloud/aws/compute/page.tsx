@@ -14,7 +14,6 @@ import {
   Mark,
   MarkNote,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -86,15 +85,15 @@ export default function Page() {
       </CardGrid>
       <p>コンピューティングで処理した結果は、どこかに保存しなければ消えてしまいます。次のページでは、その保存先を選ぶ「<Link href="/cloud/aws/storage">ストレージ</Link>」を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/storage" tag="AWS">ストレージ</RelatedLink>
-          <RelatedLink href="/cloud/aws/container" tag="AWS">コンテナ</RelatedLink>
-          <RelatedLink href="/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; AWS &middot; コンピューティング</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/storage" tag="AWS">ストレージ</RelatedLink>
+                    <RelatedLink href="/cloud/aws/container" tag="AWS">コンテナ</RelatedLink>
+                    <RelatedLink href="/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

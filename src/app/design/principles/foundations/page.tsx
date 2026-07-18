@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -76,15 +75,15 @@ export default function Page() {
 
       <p>次のページでは、この3原則をさらに実践レベルに落とし込んだ<Link href="/design/principles/cohesion">保守性の基本4原則</Link>(高凝集・低結合・KISS・DRY・YAGNI)を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/principles" tag="設計">設計原則一覧</RelatedLink>
-          <RelatedLink href="/design/principles/cohesion" tag="設計">保守性の基本4原則</RelatedLink>
-          <RelatedLink href="/design/architecture/sys/layered" tag="設計">レイヤードアーキテクチャ</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; 設計原則 &middot; 黎明期の原則</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/principles" tag="設計">設計原則一覧</RelatedLink>
+                    <RelatedLink href="/design/principles/cohesion" tag="設計">保守性の基本4原則</RelatedLink>
+                    <RelatedLink href="/design/architecture/sys/layered" tag="設計">レイヤードアーキテクチャ</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

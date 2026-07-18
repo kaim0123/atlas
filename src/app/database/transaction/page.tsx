@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -103,15 +102,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>ログとバックアップで失わない</h4><p>ロールバック/ロールフォワードとバックアップの組み合わせで、障害から回復します。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/database/sql" tag="データベース">SQLとデータ操作</RelatedLink>
-          <RelatedLink href="/database/physical" tag="データベース">物理設計と運用</RelatedLink>
-          <RelatedLink href="/database/advanced/index" tag="データベース">索引とアクセス制御</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; データベース &middot; トランザクションと整合性</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/database/sql" tag="データベース">SQLとデータ操作</RelatedLink>
+                    <RelatedLink href="/database/physical" tag="データベース">物理設計と運用</RelatedLink>
+                    <RelatedLink href="/database/advanced/index" tag="データベース">索引とアクセス制御</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

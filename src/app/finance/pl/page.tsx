@@ -11,7 +11,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -126,15 +125,15 @@ export default function Page() {
 
       <p>PLで「稼ぐ力」を読んだら、次は<Link href="/finance/bs">貸借対照表（BS）</Link>で「その利益をどう蓄え、何に使っているか」を見ます。費用を固定費と変動費に分ける方法は<Link href="/finance/cost">固定費・変動費・限界利益</Link>で扱います。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/finance/bs" tag="会計・財務">貸借対照表（BS）の読み方</RelatedLink>
-          <RelatedLink href="/finance/cost" tag="会計・財務">固定費・変動費・限界利益</RelatedLink>
-          <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標（ROA・CCC）</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 会計・財務 &middot; 損益計算書（PL）</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/finance/bs" tag="会計・財務">貸借対照表（BS）の読み方</RelatedLink>
+                    <RelatedLink href="/finance/cost" tag="会計・財務">固定費・変動費・限界利益</RelatedLink>
+                    <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標（ROA・CCC）</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

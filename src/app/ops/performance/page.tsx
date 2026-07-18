@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -103,16 +102,16 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>画像を最適化する</h4><p>フォーマット・サイズ・読み込みタイミングを最適化し、転送量最大の要因に対処する。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/dev/cache" tag="開発">キャッシュの全体像</RelatedLink>
-          <RelatedLink href="/security/cache" tag="セキュリティ">キャッシュ制御</RelatedLink>
-          <RelatedLink href="/dev/framework/nextjs" tag="開発">Next.js</RelatedLink>
-          <RelatedLink href="/ops/analytics" tag="運用">分析・改善</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 運用 &middot; パフォーマンス</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/dev/cache" tag="開発">キャッシュの全体像</RelatedLink>
+                    <RelatedLink href="/security/cache" tag="セキュリティ">キャッシュ制御</RelatedLink>
+                    <RelatedLink href="/dev/framework/nextjs" tag="開発">Next.js</RelatedLink>
+                    <RelatedLink href="/ops/analytics" tag="運用">分析・改善</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

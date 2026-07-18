@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -162,17 +161,17 @@ export default function Page() {
         ここまでの経営者の視点は、投資家が重視する各種の比率指標とときに真っ向から対立します。次は<Link href="/finance/ratios">指標に惑わされない</Link>で、自己資本比率・流動比率・ROEがなぜ「実態を映さない」と言われるのかを、投資家の物差しと対比しながら見ていきます。
       </p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/finance/ratios" tag="会計・財務">指標に惑わされない</RelatedLink>
-          <RelatedLink href="/finance/bs" tag="会計・財務">貸借対照表（BS）の読み方</RelatedLink>
-          <RelatedLink href="/finance/cost" tag="会計・財務">固定費・変動費・限界利益</RelatedLink>
-          <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標</RelatedLink>
-          <RelatedLink href="/finance/payroll" tag="会計・財務">粗利益で人件費・給与を設計する</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 会計・財務 &middot; 現金がすべて</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/finance/ratios" tag="会計・財務">指標に惑わされない</RelatedLink>
+                    <RelatedLink href="/finance/bs" tag="会計・財務">貸借対照表（BS）の読み方</RelatedLink>
+                    <RelatedLink href="/finance/cost" tag="会計・財務">固定費・変動費・限界利益</RelatedLink>
+                    <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標</RelatedLink>
+                    <RelatedLink href="/finance/payroll" tag="会計・財務">粗利益で人件費・給与を設計する</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

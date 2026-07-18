@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -147,15 +146,15 @@ export default function Page() {
       </CardGrid>
       <p>ここで育てた人材に何を任せ、どんな目標を握るかは、<Link href="/management/team/goals">目標設定</Link>と地続きです。個人を対象にした理論的な整理は<Link href="/management/individual">個人のマネジメント（ミクロ）</Link>もあわせてどうぞ。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/team/goals" tag="マネジメント">目標設定</RelatedLink>
-          <RelatedLink href="/management/individual" tag="マネジメント">個人のマネジメント（ミクロ）</RelatedLink>
-          <RelatedLink href="/management/team/operation" tag="マネジメント">チーム運営と3つの力</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; 採用・オンボーディング・育成</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/team/goals" tag="マネジメント">目標設定</RelatedLink>
+                    <RelatedLink href="/management/individual" tag="マネジメント">個人のマネジメント（ミクロ）</RelatedLink>
+                    <RelatedLink href="/management/team/operation" tag="マネジメント">チーム運営と3つの力</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -86,17 +85,17 @@ export default function Page() {
 
       <p>実務では1つのパラダイムだけを使うことは少なく、JavaScript/TypeScriptのように<Term>マルチパラダイム</Term>の言語で、オブジェクト指向的な設計と関数型的な書き方を併用するのが一般的です。次のページからは、より大きな粒度で「何を軸に設計するか」を決める<Link href="/design/methodology">設計思想・方法論</Link>を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/paradigm/functional/foundations" tag="設計">関数型パターン</RelatedLink>
-          <RelatedLink href="/design/paradigm/functional/composition" tag="設計">関数を組み合わせる</RelatedLink>
-          <RelatedLink href="/design/paradigm/functional/safety" tag="設計">安全に分岐する</RelatedLink>
-          <RelatedLink href="/design/paradigm/oop" tag="設計">オブジェクト指向</RelatedLink>
-          <RelatedLink href="/design/methodology" tag="設計">設計思想・方法論</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; パラダイム &middot; 関数型</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/paradigm/functional/foundations" tag="設計">関数型パターン</RelatedLink>
+                    <RelatedLink href="/design/paradigm/functional/composition" tag="設計">関数を組み合わせる</RelatedLink>
+                    <RelatedLink href="/design/paradigm/functional/safety" tag="設計">安全に分岐する</RelatedLink>
+                    <RelatedLink href="/design/paradigm/oop" tag="設計">オブジェクト指向</RelatedLink>
+                    <RelatedLink href="/design/methodology" tag="設計">設計思想・方法論</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

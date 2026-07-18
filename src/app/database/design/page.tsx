@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -187,16 +186,16 @@ export default function Page() {
       </CardGrid>
       <p>ここまでで、要件から論理的なテーブル設計(概念スキーマ)を導く手順が固まりました。次は、これをSQLで操作する「<Link href="/database/sql">SQLとデータ操作</Link>」へ。実際のインデックス設計・冗長化・バックアップといった物理設計の実務は「<Link href="/database/physical">物理設計と運用</Link>」で扱います。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/database/model" tag="データベース">関係モデルと3層スキーマ</RelatedLink>
-          <RelatedLink href="/database/sql" tag="データベース">SQLとデータ操作</RelatedLink>
-          <RelatedLink href="/database/physical" tag="データベース">物理設計と運用</RelatedLink>
-          <RelatedLink href="/design/methodology/data-centric" tag="設計">データ中心設計</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; データベース &middot; ER図と正規化</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/database/model" tag="データベース">関係モデルと3層スキーマ</RelatedLink>
+                    <RelatedLink href="/database/sql" tag="データベース">SQLとデータ操作</RelatedLink>
+                    <RelatedLink href="/database/physical" tag="データベース">物理設計と運用</RelatedLink>
+                    <RelatedLink href="/design/methodology/data-centric" tag="設計">データ中心設計</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

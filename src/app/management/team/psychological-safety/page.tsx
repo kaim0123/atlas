@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -104,15 +103,15 @@ export default function Page() {
       </CardGrid>
       <p>最も大切なのは、あなたが笑顔でいること、そして仲間も笑顔にできるよう場を整えることです。個人の側でこうした強さを支えるのが<Link href="/management/individual/capital">心理資本（レジリエンス）</Link>であり、場の側で支えるのが心理的安全性 ― この両輪で、チームは健やかに力を発揮します。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/team" tag="マネジメント">チームのマネジメント（メゾ）</RelatedLink>
-          <RelatedLink href="/management/team/efficacy" tag="マネジメント">組織効力感</RelatedLink>
-          <RelatedLink href="/management/team/conflict" tag="マネジメント">コンフリクトマネジメント</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; 心理的安全性</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/team" tag="マネジメント">チームのマネジメント（メゾ）</RelatedLink>
+                    <RelatedLink href="/management/team/efficacy" tag="マネジメント">組織効力感</RelatedLink>
+                    <RelatedLink href="/management/team/conflict" tag="マネジメント">コンフリクトマネジメント</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

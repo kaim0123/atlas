@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -156,15 +155,15 @@ export default function Page() {
       </CardGrid>
       <p>GNUの物語は、実は「カーネルが完成しなかった」ところで別のカーネル(Linux)と出会います。次は、その趣味のプロジェクトがどうやって世界を動かすまでになったのかを見ていきましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/os/linux" tag="OS">Linuxの歴史</RelatedLink>
-          <RelatedLink href="/os/unix" tag="OS">UNIXの歴史と哲学</RelatedLink>
-          <RelatedLink href="/os/posix" tag="OS">UNIX・BSD・Linuxの違い</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; OS &middot; GNUとフリーソフトウェア</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/os/linux" tag="OS">Linuxの歴史</RelatedLink>
+                    <RelatedLink href="/os/unix" tag="OS">UNIXの歴史と哲学</RelatedLink>
+                    <RelatedLink href="/os/posix" tag="OS">UNIX・BSD・Linuxの違い</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

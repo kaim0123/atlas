@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -82,16 +81,16 @@ export default function Page() {
       </CardGrid>
       <p>ReactにルーティングやSSRを足したものが「<Link href="/dev/framework/nextjs">Next.js</Link>」です。次のページで詳しく見ていきます。ロジックの再利用・コンポーネントの組み合わせ・フォームの値管理といった、より実践的なReactパターンは<Link href="/dev/framework/react/logic-reuse">ロジックを再利用する</Link>から扱います。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/dev/framework/react/logic-reuse" tag="開発">ロジックを再利用する</RelatedLink>
-          <RelatedLink href="/dev/framework" tag="開発">フレームワーク・ライブラリ概要</RelatedLink>
-          <RelatedLink href="/dev/framework/nextjs" tag="開発">Next.js</RelatedLink>
-          <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; フレームワーク・ライブラリ &middot; React</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/dev/framework/react/logic-reuse" tag="開発">ロジックを再利用する</RelatedLink>
+                    <RelatedLink href="/dev/framework" tag="開発">フレームワーク・ライブラリ概要</RelatedLink>
+                    <RelatedLink href="/dev/framework/nextjs" tag="開発">Next.js</RelatedLink>
+                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

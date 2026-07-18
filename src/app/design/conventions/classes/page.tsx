@@ -11,7 +11,6 @@ import {
   Card,
   CardGrid,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -117,15 +116,15 @@ Client       … 外部API
 
       <p>クラスや関数の役割が定まったら、最後は<Term>ファイル名・ディレクトリ名</Term>にその役割を反映させる番になる。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/conventions/variables" tag="設計">変数・略語の命名</RelatedLink>
-          <RelatedLink href="/design/conventions/files" tag="設計">ファイル・ディレクトリの命名</RelatedLink>
-          <RelatedLink href="/design/architecture/app/layered" tag="設計">レイヤー系アーキテクチャ</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; コーディング規約・スタイル &middot; クラス・接尾辞の命名</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/conventions/variables" tag="設計">変数・略語の命名</RelatedLink>
+                    <RelatedLink href="/design/conventions/files" tag="設計">ファイル・ディレクトリの命名</RelatedLink>
+                    <RelatedLink href="/design/architecture/app/layered" tag="設計">レイヤー系アーキテクチャ</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

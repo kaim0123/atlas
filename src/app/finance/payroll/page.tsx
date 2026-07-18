@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -205,18 +204,18 @@ export default function Page() {
       </CardGrid>
       <p>ここで扱った「粗利益・労働分配率・現金で会社を回す」感覚は、次の<Link href="/finance/cash">現金がすべて</Link>や<Link href="/finance/ratios">指標に惑わされない</Link>と地続きです。人の評価・育成の側面は<Link href="/management/individual/evaluation">マネジメントの人事評価</Link>とあわせて読むと立体的になります。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/finance/cash" tag="会計・財務">現金がすべて ― 黒字倒産と負債</RelatedLink>
-          <RelatedLink href="/finance/ratios" tag="会計・財務">指標に惑わされない</RelatedLink>
-          <RelatedLink href="/finance/pl" tag="会計・財務">損益計算書（PL）― 5つの利益</RelatedLink>
-          <RelatedLink href="/finance/cost" tag="会計・財務">固定費・変動費・限界利益</RelatedLink>
-          <RelatedLink href="/management/individual/evaluation" tag="マネジメント">人事評価</RelatedLink>
-          <RelatedLink href="/finance" tag="会計・財務">会計・財務の全体像</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 会計・財務 &middot; 粗利益で人件費・給与を設計する</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/finance/cash" tag="会計・財務">現金がすべて ― 黒字倒産と負債</RelatedLink>
+                    <RelatedLink href="/finance/ratios" tag="会計・財務">指標に惑わされない</RelatedLink>
+                    <RelatedLink href="/finance/pl" tag="会計・財務">損益計算書（PL）― 5つの利益</RelatedLink>
+                    <RelatedLink href="/finance/cost" tag="会計・財務">固定費・変動費・限界利益</RelatedLink>
+                    <RelatedLink href="/management/individual/evaluation" tag="マネジメント">人事評価</RelatedLink>
+                    <RelatedLink href="/finance" tag="会計・財務">会計・財務の全体像</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

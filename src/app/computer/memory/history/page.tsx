@@ -12,7 +12,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -151,15 +150,15 @@ export default function Page() {
       </CardGrid>
       <p>容量は増え続けました。ところが人類は、増えた分をあっという間に使い切ってしまいます。次のページ「仮想メモリとソフトウェアの肥大化」では、OSがついた「やさしい嘘」と、その代償を見ていきましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/computer/memory/virtual" tag="コンピュータ">仮想メモリとソフトウェアの肥大化</RelatedLink>
-          <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み ― 記憶階層と4領域</RelatedLink>
-          <RelatedLink href="/computer/history" tag="コンピュータ">コンピュータの歴史</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; コンピュータ &middot; 記憶装置の歴史</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/computer/memory/virtual" tag="コンピュータ">仮想メモリとソフトウェアの肥大化</RelatedLink>
+                    <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み ― 記憶階層と4領域</RelatedLink>
+                    <RelatedLink href="/computer/history" tag="コンピュータ">コンピュータの歴史</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

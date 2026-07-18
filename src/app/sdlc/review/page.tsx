@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -83,15 +82,15 @@ export default function Page() {
         <Card><CardNumber>4</CardNumber><h4>自動チェックの手前にある品質保証</h4><p>動かして確認できない成果物は、人の目によるレビューでしか品質を担保できません。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/test/strategy" tag="テスト">テストの段階</RelatedLink>
-          <RelatedLink href="/test/code-review" tag="テスト">コードレビュー</RelatedLink>
-          <RelatedLink href="/test/strategy" tag="テスト">品質戦略とテストピラミッド</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; レビューと品質確認</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/test/strategy" tag="テスト">テストの段階</RelatedLink>
+                    <RelatedLink href="/test/code-review" tag="テスト">コードレビュー</RelatedLink>
+                    <RelatedLink href="/test/strategy" tag="テスト">品質戦略とテストピラミッド</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

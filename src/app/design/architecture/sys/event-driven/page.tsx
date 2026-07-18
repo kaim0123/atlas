@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -167,15 +166,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>派生イベントの連鎖に注意</h4><p>制御のない連鎖は「ブヨの群れ」を生み、全体の見通しを悪くする。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/architecture/sys/soa" tag="設計">オーケストレーション駆動SOA</RelatedLink>
-          <RelatedLink href="/design/architecture/sys/space-based" tag="設計">スペースベースアーキテクチャ</RelatedLink>
-          <RelatedLink href="/design/architecture/sys/microservices" tag="設計">マイクロサービスアーキテクチャ</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; イベント駆動アーキテクチャ</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/architecture/sys/soa" tag="設計">オーケストレーション駆動SOA</RelatedLink>
+                    <RelatedLink href="/design/architecture/sys/space-based" tag="設計">スペースベースアーキテクチャ</RelatedLink>
+                    <RelatedLink href="/design/architecture/sys/microservices" tag="設計">マイクロサービスアーキテクチャ</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

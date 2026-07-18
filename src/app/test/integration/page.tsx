@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -68,15 +67,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>テストデータを管理する</h4><p>独立性・再現性・個人情報の非利用を守り、安定して繰り返し実行できるようにします。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/test/unit" tag="テスト">Unitテスト</RelatedLink>
-          <RelatedLink href="/test/e2e" tag="テスト">E2Eテスト</RelatedLink>
-          <RelatedLink href="/test/strategy" tag="テスト">テストの段階</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; テスト &middot; Integrationテスト</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/test/unit" tag="テスト">Unitテスト</RelatedLink>
+                    <RelatedLink href="/test/e2e" tag="テスト">E2Eテスト</RelatedLink>
+                    <RelatedLink href="/test/strategy" tag="テスト">テストの段階</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

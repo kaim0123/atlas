@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -55,15 +54,15 @@ export default function Page() {
       </CardGrid>
       <p>次は、誰もが使えるように配慮する人間中心設計と、その評価の方法を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/ui/hcd" tag="ユーザーインタフェース">人間中心設計と評価</RelatedLink>
-          <RelatedLink href="/dev/web-basics" tag="開発">Web基礎</RelatedLink>
-          <RelatedLink href="/dev/framework/tailwind" tag="開発">Tailwind CSS</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; ユーザーインタフェース &middot; Web UIデザイン</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/ui/hcd" tag="ユーザーインタフェース">人間中心設計と評価</RelatedLink>
+                    <RelatedLink href="/dev/web-basics" tag="開発">Web基礎</RelatedLink>
+                    <RelatedLink href="/dev/framework/tailwind" tag="開発">Tailwind CSS</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

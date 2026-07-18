@@ -49,7 +49,7 @@ export default function Page() {
         ))}
       </IndexGrid>
 
-      <DocsFooter>Atlas &middot; コンピュータ</DocsFooter>
+      <DocsFooter />
     </DocsPage>
   );
 }

@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -313,21 +312,21 @@ export default function Page() {
         </Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/os/kernel" tag="OS">
-            カーネルの役割と設計
-          </RelatedLink>
-          <RelatedLink href="/computer/memory/history" tag="コンピュータ">
-            記憶装置の歴史
-          </RelatedLink>
-          <RelatedLink href="/infra/storage" tag="インフラ">
-            ストレージの仕組み
-          </RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; OS &middot; ファイルシステム</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/os/kernel" tag="OS">
+                      カーネルの役割と設計
+                    </RelatedLink>
+                    <RelatedLink href="/computer/memory/history" tag="コンピュータ">
+                      記憶装置の歴史
+                    </RelatedLink>
+                    <RelatedLink href="/infra/storage" tag="インフラ">
+                      ストレージの仕組み
+                    </RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

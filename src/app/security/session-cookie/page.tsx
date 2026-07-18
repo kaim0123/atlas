@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -69,15 +68,15 @@ export default function Page() {
         <Card><CardNumber>4</CardNumber><h4>セッションCookieは意味2由来</h4><p>有効期限を設定しないCookieを指す種類名で、ログインセッションとは別の話。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/security/session" tag="セキュリティ">セッションとCookie管理</RelatedLink>
-          <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル</RelatedLink>
-          <RelatedLink href="/security/token" tag="セキュリティ">トークンの全体像</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; セキュリティ &middot; セッション・Cookieの全体像</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/security/session" tag="セキュリティ">セッションとCookie管理</RelatedLink>
+                    <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル</RelatedLink>
+                    <RelatedLink href="/security/token" tag="セキュリティ">トークンの全体像</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

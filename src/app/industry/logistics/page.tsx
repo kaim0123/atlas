@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -131,17 +130,17 @@ export default function Page() {
       </CardGrid>
       <p>この産業の会計を支える基礎は<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/analysis">三表から会社を診断する</Link>で、含み益と株価の関係は<Link href="/finance/valuation">企業価値とPBR</Link>で、それぞれ詳しく扱っています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/transport" tag="業界">航空・海運・鉄道・陸運</RelatedLink>
-          <RelatedLink href="/industry/trading" tag="業界">商社</RelatedLink>
-          <RelatedLink href="/industry/realestate" tag="業界">不動産</RelatedLink>
-          <RelatedLink href="/finance/valuation" tag="会計・財務">企業価値とPBR</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; 倉庫・物流</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/transport" tag="業界">航空・海運・鉄道・陸運</RelatedLink>
+                    <RelatedLink href="/industry/trading" tag="業界">商社</RelatedLink>
+                    <RelatedLink href="/industry/realestate" tag="業界">不動産</RelatedLink>
+                    <RelatedLink href="/finance/valuation" tag="会計・財務">企業価値とPBR</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

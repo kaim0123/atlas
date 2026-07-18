@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -100,16 +99,16 @@ export default function Page() {
       </CardGrid>
       <p>ここまでで、攻撃を防ぐための8つのテーマを見てきました。最後のページでは視点を変えて、「攻撃を未然に防ぎきれなかったときに、どう気づき、どう調べるか」を支える「<Link href="/security/logging">ログ出力設計</Link>」を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/security/authz" tag="セキュリティ">認可</RelatedLink>
-          <RelatedLink href="/security/session" tag="セキュリティ">セッションとCookie管理</RelatedLink>
-          <RelatedLink href="/security/logging" tag="セキュリティ">ログ出力設計</RelatedLink>
-          <RelatedLink href="/dev/cache" tag="開発">キャッシュの全体像</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; セキュリティ &middot; キャッシュ制御</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/security/authz" tag="セキュリティ">認可</RelatedLink>
+                    <RelatedLink href="/security/session" tag="セキュリティ">セッションとCookie管理</RelatedLink>
+                    <RelatedLink href="/security/logging" tag="セキュリティ">ログ出力設計</RelatedLink>
+                    <RelatedLink href="/dev/cache" tag="開発">キャッシュの全体像</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

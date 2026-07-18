@@ -11,7 +11,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -106,15 +105,15 @@ export default function Page() {
       </CardGrid>
       <p>目的を押さえたら、次は攻撃者が実際にどんな手口を使うのか、「攻撃手法」を見ていきましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/security/attacks" tag="セキュリティ">攻撃手法</RelatedLink>
-          <RelatedLink href="/security/management" tag="セキュリティ">リスクマネジメント</RelatedLink>
-          <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; セキュリティ &middot; 目的と脅威</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/security/attacks" tag="セキュリティ">攻撃手法</RelatedLink>
+                    <RelatedLink href="/security/management" tag="セキュリティ">リスクマネジメント</RelatedLink>
+                    <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

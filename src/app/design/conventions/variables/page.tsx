@@ -11,7 +11,6 @@ import {
   Card,
   CardGrid,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -118,15 +117,15 @@ export default function Page() {
 
       <p>変数と関数の命名が揃ったら、次はそれらをまとめる<Term>クラス</Term>の命名を見ていく。<code>Service</code>や<code>Repository</code>といった接尾辞は、クラスの役割を名前だけで伝えるための語彙になる。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/conventions/functions" tag="設計">関数・イベントハンドラの命名</RelatedLink>
-          <RelatedLink href="/design/conventions/classes" tag="設計">クラス・接尾辞の命名</RelatedLink>
-          <RelatedLink href="/design/conventions" tag="設計">コーディング規約・スタイル</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; コーディング規約・スタイル &middot; 変数・略語の命名</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/conventions/functions" tag="設計">関数・イベントハンドラの命名</RelatedLink>
+                    <RelatedLink href="/design/conventions/classes" tag="設計">クラス・接尾辞の命名</RelatedLink>
+                    <RelatedLink href="/design/conventions" tag="設計">コーディング規約・スタイル</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

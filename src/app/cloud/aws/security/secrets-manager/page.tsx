@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -65,15 +64,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>Parameter Storeとはコストと機能で使い分ける</h4><p>ローテーションが必要な秘密はSecrets Manager、それ以外はコスト重視でParameter Storeを検討する。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/security" tag="AWS">セキュリティ、アイデンティティ、コンプライアンス</RelatedLink>
-          <RelatedLink href="/cloud/aws/database" tag="AWS">データベース</RelatedLink>
-          <RelatedLink href="/security/auth" tag="セキュリティ">認証</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; AWS &middot; セキュリティ、アイデンティティ、コンプライアンス &middot; Secrets Manager</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/security" tag="AWS">セキュリティ、アイデンティティ、コンプライアンス</RelatedLink>
+                    <RelatedLink href="/cloud/aws/database" tag="AWS">データベース</RelatedLink>
+                    <RelatedLink href="/security/auth" tag="セキュリティ">認証</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

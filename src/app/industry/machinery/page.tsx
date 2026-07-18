@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -136,16 +135,16 @@ export default function Page() {
       </CardGrid>
       <p>この業界の会計を支える基礎は<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/analysis">三表から会社を診断する</Link>で、受注残やアフター収益が生む現金の動きは<Link href="/finance/cf">キャッシュフロー計算書</Link>で、キーエンスのような高収益企業がどう評価されるかは<Link href="/finance/valuation">企業価値とPBR</Link>で、それぞれ詳しく扱っています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/auto" tag="業界">自動車・自動車部品</RelatedLink>
-          <RelatedLink href="/industry/electronics" tag="業界">電機・電子部品・半導体</RelatedLink>
-          <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; 機械・産業機械</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/auto" tag="業界">自動車・自動車部品</RelatedLink>
+                    <RelatedLink href="/industry/electronics" tag="業界">電機・電子部品・半導体</RelatedLink>
+                    <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

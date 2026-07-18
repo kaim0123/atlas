@@ -16,7 +16,6 @@ import {
   Timeline,
   TimelineItem,
   TimelineLabel,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -113,15 +112,15 @@ export default function Page() {
       </CardGrid>
       <p>これで「セキュリティ」カテゴリは一通り完結です。入力を汚染する攻撃(インジェクション・XSS・SQLインジェクション)から、ログイン状態を乗っ取る攻撃(CSRF・セッション)、誰が・何をしてよいかの判定(認証・認可)、周辺の運用観点(キャッシュ・ログ)、混乱しやすい「セッション・Cookie」「トークン」という言葉の整理、そして最後にそれらを支えるプロトコルの歴史までを一通り見てきました。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/security/auth" tag="セキュリティ">認証</RelatedLink>
-          <RelatedLink href="/security/authz" tag="セキュリティ">認可</RelatedLink>
-          <RelatedLink href="/security/token" tag="セキュリティ">トークンの全体像</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; セキュリティ &middot; 認証プロトコルの変遷</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/security/auth" tag="セキュリティ">認証</RelatedLink>
+                    <RelatedLink href="/security/authz" tag="セキュリティ">認可</RelatedLink>
+                    <RelatedLink href="/security/token" tag="セキュリティ">トークンの全体像</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -11,7 +11,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -67,15 +66,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>ISMSで継続的に回す</h4><p>ポリシーを定め、PDCAで見直し、インシデントと事業継続に備えます。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/security/basics" tag="セキュリティ">情報セキュリティの目的と脅威</RelatedLink>
-          <RelatedLink href="/security/countermeasures" tag="セキュリティ">セキュリティ対策と実装</RelatedLink>
-          <RelatedLink href="/ops/compliance" tag="運用">法令・コンプライアンス</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; セキュリティ &middot; リスクマネジメント</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/security/basics" tag="セキュリティ">情報セキュリティの目的と脅威</RelatedLink>
+                    <RelatedLink href="/security/countermeasures" tag="セキュリティ">セキュリティ対策と実装</RelatedLink>
+                    <RelatedLink href="/ops/compliance" tag="運用">法令・コンプライアンス</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

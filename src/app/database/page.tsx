@@ -48,7 +48,7 @@ export default function Page() {
         ))}
       </IndexGrid>
 
-      <DocsFooter>Atlas &middot; データベース</DocsFooter>
+      <DocsFooter />
     </DocsPage>
   );
 }

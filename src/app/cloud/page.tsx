@@ -101,7 +101,7 @@ export default function Page() {
         ))}
       </IndexGrid>
 
-      <DocsFooter>Atlas &middot; クラウド</DocsFooter>
+      <DocsFooter />
     </DocsPage>
   );
 }

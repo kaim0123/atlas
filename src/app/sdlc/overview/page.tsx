@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -63,15 +62,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>進め方には型がある</h4><p>ウォーターフォールとアジャイルは、同じ工程を並べ替えた別の回し方です。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/sdlc/process" tag="開発工程・管理">開発プロセスと手法</RelatedLink>
-          <RelatedLink href="/sdlc/requirements" tag="開発工程・管理">要件定義</RelatedLink>
-          <RelatedLink href="/test/strategy" tag="テスト">テストの段階</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発工程・管理 &middot; 開発の全体像</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/sdlc/process" tag="開発工程・管理">開発プロセスと手法</RelatedLink>
+                    <RelatedLink href="/sdlc/requirements" tag="開発工程・管理">要件定義</RelatedLink>
+                    <RelatedLink href="/test/strategy" tag="テスト">テストの段階</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -154,16 +153,16 @@ export default function Page() {
       </CardGrid>
       <p>この産業の会計を支える基礎は<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/analysis">三表から会社を診断する</Link>で、設備投資や炉修が生むキャッシュの波は<Link href="/finance/cf">キャッシュフロー計算書</Link>で、それぞれ詳しく扱っています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
-          <RelatedLink href="/industry/steel" tag="業界">鉄鋼・非鉄金属</RelatedLink>
-          <RelatedLink href="/industry/chemical" tag="業界">化学・石油化学</RelatedLink>
-          <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 業界 &middot; ゴム・ガラス・セメント</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/industry" tag="業界">業界の全体像</RelatedLink>
+                    <RelatedLink href="/industry/steel" tag="業界">鉄鋼・非鉄金属</RelatedLink>
+                    <RelatedLink href="/industry/chemical" tag="業界">化学・石油化学</RelatedLink>
+                    <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

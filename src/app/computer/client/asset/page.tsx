@@ -12,7 +12,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -84,15 +83,15 @@ export default function Page() {
         </Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/computer/client" tag="コンピュータ">クライアント管理の実務(総論)</RelatedLink>
-          <RelatedLink href="/computer/client/kitting" tag="コンピュータ">キッティングと配布・回収</RelatedLink>
-          <RelatedLink href="/computer/client/license" tag="コンピュータ">ライセンス管理</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; コンピュータ &middot; 資産管理</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/computer/client" tag="コンピュータ">クライアント管理の実務(総論)</RelatedLink>
+                    <RelatedLink href="/computer/client/kitting" tag="コンピュータ">キッティングと配布・回収</RelatedLink>
+                    <RelatedLink href="/computer/client/license" tag="コンピュータ">ライセンス管理</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

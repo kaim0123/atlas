@@ -12,7 +12,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
   Timeline,
@@ -170,15 +169,15 @@ export default function Page() {
       </CardGrid>
       <p>言語そのものは、目的を達成するための道具にすぎません。ここで見てきた「なぜ生まれたか」という背景を踏まえたうえで、次は静的な分類軸である「<Term>プログラミング言語の仕組み</Term>」と合わせて読むと、今使っている言語の設計判断がより立体的に見えてくるはずです。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/dev/language-basics" tag="開発">プログラミング言語の仕組み ― パラダイム・実行方式・型システム</RelatedLink>
-          <RelatedLink href="/computer/history" tag="コンピュータ">コンピュータの歴史 ― 歯車の夢から、指先の中の宇宙へ</RelatedLink>
-          <RelatedLink href="/internet/history" tag="インターネット">インターネットの歴史</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; プログラミング言語の歴史</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/dev/language-basics" tag="開発">プログラミング言語の仕組み ― パラダイム・実行方式・型システム</RelatedLink>
+                    <RelatedLink href="/computer/history" tag="コンピュータ">コンピュータの歴史 ― 歯車の夢から、指先の中の宇宙へ</RelatedLink>
+                    <RelatedLink href="/internet/history" tag="インターネット">インターネットの歴史</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

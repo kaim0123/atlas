@@ -14,7 +14,6 @@ import {
   Mark,
   MarkNote,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -69,15 +68,15 @@ export default function Page() {
       <div className="mb-1.5"><Mark tier="niche">補足</Mark></div>
       <MarkNote>→ 社内システムなど、公的な認証局ではなく組織内だけで通用する証明書を発行したい場合は「ACM Private CA」という別サービスを使う。</MarkNote>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/network/cloudfront" tag="AWS">CloudFront</RelatedLink>
-          <RelatedLink href="/cloud/aws/network/route53" tag="AWS">Route 53</RelatedLink>
-          <RelatedLink href="/cloud/aws/network" tag="AWS">ネットワーキングとコンテンツ配信</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; AWS &middot; ネットワーキングとコンテンツ配信 &middot; ACM</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/network/cloudfront" tag="AWS">CloudFront</RelatedLink>
+                    <RelatedLink href="/cloud/aws/network/route53" tag="AWS">Route 53</RelatedLink>
+                    <RelatedLink href="/cloud/aws/network" tag="AWS">ネットワーキングとコンテンツ配信</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

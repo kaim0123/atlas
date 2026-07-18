@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -172,15 +171,15 @@ export default function Page() {
       </CardGrid>
       <p>ここまでは自分の手元のネットワークの中の話でした。次は、そのネットワークがどうやってインターネットの外へつながっていくのか、「ISP接続とCDN」で見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/network/ip" tag="ネットワーク">IPアドレスと経路</RelatedLink>
-          <RelatedLink href="/internet/isp" tag="インターネット">ISP接続とCDN ― インターネットへの入り口</RelatedLink>
-          <RelatedLink href="/internet/server/build" tag="インターネット">サーバー構築の実務</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; ネットワーク &middot; トポロジと接続装置</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/network/ip" tag="ネットワーク">IPアドレスと経路</RelatedLink>
+                    <RelatedLink href="/internet/isp" tag="インターネット">ISP接続とCDN ― インターネットへの入り口</RelatedLink>
+                    <RelatedLink href="/internet/server/build" tag="インターネット">サーバー構築の実務</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

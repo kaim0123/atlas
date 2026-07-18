@@ -14,7 +14,6 @@ import {
   Analogy,
   IndexGrid,
   IndexCard,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -95,15 +94,15 @@ export default function Page() {
 
       <p>これで<Term>設計</Term>の各テーマを一通り見終えました。パラダイムから設計思想・方法論、設計原則、アーキテクチャ、設計パターン、実装パターン・イディオム、そして規約・スタイルまで、粒度の異なる7つのレベルを通して「どう組み立てるか」を見てきたことになります。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/conventions/functions" tag="設計">関数・イベントハンドラの命名</RelatedLink>
-          <RelatedLink href="/design/idioms" tag="設計">実装パターン・イディオム</RelatedLink>
-          <RelatedLink href="/design" tag="設計">設計一覧に戻る</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; コーディング規約・スタイル</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/conventions/functions" tag="設計">関数・イベントハンドラの命名</RelatedLink>
+                    <RelatedLink href="/design/idioms" tag="設計">実装パターン・イディオム</RelatedLink>
+                    <RelatedLink href="/design" tag="設計">設計一覧に戻る</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

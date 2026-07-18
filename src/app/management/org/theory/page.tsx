@@ -16,7 +16,6 @@ import {
   Diagram,
   Timeline,
   TimelineItem,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -134,15 +133,15 @@ export default function Page() {
       </CardGrid>
       <p>個々の理論家の位置づけは<Link href="/management/theory">マネジメント理論家</Link>で俯瞰できます。理論を踏まえたら、次は現場での器づくりと任せ方 ― <Link href="/management/org/structure">組織構造とアサイン</Link>や<Link href="/management/org/delegation">権限委譲</Link>へ進みましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/org" tag="マネジメント">組織のマネジメント（マクロ）</RelatedLink>
-          <RelatedLink href="/management/team" tag="マネジメント">チームのマネジメント（メゾ）</RelatedLink>
-          <RelatedLink href="/management/theory" tag="マネジメント">マネジメント理論家</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; 組織・リーダーシップ理論の歴史</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/org" tag="マネジメント">組織のマネジメント（マクロ）</RelatedLink>
+                    <RelatedLink href="/management/team" tag="マネジメント">チームのマネジメント（メゾ）</RelatedLink>
+                    <RelatedLink href="/management/theory" tag="マネジメント">マネジメント理論家</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

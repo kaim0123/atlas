@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Mark,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -101,15 +100,15 @@ withStandardTax(1000); // priceだけ渡せばよい`}</code>
 
       <p>最後に、値が無いかもしれないことや処理が失敗するかもしれないことを、例外ではなく型と分岐で安全に扱う<Link href="/design/paradigm/functional/safety">安全に分岐する</Link>技法を見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/paradigm/functional/composition" tag="設計">関数を組み合わせる</RelatedLink>
-          <RelatedLink href="/design/paradigm/functional/safety" tag="設計">安全に分岐する</RelatedLink>
-          <RelatedLink href="/design/idioms" tag="設計">実装パターン・イディオム</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; パラダイム &middot; 関数型 &middot; パターン &middot; 引数を固定する</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/paradigm/functional/composition" tag="設計">関数を組み合わせる</RelatedLink>
+                    <RelatedLink href="/design/paradigm/functional/safety" tag="設計">安全に分岐する</RelatedLink>
+                    <RelatedLink href="/design/idioms" tag="設計">実装パターン・イディオム</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

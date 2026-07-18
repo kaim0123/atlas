@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -110,16 +109,16 @@ export default function Page() {
       </CardGrid>
       <p>誰が・何をしてよいかが整理できたら、次は少し視点を変えて「<Link href="/security/cache">キャッシュ制御</Link>」を見ていきます。せっかく認証・認可を正しく実装しても、レスポンスのキャッシュのされ方によっては、個人向けのデータが他人に見えてしまう事故が起こり得ます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/security/auth" tag="セキュリティ">認証</RelatedLink>
-          <RelatedLink href="/security/session" tag="セキュリティ">セッションとCookie管理</RelatedLink>
-          <RelatedLink href="/security/cache" tag="セキュリティ">キャッシュ制御</RelatedLink>
-          <RelatedLink href="/security/identity" tag="セキュリティ">認証プロトコルの変遷</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; セキュリティ &middot; 認可</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/security/auth" tag="セキュリティ">認証</RelatedLink>
+                    <RelatedLink href="/security/session" tag="セキュリティ">セッションとCookie管理</RelatedLink>
+                    <RelatedLink href="/security/cache" tag="セキュリティ">キャッシュ制御</RelatedLink>
+                    <RelatedLink href="/security/identity" tag="セキュリティ">認証プロトコルの変遷</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

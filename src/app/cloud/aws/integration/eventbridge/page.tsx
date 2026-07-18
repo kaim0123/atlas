@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -70,15 +69,15 @@ export default function Page() {
       </CardGrid>
       <p>これで、<Link href="/cloud/aws/basics">AWSの基礎</Link>から<Link href="/cloud/aws/integration">アプリケーション統合</Link>まで、AWSの中心となる10分野を一通り見たことになります。実際のシステムでは、ここで見た個々のサービスを組み合わせて、<Link href="/design/architecture">アーキテクチャ</Link>ページで見た構成として組み上がります。残る最後の1分野、<Link href="/cloud/aws/iac">IaC</Link>では、それらの組み合わせを実際にコードでどう定義するかを見ていきます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/integration/sns" tag="AWS">SNS</RelatedLink>
-          <RelatedLink href="/cloud/aws/integration/sqs" tag="AWS">SQS</RelatedLink>
-          <RelatedLink href="/design/architecture/sys/event-driven" tag="設計">イベント駆動アーキテクチャ</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; AWS &middot; アプリケーション統合 &middot; EventBridge</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/integration/sns" tag="AWS">SNS</RelatedLink>
+                    <RelatedLink href="/cloud/aws/integration/sqs" tag="AWS">SQS</RelatedLink>
+                    <RelatedLink href="/design/architecture/sys/event-driven" tag="設計">イベント駆動アーキテクチャ</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

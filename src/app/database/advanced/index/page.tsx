@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -63,15 +62,15 @@ REVOKE INSERT ON orders FROM app_user;       -- 追加の許可を取り消す`}
         <Card><CardNumber>2</CardNumber><h4>権限は最小限に</h4><p>GRANT/REVOKEで、アプリや利用者に必要な操作だけを許可します。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/database/physical" tag="データベース">物理設計と運用</RelatedLink>
-          <RelatedLink href="/database/transaction" tag="データベース">トランザクションと整合性</RelatedLink>
-          <RelatedLink href="/security/sqli" tag="セキュリティ">SQLインジェクション対策</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; データベース &middot; 索引とアクセス制御</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/database/physical" tag="データベース">物理設計と運用</RelatedLink>
+                    <RelatedLink href="/database/transaction" tag="データベース">トランザクションと整合性</RelatedLink>
+                    <RelatedLink href="/security/sqli" tag="セキュリティ">SQLインジェクション対策</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

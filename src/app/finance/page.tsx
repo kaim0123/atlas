@@ -126,7 +126,7 @@ export default function Page() {
 
       <p>会計・財務は<Link href="/management">マネジメント</Link>（人と組織で成果を出す）や<Link href="/ops/compliance">運用の法令・コンプライアンス</Link>とも地続きです。経営を数字とヒトの両面から捉えるために、あわせて読むと理解が深まります。</p>
 
-      <DocsFooter>Atlas &middot; 会計・財務</DocsFooter>
+      <DocsFooter />
     </DocsPage>
   );
 }

@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -96,15 +95,15 @@ export default function Page() {
       </CardGrid>
       <p>対立を成果に変える技術は、率直に言い合える場があってこそ機能します。次は<Link href="/management/team/psychological-safety">心理的安全性</Link>や、チームの約束ごとを扱う<Link href="/management/team/rules">ルールと相互理解</Link>へ進みましょう。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/team" tag="マネジメント">チームのマネジメント（メゾ）</RelatedLink>
-          <RelatedLink href="/management/team/psychological-safety" tag="マネジメント">心理的安全性</RelatedLink>
-          <RelatedLink href="/management/team/rules" tag="マネジメント">実践編 ― ルールと相互理解</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; コンフリクトマネジメント</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/team" tag="マネジメント">チームのマネジメント（メゾ）</RelatedLink>
+                    <RelatedLink href="/management/team/psychological-safety" tag="マネジメント">心理的安全性</RelatedLink>
+                    <RelatedLink href="/management/team/rules" tag="マネジメント">実践編 ― ルールと相互理解</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

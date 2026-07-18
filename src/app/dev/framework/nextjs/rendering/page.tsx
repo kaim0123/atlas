@@ -14,7 +14,6 @@ import {
   Analogy,
   Mark,
   MarkNote,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -125,15 +124,15 @@ export const config = {
         <Card><CardNumber>3</CardNumber><h4>Proxy(旧Middleware)</h4><p>ルートに届く前の軽量な共通処理。Next.js 16で改称。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/dev/framework/nextjs/data" tag="開発">データフェッチ・キャッシュ・再検証</RelatedLink>
-          <RelatedLink href="/dev/framework/nextjs/components" tag="開発">Server/Clientコンポーネントの境界</RelatedLink>
-          <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; フレームワーク &middot; Next.js &middot; パターン &middot; 配信を最適化する</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/dev/framework/nextjs/data" tag="開発">データフェッチ・キャッシュ・再検証</RelatedLink>
+                    <RelatedLink href="/dev/framework/nextjs/components" tag="開発">Server/Clientコンポーネントの境界</RelatedLink>
+                    <RelatedLink href="/design/patterns" tag="設計">設計パターン一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -175,15 +174,15 @@ export default function Page() {
       </CardGrid>
       <p>Podが動的に増減するため監視も一筋縄ではいきません。定番はPrometheus+Grafana(監視)とEFKスタック(ログ)で、詳しくは「<Link href="/infra/container/observability">オブザーバビリティ</Link>」で扱います。K8sは単体ではなく周辺ツールと組み合わせて使うのが普通で、この全体を<Term>クラウドネイティブエコシステム</Term>と呼び、<Term>CNCF</Term>(Cloud Native Computing Foundation)が推進しています。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/infra/container/docker" tag="インフラ">Docker ― コンテナを届けたツール</RelatedLink>
-          <RelatedLink href="/infra/container/observability" tag="インフラ">オブザーバビリティ ― メトリクス・ログ・トレース</RelatedLink>
-          <RelatedLink href="/design/architecture/sys/microservices" tag="設計">マイクロサービスアーキテクチャ</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; インフラ &middot; Kubernetes</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/infra/container/docker" tag="インフラ">Docker ― コンテナを届けたツール</RelatedLink>
+                    <RelatedLink href="/infra/container/observability" tag="インフラ">オブザーバビリティ ― メトリクス・ログ・トレース</RelatedLink>
+                    <RelatedLink href="/design/architecture/sys/microservices" tag="設計">マイクロサービスアーキテクチャ</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

@@ -14,7 +14,6 @@ import {
   Analogy,
   Aside,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -126,15 +125,15 @@ export default function Page() {
         </Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/theory/algorithms" tag="情報科学">アルゴリズムとデータ構造</RelatedLink>
-          <RelatedLink href="/network/ip" tag="ネットワーク">IPアドレスとルーティング</RelatedLink>
-          <RelatedLink href="/theory/formal" tag="情報科学">形式言語</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 情報科学 &middot; グラフと最短経路</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/theory/algorithms" tag="情報科学">アルゴリズムとデータ構造</RelatedLink>
+                    <RelatedLink href="/network/ip" tag="ネットワーク">IPアドレスとルーティング</RelatedLink>
+                    <RelatedLink href="/theory/formal" tag="情報科学">形式言語</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

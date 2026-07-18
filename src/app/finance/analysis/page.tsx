@@ -14,7 +14,6 @@ import {
   CardGrid,
   Card,
   CardNumber,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -117,16 +116,16 @@ export default function Page() {
       </CardGrid>
       <p>業種の癖が読めたら、次は<Link href="/finance/metrics">収益性と効率の指標</Link>へ。利益率だけでは見えない「資産をどれだけ効率よく使っているか」を診ます。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標</RelatedLink>
-          <RelatedLink href="/finance/bs" tag="会計・財務">貸借対照表（BS）の読み方</RelatedLink>
-          <RelatedLink href="/finance/valuation" tag="会計・財務">企業価値と株価（PBR）</RelatedLink>
-          <RelatedLink href="/finance" tag="会計・財務">会計・財務の全体像</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 会計・財務 &middot; 三表から会社を診断する</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標</RelatedLink>
+                    <RelatedLink href="/finance/bs" tag="会計・財務">貸借対照表（BS）の読み方</RelatedLink>
+                    <RelatedLink href="/finance/valuation" tag="会計・財務">企業価値と株価（PBR）</RelatedLink>
+                    <RelatedLink href="/finance" tag="会計・財務">会計・財務の全体像</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

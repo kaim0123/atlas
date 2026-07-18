@@ -16,7 +16,6 @@ import {
   Analogy,
   IndexGrid,
   IndexCard,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -88,15 +87,15 @@ export default function Page() {
         </IndexCard>
       </IndexGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/cloud/aws/container" tag="AWS">コンテナ</RelatedLink>
-          <RelatedLink href="/cloud/aws/cicd/codebuild" tag="AWS">CodeBuild</RelatedLink>
-          <RelatedLink href="/cloud/aws/integration" tag="AWS">アプリケーション統合</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; AWS &middot; CI/CD</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/cloud/aws/container" tag="AWS">コンテナ</RelatedLink>
+                    <RelatedLink href="/cloud/aws/cicd/codebuild" tag="AWS">CodeBuild</RelatedLink>
+                    <RelatedLink href="/cloud/aws/integration" tag="AWS">アプリケーション統合</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

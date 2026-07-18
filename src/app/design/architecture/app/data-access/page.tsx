@@ -12,7 +12,6 @@ import {
   CardGrid,
   CardNumber,
   Analogy,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -56,16 +55,16 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>Repository</h4><p>コレクションのように振る舞う窓口でデータ取得方法を隠す。</p></Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/design/architecture/app/data-access/patterns" tag="設計">永続化層の定石</RelatedLink>
-          <RelatedLink href="/design/architecture/app/domain-model" tag="設計">ドメインモデル系</RelatedLink>
-          <RelatedLink href="/design/architecture/app/domain-centric" tag="設計">ドメイン中心アーキテクチャ系</RelatedLink>
-          <RelatedLink href="/design/architecture" tag="設計">アーキテクチャ一覧</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 設計 &middot; データアクセス系(アプリケーションアーキテクチャ)</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/design/architecture/app/data-access/patterns" tag="設計">永続化層の定石</RelatedLink>
+                    <RelatedLink href="/design/architecture/app/domain-model" tag="設計">ドメインモデル系</RelatedLink>
+                    <RelatedLink href="/design/architecture/app/domain-centric" tag="設計">ドメイン中心アーキテクチャ系</RelatedLink>
+                    <RelatedLink href="/design/architecture" tag="設計">アーキテクチャ一覧</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

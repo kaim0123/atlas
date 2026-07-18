@@ -15,7 +15,6 @@ import {
   Aside,
   Diagram,
   Steps,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -117,16 +116,16 @@ export default function Page() {
         </Card>
       </CardGrid>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/monitoring" tag="監視">監視・保守</RelatedLink>
-          <RelatedLink href="/monitoring/infra" tag="監視">インフラの監視</RelatedLink>
-          <RelatedLink href="/security/network-defense" tag="セキュリティ">ネットワーク層の防御</RelatedLink>
-          <RelatedLink href="/internet/dns" tag="インターネット">DNS</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; インフラ &middot; インフラ障害の切り分け</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/monitoring" tag="監視">監視・保守</RelatedLink>
+                    <RelatedLink href="/monitoring/infra" tag="監視">インフラの監視</RelatedLink>
+                    <RelatedLink href="/security/network-defense" tag="セキュリティ">ネットワーク層の防御</RelatedLink>
+                    <RelatedLink href="/internet/dns" tag="インターネット">DNS</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

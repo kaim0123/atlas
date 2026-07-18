@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Diagram,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -91,15 +90,15 @@ export default function Page() {
       </CardGrid>
       <p>言語と実行環境がわかったところで、次はその上に積み上がる「アプリの骨組み」を見ていきます。次のページ「<Link href="/dev/framework">フレームワーク・ライブラリ</Link>」では、React・Next.js・Express・Honoといった、開発の型を決める道具を扱います。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/dev/framework" tag="開発">フレームワーク・ライブラリ</RelatedLink>
-          <RelatedLink href="/dev/language" tag="開発">JavaScript・TypeScript</RelatedLink>
-          <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; 開発 &middot; ランタイム</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/dev/framework" tag="開発">フレームワーク・ライブラリ</RelatedLink>
+                    <RelatedLink href="/dev/language" tag="開発">JavaScript・TypeScript</RelatedLink>
+                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }

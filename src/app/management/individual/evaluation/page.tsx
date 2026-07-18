@@ -13,7 +13,6 @@ import {
   CardNumber,
   Analogy,
   Aside,
-  RelatedNav,
   RelatedList,
   RelatedLink,
 } from "@/components/docs";
@@ -94,15 +93,15 @@ export default function Page() {
       </CardGrid>
       <p>評価の「公正」を押さえたら、そもそも何を目標として置くか ― <Link href="/management/team/goals">実践編：目標設定</Link>や、評価の材料となる能力の内訳<Link href="/management/individual/capital">個人の力の3つの源泉</Link>もあわせてどうぞ。</p>
 
-      <RelatedNav>
-        <RelatedList>
-          <RelatedLink href="/management/individual" tag="マネジメント">個人のマネジメント（ミクロ）</RelatedLink>
-          <RelatedLink href="/management/individual/capital" tag="マネジメント">個人の力の3つの源泉</RelatedLink>
-          <RelatedLink href="/management/team/goals" tag="マネジメント">実践編 ― 目標設定</RelatedLink>
-        </RelatedList>
-      </RelatedNav>
-
-      <DocsFooter>Atlas &middot; マネジメント &middot; 人事評価</DocsFooter>
+      <DocsFooter
+        related={
+          <RelatedList>
+                    <RelatedLink href="/management/individual" tag="マネジメント">個人のマネジメント（ミクロ）</RelatedLink>
+                    <RelatedLink href="/management/individual/capital" tag="マネジメント">個人の力の3つの源泉</RelatedLink>
+                    <RelatedLink href="/management/team/goals" tag="マネジメント">実践編 ― 目標設定</RelatedLink>
+                  </RelatedList>
+        }
+      />
     </DocsPage>
   );
 }
