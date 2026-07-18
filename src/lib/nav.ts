@@ -16,6 +16,7 @@ import {
   Activity,
   Settings2,
   Workflow,
+  Users,
   type LucideIcon,
 } from "lucide-react";
 
@@ -593,6 +594,49 @@ export const sections: NavSection[] = [
       { href: "/ops/content", title: "コンテンツ管理" },
       { href: "/ops/cost", title: "コスト管理" },
       { href: "/ops/compliance", title: "法令・コンプライアンス" },
+    ],
+  },
+  {
+    href: "/management",
+    title: "マネジメント",
+    icon: Users,
+    tree: [
+      { href: "/management", title: "マネジメントの全体像" },
+      { href: "/management/basics", title: "人事マネジメントとは" },
+      {
+        title: "個人のマネジメント（ミクロ）",
+        children: [
+          { href: "/management/individual", title: "個人マネジメント概要" },
+          { href: "/management/individual/onboarding", title: "採用・オンボーディング・育成" },
+          { href: "/management/individual/motivation", title: "モチベーション理論の歴史" },
+          { href: "/management/individual/evaluation", title: "人事評価" },
+          { href: "/management/individual/capital", title: "個人の力の3つの源泉" },
+        ],
+      },
+      {
+        title: "チームのマネジメント（メゾ）",
+        children: [
+          { href: "/management/team", title: "チームマネジメント概要" },
+          { href: "/management/team/leadership", title: "リーダーシップの実践" },
+          { href: "/management/team/conflict", title: "コンフリクトマネジメント" },
+          { href: "/management/team/psychological-safety", title: "心理的安全性" },
+          { href: "/management/team/operation", title: "チーム運営と3つの力" },
+          { href: "/management/team/goals", title: "目標設定" },
+          { href: "/management/team/momentum", title: "戦略方針とモメンタム" },
+          { href: "/management/team/rules", title: "ルールと相互理解" },
+        ],
+      },
+      {
+        title: "組織のマネジメント（マクロ）",
+        children: [
+          { href: "/management/org", title: "組織マネジメント概要" },
+          { href: "/management/org/theory", title: "組織・リーダーシップ理論の歴史" },
+          { href: "/management/org/structure", title: "組織構造とアサイン" },
+          { href: "/management/org/delegation", title: "権限委譲" },
+        ],
+      },
+      { href: "/management/context", title: "経営・社会とのつながり" },
+      { href: "/management/theory", title: "マネジメント理論家" },
     ],
   },
 ];

@@ -107,7 +107,8 @@ export default function Page() {
           <tr><td className="hl">テスト</td><td>テスト自動化</td><td>Jest、Vitest、Playwright、Cypress、JUnit、pytest</td><td>各言語</td></tr>
           <tr><td className="hl">CSS/UI</td><td>デザイン・レイアウト</td><td>Tailwind CSS、Bootstrap、Bulma</td><td>CSS</td></tr>
           <tr><td className="hl">状態管理</td><td>クライアント側の状態を一元管理する</td><td>Redux、Zustand、Jotai、Recoil、Pinia</td><td>JavaScript / TypeScript</td></tr>
-          <tr><td className="hl">データ取得・サーバー状態</td><td>APIのデータを取得・キャッシュ・再取得する</td><td>TanStack Query、SWR、Apollo Client</td><td>JavaScript / TypeScript</td></tr>
+          <tr><td className="hl">HTTPクライアント</td><td>サーバーにHTTPリクエストを送る</td><td>axios、ky、got(標準のFetch APIも同じ役割)</td><td>JavaScript / TypeScript</td></tr>
+          <tr><td className="hl">データ取得・サーバー状態</td><td>HTTPクライアントを土台にデータを取得・キャッシュ・再取得する</td><td>TanStack Query、SWR、Apollo Client</td><td>JavaScript / TypeScript</td></tr>
           <tr><td className="hl">フォーム</td><td>入力フォームの値と検証を扱う</td><td>React Hook Form、Formik、VeeValidate</td><td>JavaScript / TypeScript</td></tr>
           <tr><td className="hl">バリデーション</td><td>データの形を検証し型を付ける</td><td>Zod、Yup、Valibot、Joi</td><td>JavaScript / TypeScript</td></tr>
           <tr><td className="hl">ORM・DB接続</td><td>オブジェクトとDBを橋渡しする</td><td>Prisma、Drizzle、Mongoose、TypeORM、SQLAlchemy</td><td>JavaScript、Python など</td></tr>
@@ -116,6 +117,12 @@ export default function Page() {
           <tr><td className="hl">ビルド・バンドル</td><td>コードをまとめて配信用に変換する</td><td>Vite、webpack、esbuild、Rollup、Turbopack</td><td>JavaScript / TypeScript</td></tr>
           <tr><td className="hl">日付・ユーティリティ</td><td>日付処理や汎用的な小道具</td><td>date-fns、Day.js、Lodash</td><td>JavaScript / TypeScript</td></tr>
           <tr><td className="hl">アニメーション</td><td>UIに動きをつける</td><td>Framer Motion、GSAP、React Spring</td><td>JavaScript / TypeScript</td></tr>
+          <tr><td className="hl">ルーティング</td><td>ページ遷移とURLを管理する(Next.jsは標準搭載)</td><td>React Router、TanStack Router、Vue Router</td><td>JavaScript / TypeScript</td></tr>
+          <tr><td className="hl">ヘッドレスUI</td><td>見た目を持たないアクセシブルな部品</td><td>Radix UI、Headless UI、Ariakit</td><td>JavaScript / TypeScript</td></tr>
+          <tr><td className="hl">データ可視化・チャート</td><td>データをグラフで描く</td><td>Recharts、Chart.js、D3.js、ECharts</td><td>JavaScript / TypeScript</td></tr>
+          <tr><td className="hl">国際化(i18n)</td><td>多言語・地域対応を行う</td><td>i18next、react-i18next、FormatJS</td><td>JavaScript / TypeScript</td></tr>
+          <tr><td className="hl">リアルタイム通信</td><td>サーバーと双方向にやりとりする</td><td>Socket.IO、ws、Pusher</td><td>JavaScript / TypeScript</td></tr>
+          <tr><td className="hl">ロギング・監視</td><td>ログ出力とエラー・性能の監視</td><td>pino、winston、Sentry、OpenTelemetry</td><td>JavaScript / TypeScript</td></tr>
         </tbody>
       </table>
       <p>この表の「分類」は一般的な呼び方に沿ったもので、必ずしも01節の「制御の反転」の定義に厳密に一致するわけではありません。たとえばCSS/UI行のTailwind CSSは、01節の定義では自分のコードから呼び出す<Term>ライブラリ</Term>です。このAtlasが扱うNext.jsは「メタフレームワーク」かつ「フルスタック」に位置づけられます。</p>
