@@ -18,6 +18,7 @@ import {
   Workflow,
   Users,
   Landmark,
+  Building2,
   type LucideIcon,
 } from "lucide-react";
 
@@ -691,6 +692,140 @@ export const sections: NavSection[] = [
         children: [
           { href: "/finance/thinking", title: "会計 vs ファイナンス" },
           { href: "/finance/pe", title: "PE・LBO・MBOの仕組み" },
+        ],
+      },
+    ],
+  },
+  {
+    href: "/industry",
+    title: "業界",
+    icon: Building2,
+    tree: [
+      { href: "/industry", title: "業界の全体像" },
+      {
+        title: "製造業",
+        children: [
+          {
+            title: "重工業・素材",
+            children: [
+              { href: "/industry/steel", title: "鉄鋼・非鉄金属" },
+              { href: "/industry/chemical", title: "化学・石油化学" },
+              { href: "/industry/paper", title: "紙・パルプ・印刷" },
+              { href: "/industry/glass-cement", title: "ゴム・ガラス・セメント" },
+            ],
+          },
+          {
+            title: "機械・自動車",
+            children: [
+              { href: "/industry/machinery", title: "機械・産業機械" },
+              { href: "/industry/auto", title: "自動車・自動車部品" },
+              { href: "/industry/electronics", title: "電機・電子部品・半導体" },
+            ],
+          },
+          {
+            title: "消費財・生活用品",
+            children: [
+              { href: "/industry/cosmetics", title: "化粧品・生活用品" },
+              { href: "/industry/pharma", title: "医薬品" },
+              { href: "/industry/apparel", title: "繊維・アパレル" },
+              { href: "/industry/food", title: "食品・飲料" },
+            ],
+          },
+        ],
+      },
+      {
+        title: "金融・保険",
+        children: [
+          { href: "/industry/bank", title: "銀行" },
+          { href: "/industry/securities", title: "証券" },
+          { href: "/industry/insurance", title: "生命保険・損害保険" },
+          { href: "/industry/credit", title: "信販・クレジット・リース" },
+        ],
+      },
+      {
+        title: "流通・小売",
+        children: [
+          { href: "/industry/trading", title: "商社" },
+          { href: "/industry/specialty", title: "専門店" },
+          { href: "/industry/retail", title: "百貨店・スーパー・コンビニ" },
+        ],
+      },
+      {
+        title: "運輸・物流",
+        children: [
+          { href: "/industry/logistics", title: "倉庫・物流" },
+          { href: "/industry/transport", title: "航空・海運・鉄道・陸運" },
+        ],
+      },
+      {
+        title: "インフラ・エネルギー",
+        children: [
+          {
+            title: "エネルギー",
+            children: [
+              { href: "/industry/power", title: "電力・ガス" },
+              { href: "/industry/oil", title: "石油・石炭" },
+              { href: "/industry/renewables", title: "再生可能エネルギー" },
+            ],
+          },
+          {
+            title: "建設・不動産",
+            children: [
+              { href: "/industry/construction", title: "建設・設備" },
+              { href: "/industry/realestate", title: "不動産" },
+              { href: "/industry/housing", title: "住宅・住設機器" },
+              { href: "/industry/renovation", title: "リフォーム・リノベーション" },
+            ],
+          },
+        ],
+      },
+      {
+        title: "情報通信",
+        children: [
+          {
+            title: "IT・通信",
+            children: [
+              { href: "/industry/software", title: "ソフトウェア" },
+              { href: "/industry/it-services", title: "ITサービス" },
+              { href: "/industry/telecom", title: "インターネット・通信" },
+            ],
+          },
+          {
+            title: "メディア・エンタメ",
+            children: [
+              { href: "/industry/entertainment", title: "エンターテインメント" },
+              { href: "/industry/mass-media", title: "マスコミ" },
+              { href: "/industry/advertising", title: "広告・出版" },
+            ],
+          },
+        ],
+      },
+      {
+        title: "生活・公共サービス",
+        children: [
+          {
+            title: "外食・旅行",
+            children: [
+              { href: "/industry/restaurant", title: "フードサービス" },
+              { href: "/industry/travel", title: "旅行・ホテル" },
+            ],
+          },
+          {
+            title: "教育・人材",
+            children: [
+              { href: "/industry/education", title: "教育" },
+              { href: "/industry/staffing", title: "人材サービス" },
+              { href: "/industry/consulting", title: "コンサルティング" },
+            ],
+          },
+          {
+            title: "公共・医療",
+            children: [
+              { href: "/industry/healthcare", title: "医療・福祉" },
+              { href: "/industry/government", title: "政府・自治体" },
+              { href: "/industry/services", title: "その他サービス" },
+            ],
+          },
         ],
       },
     ],
