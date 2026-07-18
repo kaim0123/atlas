@@ -107,7 +107,7 @@ export default function Page() {
       <RelatedNav>
         <RelatedList>
           <RelatedLink href="/management/team" tag="マネジメント">チームのマネジメント（メゾ）</RelatedLink>
-          <RelatedLink href="/management/individual/motivation" tag="マネジメント">モチベーション理論の歴史</RelatedLink>
+          <RelatedLink href="/management/team/efficacy" tag="マネジメント">組織効力感</RelatedLink>
           <RelatedLink href="/management/team/conflict" tag="マネジメント">コンフリクトマネジメント</RelatedLink>
         </RelatedList>
       </RelatedNav>

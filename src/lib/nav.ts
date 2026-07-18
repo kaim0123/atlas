@@ -617,13 +617,26 @@ export const sections: NavSection[] = [
         title: "チームのマネジメント（メゾ）",
         children: [
           { href: "/management/team", title: "チームマネジメント概要" },
-          { href: "/management/team/leadership", title: "リーダーシップの実践" },
-          { href: "/management/team/conflict", title: "コンフリクトマネジメント" },
-          { href: "/management/team/psychological-safety", title: "心理的安全性" },
-          { href: "/management/team/operation", title: "チーム運営と3つの力" },
-          { href: "/management/team/goals", title: "目標設定" },
-          { href: "/management/team/momentum", title: "戦略方針とモメンタム" },
-          { href: "/management/team/rules", title: "ルールと相互理解" },
+          {
+            title: "リーダーシップ・対人",
+            children: [
+              { href: "/management/team/leadership", title: "リーダーシップの実践" },
+              { href: "/management/team/grid", title: "マネジリアル・グリッド" },
+              { href: "/management/team/communication", title: "コミュニケーション" },
+              { href: "/management/team/conflict", title: "コンフリクトマネジメント" },
+              { href: "/management/team/psychological-safety", title: "心理的安全性" },
+              { href: "/management/team/efficacy", title: "組織効力感" },
+              { href: "/management/team/rules", title: "ルールと相互理解" },
+            ],
+          },
+          {
+            title: "チーム運営（実行）",
+            children: [
+              { href: "/management/team/operation", title: "チーム運営と3つの力" },
+              { href: "/management/team/goals", title: "目標設定" },
+              { href: "/management/team/momentum", title: "戦略方針とモメンタム" },
+            ],
+          },
         ],
       },
       {
@@ -632,6 +645,7 @@ export const sections: NavSection[] = [
           { href: "/management/org", title: "組織マネジメント概要" },
           { href: "/management/org/theory", title: "組織・リーダーシップ理論の歴史" },
           { href: "/management/org/structure", title: "組織構造とアサイン" },
+          { href: "/management/org/system", title: "人事制度" },
           { href: "/management/org/delegation", title: "権限委譲" },
         ],
       },

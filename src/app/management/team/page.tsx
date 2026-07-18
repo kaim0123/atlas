@@ -57,7 +57,7 @@ export default function Page() {
           </defs>
         </svg>
       </Diagram>
-      <p>重要なのは、<Term>混乱期（Storming）</Term>を避けないことです。意見のぶつかり合いは失敗ではなく、機能するチームへ育つための通過点です。役割分担を考えるうえでは、メンバーが自然に担う役割を9つに類型化した<Term>ベルビン（Belbin）理論</Term>も参考になります。異なるタイプが噛み合うことでチームの<Term>多様性</Term>が力になります。</p>
+      <p>重要なのは、<Term>混乱期（Storming）</Term>を避けないことです。意見のぶつかり合いは失敗ではなく、機能するチームへ育つための通過点です。役割分担を考えるうえでは、メンバーが自然に担う役割を9つに類型化した<Term>ベルビン（Belbin）理論</Term>も参考になります。異なるタイプが噛み合うことでチームの<Term>多様性</Term>が力になります。そして機能するチームには「自分たちならやれる」という共有された確信 ―<Link href="/management/team/efficacy">組織効力感</Link>― が育ちます。</p>
 
       <Heading num="02">リーダーシップ ― 状況で使い分ける</Heading>
       <p><Term>リーダーシップ</Term>に唯一の正解はありません。状況・相手・目的によって有効なスタイルは変わります。代表的な理論を押さえておきましょう（特性論から変革型・奉仕型までの変遷は<Link href="/management/org/theory">組織・リーダーシップ理論の歴史</Link>で詳しく扱います）。</p>
@@ -72,7 +72,7 @@ export default function Page() {
           <tr><td className="hl">変革型リーダーシップ</td><td>ビジョンを示し、メンバーの内発的動機に火をつけて変化を起こす</td></tr>
         </tbody>
       </table>
-      <p>とりわけ<Term>SL理論</Term>の「相手の習熟度でスタイルを変える」という発想は、<Link href="/management/org/structure">アサインの設計</Link>や<Link href="/management/org/delegation">権限委譲</Link>とも直結します。育ちきっていない相手には手厚く、育った相手には任せる ― この切り替えが要です。日本発のPM理論や、カリスマ・サーバント・オーセンティックの3スタイルは<Link href="/management/team/leadership">リーダーシップの実践</Link>で詳しく扱います。</p>
+      <p>とりわけ<Term>SL理論</Term>の「相手の習熟度でスタイルを変える」という発想は、<Link href="/management/org/structure">アサインの設計</Link>や<Link href="/management/org/delegation">権限委譲</Link>とも直結します。育ちきっていない相手には手厚く、育った相手には任せる ― この切り替えが要です。日本発のPM理論や、カリスマ・サーバント・オーセンティックの3スタイルは<Link href="/management/team/leadership">リーダーシップの実践</Link>で、業績と人の2軸でリーダーを捉える<Link href="/management/team/grid">マネジリアル・グリッド</Link>は別ページで詳しく扱います。</p>
 
       <Heading num="03">コミュニケーション ― 対話でつなぐ</Heading>
       <p>チームを動かすのは、日々の<Term>コミュニケーション</Term>です。技術として磨けるものが多く、代表的なものを挙げます。</p>
@@ -82,7 +82,7 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>傾聴</h4><p>評価や助言を急がず、相手の話を受け止めて理解する聴き方。</p></Card>
         <Card><CardNumber>4</CardNumber><h4>アサーション</h4><p>相手を尊重しつつ自分の考えも率直に伝える、対等な自己表現。</p></Card>
       </CardGrid>
-      <p>会議運営も重要なテーマです。目的の不明確な会議はチームの時間を奪います。ファシリテーションで「何を決める場か」を明確にし、傾聴とアサーションで健全な対話を保つことが、チームの生産性を左右します。こうした率直な対話が成り立つ土台となる<Link href="/management/team/psychological-safety">心理的安全性</Link>は、独立したテーマとして扱います。</p>
+      <p>会議運営も重要なテーマです。目的の不明確な会議はチームの時間を奪います。ファシリテーションで「何を決める場か」を明確にし、傾聴とアサーションで健全な対話を保つことが、チームの生産性を左右します。1on1・傾聴・アサーション・ファシリテーション・会議運営の具体的な技は<Link href="/management/team/communication">コミュニケーション</Link>で掘り下げます。こうした率直な対話が成り立つ土台となる<Link href="/management/team/psychological-safety">心理的安全性</Link>は、独立したテーマとして扱います。</p>
 
       <Heading num="04">コンフリクトマネジメント ― 対立を成果に変える</Heading>
       <p><Term>コンフリクト（対立）</Term>は、なくすべき悪ではありません。異なる視点がぶつかること自体は、より良い答えを生む源泉になり得ます。問題は対立の有無ではなく、それを<Term>建設的に扱えるか</Term>です。</p>
