@@ -29,12 +29,12 @@ export default function Page() {
         <Eyebrow>インターネット</Eyebrow>
         <h1>サーバーの全体像 ― 「モノ」なのか「役割」なのか</h1>
         <Lead>
-          「<Link href="/internet/web">Webの仕組み</Link>」ではリクエストを受け取って応答を返す側として、「<Link href="/dev/framework">フレームワーク・ライブラリ</Link>」ではExpress・Honoのようなソフトウェアとして、それぞれ「サーバー」という言葉に触れてきました。ところが日常会話では「サーバーが落ちた」という一言が、巨大な機械の故障を指すこともあれば、1つのプログラムの不調を指すこともあります。何が同じで、何が違うのかを整理します。
+          「<Link href="/network/applications/web">Webの仕組み</Link>」ではリクエストを受け取って応答を返す側として、「<Link href="/dev/framework">フレームワーク・ライブラリ</Link>」ではExpress・Honoのようなソフトウェアとして、それぞれ「サーバー」という言葉に触れてきました。ところが日常会話では「サーバーが落ちた」という一言が、巨大な機械の故障を指すこともあれば、1つのプログラムの不調を指すこともあります。何が同じで、何が違うのかを整理します。
         </Lead>
       </Hero>
 
       <Heading num="01">共通点 ― 「頼まれて、応える側」</Heading>
-      <p>種類がどれだけ増えても、サーバーの定義そのものは単純です。<strong>リクエスト(依頼)を受け取り、それに応じたレスポンス(応答)を返す側</strong>。依頼する側を<Term>クライアント</Term>と呼び、この2者の関係を<Term>クライアント・サーバーモデル</Term>と呼びます。「<Link href="/internet/web">Webの仕組み</Link>」で見たブラウザ(クライアント)とWebサーバーのやり取りは、その最も身近な一例にすぎません。</p>
+      <p>種類がどれだけ増えても、サーバーの定義そのものは単純です。<strong>リクエスト(依頼)を受け取り、それに応じたレスポンス(応答)を返す側</strong>。依頼する側を<Term>クライアント</Term>と呼び、この2者の関係を<Term>クライアント・サーバーモデル</Term>と呼びます。「<Link href="/network/applications/web">Webの仕組み</Link>」で見たブラウザ(クライアント)とWebサーバーのやり取りは、その最も身近な一例にすぎません。</p>
 
       <Heading num="02">軸1: 「機械そのもの」か「その上で動くプログラム」か</Heading>
       <p>混乱の一番の原因は、「サーバー」が2つの異なるレベルを指せてしまうことです。</p>
@@ -114,7 +114,7 @@ export default function Page() {
       <DocsFooter
         related={
           <RelatedList>
-                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                    <RelatedLink href="/network/applications/web" tag="インターネット">Webの仕組み</RelatedLink>
                     <RelatedLink href="/dev/framework" tag="開発">フレームワーク・ライブラリ</RelatedLink>
                     <RelatedLink href="/dev/tooling" tag="開発">パッケージ管理とビルド</RelatedLink>
                   </RelatedList>

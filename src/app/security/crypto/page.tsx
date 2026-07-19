@@ -32,7 +32,7 @@ export default function Page() {
         <Eyebrow>セキュリティ</Eyebrow>
         <h1>暗号の歴史と公開鍵暗号 ― 「作る者」と「解く者」の2000年</h1>
         <Lead>
-          <Link href="/internet/web">HTTPS</Link>のTLSも、<Link href="/security/identity">パスキー</Link>の署名も、その土台には<Term>暗号</Term>があります。暗号の歴史は「新しい暗号を作る者」と「それを解読する者」の終わりない攻防で、解読法が弱点を暴くたびに暗号はより強い形へと進化してきました。このページでは、棒に紐を巻いた古代の暗号から、300年破られなかったヴィジュネル暗号、第2次大戦のエニグマ、そして現代のインターネットを支える公開鍵暗号までを、「どんな解読法に、どんな仕組みで対抗したか」という流れで見ていきます。
+          <Link href="/network/applications/web">HTTPS</Link>のTLSも、<Link href="/security/identity">パスキー</Link>の署名も、その土台には<Term>暗号</Term>があります。暗号の歴史は「新しい暗号を作る者」と「それを解読する者」の終わりない攻防で、解読法が弱点を暴くたびに暗号はより強い形へと進化してきました。このページでは、棒に紐を巻いた古代の暗号から、300年破られなかったヴィジュネル暗号、第2次大戦のエニグマ、そして現代のインターネットを支える公開鍵暗号までを、「どんな解読法に、どんな仕組みで対抗したか」という流れで見ていきます。
         </Lead>
       </Hero>
 
@@ -151,7 +151,7 @@ export default function Page() {
           <RelatedList>
                     <RelatedLink href="/security/hash" tag="セキュリティ">ハッシュ関数と衝突攻撃</RelatedLink>
                     <RelatedLink href="/security/identity" tag="セキュリティ">認証プロトコルの変遷</RelatedLink>
-                    <RelatedLink href="/internet/web" tag="インターネット">Webと暗号化通信</RelatedLink>
+                    <RelatedLink href="/network/applications/web" tag="インターネット">Webと暗号化通信</RelatedLink>
                   </RelatedList>
         }
       />

@@ -171,7 +171,7 @@ export default function Page() {
           <RelatedList>
                     <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み</RelatedLink>
                     <RelatedLink href="/computer/history" tag="コンピュータ">コンピュータの歴史</RelatedLink>
-                    <RelatedLink href="/internet/history" tag="インターネット">インターネットの歴史</RelatedLink>
+                    <RelatedLink href="/network/internet/history" tag="インターネット">インターネットの歴史</RelatedLink>
                   </RelatedList>
         }
       />

@@ -29,7 +29,7 @@ export default function Page() {
         <Eyebrow>設計</Eyebrow>
         <h1>オブジェクトの全体像 ― データの入れ物なのか、概念のインスタンスなのか</h1>
         <Lead>
-          「<Link href="/dev/language-basics">プログラミング言語の仕組み</Link>」ではJavaScriptの<code>{"{ }"}</code>を、「<Link href="/design/paradigm/oop">オブジェクト指向</Link>」では設計思想としてのオブジェクトを、「<Link href="/internet/web">Webの仕組み</Link>」ではDOMオブジェクトを、それぞれ見てきました。「オブジェクト」は同じ単語なのに、指しているものの抽象度がまったく違います。3つの意味の関係を整理します。
+          「<Link href="/dev/language-basics">プログラミング言語の仕組み</Link>」ではJavaScriptの<code>{"{ }"}</code>を、「<Link href="/design/paradigm/oop">オブジェクト指向</Link>」では設計思想としてのオブジェクトを、「<Link href="/network/applications/web">Webの仕組み</Link>」ではDOMオブジェクトを、それぞれ見てきました。「オブジェクト」は同じ単語なのに、指しているものの抽象度がまったく違います。3つの意味の関係を整理します。
         </Lead>
       </Hero>
 
@@ -44,7 +44,7 @@ export default function Page() {
       <p>ここが混乱しやすい点です。JavaScriptの<code>{"{ }"}</code>はオブジェクト指向のオブジェクトを作るための手段の1つにすぎず、<code>class</code>構文を使わなくても<code>{"{ }"}</code>だけでオブジェクトは作れます。つまり「JSのオブジェクト」という枠のほうが、「オブジェクト指向のオブジェクト」という考え方より広く、後者は前者を使った1つの流儀にすぎません。</p>
 
       <Heading num="04">意味3: DOMオブジェクト</Heading>
-      <p>「<Link href="/internet/web">Webの仕組み</Link>」で見た通り、ブラウザは表示中のHTMLを<Term>DOM</Term>というオブジェクトの集まりとしてJavaScriptに公開します。<code>document.getElementById(...)</code>が返す値は、「HTMLのある要素」を表すために、ブラウザがあらかじめ用意している専用のオブジェクトです。これは意味2の「カプセル化」という設計思想を、ブラウザというソフトウェアが具体的に実装した一例と言えます。</p>
+      <p>「<Link href="/network/applications/web">Webの仕組み</Link>」で見た通り、ブラウザは表示中のHTMLを<Term>DOM</Term>というオブジェクトの集まりとしてJavaScriptに公開します。<code>document.getElementById(...)</code>が返す値は、「HTMLのある要素」を表すために、ブラウザがあらかじめ用意している専用のオブジェクトです。これは意味2の「カプセル化」という設計思想を、ブラウザというソフトウェアが具体的に実装した一例と言えます。</p>
 
       <Diagram caption="3つの意味は「データ構造」を土台に、意味の重なる部分と独立した部分がある">
         <svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg">
@@ -82,7 +82,7 @@ export default function Page() {
           <RelatedList>
                     <RelatedLink href="/dev/language-basics" tag="開発">プログラミング言語の仕組み</RelatedLink>
                     <RelatedLink href="/design/paradigm/oop" tag="設計">オブジェクト指向</RelatedLink>
-                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                    <RelatedLink href="/network/applications/web" tag="インターネット">Webの仕組み</RelatedLink>
                   </RelatedList>
         }
       />

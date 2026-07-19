@@ -158,8 +158,8 @@ export default function Page() {
       <DocsFooter
         related={
           <RelatedList>
-                    <RelatedLink href="/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
-                    <RelatedLink href="/internet/mail" tag="インターネット">メールの仕組み</RelatedLink>
+                    <RelatedLink href="/network/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
+                    <RelatedLink href="/network/applications/mail" tag="インターネット">メールの仕組み</RelatedLink>
                     <RelatedLink href="/computer/printer" tag="コンピュータ">プリンターの仕組み</RelatedLink>
                   </RelatedList>
         }

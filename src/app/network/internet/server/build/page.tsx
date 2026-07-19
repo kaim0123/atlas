@@ -29,13 +29,13 @@ export default function Page() {
         <Eyebrow>インターネット</Eyebrow>
         <h1>サーバー構築の実務 ― Windows ServerとLinux</h1>
         <Lead>
-          「<Link href="/internet/server">サーバーの全体像</Link>」では、「サーバー」という言葉が機械そのものを指すこともあれば、役割ごとのソフトウェアを指すこともあるという分類を見ました。ここでは一歩進んで、実際にそのサーバーを構築・運用する実務 ―
+          「<Link href="/network/internet/server">サーバーの全体像</Link>」では、「サーバー」という言葉が機械そのものを指すこともあれば、役割ごとのソフトウェアを指すこともあるという分類を見ました。ここでは一歩進んで、実際にそのサーバーを構築・運用する実務 ―
           どんなOSを選び、どんな役割を持たせ、どう管理するのか ― を扱います。
         </Lead>
       </Hero>
 
       <Heading num="01">サーバーOSの2大陣営 ― Windows ServerとLinux</Heading>
-      <p>「<Link href="/internet/server">サーバーの全体像</Link>」で見た通り、サーバーソフトはハードウェアの上で動きます。そのハードウェアを土台から動かすOSとして広く使われているのが<Term>Windows Server</Term>と<Term>Linux</Term>です。どちらも「24時間稼働し、複数の利用者・プログラムからの依頼を捌く」という前提で作られている点は共通していますが、選ばれる場面や運用のスタイルは大きく異なります。</p>
+      <p>「<Link href="/network/internet/server">サーバーの全体像</Link>」で見た通り、サーバーソフトはハードウェアの上で動きます。そのハードウェアを土台から動かすOSとして広く使われているのが<Term>Windows Server</Term>と<Term>Linux</Term>です。どちらも「24時間稼働し、複数の利用者・プログラムからの依頼を捌く」という前提で作られている点は共通していますが、選ばれる場面や運用のスタイルは大きく異なります。</p>
 
       <table>
         <tbody>
@@ -75,7 +75,7 @@ export default function Page() {
       </Analogy>
 
       <Heading num="03">代表的なサーバーの役割</Heading>
-      <p>「<Link href="/internet/server">サーバーの全体像</Link>」ではWeb・AP・DBサーバーを中心に見ましたが、社内インフラの実務ではこれ以外にもさまざまな役割のサーバーが登場します。</p>
+      <p>「<Link href="/network/internet/server">サーバーの全体像</Link>」ではWeb・AP・DBサーバーを中心に見ましたが、社内インフラの実務ではこれ以外にもさまざまな役割のサーバーが登場します。</p>
 
       <table>
         <tbody>
@@ -144,9 +144,9 @@ export default function Page() {
       <DocsFooter
         related={
           <RelatedList>
-                    <RelatedLink href="/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
+                    <RelatedLink href="/network/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
                     <RelatedLink href="/network/topology" tag="ネットワーク">トポロジと接続装置</RelatedLink>
-                    <RelatedLink href="/internet/isp" tag="インターネット">ISP接続とCDN</RelatedLink>
+                    <RelatedLink href="/network/internet/isp" tag="インターネット">ISP接続とCDN</RelatedLink>
                   </RelatedList>
         }
       />

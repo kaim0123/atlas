@@ -27,7 +27,7 @@ export default function Page() {
   return (
     <DocsPage>
       <Hero>
-        <Eyebrow>インターネット</Eyebrow>
+        <Eyebrow>ネットワーク</Eyebrow>
         <h1>Webの仕組み ― URLを打ってからページが表示されるまで</h1>
         <Lead>
           ブラウザのアドレスバーにURLを入力してEnterを押す ―
@@ -95,7 +95,7 @@ export default function Page() {
       </Analogy>
 
       <Heading num="04">DNS ― 名前を住所に変換する電話帳</Heading>
-      <p><Term>DNS(Domain Name System)</Term>は、人間が覚えやすい<code>example.com</code>のような名前を、コンピュータが通信に使うIPアドレスに変換する仕組みです。一度調べた結果は一定時間<Term>キャッシュ</Term>されるため、同じサイトに何度もアクセスするときに毎回DNSへ問い合わせずに済み、表示が速くなります。リゾルバの階層や歴史的な経緯は「<Link href="/internet/dns">DNS</Link>」で詳しく扱います。</p>
+      <p><Term>DNS(Domain Name System)</Term>は、人間が覚えやすい<code>example.com</code>のような名前を、コンピュータが通信に使うIPアドレスに変換する仕組みです。一度調べた結果は一定時間<Term>キャッシュ</Term>されるため、同じサイトに何度もアクセスするときに毎回DNSへ問い合わせずに済み、表示が速くなります。リゾルバの階層や歴史的な経緯は「<Link href="/network/applications/dns">DNS</Link>」で詳しく扱います。</p>
 
       <Heading num="05">HTTPリクエストの構造</Heading>
       <p>ブラウザがサーバーに送るHTTPリクエストは、大きく3つの部分でできています。</p>
@@ -296,7 +296,7 @@ export default function Page() {
         related={
           <RelatedList>
                     <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル ― OSI参照モデルとTCP/IP</RelatedLink>
-                    <RelatedLink href="/internet/history" tag="インターネット">インターネットの歴史</RelatedLink>
+                    <RelatedLink href="/network/internet/history" tag="インターネット">インターネットの歴史</RelatedLink>
                     <RelatedLink href="/os" tag="OS">OSの仕組み</RelatedLink>
                   </RelatedList>
         }

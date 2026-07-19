@@ -81,7 +81,7 @@ export default function Page() {
           <RelatedList>
                     <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル ― OSI参照モデルとTCP/IP</RelatedLink>
                     <RelatedLink href="/network/topology" tag="ネットワーク">トポロジと接続装置</RelatedLink>
-                    <RelatedLink href="/internet/history" tag="インターネット">インターネットの歴史</RelatedLink>
+                    <RelatedLink href="/network/internet/history" tag="インターネット">インターネットの歴史</RelatedLink>
                   </RelatedList>
         }
       />

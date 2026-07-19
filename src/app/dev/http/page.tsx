@@ -36,7 +36,7 @@ export default function Page() {
       </Hero>
 
       <Heading num="01">HTTPクライアント ― サーバーにリクエストを送る道具</Heading>
-      <p>「コンピュータ基礎」の「<Link href="/internet/web">Webの仕組み</Link>」で見たように、ブラウザとサーバーは<Term>HTTP</Term>という約束事に沿ってやりとりします。ページを最初に表示するときはブラウザがこの通信を自動で行いますが、表示後に「ボタンを押したら最新のデータだけを取りに行く」といった通信は、JavaScriptから自分でリクエストを送る必要があります。この「サーバーにHTTPリクエストを送り、レスポンスを受け取る」役割を担うのが<Term>HTTPクライアント</Term>です。</p>
+      <p>「コンピュータ基礎」の「<Link href="/network/applications/web">Webの仕組み</Link>」で見たように、ブラウザとサーバーは<Term>HTTP</Term>という約束事に沿ってやりとりします。ページを最初に表示するときはブラウザがこの通信を自動で行いますが、表示後に「ボタンを押したら最新のデータだけを取りに行く」といった通信は、JavaScriptから自分でリクエストを送る必要があります。この「サーバーにHTTPリクエストを送り、レスポンスを受け取る」役割を担うのが<Term>HTTPクライアント</Term>です。</p>
       <p>JavaScriptでの書き方は世代を経て変化してきました。まずは全体像を押さえます。</p>
       <table>
         <thead>
@@ -175,7 +175,7 @@ clearTimeout(timer);`}</code>
           <RelatedList>
                     <RelatedLink href="/dev/language" tag="開発">JavaScript・TypeScript</RelatedLink>
                     <RelatedLink href="/dev/framework/nextjs/data" tag="開発">データフェッチ・キャッシュ・再検証</RelatedLink>
-                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                    <RelatedLink href="/network/applications/web" tag="インターネット">Webの仕組み</RelatedLink>
                     <RelatedLink href="/dev" tag="開発">実装 一覧</RelatedLink>
                   </RelatedList>
         }

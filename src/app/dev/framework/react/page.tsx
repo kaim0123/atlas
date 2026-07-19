@@ -27,7 +27,7 @@ export default function Page() {
         <Eyebrow>開発 &middot; フレームワーク・ライブラリ</Eyebrow>
         <h1>React ― 宣言的にUIを組み立てる</h1>
         <Lead>
-          <Term>React</Term>はMeta(旧Facebook)が開発した、画面をコンポーネント単位で組み立てるためのフレームワークです。「コンピュータ基礎」の「<Link href="/internet/web">Webの仕組み</Link>」で見た通り、DOMを直接<code>appendChild</code>のような命令で書き換えていく方法は、状態が複雑になるほど「今どんな画面になっているか」を追いにくくなります。Reactは「このデータのときはこの見た目」という完成形だけを書く発想でこの問題に応えます。
+          <Term>React</Term>はMeta(旧Facebook)が開発した、画面をコンポーネント単位で組み立てるためのフレームワークです。「コンピュータ基礎」の「<Link href="/network/applications/web">Webの仕組み</Link>」で見た通り、DOMを直接<code>appendChild</code>のような命令で書き換えていく方法は、状態が複雑になるほど「今どんな画面になっているか」を追いにくくなります。Reactは「このデータのときはこの見た目」という完成形だけを書く発想でこの問題に応えます。
         </Lead>
       </Hero>
 
@@ -87,7 +87,7 @@ export default function Page() {
                     <RelatedLink href="/dev/framework/react/logic-reuse" tag="開発">ロジックを再利用する</RelatedLink>
                     <RelatedLink href="/dev/framework" tag="開発">フレームワーク・ライブラリ概要</RelatedLink>
                     <RelatedLink href="/dev/framework/nextjs" tag="開発">Next.js</RelatedLink>
-                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                    <RelatedLink href="/network/applications/web" tag="インターネット">Webの仕組み</RelatedLink>
                   </RelatedList>
         }
       />

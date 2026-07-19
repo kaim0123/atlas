@@ -175,8 +175,8 @@ export default function Page() {
         related={
           <RelatedList>
                     <RelatedLink href="/network/ip" tag="ネットワーク">IPアドレスと経路</RelatedLink>
-                    <RelatedLink href="/internet/isp" tag="インターネット">ISP接続とCDN ― インターネットへの入り口</RelatedLink>
-                    <RelatedLink href="/internet/server/build" tag="インターネット">サーバー構築の実務</RelatedLink>
+                    <RelatedLink href="/network/internet/isp" tag="インターネット">ISP接続とCDN ― インターネットへの入り口</RelatedLink>
+                    <RelatedLink href="/network/internet/server/build" tag="インターネット">サーバー構築の実務</RelatedLink>
                   </RelatedList>
         }
       />

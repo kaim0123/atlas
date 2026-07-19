@@ -90,7 +90,7 @@ export default function Page() {
                     <RelatedLink href="/security/csrf" tag="セキュリティ">CSRF対策</RelatedLink>
                     <RelatedLink href="/security/xss" tag="セキュリティ">XSSと出力エスケープ</RelatedLink>
                     <RelatedLink href="/security/auth" tag="セキュリティ">認証</RelatedLink>
-                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                    <RelatedLink href="/network/applications/web" tag="インターネット">Webの仕組み</RelatedLink>
                   </RelatedList>
         }
       />

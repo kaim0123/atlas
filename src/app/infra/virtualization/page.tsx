@@ -140,7 +140,7 @@ export default function Page() {
       <DocsFooter
         related={
           <RelatedList>
-                    <RelatedLink href="/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
+                    <RelatedLink href="/network/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
                     <RelatedLink href="/infra/storage" tag="インフラ">ストレージの仕組み ― NAS・SAN・RAID</RelatedLink>
                     <RelatedLink href="/computer/client" tag="コンピュータ">クライアント管理の実務</RelatedLink>
                   </RelatedList>

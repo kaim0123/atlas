@@ -30,7 +30,7 @@ export default function Page() {
         <Eyebrow>セキュリティ</Eyebrow>
         <h1>ハッシュ関数と衝突攻撃 ― Web全体の信頼を支える「一方向の壁」</h1>
         <Lead>
-          2004年、ある学会で中国人研究者<Term>王小雲(ワン・シャオユン)</Term>の発表が終わると、聴衆は総立ちになりました。表向きは「条件を満たす数の組を見つけた」という地味な成果。しかし専門家には意味が分かりました ― 広く使われていた<Term>MD5</Term>で、意図的に同じハッシュ値を作れることを示したのです。これはWebの信頼の基盤が揺らいだ瞬間でした。<Link href="/security/auth">パスワードの保存</Link>も、電子署名も、<Link href="/internet/web">HTTPS</Link>の改ざん検知も、その裏では<Term>ハッシュ関数</Term>が動いています。このページでは、ハッシュ関数の性質と、それを壊す「衝突」を手計算のデモで見ていきます。
+          2004年、ある学会で中国人研究者<Term>王小雲(ワン・シャオユン)</Term>の発表が終わると、聴衆は総立ちになりました。表向きは「条件を満たす数の組を見つけた」という地味な成果。しかし専門家には意味が分かりました ― 広く使われていた<Term>MD5</Term>で、意図的に同じハッシュ値を作れることを示したのです。これはWebの信頼の基盤が揺らいだ瞬間でした。<Link href="/security/auth">パスワードの保存</Link>も、電子署名も、<Link href="/network/applications/web">HTTPS</Link>の改ざん検知も、その裏では<Term>ハッシュ関数</Term>が動いています。このページでは、ハッシュ関数の性質と、それを壊す「衝突」を手計算のデモで見ていきます。
         </Lead>
       </Hero>
 
@@ -142,7 +142,7 @@ export default function Page() {
           <RelatedList>
                     <RelatedLink href="/security/crypto" tag="セキュリティ">暗号の歴史と公開鍵暗号</RelatedLink>
                     <RelatedLink href="/security/auth" tag="セキュリティ">認証</RelatedLink>
-                    <RelatedLink href="/internet/web" tag="インターネット">Webと暗号化通信</RelatedLink>
+                    <RelatedLink href="/network/applications/web" tag="インターネット">Webと暗号化通信</RelatedLink>
                   </RelatedList>
         }
       />

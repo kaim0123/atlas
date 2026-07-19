@@ -49,7 +49,7 @@ export default function Page() {
       </Analogy>
 
       <Heading num="02">DNS・SSL/TLS・CDN ― ドメインからページが届くまで</Heading>
-      <p>ユーザーがドメイン名を入力してからページが表示されるまでには、<Term>DNS</Term>(ドメイン名をIPアドレスに変換)・<Term>SSL/TLS</Term>(通信の暗号化)・<Term>CDN</Term>(地理的に近い拠点からコンテンツを配信)という3つの仕組みが働いています。この一連の流れの詳細は<Link href="/internet/web">Webの仕組み</Link>で、AWSでの実装(Route 53・ACM・CloudFront)は<Link href="/cloud/aws/network">ネットワーキングとコンテンツ配信</Link>で扱っています。PaaSを使う場合、この3つは基本的に自動で用意されるため、個人サイトで意識するのはカスタムドメインの接続程度です。</p>
+      <p>ユーザーがドメイン名を入力してからページが表示されるまでには、<Term>DNS</Term>(ドメイン名をIPアドレスに変換)・<Term>SSL/TLS</Term>(通信の暗号化)・<Term>CDN</Term>(地理的に近い拠点からコンテンツを配信)という3つの仕組みが働いています。この一連の流れの詳細は<Link href="/network/applications/web">Webの仕組み</Link>で、AWSでの実装(Route 53・ACM・CloudFront)は<Link href="/cloud/aws/network">ネットワーキングとコンテンツ配信</Link>で扱っています。PaaSを使う場合、この3つは基本的に自動で用意されるため、個人サイトで意識するのはカスタムドメインの接続程度です。</p>
 
       <Heading num="03">Git運用とデプロイフロー</Heading>
       <p>デプロイの起点は基本的に<Term>Gitへのpush</Term>です。個人開発でも、`main`ブランチ = 本番反映という状態を保つために、最低限のルールを決めておくと事故が減ります。</p>

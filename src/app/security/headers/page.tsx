@@ -190,7 +190,7 @@ export default function Page() {
           <RelatedList>
                     <RelatedLink href="/security/xss" tag="セキュリティ">XSSと出力エスケープ</RelatedLink>
                     <RelatedLink href="/security/network-defense" tag="セキュリティ">ネットワーク層の防御</RelatedLink>
-                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                    <RelatedLink href="/network/applications/web" tag="インターネット">Webの仕組み</RelatedLink>
                     <RelatedLink href="/ops/deploy" tag="運用">インフラとデプロイ</RelatedLink>
                   </RelatedList>
         }

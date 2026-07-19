@@ -44,7 +44,7 @@ export default function Page() {
 
       <Heading num="04">パスワードは「ハッシュ化」して保存する</Heading>
       <p>最も重要な原則は、パスワードを平文のまま保存しないことです。データベースが漏洩した瞬間に、全ユーザーのパスワードがそのまま流出してしまうためです。</p>
-      <p>ここで区別しておきたいのが<Term>暗号化</Term>と<Term>ハッシュ関数</Term>の違いです。<Term>暗号化</Term>は「鍵」を使って変換前のデータに戻すことができる<Term>双方向</Term>の仕組みです(<Link href="/internet/web">Webの仕組み</Link>ページで見たHTTPSの通信路の暗号化がその代表例です)。一方<Term>ハッシュ関数</Term>は「同じ入力からは必ず同じ出力が得られるが、出力から入力を逆算することはできない」<Term>一方向</Term>の変換です。</p>
+      <p>ここで区別しておきたいのが<Term>暗号化</Term>と<Term>ハッシュ関数</Term>の違いです。<Term>暗号化</Term>は「鍵」を使って変換前のデータに戻すことができる<Term>双方向</Term>の仕組みです(<Link href="/network/applications/web">Webの仕組み</Link>ページで見たHTTPSの通信路の暗号化がその代表例です)。一方<Term>ハッシュ関数</Term>は「同じ入力からは必ず同じ出力が得られるが、出力から入力を逆算することはできない」<Term>一方向</Term>の変換です。</p>
 
       <table>
         <thead>

@@ -27,7 +27,7 @@ export default function Page() {
         <Eyebrow>AWS &middot; ネットワーキングとコンテンツ配信</Eyebrow>
         <h1>Route 53 ― ドメイン名を宛先へ振り分ける</h1>
         <Lead>
-          <Term>Route 53</Term>はAWSの<Term>DNS(<Link href="/internet/dns">DNS</Link>ページ参照)</Term>サービスです。ドメイン名をIPアドレスへ変換する基本機能に加え、複数の宛先の中から状況に応じて最適な1つへ振り分ける、高度な<Term>ルーティングポリシー</Term>を持っています。
+          <Term>Route 53</Term>はAWSの<Term>DNS(<Link href="/network/applications/dns">DNS</Link>ページ参照)</Term>サービスです。ドメイン名をIPアドレスへ変換する基本機能に加え、複数の宛先の中から状況に応じて最適な1つへ振り分ける、高度な<Term>ルーティングポリシー</Term>を持っています。
         </Lead>
       </Hero>
 
@@ -72,7 +72,7 @@ export default function Page() {
           <RelatedList>
                     <RelatedLink href="/cloud/aws/network" tag="AWS">ネットワーキングとコンテンツ配信</RelatedLink>
                     <RelatedLink href="/cloud/aws/network/cloudfront" tag="AWS">CloudFront</RelatedLink>
-                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                    <RelatedLink href="/network/applications/web" tag="インターネット">Webの仕組み</RelatedLink>
                   </RelatedList>
         }
       />

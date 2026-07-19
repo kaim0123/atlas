@@ -33,7 +33,7 @@ export default function Page() {
         </Lead>
       </Hero>
 
-      <p>なお、名前をIPアドレスに変換する<Term>DNS</Term>の仕組みそのものや、通信を暗号化する<Term>HTTPS/TLS</Term>の仕組みそのものは、それぞれ「<Link href="/internet/dns">DNS</Link>」「<Link href="/internet/web">Webの仕組み</Link>」で詳しく扱っています。ここでは重複を避け、ISPやCDNが「何のために」それらの技術を使っているかに絞って説明します。</p>
+      <p>なお、名前をIPアドレスに変換する<Term>DNS</Term>の仕組みそのものや、通信を暗号化する<Term>HTTPS/TLS</Term>の仕組みそのものは、それぞれ「<Link href="/network/applications/dns">DNS</Link>」「<Link href="/network/applications/web">Webの仕組み</Link>」で詳しく扱っています。ここでは重複を避け、ISPやCDNが「何のために」それらの技術を使っているかに絞って説明します。</p>
 
       <Heading num="01">ISP(プロバイダ)とは何をしている会社か</Heading>
       <p><Term>ISP(Internet Service Provider)</Term>は、家庭やオフィスを世界中のネットワークがつながる「インターネット」本体に接続する会社です。「<Link href="/network/topology">トポロジと接続装置</Link>」で見たルーターは、あくまで自宅・社内のネットワークとインターネットの境目に立つ機器にすぎません。その先、実際にネットワークとネットワークをつなぎ合わせている回線・設備・契約を提供しているのがISPです。</p>
@@ -142,14 +142,14 @@ export default function Page() {
           <p>CDNは物理的な距離を縮めて配信を速くし、プロキシはクライアント側・サーバー側それぞれの代理人として通信を仲介します。</p>
         </Card>
       </CardGrid>
-      <p>ここまででネットワークの入り口から出口までを見てきました。次は、実際にサーバーを構築・運用する現場の実務を「<Link href="/internet/server/build">サーバー構築の実務</Link>」で見ていきます。</p>
+      <p>ここまででネットワークの入り口から出口までを見てきました。次は、実際にサーバーを構築・運用する現場の実務を「<Link href="/network/internet/server/build">サーバー構築の実務</Link>」で見ていきます。</p>
 
       <DocsFooter
         related={
           <RelatedList>
                     <RelatedLink href="/network/topology" tag="ネットワーク">トポロジと接続装置</RelatedLink>
-                    <RelatedLink href="/internet/dns" tag="インターネット">DNS ― 名前をIPアドレスに変える電話帳</RelatedLink>
-                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み ― URLからレンダリングまで</RelatedLink>
+                    <RelatedLink href="/network/applications/dns" tag="インターネット">DNS ― 名前をIPアドレスに変える電話帳</RelatedLink>
+                    <RelatedLink href="/network/applications/web" tag="インターネット">Webの仕組み ― URLからレンダリングまで</RelatedLink>
                   </RelatedList>
         }
       />

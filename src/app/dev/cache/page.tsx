@@ -29,7 +29,7 @@ export default function Page() {
         <Eyebrow>開発</Eyebrow>
         <h1>キャッシュの全体像 ― 名前は同じでも、動く場所も目的も違う</h1>
         <Lead>
-          「<Link href="/computer/memory">メモリの仕組み</Link>」ではCPUの<Term>キャッシュメモリ</Term>を、「<Link href="/internet/web">Webの仕組み</Link>」ではDNSの問い合わせ結果を、「<Link href="/network/applications">アプリケーション層</Link>」では<code>Cache-Control</code>ヘッダを、それぞれ見てきました。実は「キャッシュ」という同じ言葉が、1台のコンピュータの内部からインターネットの向こう側まで、何段階にもわたって登場します。このページでは、それらを1枚の地図として整理します。
+          「<Link href="/computer/memory">メモリの仕組み</Link>」ではCPUの<Term>キャッシュメモリ</Term>を、「<Link href="/network/applications/web">Webの仕組み</Link>」ではDNSの問い合わせ結果を、「<Link href="/network/applications">アプリケーション層</Link>」では<code>Cache-Control</code>ヘッダを、それぞれ見てきました。実は「キャッシュ」という同じ言葉が、1台のコンピュータの内部からインターネットの向こう側まで、何段階にもわたって登場します。このページでは、それらを1枚の地図として整理します。
         </Lead>
       </Hero>
 
@@ -96,7 +96,7 @@ export default function Page() {
       <p>一度読み込んだ画像・CSS・JavaScriptファイルなどを、自分のブラウザの中に保存しておく仕組みです。同じサイトに再訪問したとき、サーバーへ取りに行かずに済むため表示が速くなります。どれくらいの期間保存してよいかは、サーバーが返す<code>Cache-Control</code>ヘッダで指示します(詳しくは「<Link href="/network/applications">アプリケーション層</Link>」)。</p>
 
       <h3>DNSキャッシュ ― 一度調べた住所を覚えておく</h3>
-      <p>「<Link href="/internet/web">Webの仕組み</Link>」で見た通り、ホスト名からIPアドレスへの変換結果を一定時間覚えておくキャッシュです。ブラウザ自身や、その先のOS・DNSサーバーなど、複数の場所で行われています。</p>
+      <p>「<Link href="/network/applications/web">Webの仕組み</Link>」で見た通り、ホスト名からIPアドレスへの変換結果を一定時間覚えておくキャッシュです。ブラウザ自身や、その先のOS・DNSサーバーなど、複数の場所で行われています。</p>
 
       <h3>CDN・プロキシキャッシュ ― みんなで使う共有の棚</h3>
       <p><Term>CDN</Term>や<Term>プロキシ</Term>は、サーバーとブラウザの間に立つ共有インフラです。多数の利用者から同じファイルへのリクエストが来ることを見越して、サーバーに問い合わせる前にそこで応答を返してしまいます。ブラウザキャッシュと違い、<strong>複数の利用者で共有</strong>される点が重要です。</p>
@@ -125,15 +125,15 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>リクエストの経路上にも階層がある</h4><p>ブラウザ→CDN・プロキシ→Webサーバー→データベースと、段階ごとに別のキャッシュが働いています。</p></Card>
         <Card><CardNumber>4</CardNumber><h4>「共有か専用か」が安全性を左右する</h4><p>複数人で共有されるキャッシュに個人向けデータを乗せないことが、最も注意すべき点です。</p></Card>
       </CardGrid>
-      <p>キャッシュのほかにも、「サーバー」「オブジェクト」「ポート」など、コンピュータの世界には同じ言葉が文脈によって姿を変える例がいくつもあります。次のページ「<Link href="/internet/server">サーバーの全体像</Link>」から、続けてそれらを整理していきます。</p>
+      <p>キャッシュのほかにも、「サーバー」「オブジェクト」「ポート」など、コンピュータの世界には同じ言葉が文脈によって姿を変える例がいくつもあります。次のページ「<Link href="/network/internet/server">サーバーの全体像</Link>」から、続けてそれらを整理していきます。</p>
 
       <DocsFooter
         related={
           <RelatedList>
                     <RelatedLink href="/computer/memory" tag="コンピュータ">メモリの仕組み</RelatedLink>
-                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                    <RelatedLink href="/network/applications/web" tag="インターネット">Webの仕組み</RelatedLink>
                     <RelatedLink href="/security/cache" tag="セキュリティ">キャッシュ制御と情報漏洩</RelatedLink>
-                    <RelatedLink href="/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
+                    <RelatedLink href="/network/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
                   </RelatedList>
         }
       />

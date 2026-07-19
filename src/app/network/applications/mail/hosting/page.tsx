@@ -25,10 +25,10 @@ export default function Page() {
   return (
     <DocsPage>
       <Hero>
-        <Eyebrow>インターネット</Eyebrow>
+        <Eyebrow>ネットワーク</Eyebrow>
         <h1>会社ドメインのメールを用意する ― 情シスの選択肢</h1>
         <Lead>
-          <Link href="/internet/mail">メールの仕組み</Link>が「どう届くか」の話だとすれば、こちらは「<Term>@会社ドメインのメールを、誰が・どこで運用するか</Term>」という選定の話です。企業の情報システム部門が独自ドメインのメールを整えるとき、選択肢は大きく4系統に分かれます。まずは全体像を押さえ、最後に選ぶときの判断軸を整理します。
+          <Link href="/network/applications/mail">メールの仕組み</Link>が「どう届くか」の話だとすれば、こちらは「<Term>@会社ドメインのメールを、誰が・どこで運用するか</Term>」という選定の話です。企業の情報システム部門が独自ドメインのメールを整えるとき、選択肢は大きく4系統に分かれます。まずは全体像を押さえ、最後に選ぶときの判断軸を整理します。
         </Lead>
       </Hero>
 
@@ -85,12 +85,12 @@ export default function Page() {
       <ul>
         <li><strong>アカウント管理 / SSO</strong> ― IdP(Entra ID・Okta など)連携や、入退社時の自動プロビジョニングができるか</li>
         <li><strong>セキュリティ・コンプライアンス</strong> ― メールアーカイブ、監査ログ、DLP、暗号化、業界規制への対応</li>
-        <li><strong>到達性</strong> ― <Link href="/internet/mail">SPF・DKIM・DMARC</Link> を正しく設定でき、なりすまし対策・迷惑メール判定回避ができるか</li>
+        <li><strong>到達性</strong> ― <Link href="/network/applications/mail">SPF・DKIM・DMARC</Link> を正しく設定でき、なりすまし対策・迷惑メール判定回避ができるか</li>
         <li><strong>一体運用</strong> ― カレンダー・チャット・ストレージまで揃えるか、メール単体で足りるか</li>
         <li><strong>コスト</strong> ― 多くはユーザー単位の月額課金。人数と必要機能で見積もる</li>
       </ul>
       <Aside label="注意">
-        どの方式を選んでも、SPF・DKIM・DMARC といった認証設定は<Link href="/internet/dns">DNS</Link>への登録で有効になります。メールサービスを移行したり、新しい配信ツールを併用したりする際にこの設定を更新し忘れると、正規のメールが迷惑メール扱いされることがあります。
+        どの方式を選んでも、SPF・DKIM・DMARC といった認証設定は<Link href="/network/applications/dns">DNS</Link>への登録で有効になります。メールサービスを移行したり、新しい配信ツールを併用したりする際にこの設定を更新し忘れると、正規のメールが迷惑メール扱いされることがあります。
       </Aside>
 
       <Heading num="まとめ">まず主流の二択から</Heading>
@@ -115,9 +115,9 @@ export default function Page() {
       <DocsFooter
         related={
           <RelatedList>
-                    <RelatedLink href="/internet/mail" tag="インターネット">メールの仕組み</RelatedLink>
+                    <RelatedLink href="/network/applications/mail" tag="インターネット">メールの仕組み</RelatedLink>
                     <RelatedLink href="/cloud/cloudflare" tag="クラウド">Cloudflare</RelatedLink>
-                    <RelatedLink href="/internet/dns" tag="インターネット">DNS</RelatedLink>
+                    <RelatedLink href="/network/applications/dns" tag="インターネット">DNS</RelatedLink>
                     <RelatedLink href="/ops/deploy" tag="運用">インフラとデプロイ</RelatedLink>
                   </RelatedList>
         }

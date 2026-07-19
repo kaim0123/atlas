@@ -37,7 +37,7 @@ export default function Page() {
         Cloudflareの出発点は、Webサイトとユーザーの間に立つ<Term>CDN(コンテンツ配信網)</Term>です。世界中のデータセンターにコンテンツをキャッシュし、ユーザーに地理的に近い拠点から配信することで表示を高速化します。この「間に立つ」位置を活かして、<Term>DNS</Term>(ドメイン名の名前解決)、<Term>SSL/TLS</Term>(通信の暗号化)、そして<Term>WAF・DDoS防御</Term>(攻撃の遮断)といった、ドメインの前段に必要な機能をまとめて提供しているのが特徴です。
       </p>
       <p>
-        AWSに置き換えると、<Link href="/cloud/aws/network/cloudfront">CloudFront</Link>(CDN)+ <Link href="/cloud/aws/network/route53">Route 53</Link>(DNS)+ <Link href="/cloud/aws/network/acm">ACM</Link>(証明書)+ WAF を、1つのサービスとしてまとめて提供しているイメージです。CDN・DNS・SSL そのものの仕組みは<Link href="/internet/web">Webの仕組み</Link>や<Link href="/internet/dns">DNS</Link>で扱っています。
+        AWSに置き換えると、<Link href="/cloud/aws/network/cloudfront">CloudFront</Link>(CDN)+ <Link href="/cloud/aws/network/route53">Route 53</Link>(DNS)+ <Link href="/cloud/aws/network/acm">ACM</Link>(証明書)+ WAF を、1つのサービスとしてまとめて提供しているイメージです。CDN・DNS・SSL そのものの仕組みは<Link href="/network/applications/web">Webの仕組み</Link>や<Link href="/network/applications/dns">DNS</Link>で扱っています。
       </p>
       <Analogy label="💡 たとえるなら">
         Cloudflareは「店(サーバー)とお客さん(ユーザー)の間に立つ、全国チェーンの受付窓口」です。お客さんは最寄りの窓口に行くだけで用が足り(CDN)、窓口が本人確認や不審者の入店拒否を代行し(セキュリティ)、どの店に取り次ぐかも案内してくれます(DNS)。本店(オリジンサーバー)まで足を運ぶ回数そのものを減らすのが役割です。
@@ -118,7 +118,7 @@ export default function Page() {
                     <RelatedLink href="/ops/deploy" tag="運用">インフラとデプロイ</RelatedLink>
                     <RelatedLink href="/cloud/aws/network" tag="AWS">ネットワーキングとコンテンツ配信</RelatedLink>
                     <RelatedLink href="/cloud/aws/network/cloudfront" tag="AWS">CloudFront</RelatedLink>
-                    <RelatedLink href="/internet/dns" tag="インターネット">DNS</RelatedLink>
+                    <RelatedLink href="/network/applications/dns" tag="インターネット">DNS</RelatedLink>
                   </RelatedList>
         }
       />

@@ -36,7 +36,7 @@ export default function Page() {
       <p>JavaScriptのコードを実際に解釈・実行するプログラムを<Term>JSエンジン</Term>と呼びます(代表例: Google製の<Term>V8</Term>)。しかしJSエンジン単体では、ファイルを読み書きしたり画面に何かを表示したりはできません。JSエンジンに、その実行環境ならではの機能(ブラウザなら画面操作、サーバーならファイル操作など)を組み合わせた「動かすための土台一式」が<Term>ランタイム</Term>です。</p>
 
       <Heading num="02">ブラウザという実行環境</Heading>
-      <p>私たちが最初にJavaScriptを実行する場所として出会うのはブラウザです。「コンピュータ基礎」の「<Link href="/internet/web">Webの仕組み</Link>」で見た通り、ブラウザはHTML・CSSからDOM・CSSOMを組み立てて画面を描きますが、JavaScriptはそのDOMを直接書き換えることで、クリックへの反応やアニメーションを実現します。ブラウザにはこの他にも、通信を行う<code>fetch</code>や、時間差で処理を実行する<code>setTimeout</code>など、<Term>Web API</Term>と呼ばれる豊富な機能が用意されています。</p>
+      <p>私たちが最初にJavaScriptを実行する場所として出会うのはブラウザです。「コンピュータ基礎」の「<Link href="/network/applications/web">Webの仕組み</Link>」で見た通り、ブラウザはHTML・CSSからDOM・CSSOMを組み立てて画面を描きますが、JavaScriptはそのDOMを直接書き換えることで、クリックへの反応やアニメーションを実現します。ブラウザにはこの他にも、通信を行う<code>fetch</code>や、時間差で処理を実行する<code>setTimeout</code>など、<Term>Web API</Term>と呼ばれる豊富な機能が用意されています。</p>
 
       <Heading num="03">Node.js ― JavaScriptをサーバーでも動かす</Heading>
       <p>2009年、Ryan DahlはブラウザのV8エンジンを取り出し、ファイルの読み書きやネットワーク通信などサーバー用途の機能を組み合わせた<Term>Node.js</Term>を作りました。これにより、それまでブラウザの中だけで完結していたJavaScriptを、サーバー側のプログラムとしても動かせるようになりました。フロントエンドとバックエンドを同じ言語で書けるようになったことは、JavaScriptが爆発的に普及する大きな転機になりました。世界最大のパッケージ管理エコシステム<Term>npm</Term>(前のカテゴリ「開発基盤」の「<Link href="/dev/tooling">パッケージ管理とビルド</Link>」参照)も、このNode.jsを前提に育ってきたものです。</p>
@@ -95,7 +95,7 @@ export default function Page() {
           <RelatedList>
                     <RelatedLink href="/dev/framework" tag="開発">フレームワーク・ライブラリ</RelatedLink>
                     <RelatedLink href="/dev/language" tag="開発">JavaScript・TypeScript</RelatedLink>
-                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                    <RelatedLink href="/network/applications/web" tag="インターネット">Webの仕組み</RelatedLink>
                   </RelatedList>
         }
       />

@@ -143,7 +143,7 @@ export default function Page() {
           <RelatedList>
                     <RelatedLink href="/dev/runtime" tag="開発">ランタイム</RelatedLink>
                     <RelatedLink href="/dev/web-basics" tag="開発">Web基礎</RelatedLink>
-                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                    <RelatedLink href="/network/applications/web" tag="インターネット">Webの仕組み</RelatedLink>
                   </RelatedList>
         }
       />

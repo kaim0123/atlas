@@ -49,7 +49,7 @@ export default function Page() {
       </table>
 
       <Heading num="02">Route 53 ― 住所(ドメイン)を管理する</Heading>
-      <p><Term>Route 53</Term>はAWSのDNS(<Link href="/internet/dns">DNS</Link>ページ参照)サービスです。ドメイン名をIPアドレスへ変換するだけでなく、「最も近いリージョンへ振り分ける」「障害が起きたサーバーへは向けない」といった高度なルーティングポリシーを設定できます。ルーティングポリシーやヘルスチェックの詳細は<Link href="/cloud/aws/network/route53">Route 53のページ</Link>で扱います。</p>
+      <p><Term>Route 53</Term>はAWSのDNS(<Link href="/network/applications/dns">DNS</Link>ページ参照)サービスです。ドメイン名をIPアドレスへ変換するだけでなく、「最も近いリージョンへ振り分ける」「障害が起きたサーバーへは向けない」といった高度なルーティングポリシーを設定できます。ルーティングポリシーやヘルスチェックの詳細は<Link href="/cloud/aws/network/route53">Route 53のページ</Link>で扱います。</p>
 
       <Heading num="03">CloudFront ― 世界中に配達拠点を置く</Heading>
       <p><Term>CloudFront</Term>はAWSの<Term>CDN(Content Delivery Network)</Term>です。オリジンサーバー(S3やEC2)の内容を世界中の<Term>エッジロケーション</Term>にキャッシュし、利用者から地理的に最も近い拠点から配信することで、表示速度を上げつつオリジンサーバーへの負荷を減らします。この考え方は<Link href="/dev/cache">キャッシュの全体像</Link>ページで見た「近くに複製を置く」戦略のネットワーク版です。オリジンの保護や署名付きURLの詳細は<Link href="/cloud/aws/network/cloudfront">CloudFrontのページ</Link>で扱います。</p>

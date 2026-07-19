@@ -174,7 +174,7 @@ export default function Page() {
           <RelatedList>
                     <RelatedLink href="/dev/language-basics" tag="開発">プログラミング言語の仕組み ― パラダイム・実行方式・型システム</RelatedLink>
                     <RelatedLink href="/computer/history" tag="コンピュータ">コンピュータの歴史 ― 歯車の夢から、指先の中の宇宙へ</RelatedLink>
-                    <RelatedLink href="/internet/history" tag="インターネット">インターネットの歴史</RelatedLink>
+                    <RelatedLink href="/network/internet/history" tag="インターネット">インターネットの歴史</RelatedLink>
                   </RelatedList>
         }
       />

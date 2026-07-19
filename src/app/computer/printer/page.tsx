@@ -113,8 +113,8 @@ export default function Page() {
         related={
           <RelatedList>
                     <RelatedLink href="/network/link" tag="ネットワーク">データリンク層と物理層</RelatedLink>
-                    <RelatedLink href="/internet/mail" tag="インターネット">メールの仕組み</RelatedLink>
-                    <RelatedLink href="/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
+                    <RelatedLink href="/network/applications/mail" tag="インターネット">メールの仕組み</RelatedLink>
+                    <RelatedLink href="/network/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
                   </RelatedList>
         }
       />

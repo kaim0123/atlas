@@ -29,7 +29,7 @@ export default function Page() {
   return (
     <DocsPage>
       <Hero>
-        <Eyebrow>インターネット</Eyebrow>
+        <Eyebrow>ネットワーク</Eyebrow>
         <h1>DNS ― 名前をIPアドレスに変える、インターネットの電話帳</h1>
         <Lead>
           2021年秋、Facebook・Instagram・WhatsAppが約6時間同時にダウンした原因は、ハッキングでもサーバー故障でもなく、名前をIPアドレスへ変換する仕組み――DNSへ辿り着く経路が一時的に消えたことでした。ここでは「インターネットの電話帳」であるDNSの仕組みと、1983年の設計転換から現在まで続く40年の攻防を辿ります。
@@ -179,13 +179,13 @@ export default function Page() {
         <Card><CardNumber>3</CardNumber><h4>危機のたびに多重防御が積まれた</h4><p>カミンスキー攻撃はソースポートのランダム化とDNSSECを、Dyn・Facebookの障害は事業者の分散を教訓として残しました。</p></Card>
         <Card><CardNumber>4</CardNumber><h4>普段は空気、止まれば道連れ</h4><p>サーバーが生きていても、名前が引けなければ誰もたどり着けません。</p></Card>
       </CardGrid>
-      <p>次にネットが急につながらなくなったら、サーバーが死んだのではなく、電話帳が一瞬迷子になっただけかもしれません。名前解決の後、実際にコンテンツがブラウザへ届くまでの続きは「<Link href="/internet/web">Webの仕組み</Link>」で見ていきます。</p>
+      <p>次にネットが急につながらなくなったら、サーバーが死んだのではなく、電話帳が一瞬迷子になっただけかもしれません。名前解決の後、実際にコンテンツがブラウザへ届くまでの続きは「<Link href="/network/applications/web">Webの仕組み</Link>」で見ていきます。</p>
 
       <DocsFooter
         related={
           <RelatedList>
                     <RelatedLink href="/network/layers" tag="ネットワーク">階層モデル ― OSI参照モデルとTCP/IP</RelatedLink>
-                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み ― URLからレンダリングまで</RelatedLink>
+                    <RelatedLink href="/network/applications/web" tag="インターネット">Webの仕組み ― URLからレンダリングまで</RelatedLink>
                     <RelatedLink href="/cloud/aws/network/route53" tag="AWS">Route 53 ― ドメイン名を宛先へ振り分ける</RelatedLink>
                   </RelatedList>
         }

@@ -96,7 +96,7 @@ export default function Page() {
       </table>
       <p>ブラウザから利用する<Term>Webシステム</Term>も、3層構成やクラウドの上で動く代表的な形態です。</p>
       <Aside label="このページでは概要まで">
-        仮想化・クラウド・Webは e-Words 上ここに含まれますが、運用や実装の詳細は別セクションで扱います。仕組みは「<Link href="/infra/virtualization">仮想化の仕組み</Link>」、構築は「<Link href="/cloud/aws">AWS</Link>」、Webの仕組みは「<Link href="/internet/web">Webの仕組み</Link>」を参照してください。
+        仮想化・クラウド・Webは e-Words 上ここに含まれますが、運用や実装の詳細は別セクションで扱います。仕組みは「<Link href="/infra/virtualization">仮想化の仕組み</Link>」、構築は「<Link href="/cloud/aws">AWS</Link>」、Webの仕組みは「<Link href="/network/applications/web">Webの仕組み</Link>」を参照してください。
       </Aside>
 
       <Heading num="まとめ">この章の3点</Heading>
@@ -126,7 +126,7 @@ export default function Page() {
                     <RelatedLink href="/computer/system/reliability" tag="コンピュータ">信頼性と冗長化 ― RASIS・MTBF/MTTR</RelatedLink>
                     <RelatedLink href="/computer/system/metrics" tag="コンピュータ">性能と経済性の評価 ― スループット・TCO</RelatedLink>
                     <RelatedLink href="/infra/virtualization" tag="インフラ">仮想化の仕組み</RelatedLink>
-                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                    <RelatedLink href="/network/applications/web" tag="インターネット">Webの仕組み</RelatedLink>
                   </RelatedList>
         }
       />

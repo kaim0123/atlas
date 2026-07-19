@@ -29,7 +29,7 @@ export default function Page() {
         <Eyebrow>開発</Eyebrow>
         <h1>Web基礎 ― HTMLとCSSでページの骨格と見た目を作る</h1>
         <Lead>
-          「コンピュータ基礎」の<Link href="/internet/web">Webの仕組み</Link>で、ブラウザが受け取ったHTML・CSSを<Term>DOM</Term>・<Term>CSSOM</Term>というツリーに変換し、画面に描き出す流れを見ました。この記事では、その材料であるHTMLとCSS自体をどう書くのかを見ていきます。
+          「コンピュータ基礎」の<Link href="/network/applications/web">Webの仕組み</Link>で、ブラウザが受け取ったHTML・CSSを<Term>DOM</Term>・<Term>CSSOM</Term>というツリーに変換し、画面に描き出す流れを見ました。この記事では、その材料であるHTMLとCSS自体をどう書くのかを見ていきます。
         </Lead>
       </Hero>
 
@@ -166,7 +166,7 @@ export default function Page() {
         related={
           <RelatedList>
                     <RelatedLink href="/dev/language" tag="開発">JavaScript・TypeScript</RelatedLink>
-                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                    <RelatedLink href="/network/applications/web" tag="インターネット">Webの仕組み</RelatedLink>
                     <RelatedLink href="/dev" tag="開発">実装 一覧</RelatedLink>
                   </RelatedList>
         }

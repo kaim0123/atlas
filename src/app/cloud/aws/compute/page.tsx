@@ -90,7 +90,7 @@ export default function Page() {
           <RelatedList>
                     <RelatedLink href="/cloud/aws/storage" tag="AWS">ストレージ</RelatedLink>
                     <RelatedLink href="/cloud/aws/container" tag="AWS">コンテナ</RelatedLink>
-                    <RelatedLink href="/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
+                    <RelatedLink href="/network/internet/server" tag="インターネット">サーバーの全体像</RelatedLink>
                   </RelatedList>
         }
       />

@@ -148,7 +148,7 @@ export default function Page() {
           <RelatedList>
                     <RelatedLink href="/security/injection" tag="セキュリティ">インジェクション攻撃の基本形</RelatedLink>
                     <RelatedLink href="/security/session" tag="セキュリティ">セッションとCookie管理</RelatedLink>
-                    <RelatedLink href="/internet/web" tag="インターネット">Webの仕組み</RelatedLink>
+                    <RelatedLink href="/network/applications/web" tag="インターネット">Webの仕組み</RelatedLink>
                   </RelatedList>
         }
       />

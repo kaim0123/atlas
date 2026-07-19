@@ -25,7 +25,7 @@ export default function Page() {
   return (
     <DocsPage>
       <Hero>
-        <Eyebrow>インターネット</Eyebrow>
+        <Eyebrow>ネットワーク</Eyebrow>
         <h1>メールの仕組み ― SMTP・POP・IMAPとなりすまし対策</h1>
         <Lead>
           「メールが届かない」「取引先を装った不審なメールが来た」―
@@ -135,7 +135,7 @@ export default function Page() {
       <DocsFooter
         related={
           <RelatedList>
-                    <RelatedLink href="/internet/mail/hosting" tag="インターネット">会社ドメインのメールを用意する</RelatedLink>
+                    <RelatedLink href="/network/applications/mail/hosting" tag="インターネット">会社ドメインのメールを用意する</RelatedLink>
                     <RelatedLink href="/network/applications" tag="ネットワーク">アプリケーション層のプロトコル</RelatedLink>
                     <RelatedLink href="/infra/storage/backup" tag="インフラ">バックアップと復旧</RelatedLink>
                     <RelatedLink href="/computer/printer" tag="コンピュータ">プリンターの仕組み</RelatedLink>
