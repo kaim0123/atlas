@@ -191,6 +191,8 @@ export const sections: NavSection[] = [
       { href: "/database/transaction", title: "トランザクションと整合性" },
       { href: "/database/advanced/index", title: "索引とアクセス制御" },
       { href: "/database/physical", title: "物理設計と運用" },
+      { href: "/database/performance", title: "パフォーマンスチューニング" },
+      { href: "/database/antipattern", title: "設計のアンチパターン" },
       { href: "/database/history", title: "データベースの歴史" },
     ],
   },
@@ -228,6 +230,7 @@ export const sections: NavSection[] = [
     icon: Code2,
     tree: [
       { href: "/dev/workspace", title: "開発環境" },
+      { href: "/dev/keyboard", title: "40%キーボードとレイヤー設計" },
       { href: "/dev/environments", title: "環境の全体像" },
       { href: "/dev/language-basics", title: "プログラミング言語の仕組み" },
       { href: "/dev/language-basics/history", title: "プログラミング言語の歴史" },
@@ -235,6 +238,14 @@ export const sections: NavSection[] = [
       { href: "/dev/web-basics", title: "Web基礎" },
       { href: "/dev/runtime", title: "ランタイム" },
       { href: "/dev/http", title: "HTTP通信（Fetch・axios）" },
+      {
+        title: "API",
+        children: [
+          { href: "/dev/api", title: "APIとは（窓口・バックエンド・DBの違い）" },
+          { href: "/dev/api/styles", title: "APIの種類と選び方" },
+          { href: "/dev/api/rest", title: "REST API" },
+        ],
+      },
       { href: "/dev/tooling", title: "パッケージ管理とビルド" },
       {
         title: "フレームワーク・ライブラリ",
@@ -258,6 +269,7 @@ export const sections: NavSection[] = [
               { href: "/dev/framework/nextjs/rendering", title: "配信を最適化する" },
             ],
           },
+          { href: "/dev/framework/express", title: "Express" },
           { href: "/dev/framework/tailwind", title: "Tailwind CSS" },
         ],
       },
@@ -581,7 +593,11 @@ export const sections: NavSection[] = [
     icon: Activity,
     tree: [
       { href: "/monitoring", title: "監視・保守" },
+      { href: "/monitoring/data", title: "監視データと統計" },
+      { href: "/monitoring/frontend", title: "フロントエンド監視" },
+      { href: "/monitoring/app", title: "アプリ監視とビジネスKPI" },
       { href: "/monitoring/infra", title: "インフラの監視" },
+      { href: "/monitoring/incident", title: "インシデント管理" },
     ],
   },
   {
