@@ -79,7 +79,7 @@ export default function Page() {
         <Card><CardNumber>2</CardNumber><h4>差分検出で必要な箇所だけ更新</h4><p>stateが変わるたびに全体を作り直しているように見えて、実際のDOM更新は最小限に抑えられる。</p></Card>
         <Card><CardNumber>3</CardNumber><h4>ルーティングやSSRは範囲外</h4><p>それらを補うのが次のページで見るNext.jsの役割。</p></Card>
       </CardGrid>
-      <p>ReactにルーティングやSSRを足したものが「<Link href="/dev/framework/nextjs">Next.js</Link>」です。次のページで詳しく見ていきます。ロジックの再利用・コンポーネントの組み合わせ・フォームの値管理といった、より実践的なReactパターンは<Link href="/dev/framework/react/logic-reuse">ロジックを再利用する</Link>から扱います。</p>
+      <p>ReactにルーティングやSSRを足したものが「<Link href="/dev/framework/nextjs">Next.js</Link>」です。この概要に続いて、まずは<Link href="/dev/framework/react/functional">関数型としてReactを読む</Link>視点を押さえ、TypeScript・JSX・props・state・副作用・ref・メモ化・Contextという基礎から中核フックまでを順に見ていきます。そのうえで、ロジックの再利用・コンポーネントの組み合わせ・フォームの値管理といった実践的なパターンへ進みます。</p>
 
       <DocsFooter
         related={
