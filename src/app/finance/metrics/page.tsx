@@ -8,7 +8,6 @@ import {
   Term,
   Heading,
   DocsFooter,
-  Analogy,
   Aside,
   Diagram,
   CardGrid,

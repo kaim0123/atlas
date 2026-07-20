@@ -91,7 +91,7 @@ const el = jsx("h1", { className: "title", children: "Hello" });`}</code>
       <p>並び替えも増減も起きない静的なリストに限れば、indexでも実害はありません。しかし「今は静的でも将来動くかもしれない」ため、IDが取れるなら常にIDを使うのが安全です。</p>
 
       <Heading num="05">描画されない値とStrict Mode</Heading>
-      <p>JSXに埋め込んだ<code>null</code>・<code>undefined</code>・<code>false</code>・<code>true</code>は<Term>何も描画されません</Term>。これを利用して<code>{`cond && <X />`}</code>が成立します。一方、<code>0</code>や<code>""</code>は描画される点に注意します。</p>
+      <p>JSXに埋め込んだ<code>null</code>・<code>undefined</code>・<code>false</code>・<code>true</code>は<Term>何も描画されません</Term>。これを利用して<code>{`cond && <X />`}</code>が成立します。一方、<code>0</code>や<code>{`""`}</code>は描画される点に注意します。</p>
       <p>開発時の<Term>Strict Mode</Term>では、コンポーネントが意図的に<Term>2回</Term>実行されます。これは「描画は純粋であるべき(何度呼んでも同じ結果になるべき)」という前提を破っていないか炙り出すための仕組みです。描画中にカウントを増やすような副作用を紛れ込ませていると、2回実行で値が倍になり、その混入に気づけます。</p>
 
       <Analogy label="💡 たとえるなら">
