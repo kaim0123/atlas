@@ -16,7 +16,23 @@ import {
   CodeCompare,
   RelatedList,
   RelatedLink,
+  IndexGrid,
+  IndexCard,
 } from "@/components/docs";
+
+const chapters = [
+  { href: "/dev/language/values", title: "値と型", desc: "リテラル・typeof・const中心の不変な値。JSの型とTSの型注釈の最初の一歩。" },
+  { href: "/dev/language/functions", title: "関数 ― プログラムの中心", desc: "第一級関数・純粋関数・アロー・高階関数・クロージャ。関数型の土台。" },
+  { href: "/dev/language/data", title: "データの変換 ― オブジェクトと配列", desc: "スプレッドによる不変更新とmap/filter/reduce。interfaceとUnion型。" },
+  { href: "/dev/language/types", title: "型を使いこなす", desc: "リテラル型・判別可能Union・Narrowing・as const・Result型パターン。" },
+  { href: "/dev/language/classes", title: "クラスとプロトタイプ", desc: "既存コードを読むための知識。ファクトリ関数との対比。" },
+  { href: "/dev/language/engine", title: "実行の仕組み", desc: "コールスタック・ヒープとGC。forと再帰、クロージャと参照保持。" },
+  { href: "/dev/language/async", title: "非同期処理", desc: "イベントループ・Promise・async/await・Fetch。値としての非同期。" },
+  { href: "/dev/language/browser", title: "ブラウザ ― Web API", desc: "DOM・イベント・ストレージ。計算と副作用を分けて書く。" },
+  { href: "/dev/language/generics", title: "ジェネリクスとユーティリティ型", desc: "型パラメータとPartial/Pick/Omit/Recordによる不変データの型変換。" },
+  { href: "/dev/language/node", title: "Node.js と標準ライブラリ", desc: "import/export・Math/Date/JSON/RegExp。副作用のないAPIを優先。" },
+  { href: "/dev/language/appendix", title: "付録", desc: "用語集・型エラー早見表・命令型/関数型/TSの書き方対照表。" },
+];
 
 export const metadata: Metadata = {
   title: "JavaScript・TypeScript",
@@ -252,7 +268,22 @@ async function main() {
         <Card><CardNumber>3</CardNumber><h4>型を書く対象は主に4つ</h4><p>関数(引数・戻り値)、データ(オブジェクト・配列)、クラス(プロパティ・メソッド)、Reactコンポーネント(Props・State)です。</p></Card>
         <Card><CardNumber>4</CardNumber><h4>非同期処理はasync/awaitが主流</h4><p>コールバック→Promise→async/awaitと進化し、TypeScriptでは<code>Promise&lt;T&gt;</code>で結果の型まで表現できます。</p></Card>
       </CardGrid>
-      <p>JavaScript・TypeScriptという言語そのものを見てきましたが、この言語のコードは一体どこで実行されているのでしょうか。次のページ「<Link href="/dev/runtime">ランタイム</Link>」では、ブラウザ・Node.js・Deno・Bunという、コードを実際に動かす実行環境の違いを見ていきます。</p>
+      <p>JavaScript・TypeScriptという言語そのものを見てきましたが、この言語のコードは一体どこで実行されているのでしょうか。実行環境については後のページ「<Link href="/dev/runtime">ランタイム</Link>」で扱います。</p>
+
+      <Heading num="教科書">JavaScript / TypeScript を詳しく学ぶ</Heading>
+      <p>ここまでは全体像でした。以下は<Term>初心者向けの教科書</Term>です。<strong>まず素直なJavaScriptで理解し、実務で使うTypeScriptではどう書くのか</strong>を、章ごとに<Term>書き比べ</Term>で学びます。データは<Term>不変</Term>に扱い、<code>map</code>・<code>filter</code>・<code>reduce</code>といった<Term>関数型</Term>のスタイルを軸にしています。上から順に読み進めるのがおすすめです。</p>
+      <IndexGrid>
+        {chapters.map((c, i) => (
+          <IndexCard
+            key={c.href}
+            href={c.href}
+            num={`第${i + 1}章`}
+            title={c.title}
+          >
+            {c.desc}
+          </IndexCard>
+        ))}
+      </IndexGrid>
 
       <DocsFooter
         related={
