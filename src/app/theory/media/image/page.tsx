@@ -62,10 +62,10 @@ export default function Page() {
           <tr><td className="hl">TIFF</td><td>可逆/無圧縮</td><td>印刷・保存向けの高品質形式</td></tr>
         </tbody>
       </table>
-      <p>写真をたくさん扱うならJPEG、透過や図の鮮明さが要るならPNG、と用途で選びます。画像には撮影日時やカメラ設定などの付帯情報を埋め込む<Term>Exif</Term>という仕組みもあります。可逆・非可逆の意味は「<Link href="/media/compression">圧縮の考え方</Link>」で扱います。</p>
+      <p>写真をたくさん扱うならJPEG、透過や図の鮮明さが要るならPNG、と用途で選びます。画像には撮影日時やカメラ設定などの付帯情報を埋め込む<Term>Exif</Term>という仕組みもあります。可逆・非可逆の意味は「<Link href="/theory/media/compression">圧縮の考え方</Link>」で扱います。</p>
 
       <Heading num="03">画素と解像度 ― 画像の細かさ</Heading>
-      <p>ラスタ画像を構成する1つ1つの点が<Term>画素(ピクセル)</Term>です。画像の細かさを表すのが<Term>解像度</Term>で、単位面積あたりの画素の多さで表します。<Term>dpi</Term>(1インチあたりのドット数、主に印刷)や<Term>ppi</Term>(1インチあたりの画素数、主に画面)といった単位が使われ、数値が大きいほどきめ細かく表現できます。1画素で表せる色の段階数(<Term>階調</Term>)については「<Link href="/media/graphics">色・解像度・グラフィックス応用</Link>」で扱います。</p>
+      <p>ラスタ画像を構成する1つ1つの点が<Term>画素(ピクセル)</Term>です。画像の細かさを表すのが<Term>解像度</Term>で、単位面積あたりの画素の多さで表します。<Term>dpi</Term>(1インチあたりのドット数、主に印刷)や<Term>ppi</Term>(1インチあたりの画素数、主に画面)といった単位が使われ、数値が大きいほどきめ細かく表現できます。1画素で表せる色の段階数(<Term>階調</Term>)については「<Link href="/theory/media/graphics">色・解像度・グラフィックス応用</Link>」で扱います。</p>
 
       <Heading num="まとめ">点か式か、用途で選ぶ</Heading>
       <CardGrid>
@@ -77,9 +77,9 @@ export default function Page() {
       <DocsFooter
         related={
           <RelatedList>
-                    <RelatedLink href="/media/video" tag="情報メディア">動画フォーマット</RelatedLink>
-                    <RelatedLink href="/media/graphics" tag="情報メディア">色・解像度・グラフィックス応用</RelatedLink>
-                    <RelatedLink href="/media/compression" tag="情報メディア">圧縮の考え方</RelatedLink>
+                    <RelatedLink href="/theory/media/video" tag="情報メディア">動画フォーマット</RelatedLink>
+                    <RelatedLink href="/theory/media/graphics" tag="情報メディア">色・解像度・グラフィックス応用</RelatedLink>
+                    <RelatedLink href="/theory/media/compression" tag="情報メディア">圧縮の考え方</RelatedLink>
                   </RelatedList>
         }
       />

@@ -107,7 +107,7 @@ export default function Page() {
           <RelatedList>
                     <RelatedLink href="/database/sql" tag="データベース">SQLとデータ操作</RelatedLink>
                     <RelatedLink href="/database/physical" tag="データベース">物理設計と運用</RelatedLink>
-                    <RelatedLink href="/database/advanced/index" tag="データベース">索引とアクセス制御</RelatedLink>
+                    <RelatedLink href="/database/index" tag="データベース">索引とアクセス制御</RelatedLink>
                   </RelatedList>
         }
       />

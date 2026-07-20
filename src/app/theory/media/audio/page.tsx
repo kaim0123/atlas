@@ -59,7 +59,7 @@ export default function Page() {
           <tr><td className="hl">MIDI</td><td>音そのものではなく「どの楽器で、どの音を、どう鳴らすか」という演奏情報を記録する</td></tr>
         </tbody>
       </table>
-      <p>WAVが波形そのものを記録するのに対し、<Term>MIDI</Term>は演奏の指示だけを記録する点が根本的に異なります。MIDIは楽譜に近く、データが非常に小さい代わりに、再生する機器によって音色が変わります。可逆・非可逆といった圧縮の考え方は「<Link href="/media/compression">圧縮の考え方</Link>」で扱います。</p>
+      <p>WAVが波形そのものを記録するのに対し、<Term>MIDI</Term>は演奏の指示だけを記録する点が根本的に異なります。MIDIは楽譜に近く、データが非常に小さい代わりに、再生する機器によって音色が変わります。可逆・非可逆といった圧縮の考え方は「<Link href="/theory/media/compression">圧縮の考え方</Link>」で扱います。</p>
 
       <Heading num="まとめ">測って、刻んで、記録する</Heading>
       <CardGrid>
@@ -71,9 +71,9 @@ export default function Page() {
       <DocsFooter
         related={
           <RelatedList>
-                    <RelatedLink href="/media/image" tag="情報メディア">画像フォーマット</RelatedLink>
-                    <RelatedLink href="/media/compression" tag="情報メディア">圧縮の考え方</RelatedLink>
-                    <RelatedLink href="/media/basics" tag="情報メディア">マルチメディアの全体像</RelatedLink>
+                    <RelatedLink href="/theory/media/image" tag="情報メディア">画像フォーマット</RelatedLink>
+                    <RelatedLink href="/theory/media/compression" tag="情報メディア">圧縮の考え方</RelatedLink>
+                    <RelatedLink href="/theory/media/basics" tag="情報メディア">マルチメディアの全体像</RelatedLink>
                   </RelatedList>
         }
       />

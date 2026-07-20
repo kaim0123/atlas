@@ -37,7 +37,7 @@ export default function Page() {
 
       <Heading num="02">コンテナフォーマット ― 中身をまとめる入れ物</Heading>
       <p>動画ファイルは、映像だけでなく音声や字幕など複数のデータで成り立っています。これらを1つのファイルにまとめる「入れ物」が<Term>コンテナフォーマット</Term>です。MP4・MOV・AVIといった拡張子は、多くの場合この入れ物の種類を表しています。</p>
-      <p>ここで区別したいのが、「入れ物(コンテナ)」と「中身の符号化方式(コーデック)」は別だということです。同じMP4でも、中の映像がH.264かHEVCかで異なります。コーデックの詳細は「<Link href="/media/video">動画フォーマット</Link>」で扱います。</p>
+      <p>ここで区別したいのが、「入れ物(コンテナ)」と「中身の符号化方式(コーデック)」は別だということです。同じMP4でも、中の映像がH.264かHEVCかで異なります。コーデックの詳細は「<Link href="/theory/media/video">動画フォーマット</Link>」で扱います。</p>
 
       <Analogy label="💡 たとえるなら">
         コンテナは「弁当箱」、コーデックは「中のおかずの調理法」です。同じ弁当箱(MP4)でも、中身の作り方(H.264・HEVC)は違います。箱の形だけでは、中身がどう作られているかまでは分かりません。
@@ -58,8 +58,8 @@ export default function Page() {
       <DocsFooter
         related={
           <RelatedList>
-                    <RelatedLink href="/media/image" tag="情報メディア">画像フォーマット</RelatedLink>
-                    <RelatedLink href="/media/compression" tag="情報メディア">圧縮の考え方</RelatedLink>
+                    <RelatedLink href="/theory/media/image" tag="情報メディア">画像フォーマット</RelatedLink>
+                    <RelatedLink href="/theory/media/compression" tag="情報メディア">圧縮の考え方</RelatedLink>
                     <RelatedLink href="/theory/encoding" tag="情報科学">文字コード</RelatedLink>
                   </RelatedList>
         }

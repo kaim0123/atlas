@@ -57,7 +57,7 @@ export default function Page() {
       <DocsFooter
         related={
           <RelatedList>
-                    <RelatedLink href="/ui/hcd" tag="ユーザーインタフェース">人間中心設計と評価</RelatedLink>
+                    <RelatedLink href="/design/ui/hcd" tag="ユーザーインタフェース">人間中心設計と評価</RelatedLink>
                     <RelatedLink href="/dev/web-basics" tag="開発">Web基礎</RelatedLink>
                     <RelatedLink href="/dev/framework/tailwind" tag="開発">Tailwind CSS</RelatedLink>
                   </RelatedList>

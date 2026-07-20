@@ -51,7 +51,7 @@ export default function Page() {
 
       <Heading num="02">階調と解像度 ― 色と細かさの段階</Heading>
       <p>1つの画素が表せる色の段階数を<Term>階調</Term>と呼びます。RGBそれぞれを何ビットで表すかで色数が決まり、各8ビット(256段階)なら約1677万色(フルカラー)を表現できます。階調が多いほど、グラデーションがなめらかになります。</p>
-      <p>画像の細かさを表す<Term>解像度</Term>(<Term>dpi</Term>・<Term>ppi</Term>)については「<Link href="/media/image">画像フォーマット</Link>」でも触れました。階調(色の深さ)と解像度(画素の密度)は別の軸で、両方が高いほど高品質になります。画像編集では、要素を透明なシートのように重ねて管理する<Term>レイヤー</Term>がよく使われます。</p>
+      <p>画像の細かさを表す<Term>解像度</Term>(<Term>dpi</Term>・<Term>ppi</Term>)については「<Link href="/theory/media/image">画像フォーマット</Link>」でも触れました。階調(色の深さ)と解像度(画素の密度)は別の軸で、両方が高いほど高品質になります。画像編集では、要素を透明なシートのように重ねて管理する<Term>レイヤー</Term>がよく使われます。</p>
 
       <Heading num="03">グラフィックスの応用 ― CG・CAD・XR</Heading>
       <p>コンピュータで画像を生成・加工する技術は、さまざまな分野に応用されています。</p>
@@ -80,9 +80,9 @@ export default function Page() {
       <DocsFooter
         related={
           <RelatedList>
-                    <RelatedLink href="/media/image" tag="情報メディア">画像フォーマット</RelatedLink>
-                    <RelatedLink href="/media/basics" tag="情報メディア">マルチメディアの全体像</RelatedLink>
-                    <RelatedLink href="/media/compression" tag="情報メディア">圧縮の考え方</RelatedLink>
+                    <RelatedLink href="/theory/media/image" tag="情報メディア">画像フォーマット</RelatedLink>
+                    <RelatedLink href="/theory/media/basics" tag="情報メディア">マルチメディアの全体像</RelatedLink>
+                    <RelatedLink href="/theory/media/compression" tag="情報メディア">圧縮の考え方</RelatedLink>
                   </RelatedList>
         }
       />

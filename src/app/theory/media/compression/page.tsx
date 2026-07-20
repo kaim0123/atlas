@@ -68,8 +68,8 @@ export default function Page() {
         related={
           <RelatedList>
                     <RelatedLink href="/theory/probability" tag="情報科学">確率・統計と情報理論</RelatedLink>
-                    <RelatedLink href="/media/image" tag="情報メディア">画像フォーマット</RelatedLink>
-                    <RelatedLink href="/media/graphics" tag="情報メディア">色・解像度・グラフィックス応用</RelatedLink>
+                    <RelatedLink href="/theory/media/image" tag="情報メディア">画像フォーマット</RelatedLink>
+                    <RelatedLink href="/theory/media/graphics" tag="情報メディア">色・解像度・グラフィックス応用</RelatedLink>
                   </RelatedList>
         }
       />

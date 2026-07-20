@@ -50,7 +50,7 @@ export default function Page() {
           <tr><td className="hl">HEVC(H.265)</td><td>H.264よりさらに高効率。4K/8Kなど高解像度向け</td></tr>
         </tbody>
       </table>
-      <p>これらの符号化された映像は、音声などとともに<Term>コンテナ</Term>(MP4・QuickTime(MOV)・AVIなど)にまとめられます。入れ物(コンテナ)と中身(コーデック)が別であることは「<Link href="/media/basics">マルチメディアの全体像</Link>」で見た通りです。</p>
+      <p>これらの符号化された映像は、音声などとともに<Term>コンテナ</Term>(MP4・QuickTime(MOV)・AVIなど)にまとめられます。入れ物(コンテナ)と中身(コーデック)が別であることは「<Link href="/theory/media/basics">マルチメディアの全体像</Link>」で見た通りです。</p>
 
       <Heading num="03">高解像度の動画 ― 4K・8K</Heading>
       <p>画面の画素数が多いほど精細な映像になります。フルHD(約207万画素)に対し、<Term>4K</Term>はその約4倍、<Term>8K</Term>はさらにその約4倍の画素数を持ちます。精細さが増すぶんデータ量も跳ね上がるため、HEVCのような高効率コーデックとセットで使われます。</p>
@@ -65,9 +65,9 @@ export default function Page() {
       <DocsFooter
         related={
           <RelatedList>
-                    <RelatedLink href="/media/compression" tag="情報メディア">圧縮の考え方</RelatedLink>
-                    <RelatedLink href="/media/graphics" tag="情報メディア">色・解像度・グラフィックス応用</RelatedLink>
-                    <RelatedLink href="/media/basics" tag="情報メディア">マルチメディアの全体像</RelatedLink>
+                    <RelatedLink href="/theory/media/compression" tag="情報メディア">圧縮の考え方</RelatedLink>
+                    <RelatedLink href="/theory/media/graphics" tag="情報メディア">色・解像度・グラフィックス応用</RelatedLink>
+                    <RelatedLink href="/theory/media/basics" tag="情報メディア">マルチメディアの全体像</RelatedLink>
                   </RelatedList>
         }
       />

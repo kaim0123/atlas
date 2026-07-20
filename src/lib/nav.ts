@@ -8,8 +8,6 @@ import {
   Shapes,
   FlaskConical,
   ShieldCheck,
-  AppWindow,
-  Palette,
   Server,
   Cloud,
   Activity,
@@ -49,6 +47,21 @@ export const sections: NavSection[] = [
       { href: "/theory/algorithms", title: "アルゴリズムとデータ構造" },
       { href: "/theory/algorithms/graphs", title: "グラフと最短経路" },
       { href: "/theory/formal", title: "形式言語" },
+      {
+        title: "情報メディア",
+        children: [
+          { href: "/theory/media", title: "情報メディアの全体像" },
+          { href: "/theory/media/basics", title: "マルチメディアの全体像" },
+          { href: "/theory/media/audio", title: "音声フォーマット" },
+          { href: "/theory/media/image", title: "画像フォーマット" },
+          { href: "/theory/media/video", title: "動画フォーマット" },
+          { href: "/theory/media/compression", title: "圧縮の考え方" },
+          {
+            href: "/theory/media/graphics",
+            title: "色・解像度・グラフィックス応用",
+          },
+        ],
+      },
     ],
   },
   {
@@ -62,8 +75,14 @@ export const sections: NavSection[] = [
         title: "半導体",
         children: [
           { href: "/computer/semiconductor", title: "半導体の全体像" },
-          { href: "/computer/semiconductor/transistor", title: "トランジスタの正体" },
-          { href: "/computer/semiconductor/logic", title: "直列と並列で論理をつくる" },
+          {
+            href: "/computer/semiconductor/transistor",
+            title: "トランジスタの正体",
+          },
+          {
+            href: "/computer/semiconductor/logic",
+            title: "直列と並列で論理をつくる",
+          },
           { href: "/computer/semiconductor/adder", title: "足し算をつくる" },
         ],
       },
@@ -78,9 +97,18 @@ export const sections: NavSection[] = [
         title: "メモリ",
         children: [
           { href: "/computer/memory", title: "メモリの仕組み" },
-          { href: "/computer/memory/virtual", title: "仮想メモリとソフトウェアの肥大化" },
-          { href: "/computer/memory/speed", title: "速さの壁 ― キャッシュ・帯域・HBM" },
-          { href: "/computer/memory/stack", title: "スタックと関数呼び出しの舞台裏" },
+          {
+            href: "/computer/memory/speed",
+            title: "速さの壁 ― キャッシュ・帯域・HBM",
+          },
+          {
+            href: "/computer/memory/virtual",
+            title: "仮想メモリとソフトウェアの肥大化",
+          },
+          {
+            href: "/computer/memory/stack",
+            title: "スタックと関数呼び出しの舞台裏",
+          },
           { href: "/computer/memory/history", title: "記憶装置の歴史" },
         ],
       },
@@ -90,12 +118,19 @@ export const sections: NavSection[] = [
           { href: "/computer/io/bus", title: "バス" },
           { href: "/computer/io/interface", title: "入出力インタフェース" },
           { href: "/computer/io/devices", title: "入出力装置" },
+          {
+            href: "/computer/io/devices/keyboard",
+            title: "キーボードとレイヤー設計",
+          },
         ],
       },
       {
         title: "システム構成",
         children: [
-          { href: "/computer/system/architecture", title: "処理形態とシステム構成" },
+          {
+            href: "/computer/system/architecture",
+            title: "処理形態とシステム構成",
+          },
           { href: "/computer/system/reliability", title: "信頼性と冗長化" },
           { href: "/computer/system/metrics", title: "性能と経済性の評価" },
         ],
@@ -104,11 +139,20 @@ export const sections: NavSection[] = [
         title: "クライアント管理",
         children: [
           { href: "/computer/client", title: "クライアント管理の実務(総論)" },
-          { href: "/computer/client/asset", title: "資産管理 ― 台帳・在庫・棚卸" },
-          { href: "/computer/client/kitting", title: "キッティングと配布・回収" },
+          {
+            href: "/computer/client/asset",
+            title: "資産管理 ― 台帳・在庫・棚卸",
+          },
+          {
+            href: "/computer/client/kitting",
+            title: "キッティングと配布・回収",
+          },
           { href: "/computer/client/license", title: "ライセンス管理" },
           { href: "/computer/client/security", title: "端末セキュリティ管理" },
-          { href: "/computer/client/maintenance", title: "更新管理と保守・故障対応" },
+          {
+            href: "/computer/client/maintenance",
+            title: "更新管理と保守・故障対応",
+          },
           { href: "/computer/client/disposal", title: "廃棄管理" },
         ],
       },
@@ -160,7 +204,10 @@ export const sections: NavSection[] = [
               { href: "/network/applications/web", title: "Web(HTTP/HTTPS)" },
               { href: "/network/applications/dns", title: "DNS" },
               { href: "/network/applications/mail", title: "メールの仕組み" },
-              { href: "/network/applications/mail/hosting", title: "会社ドメインのメールを用意する" },
+              {
+                href: "/network/applications/mail/hosting",
+                title: "会社ドメインのメールを用意する",
+              },
             ],
           },
         ],
@@ -173,7 +220,10 @@ export const sections: NavSection[] = [
           { href: "/network/internet/history", title: "インターネットの歴史" },
           { href: "/network/internet/isp", title: "ISP接続とCDN" },
           { href: "/network/internet/server", title: "サーバーの全体像" },
-          { href: "/network/internet/server/build", title: "サーバー構築の実務" },
+          {
+            href: "/network/internet/server/build",
+            title: "サーバー構築の実務",
+          },
         ],
       },
     ],
@@ -188,7 +238,7 @@ export const sections: NavSection[] = [
       { href: "/database/design", title: "ER図と正規化" },
       { href: "/database/sql", title: "SQLとデータ操作" },
       { href: "/database/transaction", title: "トランザクションと整合性" },
-      { href: "/database/advanced/index", title: "索引とアクセス制御" },
+      { href: "/database/index", title: "索引とアクセス制御" },
       { href: "/database/physical", title: "物理設計と運用" },
       { href: "/database/performance", title: "パフォーマンスチューニング" },
       { href: "/database/antipattern", title: "設計のアンチパターン" },
@@ -228,96 +278,150 @@ export const sections: NavSection[] = [
     title: "実装",
     icon: Code2,
     tree: [
+      { href: "/dev/implementation", title: "実装 ― 設計をコードに落とす" },
       { href: "/dev/workspace", title: "開発環境" },
-      { href: "/dev/keyboard", title: "40%キーボードとレイヤー設計" },
       { href: "/dev/environments", title: "環境の全体像" },
+      { href: "/dev/runtime", title: "ランタイム" },
+      { href: "/dev/tooling", title: "パッケージ管理とビルド" },
       { href: "/dev/language-basics", title: "プログラミング言語の仕組み" },
-      { href: "/dev/language-basics/history", title: "プログラミング言語の歴史" },
+      {
+        href: "/dev/language-basics/history",
+        title: "プログラミング言語の歴史",
+      },
       {
         title: "JavaScript・TypeScript",
         children: [
           { href: "/dev/language", title: "概要 ― 動的型付けと型の契約" },
           { href: "/dev/language/values", title: "1. 値と型" },
-          { href: "/dev/language/functions", title: "2. 関数 ― プログラムの中心" },
-          { href: "/dev/language/data", title: "3. データの変換 ― オブジェクトと配列" },
+          {
+            href: "/dev/language/functions",
+            title: "2. 関数 ― プログラムの中心",
+          },
+          {
+            href: "/dev/language/data",
+            title: "3. データの変換 ― オブジェクトと配列",
+          },
           { href: "/dev/language/types", title: "4. 型を使いこなす" },
           { href: "/dev/language/classes", title: "5. クラスとプロトタイプ" },
           { href: "/dev/language/engine", title: "6. 実行の仕組み" },
           { href: "/dev/language/async", title: "7. 非同期処理" },
           { href: "/dev/language/browser", title: "8. ブラウザ ― Web API" },
-          { href: "/dev/language/generics", title: "9. ジェネリクスとユーティリティ型" },
+          {
+            href: "/dev/language/generics",
+            title: "9. ジェネリクスとユーティリティ型",
+          },
           { href: "/dev/language/node", title: "10. Node.js と標準ライブラリ" },
           { href: "/dev/language/appendix", title: "11. 付録" },
         ],
       },
       { href: "/dev/web-basics", title: "Web基礎" },
-      { href: "/dev/runtime", title: "ランタイム" },
       { href: "/dev/http", title: "HTTP通信（Fetch・axios）" },
       {
         title: "API",
         children: [
-          { href: "/dev/api", title: "APIとは（窓口・バックエンド・DBの違い）" },
+          {
+            href: "/dev/api",
+            title: "APIとは（窓口・バックエンド・DBの違い）",
+          },
           { href: "/dev/api/styles", title: "APIの種類と選び方" },
           { href: "/dev/api/rest", title: "REST API" },
         ],
       },
-      { href: "/dev/tooling", title: "パッケージ管理とビルド" },
+      { href: "/dev/framework", title: "フレームワーク・ライブラリ概要" },
       {
-        title: "フレームワーク・ライブラリ",
+        title: "React",
         children: [
-          { href: "/dev/framework", title: "フレームワーク・ライブラリ概要" },
+          { href: "/dev/framework/react", title: "React概要" },
           {
-            title: "React",
-            children: [
-              { href: "/dev/framework/react", title: "React概要" },
-              { href: "/dev/framework/react/functional", title: "関数型として読むReact" },
-              { href: "/dev/framework/react/typescript", title: "TypeScriptでコンポーネントを書く" },
-              { href: "/dev/framework/react/jsx", title: "JSXとレンダリング" },
-              { href: "/dev/framework/react/props", title: "Propsと一方向データフロー" },
-              { href: "/dev/framework/react/state", title: "Stateと更新" },
-              { href: "/dev/framework/react/effects", title: "副作用（Effects）" },
-              { href: "/dev/framework/react/ref", title: "Ref" },
-              { href: "/dev/framework/react/performance", title: "メモ化とパフォーマンス" },
-              { href: "/dev/framework/react/context", title: "Context" },
-              { href: "/dev/framework/react/logic-reuse", title: "ロジックを再利用する" },
-              { href: "/dev/framework/react/composition", title: "コンポーネントを組み合わせる" },
-              { href: "/dev/framework/react/forms", title: "フォームの値を管理する" },
-            ],
+            href: "/dev/framework/react/functional",
+            title: "関数型として読むReact",
           },
           {
-            title: "Next.js",
-            children: [
-              { href: "/dev/framework/nextjs", title: "Next.js概要" },
-              { href: "/dev/framework/nextjs/components", title: "Server/Clientコンポーネントの境界" },
-              { href: "/dev/framework/nextjs/data", title: "データフェッチ・キャッシュ・再検証" },
-              { href: "/dev/framework/nextjs/rendering", title: "配信を最適化する" },
-            ],
+            href: "/dev/framework/react/typescript",
+            title: "TypeScriptでコンポーネントを書く",
+          },
+          { href: "/dev/framework/react/jsx", title: "JSXとレンダリング" },
+          {
+            href: "/dev/framework/react/props",
+            title: "Propsと一方向データフロー",
+          },
+          { href: "/dev/framework/react/state", title: "Stateと更新" },
+          { href: "/dev/framework/react/effects", title: "副作用（Effects）" },
+          { href: "/dev/framework/react/ref", title: "Ref" },
+          {
+            href: "/dev/framework/react/performance",
+            title: "メモ化とパフォーマンス",
+          },
+          { href: "/dev/framework/react/context", title: "Context" },
+          {
+            href: "/dev/framework/react/logic-reuse",
+            title: "ロジックを再利用する",
           },
           {
-            title: "Express",
-            children: [
-              { href: "/dev/framework/express", title: "Express概要" },
-              { href: "/dev/framework/express/hello", title: "最初のサーバー" },
-              { href: "/dev/framework/express/routing", title: "ルーティング" },
-              { href: "/dev/framework/express/request", title: "Requestオブジェクト" },
-              { href: "/dev/framework/express/response", title: "Responseオブジェクト" },
-              { href: "/dev/framework/express/middleware", title: "ミドルウェア" },
-              { href: "/dev/framework/express/json", title: "JSON API" },
-              { href: "/dev/framework/express/router", title: "Router（ルーター分割）" },
-              { href: "/dev/framework/express/async", title: "非同期処理" },
-              { href: "/dev/framework/express/error", title: "エラーハンドリング" },
-              { href: "/dev/framework/express/validation", title: "バリデーション" },
-              { href: "/dev/framework/express/logging", title: "ログ" },
-              { href: "/dev/framework/express/design", title: "API設計" },
-              { href: "/dev/framework/express/auth", title: "認証・認可" },
-              { href: "/dev/framework/express/database", title: "データベース連携" },
-            ],
+            href: "/dev/framework/react/composition",
+            title: "コンポーネントを組み合わせる",
           },
-          { href: "/dev/framework/tailwind", title: "Tailwind CSS" },
+          {
+            href: "/dev/framework/react/forms",
+            title: "フォームの値を管理する",
+          },
         ],
       },
+      {
+        title: "Next.js",
+        children: [
+          { href: "/dev/framework/nextjs", title: "Next.js概要" },
+          {
+            href: "/dev/framework/nextjs/components",
+            title: "Server/Clientコンポーネントの境界",
+          },
+          {
+            href: "/dev/framework/nextjs/data",
+            title: "データフェッチ・キャッシュ・再検証",
+          },
+          {
+            href: "/dev/framework/nextjs/rendering",
+            title: "配信を最適化する",
+          },
+        ],
+      },
+      {
+        title: "Express",
+        children: [
+          { href: "/dev/framework/express", title: "Express概要" },
+          { href: "/dev/framework/express/hello", title: "最初のサーバー" },
+          { href: "/dev/framework/express/routing", title: "ルーティング" },
+          {
+            href: "/dev/framework/express/request",
+            title: "Requestオブジェクト",
+          },
+          {
+            href: "/dev/framework/express/response",
+            title: "Responseオブジェクト",
+          },
+          { href: "/dev/framework/express/middleware", title: "ミドルウェア" },
+          { href: "/dev/framework/express/json", title: "JSON API" },
+          {
+            href: "/dev/framework/express/router",
+            title: "Router（ルーター分割）",
+          },
+          { href: "/dev/framework/express/async", title: "非同期処理" },
+          { href: "/dev/framework/express/error", title: "エラーハンドリング" },
+          {
+            href: "/dev/framework/express/validation",
+            title: "バリデーション",
+          },
+          { href: "/dev/framework/express/logging", title: "ログ" },
+          { href: "/dev/framework/express/design", title: "API設計" },
+          { href: "/dev/framework/express/auth", title: "認証・認可" },
+          {
+            href: "/dev/framework/express/database",
+            title: "データベース連携",
+          },
+        ],
+      },
+      { href: "/dev/framework/tailwind", title: "Tailwind CSS" },
       { href: "/dev/stack", title: "技術スタックの組み合わせ" },
-      { href: "/dev/implementation", title: "実装" },
       { href: "/dev/cache", title: "キャッシュの全体像" },
     ],
   },
@@ -336,20 +440,44 @@ export const sections: NavSection[] = [
             title: "オブジェクト指向",
             children: [
               { href: "/design/paradigm/oop", title: "オブジェクト指向" },
-              { href: "/design/paradigm/oop/gof/creation", title: "GoF: 生成を工夫する" },
-              { href: "/design/paradigm/oop/gof/structure", title: "GoF: 構造を包む・繋ぐ" },
-              { href: "/design/paradigm/oop/gof/algorithms", title: "GoF: 振る舞いをオブジェクト化する" },
-              { href: "/design/paradigm/oop/gof/collaboration", title: "GoF: 連携・通知・走査" },
+              {
+                href: "/design/paradigm/oop/gof/creation",
+                title: "GoF: 生成を工夫する",
+              },
+              {
+                href: "/design/paradigm/oop/gof/structure",
+                title: "GoF: 構造を包む・繋ぐ",
+              },
+              {
+                href: "/design/paradigm/oop/gof/algorithms",
+                title: "GoF: 振る舞いをオブジェクト化する",
+              },
+              {
+                href: "/design/paradigm/oop/gof/collaboration",
+                title: "GoF: 連携・通知・走査",
+              },
             ],
           },
           {
             title: "関数型",
             children: [
               { href: "/design/paradigm/functional", title: "関数型" },
-              { href: "/design/paradigm/functional/foundations", title: "純粋関数とイミュータビリティ" },
-              { href: "/design/paradigm/functional/composition", title: "関数を組み合わせる" },
-              { href: "/design/paradigm/functional/currying", title: "引数を固定する" },
-              { href: "/design/paradigm/functional/safety", title: "安全に分岐する" },
+              {
+                href: "/design/paradigm/functional/foundations",
+                title: "純粋関数とイミュータビリティ",
+              },
+              {
+                href: "/design/paradigm/functional/composition",
+                title: "関数を組み合わせる",
+              },
+              {
+                href: "/design/paradigm/functional/currying",
+                title: "引数を固定する",
+              },
+              {
+                href: "/design/paradigm/functional/safety",
+                title: "安全に分岐する",
+              },
             ],
           },
         ],
@@ -370,15 +498,27 @@ export const sections: NavSection[] = [
           { href: "/design/methodology", title: "設計思想・方法論一覧" },
           { href: "/design/methodology/info-hiding", title: "情報隠蔽" },
           { href: "/design/methodology/data-centric", title: "データ中心設計" },
-          { href: "/design/methodology/object-centric", title: "オブジェクト中心設計" },
+          {
+            href: "/design/methodology/object-centric",
+            title: "オブジェクト中心設計",
+          },
           { href: "/design/methodology/contract", title: "契約による設計" },
-          { href: "/design/methodology/responsibility-driven", title: "責務駆動設計" },
-          { href: "/design/methodology/use-case-driven", title: "ユースケース中心設計" },
+          {
+            href: "/design/methodology/responsibility-driven",
+            title: "責務駆動設計",
+          },
+          {
+            href: "/design/methodology/use-case-driven",
+            title: "ユースケース中心設計",
+          },
           {
             title: "ドメイン駆動設計",
             children: [
               { href: "/design/methodology/ddd", title: "ドメイン駆動設計" },
-              { href: "/design/methodology/ddd/tactical", title: "戦術的DDDをコードに書く" },
+              {
+                href: "/design/methodology/ddd/tactical",
+                title: "戦術的DDDをコードに書く",
+              },
             ],
           },
         ],
@@ -390,15 +530,42 @@ export const sections: NavSection[] = [
           {
             title: "システム視点",
             children: [
-              { href: "/design/architecture/sys/layered", title: "レイヤードアーキテクチャ" },
-              { href: "/design/architecture/sys/pipeline", title: "パイプラインアーキテクチャ" },
-              { href: "/design/architecture/sys/microkernel", title: "マイクロカーネルアーキテクチャ" },
-              { href: "/design/architecture/sys/soa", title: "オーケストレーション駆動SOA" },
-              { href: "/design/architecture/sys/event-driven", title: "イベント駆動アーキテクチャ" },
-              { href: "/design/architecture/sys/space-based", title: "スペースベースアーキテクチャ" },
-              { href: "/design/architecture/sys/service-based", title: "サービスベースアーキテクチャ" },
-              { href: "/design/architecture/sys/microservices", title: "マイクロサービスアーキテクチャ" },
-              { href: "/design/architecture/sys/modular-monolith", title: "モジュラーモノリス" },
+              {
+                href: "/design/architecture/sys/layered",
+                title: "レイヤードアーキテクチャ",
+              },
+              {
+                href: "/design/architecture/sys/pipeline",
+                title: "パイプラインアーキテクチャ",
+              },
+              {
+                href: "/design/architecture/sys/microkernel",
+                title: "マイクロカーネルアーキテクチャ",
+              },
+              {
+                href: "/design/architecture/sys/soa",
+                title: "オーケストレーション駆動SOA",
+              },
+              {
+                href: "/design/architecture/sys/event-driven",
+                title: "イベント駆動アーキテクチャ",
+              },
+              {
+                href: "/design/architecture/sys/space-based",
+                title: "スペースベースアーキテクチャ",
+              },
+              {
+                href: "/design/architecture/sys/service-based",
+                title: "サービスベースアーキテクチャ",
+              },
+              {
+                href: "/design/architecture/sys/microservices",
+                title: "マイクロサービスアーキテクチャ",
+              },
+              {
+                href: "/design/architecture/sys/modular-monolith",
+                title: "モジュラーモノリス",
+              },
             ],
           },
           {
@@ -410,18 +577,33 @@ export const sections: NavSection[] = [
               {
                 title: "ドメインモデル系",
                 children: [
-                  { href: "/design/architecture/app/domain-model", title: "ドメインモデル系" },
-                  { href: "/design/architecture/app/domain-model/patterns", title: "業務ロジックの置き場所" },
+                  {
+                    href: "/design/architecture/app/domain-model",
+                    title: "ドメインモデル系",
+                  },
+                  {
+                    href: "/design/architecture/app/domain-model/patterns",
+                    title: "業務ロジックの置き場所",
+                  },
                 ],
               },
               {
                 title: "データアクセス系",
                 children: [
-                  { href: "/design/architecture/app/data-access", title: "データアクセス系" },
-                  { href: "/design/architecture/app/data-access/patterns", title: "永続化層の定石" },
+                  {
+                    href: "/design/architecture/app/data-access",
+                    title: "データアクセス系",
+                  },
+                  {
+                    href: "/design/architecture/app/data-access/patterns",
+                    title: "永続化層の定石",
+                  },
                 ],
               },
-              { href: "/design/architecture/app/domain-centric", title: "ドメイン中心アーキテクチャ系" },
+              {
+                href: "/design/architecture/app/domain-centric",
+                title: "ドメイン中心アーキテクチャ系",
+              },
               { href: "/design/architecture/app/cqrs", title: "高度な設計系" },
             ],
           },
@@ -432,18 +614,47 @@ export const sections: NavSection[] = [
         title: "実装パターン・イディオム",
         children: [
           { href: "/design/idioms", title: "実装パターン・イディオム一覧" },
-          { href: "/design/idioms/essentials", title: "必修イディオムを深く理解する" },
+          {
+            href: "/design/idioms/essentials",
+            title: "必修イディオムを深く理解する",
+          },
         ],
       },
       { href: "/design/object", title: "オブジェクトの全体像" },
       {
         title: "コーディング規約・スタイル",
         children: [
-          { href: "/design/conventions", title: "コーディング規約・スタイル一覧" },
-          { href: "/design/conventions/functions", title: "関数・イベントハンドラの命名" },
+          {
+            href: "/design/conventions",
+            title: "コーディング規約・スタイル一覧",
+          },
+          {
+            href: "/design/conventions/functions",
+            title: "関数・イベントハンドラの命名",
+          },
           { href: "/design/conventions/variables", title: "変数・略語の命名" },
-          { href: "/design/conventions/classes", title: "クラス・接尾辞の命名" },
-          { href: "/design/conventions/files", title: "ファイル・ディレクトリの命名" },
+          {
+            href: "/design/conventions/classes",
+            title: "クラス・接尾辞の命名",
+          },
+          {
+            href: "/design/conventions/files",
+            title: "ファイル・ディレクトリの命名",
+          },
+        ],
+      },
+      {
+        title: "ユーザーインタフェース",
+        children: [
+          { href: "/design/ui", title: "UIの全体像" },
+          {
+            href: "/design/ui/basics",
+            title: "UI・ユーザビリティ・アクセシビリティ",
+          },
+          { href: "/design/ui/gui", title: "GUIの部品" },
+          { href: "/design/ui/design", title: "画面設計と入力チェック" },
+          { href: "/design/ui/web", title: "Web UIデザイン" },
+          { href: "/design/ui/hcd", title: "人間中心設計と評価" },
         ],
       },
     ],
@@ -493,7 +704,10 @@ export const sections: NavSection[] = [
           { href: "/security/auth", title: "認証" },
           { href: "/security/authz", title: "認可" },
           { href: "/security/session", title: "セッションとCookie管理" },
-          { href: "/security/session-cookie", title: "セッション・Cookieの全体像" },
+          {
+            href: "/security/session-cookie",
+            title: "セッション・Cookieの全体像",
+          },
           { href: "/security/token", title: "トークンの全体像" },
           { href: "/security/identity", title: "認証プロトコルの変遷" },
         ],
@@ -502,38 +716,16 @@ export const sections: NavSection[] = [
       {
         title: "セキュリティ対策・実装",
         children: [
-          { href: "/security/countermeasures", title: "セキュリティ対策の概観" },
+          {
+            href: "/security/countermeasures",
+            title: "セキュリティ対策の概観",
+          },
           { href: "/security/network-defense", title: "ネットワーク層の防御" },
           { href: "/security/headers", title: "セキュリティヘッダ" },
           { href: "/security/cache", title: "キャッシュ制御" },
           { href: "/security/logging", title: "ログ出力設計" },
         ],
       },
-    ],
-  },
-  {
-    href: "/ui",
-    title: "ユーザーインタフェース",
-    icon: AppWindow,
-    tree: [
-      { href: "/ui/basics", title: "UI・ユーザビリティ・アクセシビリティ" },
-      { href: "/ui/gui", title: "GUIの部品" },
-      { href: "/ui/design", title: "画面設計と入力チェック" },
-      { href: "/ui/web", title: "Web UIデザイン" },
-      { href: "/ui/hcd", title: "人間中心設計と評価" },
-    ],
-  },
-  {
-    href: "/media",
-    title: "情報メディア",
-    icon: Palette,
-    tree: [
-      { href: "/media/basics", title: "マルチメディアの全体像" },
-      { href: "/media/audio", title: "音声フォーマット" },
-      { href: "/media/image", title: "画像フォーマット" },
-      { href: "/media/video", title: "動画フォーマット" },
-      { href: "/media/compression", title: "圧縮の考え方" },
-      { href: "/media/graphics", title: "色・解像度・グラフィックス応用" },
     ],
   },
   {
@@ -548,7 +740,10 @@ export const sections: NavSection[] = [
           { href: "/infra/container", title: "コンテナの仕組み" },
           { href: "/infra/container/docker", title: "Docker" },
           { href: "/infra/container/kubernetes", title: "Kubernetes" },
-          { href: "/infra/container/observability", title: "オブザーバビリティ" },
+          {
+            href: "/infra/container/observability",
+            title: "オブザーバビリティ",
+          },
           { href: "/infra/container/security", title: "コンテナセキュリティ" },
         ],
       },
@@ -585,7 +780,10 @@ export const sections: NavSection[] = [
           {
             title: "ネットワーキングとコンテンツ配信",
             children: [
-              { href: "/cloud/aws/network", title: "ネットワーキングとコンテンツ配信概要" },
+              {
+                href: "/cloud/aws/network",
+                title: "ネットワーキングとコンテンツ配信概要",
+              },
               { href: "/cloud/aws/network/route53", title: "Route 53" },
               { href: "/cloud/aws/network/cloudfront", title: "CloudFront" },
               { href: "/cloud/aws/network/acm", title: "ACM" },
@@ -594,15 +792,24 @@ export const sections: NavSection[] = [
           {
             title: "セキュリティ、アイデンティティ、コンプライアンス",
             children: [
-              { href: "/cloud/aws/security", title: "セキュリティ、アイデンティティ、コンプライアンス概要" },
-              { href: "/cloud/aws/security/secrets-manager", title: "Secrets Manager" },
+              {
+                href: "/cloud/aws/security",
+                title: "セキュリティ、アイデンティティ、コンプライアンス概要",
+              },
+              {
+                href: "/cloud/aws/security/secrets-manager",
+                title: "Secrets Manager",
+              },
             ],
           },
           { href: "/cloud/aws/database", title: "データベース" },
           {
             title: "モニタリングと管理",
             children: [
-              { href: "/cloud/aws/monitoring", title: "モニタリングと管理概要" },
+              {
+                href: "/cloud/aws/monitoring",
+                title: "モニタリングと管理概要",
+              },
               { href: "/cloud/aws/monitoring/cloudwatch", title: "CloudWatch" },
             ],
           },
@@ -618,10 +825,16 @@ export const sections: NavSection[] = [
           {
             title: "アプリケーション統合",
             children: [
-              { href: "/cloud/aws/integration", title: "アプリケーション統合概要" },
+              {
+                href: "/cloud/aws/integration",
+                title: "アプリケーション統合概要",
+              },
               { href: "/cloud/aws/integration/sqs", title: "SQS" },
               { href: "/cloud/aws/integration/sns", title: "SNS" },
-              { href: "/cloud/aws/integration/eventbridge", title: "EventBridge" },
+              {
+                href: "/cloud/aws/integration/eventbridge",
+                title: "EventBridge",
+              },
             ],
           },
           { href: "/cloud/aws/iac", title: "IaC" },
@@ -668,10 +881,19 @@ export const sections: NavSection[] = [
         title: "個人のマネジメント（ミクロ）",
         children: [
           { href: "/management/individual", title: "個人マネジメント概要" },
-          { href: "/management/individual/onboarding", title: "採用・オンボーディング・育成" },
-          { href: "/management/individual/motivation", title: "モチベーション理論の歴史" },
+          {
+            href: "/management/individual/onboarding",
+            title: "採用・オンボーディング・育成",
+          },
+          {
+            href: "/management/individual/motivation",
+            title: "モチベーション理論の歴史",
+          },
           { href: "/management/individual/evaluation", title: "人事評価" },
-          { href: "/management/individual/capital", title: "個人の力の3つの源泉" },
+          {
+            href: "/management/individual/capital",
+            title: "個人の力の3つの源泉",
+          },
         ],
       },
       {
@@ -681,11 +903,26 @@ export const sections: NavSection[] = [
           {
             title: "リーダーシップ・対人",
             children: [
-              { href: "/management/team/leadership", title: "リーダーシップの実践" },
-              { href: "/management/team/grid", title: "マネジリアル・グリッド" },
-              { href: "/management/team/communication", title: "コミュニケーション" },
-              { href: "/management/team/conflict", title: "コンフリクトマネジメント" },
-              { href: "/management/team/psychological-safety", title: "心理的安全性" },
+              {
+                href: "/management/team/leadership",
+                title: "リーダーシップの実践",
+              },
+              {
+                href: "/management/team/grid",
+                title: "マネジリアル・グリッド",
+              },
+              {
+                href: "/management/team/communication",
+                title: "コミュニケーション",
+              },
+              {
+                href: "/management/team/conflict",
+                title: "コンフリクトマネジメント",
+              },
+              {
+                href: "/management/team/psychological-safety",
+                title: "心理的安全性",
+              },
               { href: "/management/team/efficacy", title: "組織効力感" },
               { href: "/management/team/rules", title: "ルールと相互理解" },
             ],
@@ -693,9 +930,15 @@ export const sections: NavSection[] = [
           {
             title: "チーム運営（実行）",
             children: [
-              { href: "/management/team/operation", title: "チーム運営と3つの力" },
+              {
+                href: "/management/team/operation",
+                title: "チーム運営と3つの力",
+              },
               { href: "/management/team/goals", title: "目標設定" },
-              { href: "/management/team/momentum", title: "戦略方針とモメンタム" },
+              {
+                href: "/management/team/momentum",
+                title: "戦略方針とモメンタム",
+              },
             ],
           },
         ],
@@ -704,7 +947,10 @@ export const sections: NavSection[] = [
         title: "組織のマネジメント（マクロ）",
         children: [
           { href: "/management/org", title: "組織マネジメント概要" },
-          { href: "/management/org/theory", title: "組織・リーダーシップ理論の歴史" },
+          {
+            href: "/management/org/theory",
+            title: "組織・リーダーシップ理論の歴史",
+          },
           { href: "/management/org/structure", title: "組織構造とアサイン" },
           { href: "/management/org/system", title: "人事制度" },
           { href: "/management/org/delegation", title: "権限委譲" },
@@ -770,7 +1016,10 @@ export const sections: NavSection[] = [
               { href: "/industry/steel", title: "鉄鋼・非鉄金属" },
               { href: "/industry/chemical", title: "化学・石油化学" },
               { href: "/industry/paper", title: "紙・パルプ・印刷" },
-              { href: "/industry/glass-cement", title: "ゴム・ガラス・セメント" },
+              {
+                href: "/industry/glass-cement",
+                title: "ゴム・ガラス・セメント",
+              },
             ],
           },
           {
@@ -778,7 +1027,10 @@ export const sections: NavSection[] = [
             children: [
               { href: "/industry/machinery", title: "機械・産業機械" },
               { href: "/industry/auto", title: "自動車・自動車部品" },
-              { href: "/industry/electronics", title: "電機・電子部品・半導体" },
+              {
+                href: "/industry/electronics",
+                title: "電機・電子部品・半導体",
+              },
             ],
           },
           {
@@ -833,7 +1085,10 @@ export const sections: NavSection[] = [
               { href: "/industry/construction", title: "建設・設備" },
               { href: "/industry/realestate", title: "不動産" },
               { href: "/industry/housing", title: "住宅・住設機器" },
-              { href: "/industry/renovation", title: "リフォーム・リノベーション" },
+              {
+                href: "/industry/renovation",
+                title: "リフォーム・リノベーション",
+              },
             ],
           },
         ],
@@ -852,7 +1107,10 @@ export const sections: NavSection[] = [
           {
             title: "メディア・エンタメ",
             children: [
-              { href: "/industry/entertainment", title: "エンターテインメント" },
+              {
+                href: "/industry/entertainment",
+                title: "エンターテインメント",
+              },
               { href: "/industry/mass-media", title: "マスコミ" },
               { href: "/industry/advertising", title: "広告・出版" },
             ],
@@ -916,7 +1174,10 @@ export function getBreadcrumbTrail(pathname: string): BreadcrumbCrumb[] {
   let acc = "";
   for (const segment of segments) {
     acc += `/${segment}`;
-    trail.push({ href: acc, label: labelMap.get(acc) ?? decodeURIComponent(segment) });
+    trail.push({
+      href: acc,
+      label: labelMap.get(acc) ?? decodeURIComponent(segment),
+    });
   }
   return trail;
 }
@@ -937,7 +1198,8 @@ export type PageRef = {
 // trailingSlash: true のため usePathname() は "/industry/steel/" のように末尾
 // スラッシュ付きで返る。nav の href(スラッシュ無し)と一致させるため正規化する。
 export function normalizePath(pathname: string): string {
-  if (pathname.length > 1 && pathname.endsWith("/")) return pathname.slice(0, -1);
+  if (pathname.length > 1 && pathname.endsWith("/"))
+    return pathname.slice(0, -1);
   return pathname;
 }
 
@@ -954,7 +1216,12 @@ function buildOrderedPages(): PageRef[] {
   const push = (href: string, title: string, section: NavSection) => {
     if (seen.has(href)) return;
     seen.add(href);
-    pages.push({ href, title, sectionHref: section.href, sectionTitle: section.title });
+    pages.push({
+      href,
+      title,
+      sectionHref: section.href,
+      sectionTitle: section.title,
+    });
   };
   const visit = (nodes: NavNode[], section: NavSection) => {
     for (const node of nodes) {
@@ -998,13 +1265,21 @@ export function getPager(pathname: string): Pager {
 }
 
 // href → 兄弟ノード配列 / 子ノード配列 を引くための索引。
-type RelatedEntry = { siblings: NavNode[]; children: NavNode[]; section: NavSection };
+type RelatedEntry = {
+  siblings: NavNode[];
+  children: NavNode[];
+  section: NavSection;
+};
 function buildRelatedMap(): Map<string, RelatedEntry> {
   const map = new Map<string, RelatedEntry>();
   const walk = (nodes: NavNode[], siblings: NavNode[], section: NavSection) => {
     for (const node of nodes) {
       if (node.href) {
-        map.set(node.href, { siblings, children: node.children ?? [], section });
+        map.set(node.href, {
+          siblings,
+          children: node.children ?? [],
+          section,
+        });
       }
       if (node.children) walk(node.children, node.children, section);
     }

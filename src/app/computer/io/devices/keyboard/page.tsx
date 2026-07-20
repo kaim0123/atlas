@@ -266,7 +266,7 @@ LT(_SYM, K_KANA)   // 右内側: タップ=かな, 長押し=記号レイヤー`
             <RelatedLink href="/dev/workspace" tag="開発">開発環境 ― ターミナルとシェル</RelatedLink>
             <RelatedLink href="/os/shell" tag="OS">シェル</RelatedLink>
             <RelatedLink href="/theory/encoding" tag="情報科学">文字コード</RelatedLink>
-            <RelatedLink href="/ui/basics" tag="UI">UI・ユーザビリティ</RelatedLink>
+            <RelatedLink href="/design/ui/basics" tag="UI">UI・ユーザビリティ</RelatedLink>
           </RelatedList>
         }
       />

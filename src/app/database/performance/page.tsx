@@ -50,7 +50,7 @@ export default function Page() {
       <p>選択条件(<code>WHERE</code>)を冗長に持たせて絞り込みを速くする手も同様で、速さと引き換えに整合性・保守性を差し出します。<strong>まずは正規化で整合性を守り、性能上どうしても必要な箇所に限って冗長化する</strong>のが基本方針です。多くの場合、冗長化に踏み切る前に、次節以降のインデックスやパーティションで十分な効果が得られます。</p>
 
       <Heading num="02">インデックス設計 ― どの列に張るか</Heading>
-      <p><Link href="/database/advanced/index">索引</Link>でも触れたとおり、<Term>インデックス</Term>は検索を劇的に速くします。その最大の利点は、<strong>アプリケーションのコードもテーブルの構造も変えずに(アプリケーション透過的・データ透過的)、大きな性能改善が得られる</strong>ことです。SQLを書き換えず、データを移し替えることもなく、後から張るだけで効くため、チューニングの第一手として真っ先に検討されます。</p>
+      <p><Link href="/database/index">索引</Link>でも触れたとおり、<Term>インデックス</Term>は検索を劇的に速くします。その最大の利点は、<strong>アプリケーションのコードもテーブルの構造も変えずに(アプリケーション透過的・データ透過的)、大きな性能改善が得られる</strong>ことです。SQLを書き換えず、データを移し替えることもなく、後から張るだけで効くため、チューニングの第一手として真っ先に検討されます。</p>
       <p>もっとも一般的な<Term>B-treeインデックス</Term>は、どんな列にも効くわけではありません。次の5つの性質を満たす列ほど効果を発揮します。</p>
       <table>
         <thead>
@@ -149,7 +149,7 @@ export default function Page() {
       <DocsFooter
         related={
           <RelatedList>
-            <RelatedLink href="/database/advanced/index" tag="データベース">索引とアクセス制御</RelatedLink>
+            <RelatedLink href="/database/index" tag="データベース">索引とアクセス制御</RelatedLink>
             <RelatedLink href="/database/physical" tag="データベース">物理設計と運用</RelatedLink>
             <RelatedLink href="/database/design" tag="データベース">ER図と正規化</RelatedLink>
             <RelatedLink href="/database/antipattern" tag="データベース">設計のアンチパターン</RelatedLink>

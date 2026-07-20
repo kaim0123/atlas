@@ -77,8 +77,8 @@ export default function Page() {
       <DocsFooter
         related={
           <RelatedList>
-                    <RelatedLink href="/ui/gui" tag="ユーザーインタフェース">GUIの部品</RelatedLink>
-                    <RelatedLink href="/ui/hcd" tag="ユーザーインタフェース">人間中心設計と評価</RelatedLink>
+                    <RelatedLink href="/design/ui/gui" tag="ユーザーインタフェース">GUIの部品</RelatedLink>
+                    <RelatedLink href="/design/ui/hcd" tag="ユーザーインタフェース">人間中心設計と評価</RelatedLink>
                     <RelatedLink href="/design/architecture/app/gui" tag="設計">GUIアーキテクチャ</RelatedLink>
                   </RelatedList>
         }

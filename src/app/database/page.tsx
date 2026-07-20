@@ -19,7 +19,7 @@ const topics = [
   { href: "/database/design", title: "ER図と正規化", desc: "要件からエンティティを抽出し、テーブルを段階的に分割する" },
   { href: "/database/sql", title: "SQLとデータ操作", desc: "DDL・DMLと、SELECT・JOIN・集計の基本" },
   { href: "/database/transaction", title: "トランザクションと整合性", desc: "ACID・ロック・ログ・バックアップで一貫性と回復を守る" },
-  { href: "/database/advanced/index", title: "索引とアクセス制御", desc: "B-treeインデックスの考え方とアクセス権限(発展)" },
+  { href: "/database/index", title: "索引とアクセス制御", desc: "B-treeインデックスの考え方とアクセス権限(発展)" },
   { href: "/database/physical", title: "物理設計と運用", desc: "インデックス・RAID・レプリケーション・バックアップ・リカバリ" },
   { href: "/database/history", title: "データベースの歴史", desc: "階層型・網型からRDB、そしてNoSQLへの流れ" },
 ];
