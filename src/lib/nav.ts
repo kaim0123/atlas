@@ -241,6 +241,7 @@ export const sections: NavSection[] = [
       { href: "/database/index", title: "索引とアクセス制御" },
       { href: "/database/physical", title: "物理設計と運用" },
       { href: "/database/performance", title: "パフォーマンスチューニング" },
+      { href: "/database/features", title: "アプリ機能とDB設計" },
       { href: "/database/antipattern", title: "設計のアンチパターン" },
       { href: "/database/history", title: "データベースの歴史" },
     ],

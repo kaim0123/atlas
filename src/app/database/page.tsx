@@ -21,6 +21,9 @@ const topics = [
   { href: "/database/transaction", title: "トランザクションと整合性", desc: "ACID・ロック・ログ・バックアップで一貫性と回復を守る" },
   { href: "/database/index", title: "索引とアクセス制御", desc: "B-treeインデックスの考え方とアクセス権限(発展)" },
   { href: "/database/physical", title: "物理設計と運用", desc: "インデックス・RAID・レプリケーション・バックアップ・リカバリ" },
+  { href: "/database/performance", title: "パフォーマンスチューニング", desc: "インデックス設計・オプティマイザ・パーティションで遅いクエリを速くする" },
+  { href: "/database/features", title: "アプリ機能とDB設計", desc: "検索・タイムライン・通知など機能別に押さえるDBの検討事項" },
+  { href: "/database/antipattern", title: "設計のアンチパターン", desc: "避けるべき設計と、条件つきで許されるグレーノウハウ" },
   { href: "/database/history", title: "データベースの歴史", desc: "階層型・網型からRDB、そしてNoSQLへの流れ" },
 ];
 
