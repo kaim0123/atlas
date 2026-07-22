@@ -96,13 +96,14 @@ export default function Page() {
         PLだけ見ると「売上いくら・利益いくら」で話が終わります。しかし実際は、その利益（＝ヘリウム）で<Link href="/finance/bs">BS</Link>側の<strong>借金返済</strong>まで賄えるかをセットで見る必要があります。利益で返済分を賄えないと、また借りて負債が雪だるま式に膨らむ ― これが<Link href="/finance/cash">黒字なのに倒産する</Link>会社の正体につながる伏線です。
       </Analogy>
 
-      <p>費用構造まで掴めたら、第1章「決算書を読む」は完了です。次は三表を使って第三者の会社を診断する<Link href="/finance/analysis">三表から会社を診断する</Link>へ進みましょう。</p>
+      <p>費用構造まで掴めたら、第1章「決算書を読む」は完了です。次は<Link href="/finance/industry-cost">業界別の原価率・キャッシュ・支払い</Link>で業種ごとの数字のクセを押さえてから、三表を使って第三者の会社を診断する<Link href="/finance/analysis">三表から会社を診断する</Link>へ進みましょう。</p>
 
       <DocsFooter
         related={
           <RelatedList>
                     <RelatedLink href="/finance/pl" tag="会計・財務">損益計算書（PL）― 5つの利益</RelatedLink>
                     <RelatedLink href="/finance/cash" tag="会計・財務">現金がすべて ― 黒字倒産と負債</RelatedLink>
+                    <RelatedLink href="/finance/industry-cost" tag="会計・財務">業界別の原価率・キャッシュ・支払い</RelatedLink>
                     <RelatedLink href="/finance/payroll" tag="会計・財務">粗利益で人件費・給与を設計する</RelatedLink>
                   </RelatedList>
         }

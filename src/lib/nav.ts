@@ -980,6 +980,10 @@ export const sections: NavSection[] = [
       {
         title: "会社を分析する",
         children: [
+          {
+            href: "/finance/industry-cost",
+            title: "業界別の原価率・キャッシュ・支払い",
+          },
           { href: "/finance/analysis", title: "三表から会社を診断する" },
           { href: "/finance/metrics", title: "収益性と効率の指標" },
           { href: "/finance/valuation", title: "企業価値と株価（PBR）" },

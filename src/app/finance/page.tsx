@@ -57,6 +57,7 @@ const pages = [
   { href: "/finance/bs", parent: "第1章", title: "貸借対照表（BS）の読み方", desc: "右から読む。縦縦横横で健全性を4ステップ判定" },
   { href: "/finance/cf", parent: "第1章", title: "キャッシュフローと三表のつながり", desc: "営業・投資・財務の符号で経営パターンを読む" },
   { href: "/finance/cost", parent: "第1章", title: "固定費・変動費・限界利益", desc: "風船会計で費用構造を切り分け、利益の伸ばし方を知る" },
+  { href: "/finance/industry-cost", parent: "第2章", title: "業界別の原価率・キャッシュ・支払い", desc: "業界タイプ別の目安表。原価率・資金繰り・支払条件の地図" },
   { href: "/finance/analysis", parent: "第2章", title: "三表から会社を診断する", desc: "BSはビジネスモデルの鏡。業種ごとに必ず癖が出る" },
   { href: "/finance/metrics", parent: "第2章", title: "収益性と効率の指標", desc: "利益率だけ見ると騙される。ROAとCCCで資本効率を診る" },
   { href: "/finance/valuation", parent: "第2章", title: "企業価値と株価（PBR）", desc: "市場は未来を買う。非財務資本・ESG・日本のPBR1倍割れ" },

@@ -114,11 +114,12 @@ export default function Page() {
         <Card><CardNumber>2</CardNumber><h4>BSで会社を特定</h4><p>総資産の規模と構成比に業種の癖が出る。製造は資産大、小売は資産小で高速回転。</p></Card>
         <Card><CardNumber>3</CardNumber><h4>三表は鏡</h4><p>モノの流れと入金タイミングが決まれば、あるべき決算書の形も決まる。</p></Card>
       </CardGrid>
-      <p>業種の癖が読めたら、次は<Link href="/finance/metrics">収益性と効率の指標</Link>へ。利益率だけでは見えない「資産をどれだけ効率よく使っているか」を診ます。</p>
+      <p>業種の癖が読めたら、次は<Link href="/finance/metrics">収益性と効率の指標</Link>へ。利益率だけでは見えない「資産をどれだけ効率よく使っているか」を診ます。業種ごとの目安表は<Link href="/finance/industry-cost">業界別の原価率・キャッシュ・支払い</Link>も参照してください。</p>
 
       <DocsFooter
         related={
           <RelatedList>
+                    <RelatedLink href="/finance/industry-cost" tag="会計・財務">業界別の原価率・キャッシュ・支払い</RelatedLink>
                     <RelatedLink href="/finance/metrics" tag="会計・財務">収益性と効率の指標</RelatedLink>
                     <RelatedLink href="/finance/bs" tag="会計・財務">貸借対照表（BS）の読み方</RelatedLink>
                     <RelatedLink href="/finance/valuation" tag="会計・財務">企業価値と株価（PBR）</RelatedLink>

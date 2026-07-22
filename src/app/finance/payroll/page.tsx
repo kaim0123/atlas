@@ -38,7 +38,7 @@ export default function Page() {
       <Aside label="📎 損益分岐点売上高 ＝">
         固定費 ÷ 粗利益率。粗利益率が低い業種ほど、同じ固定費でも必要な売上が跳ね上がる。
       </Aside>
-      <p>同じ固定費・同じ人数でも、業種（粗利益率）によって必要な売上はまるで変わります。固定費1億円・10人の会社で比べてみます。</p>
+      <p>同じ固定費・同じ人数でも、業種（粗利益率）によって必要な売上はまるで変わります。固定費1億円・10人の会社で比べてみます。業種別の目安は<Link href="/finance/industry-cost">業界別の原価率・キャッシュ・支払い</Link>も参照してください。</p>
       <table>
         <thead>
           <tr><th>業種</th><th>原価率</th><th>粗利益率</th><th>損益分岐点売上（全体）</th><th>1人当たり</th></tr>
@@ -207,6 +207,7 @@ export default function Page() {
       <DocsFooter
         related={
           <RelatedList>
+                    <RelatedLink href="/finance/industry-cost" tag="会計・財務">業界別の原価率・キャッシュ・支払い</RelatedLink>
                     <RelatedLink href="/finance/cash" tag="会計・財務">現金がすべて ― 黒字倒産と負債</RelatedLink>
                     <RelatedLink href="/finance/ratios" tag="会計・財務">指標に惑わされない</RelatedLink>
                     <RelatedLink href="/finance/pl" tag="会計・財務">損益計算書（PL）― 5つの利益</RelatedLink>

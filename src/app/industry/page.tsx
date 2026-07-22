@@ -111,7 +111,7 @@ export default function Page() {
         ))}
       </IndexGrid>
 
-      <p>業界の会計を深く読むには、まず<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/analysis">三表から会社を診断する</Link>を押さえておくと、各業界の「クセ」がくっきり見えてきます。</p>
+      <p>業界の会計を深く読むには、まず<Link href="/finance/statements">財務三表の全体像</Link>と<Link href="/finance/industry-cost">業界別の原価率・キャッシュ・支払い</Link>、<Link href="/finance/analysis">三表から会社を診断する</Link>を押さえておくと、各業界の「クセ」がくっきり見えてきます。</p>
 
       <DocsFooter />
     </DocsPage>
