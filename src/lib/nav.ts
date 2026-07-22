@@ -282,6 +282,7 @@ export const sections: NavSection[] = [
       { href: "/dev/implementation", title: "実装 ― 設計をコードに落とす" },
       { href: "/dev/workspace", title: "開発環境" },
       { href: "/dev/environments", title: "環境の全体像" },
+      { href: "/dev/env", title: ".envと.gitignore" },
       { href: "/dev/runtime", title: "ランタイム" },
       { href: "/dev/tooling", title: "パッケージ管理とビルド" },
       { href: "/dev/language-basics", title: "プログラミング言語の仕組み" },

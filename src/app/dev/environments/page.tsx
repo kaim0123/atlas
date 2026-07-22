@@ -45,7 +45,7 @@ export default function Page() {
       <p>同じアプリケーションを、影響範囲の小さい場所から順番に確認しながら公開していく考え方があります。手元だけで動く<Term>開発環境(dev)</Term>、本番に近い条件でチームが確認する<Term>検証環境(staging)</Term>、実際の利用者が使う<Term>本番環境(production)</Term>という3段階に分けるのが代表的です。それぞれ同じコードを動かしていても、接続するデータベースや公開範囲が異なります。この段階分け自体の具体的な進め方は、今後「運用・プロセス」カテゴリで扱う予定です。</p>
 
       <Heading num="05">意味4: 環境変数 ― プログラムの外から渡す設定値</Heading>
-      <p><Term>環境変数(Environment Variables)</Term>は、OSやランタイムがプログラムに外から渡す、名前と値の組のことです。<code>PATH</code>(コマンドを探す場所の一覧)のように、意味3で見た「開発・検証・本番」を切り替える際にも、接続先のURLやAPIキーを環境変数として渡すのが一般的です。同じ「環境」という単語が、ここでは「設定値の集まり」という、意味1〜3ともまた違う対象を指している点に注意してください。</p>
+      <p><Term>環境変数(Environment Variables)</Term>は、OSやランタイムがプログラムに外から渡す、名前と値の組のことです。<code>PATH</code>(コマンドを探す場所の一覧)のように、意味3で見た「開発・検証・本番」を切り替える際にも、接続先のURLやAPIキーを環境変数として渡すのが一般的です。同じ「環境」という単語が、ここでは「設定値の集まり」という、意味1〜3ともまた違う対象を指している点に注意してください。<code>.env</code>ファイルへの書き方や<code>.gitignore</code>での管理方法は、次のページ「<Link href="/dev/env">.envと.gitignore</Link>」で詳しく扱います。</p>
 
       <Analogy label="💡 たとえるなら">
         「環境」を舞台に例えると、開発環境は「リハーサル室」、実行環境は「劇場そのものの設備(照明・音響)」、デプロイ環境のステージは「リハーサル→通し稽古→本番」という進行の段階、環境変数は「本番ごとに貼り替える小道具の配置メモ」にあたります。同じ台本(コード)でも、どの場所・どの段階・どの設定で演じるかによって、見え方が変わります。
@@ -68,6 +68,7 @@ export default function Page() {
         related={
           <RelatedList>
                     <RelatedLink href="/dev/workspace" tag="開発">開発環境</RelatedLink>
+                    <RelatedLink href="/dev/env" tag="開発">.envと.gitignore</RelatedLink>
                     <RelatedLink href="/dev/runtime" tag="開発">ランタイム</RelatedLink>
                     <RelatedLink href="/os" tag="OS">OSの仕組み</RelatedLink>
                   </RelatedList>
